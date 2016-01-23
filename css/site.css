@@ -1288,6 +1288,12 @@ nav {
 #main-container nav {
   color: #ff4646;
 }
+#splash-container {
+  position: absolute;
+}
+#splash-container nav {
+  position: absolute;
+}
 .nav-top {
   top: 0;
   left: 0;
