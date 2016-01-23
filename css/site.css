@@ -1266,6 +1266,11 @@ img {
   overflow: hidden;
   z-index: 800;
 }
+#splash-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 .splash-text {
   padding: 5%;
   font-size: 4em;
@@ -1279,17 +1284,9 @@ img {
   left: 0;
   z-index: 1000;
 }
-nav {
-  position: fixed;
-  -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
 #main-container nav {
+  position: fixed;
   color: #ff4646;
-}
-#splash-container {
-  position: absolute;
 }
 #splash-container nav {
   position: absolute;
