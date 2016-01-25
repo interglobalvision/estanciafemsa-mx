@@ -89,7 +89,7 @@ body
 
 h1,h2,h3,h4,h5,h6
   font-family: $font-sans
-  font-weight: 700
+  font-weight: normal
   line-height: $font-leading-basic
   -webkit-font-smoothing: antialiased
 
@@ -112,7 +112,7 @@ p
   font-size: 0.8em
 
 .font-red
-  color: red
+  color: $color-red
 
 .font-sans
   font-family: $font-sans
@@ -149,6 +149,8 @@ img
   color: $color-white-soft
   overflow: hidden
   z-index: 800
+  font-family: $font-sans
+  font-size: 1em
 
 #splash-container
   position: absolute
@@ -157,8 +159,8 @@ img
 
 .splash-text
   padding: 5%
-  font-size: 4em
-  line-height: $font-leading-basic
+  font-size: 6em
+  line-height: 1
 
 #scroll-buffer
   position: absolute
@@ -169,6 +171,9 @@ img
   z-index: 1000
 
 // NAV
+nav 
+  font-family: $font-sans
+  
 #main-container nav
   position: fixed
   color: $color-red
@@ -177,20 +182,28 @@ img
   position: absolute
 
 .nav-top
-  top: 0
+  top: $margin-basic
   left: 0
   width: 100%
   text-align: center
+  font-size: 2em
+  font-weight: bold
 
 .nav-top-right
-  top: 0
-  right: 0
+  top: $margin-basic
+  right: $margin-basic
+  font-size: 1.3em
+
+.lang 
+  padding: ( $margin-small / 2 )
 
 .nav-bottom
-  bottom: 0
+  bottom: $margin-basic
   left: 0
   width: 100%
   text-align: center
+  font-size: 2em
+  font-weight: bold
 
 // CONTENT
 #main-container
