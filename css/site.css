@@ -1261,7 +1261,7 @@ img {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #ff4646;
+  background-color: #ef5249;
   color: #fdfdfd;
   overflow: hidden;
   z-index: 800;
@@ -1286,7 +1286,7 @@ img {
 }
 #main-container nav {
   position: fixed;
-  color: #ff4646;
+  color: #ef5249;
 }
 #splash-container nav {
   position: absolute;
