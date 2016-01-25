@@ -780,7 +780,9 @@ h4,
 h5,
 h6 {
   font-family: 'Calibre', helvetica, arial, sans-serif;
+  font-weight: 700;
   line-height: 1.5em;
+  -webkit-font-smoothing: antialiased;
 }
 h1 {
   font-size: 5em;
@@ -789,6 +791,9 @@ h2 {
   font-size: 2em;
 }
 h3 {
+  font-size: 1.2em;
+}
+h4 {
   font-size: 1em;
 }
 p {
@@ -802,10 +807,6 @@ p {
 }
 .font-sans {
   font-family: 'Calibre', helvetica, arial, sans-serif;
-}
-nav {
-  font-family: 'Calibre', helvetica, arial, sans-serif;
-  font-weight: bold;
 }
 a,
 a:active,
