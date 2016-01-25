@@ -770,7 +770,7 @@ th {
 body {
   font-family: 'Tiempos', serif;
   font-size: 15px;
-  line-height: 1.35em;
+  line-height: 1.5em;
   letter-spacing: 0.001em;
 }
 h1,
@@ -780,7 +780,7 @@ h4,
 h5,
 h6 {
   font-family: 'Calibre', helvetica, arial, sans-serif;
-  line-height: 1.35em;
+  line-height: 1.5em;
 }
 h1 {
   font-size: 5em;
