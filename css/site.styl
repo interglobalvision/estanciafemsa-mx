@@ -1,7 +1,9 @@
 @import "kouto-swiss"
+@import "fonts"
 
 @import "sanitize"
 @import "helpers"
+
 
 meyer-reset()
 box-sizing-reset()
@@ -73,28 +75,45 @@ $font-tracking-basic = 0.001em
 $color-black-soft = rgb(14,14,14)
 $color-white-soft = rgb(253,253,253)
 
+$font-sans = 'Calibre', helvetica, arial, sans-serif
+$font-serif = 'Tiempos', serif
+
 // TYPOGRAPHY
 
 body
-  font-family: 'Tiempos Text', serif
+  font-family: $font-serif
   font-size: $font-size-basic
   line-height: $font-leading-basic
   letter-spacing: $font-tracking-basic
 
 h1,h2,h3,h4,h5,h6
-  font-family: 'Calibre' helvetica, arial, sans-serif
+  font-family: $font-sans
+  line-height: $font-leading-basic
 
 h1
-  font-size: 3em
+  font-size: 5em
 
 h2
   font-size: 2em
 
 h3
-  font-size: 1.5em
+  font-size: 1em
 
 p
   margin-bottom: 1em
+
+.font-small
+  font-size: 0.8em
+  
+.font-red
+  color: red
+  
+.font-sans
+  font-family: $font-sans
+  
+nav
+  font-family: $font-sans
+  font-weight: bold
 
 
 // LINKS
