@@ -91,7 +91,6 @@ h1,h2,h3,h4,h5,h6
   font-family: $font-sans
   font-weight: normal
   line-height: $font-leading-basic
-  -webkit-font-smoothing: antialiased
 
 h1
   font-size: 5em
@@ -171,9 +170,10 @@ img
   z-index: 1000
 
 // NAV
-nav 
+nav
   font-family: $font-sans
-  
+  -webkit-font-smoothing: antialiased
+
 #main-container nav
   position: fixed
   color: $color-red
@@ -194,7 +194,7 @@ nav
   right: $margin-basic
   font-size: 1.3em
 
-.lang 
+.lang
   padding: ( $margin-small / 2 )
 
 .nav-bottom

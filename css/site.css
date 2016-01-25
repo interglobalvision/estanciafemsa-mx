@@ -782,7 +782,6 @@ h6 {
   font-family: 'Calibre', helvetica, arial, sans-serif;
   font-weight: normal;
   line-height: 1.5em;
-  -webkit-font-smoothing: antialiased;
 }
 h1 {
   font-size: 5em;
@@ -864,6 +863,7 @@ img {
 }
 nav {
   font-family: 'Calibre', helvetica, arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 #main-container nav {
   position: fixed;
