@@ -556,118 +556,43 @@ th {
   margin-left: 8px;
   margin-right: 8px;
   box-sizing: content-box;
+  min-height: 1px;
 }
-.s1 {
+.col-1 {
   width: 90px;
 }
-.s2 {
+.col-2 {
   width: 196px;
 }
-.s3 {
+.col-3 {
   width: 302px;
 }
-.s4 {
+.col-4 {
   width: 408px;
 }
-.s5 {
+.col-5 {
   width: 514px;
 }
-.s6 {
+.col-6 {
   width: 620px;
 }
-.s7 {
+.col-7 {
   width: 726px;
 }
-.s8 {
+.col-8 {
   width: 832px;
 }
-.s9 {
+.col-9 {
   width: 938px;
 }
-.s10 {
+.col-10 {
   width: 1044px;
 }
-.s11 {
+.col-11 {
   width: 1150px;
 }
-.s12 {
+.col-12 {
   width: 1256px;
-}
-@media screen and (min-width: 601px) {
-  .m1 {
-    width: 90px;
-  }
-  .m2 {
-    width: 196px;
-  }
-  .m3 {
-    width: 302px;
-  }
-  .m4 {
-    width: 408px;
-  }
-  .m5 {
-    width: 514px;
-  }
-  .m6 {
-    width: 620px;
-  }
-  .m7 {
-    width: 726px;
-  }
-  .m8 {
-    width: 832px;
-  }
-  .m9 {
-    width: 938px;
-  }
-  .m10 {
-    width: 1044px;
-  }
-  .m11 {
-    width: 1150px;
-  }
-  .m12 {
-    width: 1256px;
-  }
-}
-@media screen and (min-width: 993px) {
-  .l1 {
-    width: 90px;
-  }
-  .l2 {
-    width: 196px;
-  }
-  .l3 {
-    width: 302px;
-  }
-  .l4 {
-    width: 408px;
-  }
-  .l5 {
-    width: 514px;
-  }
-  .l6 {
-    width: 620px;
-  }
-  .l7 {
-    width: 726px;
-  }
-  .l8 {
-    width: 832px;
-  }
-  .l9 {
-    width: 938px;
-  }
-  .l10 {
-    width: 1044px;
-  }
-  .l11 {
-    width: 1150px;
-  }
-  .l12 {
-    width: 1256px;
-  }
 }
 .percent-col {
   float: left;
@@ -889,17 +814,60 @@ img {
   z-index: 600;
 }
 @media screen and (max-width: 1272px) {
-  html {
-    width: 100%;
+  .container {
+    margin: 0 auto;
+    width: 936px;
+  }
+  .col {
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+  .col-1 {
+    width: 64px;
+  }
+  .col-2 {
+    width: 142px;
+  }
+  .col-3 {
+    width: 220px;
+  }
+  .col-4 {
+    width: 298px;
+  }
+  .col-5 {
+    width: 376px;
+  }
+  .col-6 {
+    width: 454px;
+  }
+  .col-7 {
+    width: 532px;
+  }
+  .col-8 {
+    width: 610px;
+  }
+  .col-9 {
+    width: 688px;
+  }
+  .col-10 {
+    width: 766px;
+  }
+  .col-11 {
+    width: 844px;
+  }
+  .col-12 {
+    width: 922px;
   }
 }
-@media screen and (min-width: 993px) {
-  html {
-    width: 100%;
+@media screen and (max-width: 940px) {
+  .container {
+    width: 95%;
   }
-}
-@media screen and (min-width: 601px) {
-  html {
+  .col {
     width: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
+    box-sizing: content-box;
+    min-height: 1px;
   }
 }
