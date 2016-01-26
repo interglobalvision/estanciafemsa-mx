@@ -107,6 +107,7 @@ p
 a,a:active,a:visited
   color: inherit
   transition: opacity .2s
+  cursor: pointer
   &:hover
     opacity: .5
 
@@ -146,6 +147,7 @@ img
   z-index: 800
   font-family: $font-sans
   font-size: 1em
+  cursor: pointer
 
 #splash-container
   position: absolute
@@ -164,6 +166,7 @@ img
   top: 0
   left: 0
   z-index: 1000
+  pointer-events: none
 
 // NAV
 nav
@@ -203,7 +206,7 @@ nav
 
 
 // TOP CONTENT
-#top-content
+section#content-1
   height: 100vh
 
 .match-height

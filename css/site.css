@@ -735,6 +735,7 @@ a:visited {
   color: inherit;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
+  cursor: pointer;
 }
 a:hover,
 a:active:hover,
@@ -779,6 +780,7 @@ img {
   z-index: 800;
   font-family: 'Calibre', helvetica, arial, sans-serif;
   font-size: 1em;
+  cursor: pointer;
 }
 #splash-container {
   position: absolute;
@@ -797,6 +799,7 @@ img {
   top: 0;
   left: 0;
   z-index: 1000;
+  pointer-events: none;
 }
 nav {
   font-family: 'Calibre', helvetica, arial, sans-serif;
@@ -833,7 +836,7 @@ nav {
   font-size: 2em;
   font-weight: bold;
 }
-#top-content {
+section#content-1 {
   height: 100vh;
 }
 .match-height {

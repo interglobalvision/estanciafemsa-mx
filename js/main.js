@@ -1,6 +1,8 @@
 /* jshint browser: true, devel: true, indent: 2, curly: true, eqeqeq: true, futurehostile: true, latedef: true, undef: true, unused: true */
 /* global $, document, Modernizr */
 
+var scrollOffset = $('.nav-top').height() * 5;
+
 var langEs = $('.lang-es');
 var langEn = $('.lang-en');
 
@@ -66,7 +68,34 @@ $(document).ready(function () {
 
   }
 
+  // SCROLLTO EVENTS
+  function bindScrollEvent() {
+    $('.scroll').on('click', function() {
+      var target = $(this).attr('data-scroll');
+
+      $('html,body').animate({
+        scrollTop: $(target).offset().top - ( scrollOffset )
+      }, 1000);
+    });
+  }
+
+
   // SPLASH SCROLL
+  function removeSplash() {
+    $('#main-container').css('position', 'relative');
+    $('#splash, #scroll-buffer').remove();
+    $(window).scrollTop(0).off('scroll');
+    bindScrollEvent();
+  };
+
+  $('#splash').on('click', function() {
+    $(this).animate({
+      'height': '0%',
+    }, 1000, function() {
+      removeSplash();
+    });
+  });
+
   $(window).on({
     scroll: function() {
       var elPos = $('#scroll-buffer').offset().top - $(window).scrollTop(),
@@ -76,9 +105,7 @@ $(document).ready(function () {
       $('#splash').css('height', elPercent + '%');
 
       if (elPercent === 0) {
-        $('#main-container').css('position', 'relative');
-        $('#splash, #scroll-buffer').remove();
-        $(window).scrollTop(0).off('scroll');
+        removeSplash();
       }
     },
 
