@@ -830,6 +830,9 @@ nav {
   font-size: 2em;
   font-weight: bold;
 }
+#top-content {
+  height: 100vh;
+}
 .match-height {
   position: relative;
 }

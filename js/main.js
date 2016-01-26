@@ -15,16 +15,19 @@ $(document).ready(function () {
   var winHeight,
     winWidth;
 
-  function matchHeights(selector){
-    var topHeight=0;
+  function matchHeights(selector) {
+    var topHeight = 0;
+
     $(selector).each(function(){
         var height = $(this).height();
+
         if (height > topHeight){
-            topHeight = height;
+          topHeight = height;
         }
     });
+
     $(selector).css('height', topHeight);
-  };
+  }
 
   function resize() {
     winHeight = $(window).height();
@@ -41,8 +44,7 @@ $(document).ready(function () {
 
     matchHeights('.match-height');
 
-    $('#top-content').css('height', winHeight);
-  };
+  }
 
   // SPLASH SCROLL
   $(window).on({
@@ -50,7 +52,7 @@ $(document).ready(function () {
       var elPos = $('#scroll-buffer').offset().top - $(window).scrollTop(),
         elBottom = elPos + winHeight,
         elPercent = (elBottom / winHeight) * 100;
-      
+
       $('#splash').css('height', elPercent + '%');
 
       if (elPercent === 0) {
@@ -59,6 +61,7 @@ $(document).ready(function () {
         $(window).scrollTop(0).off('scroll');
       }
     },
+
     resize: function() {
       resize();
     },
