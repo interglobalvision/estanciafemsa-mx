@@ -1,6 +1,8 @@
 /* jshint browser: true, devel: true, indent: 2, curly: true, eqeqeq: true, futurehostile: true, latedef: true, undef: true, unused: true */
 /* global $, document, Modernizr */
 
+var scrollOffset = $('.nav-top').height() * 5;
+
 $(document).ready(function () {
   'use strict';
 
@@ -52,7 +54,7 @@ $(document).ready(function () {
       var target = $(this).attr('data-scroll');
 
       $('html,body').animate({
-        scrollTop: $(target).offset().top - ( $('.nav-top').height() * 5 ) 
+        scrollTop: $(target).offset().top - ( scrollOffset )
       }, 1000);
     });
   }
@@ -67,8 +69,8 @@ $(document).ready(function () {
   };
 
   $('#splash').on('click', function() {
-    $(this).animate({ 
-      'height': '0%', 
+    $(this).animate({
+      'height': '0%',
     }, 1000, function() {
       removeSplash();
     });
