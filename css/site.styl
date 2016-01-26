@@ -105,11 +105,15 @@ p
 // LINKS
 
 a,a:active,a:visited
-  color:inherit
-  transition:opacity .2s
+  color: inherit
+  transition: opacity .2s
   &:hover
-    opacity:.5
+    opacity: .5
 
+a,a:active,a:visited > h1
+  &:hover
+    opacity: 1
+    color: $color-red
 
 // BASIC
 

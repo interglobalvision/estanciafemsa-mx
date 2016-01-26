@@ -743,6 +743,15 @@ a:visited:hover {
   filter: alpha(opacity=50);
   opacity: 0.5;
 }
+a:hover,
+a:active:hover,
+a:visited > h1:hover {
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  opacity: 1;
+  color: #ef5249;
+}
 html {
   background-color: #fdfdfd;
   color: #0e0e0e;
