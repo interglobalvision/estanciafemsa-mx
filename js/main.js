@@ -3,8 +3,28 @@
 
 var scrollOffset = $('.nav-top').height() * 5;
 
+var langEs = $('.lang-es');
+var langEn = $('.lang-en');
+
+function setLang(code) {
+  if (code === 'en') {
+    langEs.hide();
+    langEn.show();
+    window.location.hash = 'en';
+  } else {
+    langEn.hide();
+    langEs.show();
+    window.location.hash = 'es';
+  }
+}
+
 $(document).ready(function () {
   'use strict';
+
+  if (window.location.hash) {
+    console.log(window.location.hash);
+    setLang(window.location.hash.substring(1));
+  }
 
   // utility class mainly for use on headines to avoid widows [single words on a new line]
   $('.js-fix-widows').each(function(){
@@ -95,5 +115,12 @@ $(document).ready(function () {
   });
 
   resize();
+
+  $('.js-set-lang').on({
+    click: function(e) {
+      e.preventDefault();
+      setLang($(this).data('lang'));
+    },
+  });
 
 });

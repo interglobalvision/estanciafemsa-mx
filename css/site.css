@@ -765,6 +765,9 @@ img {
 .row {
   margin-bottom: 32px;
 }
+.lang-en {
+  display: none;
+}
 #splash {
   position: fixed;
   width: 100%;
