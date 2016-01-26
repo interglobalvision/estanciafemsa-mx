@@ -15,7 +15,18 @@ $(document).ready(function () {
   var winHeight,
     winWidth;
 
-  const resizeSplash = function() {
+  function matchHeights(selector){
+    var topHeight=0;
+    $(selector).each(function(){
+        var height = $(this).height();
+        if (height > topHeight){
+            topHeight = height;
+        }
+    });
+    $(selector).css('height', topHeight);
+  };
+
+  function resize() {
     winHeight = $(window).height();
     winWidth = $(window).width();
 
@@ -27,6 +38,10 @@ $(document).ready(function () {
       'height': winHeight,
       'width': winWidth,
     });
+
+    matchHeights('.match-height');
+
+    $('#top-content').css('height', winHeight);
   };
 
   // SPLASH SCROLL
@@ -45,10 +60,10 @@ $(document).ready(function () {
       }
     },
     resize: function() {
-      resizeSplash();
+      resize();
     },
   });
 
-  resizeSplash();
+  resize();
 
 });

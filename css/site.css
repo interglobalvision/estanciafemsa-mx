@@ -818,6 +818,14 @@ nav {
   font-size: 2em;
   font-weight: bold;
 }
+.match-height {
+  position: relative;
+}
+.align-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 #main-container {
   width: 100%;
   position: fixed;
