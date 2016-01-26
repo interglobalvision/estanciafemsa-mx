@@ -761,6 +761,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+.row {
+  margin-bottom: 32px;
+}
 #splash {
   position: fixed;
   width: 100%;
