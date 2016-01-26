@@ -15,7 +15,21 @@ $(document).ready(function () {
   var winHeight,
     winWidth;
 
-  const resizeSplash = function() {
+  function matchHeights(selector) {
+    var topHeight = 0;
+
+    $(selector).each(function(){
+        var height = $(this).height();
+
+        if (height > topHeight){
+          topHeight = height;
+        }
+    });
+
+    $(selector).css('height', topHeight);
+  }
+
+  function resize() {
     winHeight = $(window).height();
     winWidth = $(window).width();
 
@@ -27,7 +41,10 @@ $(document).ready(function () {
       'height': winHeight,
       'width': winWidth,
     });
-  };
+
+    matchHeights('.match-height');
+
+  }
 
   // SPLASH SCROLL
   $(window).on({
@@ -35,7 +52,7 @@ $(document).ready(function () {
       var elPos = $('#scroll-buffer').offset().top - $(window).scrollTop(),
         elBottom = elPos + winHeight,
         elPercent = (elBottom / winHeight) * 100;
-      
+
       $('#splash').css('height', elPercent + '%');
 
       if (elPercent === 0) {
@@ -44,11 +61,12 @@ $(document).ready(function () {
         $(window).scrollTop(0).off('scroll');
       }
     },
+
     resize: function() {
-      resizeSplash();
+      resize();
     },
   });
 
-  resizeSplash();
+  resize();
 
 });

@@ -743,6 +743,15 @@ a:visited:hover {
   filter: alpha(opacity=50);
   opacity: 0.5;
 }
+a:hover,
+a:active:hover,
+a:visited > h1:hover {
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  opacity: 1;
+  color: #ef5249;
+}
 html {
   background-color: #fdfdfd;
   color: #0e0e0e;
@@ -751,6 +760,9 @@ html {
 img {
   max-width: 100%;
   height: auto;
+}
+.row {
+  margin-bottom: 32px;
 }
 #splash {
   position: fixed;
@@ -817,6 +829,17 @@ nav {
   text-align: center;
   font-size: 2em;
   font-weight: bold;
+}
+#top-content {
+  height: 100vh;
+}
+.match-height {
+  position: relative;
+}
+.align-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 #main-container {
   width: 100%;
