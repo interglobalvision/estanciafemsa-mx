@@ -863,6 +863,16 @@ nav {
 #estancia-femsa {
   padding-bottom: 120px;
 }
+#offset-image-holder {
+  position: relative;
+  height: 40vh;
+}
+#offset-image {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  z-index: -9;
+}
 @media screen and (max-width: 1032px) {
   .container {
     margin: 0 auto;
