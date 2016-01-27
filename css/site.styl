@@ -55,9 +55,11 @@ $golden-ratio = 1.61803398875
 $margin-small = ($gutter)
 $margin-basic = ($gutter*2)
 $margin-large = ($gutter*5)
+$margin-larger = ($gutter*7.5)
 
-$font-size-basic = 15px
-$font-leading-basic = 1.5em
+$font-size-basic = 17px
+$font-leading-basic = 1.45em
+$font-leading-tight = 1.3em
 $font-tracking-basic = 0.001em
 
 $color-black-soft = rgb(14,14,14)
@@ -78,7 +80,7 @@ body
 h1,h2,h3,h4,h5,h6
   font-family: $font-sans
   font-weight: normal
-  line-height: $font-leading-basic
+  line-height: $font-leading-tight
 
 h1
   font-size: 5em
@@ -100,6 +102,10 @@ p
 
 .font-sans
   font-family: $font-sans
+
+.font-small
+  font-size: 0.8em
+  line-height: $font-leading-basic
 
 
 // LINKS
@@ -206,7 +212,7 @@ nav
 
 
 // TOP CONTENT
-section#content-1
+#barragan-fetichista
   height: 100vh
 
 .match-height
@@ -223,6 +229,12 @@ section#content-1
   width: 100%
   position: fixed // keeps it in place during splash scroll
   z-index: 600 // under splash and nav
+
+#barragan-fetichista-texto
+  padding-bottom: $margin-large
+
+#casa-luis-barragan, #estancia-femsa
+  padding-bottom: $margin-larger
 
 
 // MEDIA QUERIES

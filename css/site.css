@@ -694,8 +694,8 @@ th {
 }
 body {
   font-family: 'Tiempos', serif;
-  font-size: 15px;
-  line-height: 1.5em;
+  font-size: 17px;
+  line-height: 1.45em;
   letter-spacing: 0.001em;
 }
 h1,
@@ -706,7 +706,7 @@ h5,
 h6 {
   font-family: 'Calibre', helvetica, arial, sans-serif;
   font-weight: normal;
-  line-height: 1.5em;
+  line-height: 1.3em;
 }
 h1 {
   font-size: 5em;
@@ -728,6 +728,10 @@ p {
 }
 .font-sans {
   font-family: 'Calibre', helvetica, arial, sans-serif;
+}
+.font-small {
+  font-size: 0.8em;
+  line-height: 1.45em;
 }
 a,
 a:active,
@@ -836,7 +840,7 @@ nav {
   font-size: 2em;
   font-weight: bold;
 }
-section#content-1 {
+#barragan-fetichista {
   height: 100vh;
 }
 .match-height {
@@ -851,6 +855,13 @@ section#content-1 {
   width: 100%;
   position: fixed;
   z-index: 600;
+}
+#barragan-fetichista-texto {
+  padding-bottom: 80px;
+}
+#casa-luis-barragan,
+#estancia-femsa {
+  padding-bottom: 120px;
 }
 @media screen and (max-width: 1032px) {
   .container {
