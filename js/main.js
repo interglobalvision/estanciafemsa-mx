@@ -1,8 +1,6 @@
 /* jshint browser: true, devel: true, indent: 2, curly: true, eqeqeq: true, futurehostile: true, latedef: true, undef: true, unused: true */
 /* global $, document, Modernizr */
 
-var scrollOffset = $('.nav-top').height() * 5;
-
 var langEs = $('.lang-es');
 var langEn = $('.lang-en');
 
@@ -74,7 +72,7 @@ $(document).ready(function () {
       var target = $(this).attr('data-scroll');
 
       $('html,body').animate({
-        scrollTop: $(target).offset().top - ( scrollOffset )
+        scrollTop: $(target).offset().top,
       }, 1000);
     });
   }

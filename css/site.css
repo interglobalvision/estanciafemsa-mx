@@ -823,11 +823,13 @@ nav {
   text-align: center;
   font-size: 2em;
   font-weight: bold;
+  z-index: 888;
 }
 .nav-top-right {
   top: 32px;
   right: 32px;
   font-size: 1.3em;
+  z-index: 999;
 }
 .lang {
   padding: 8px;
@@ -839,6 +841,7 @@ nav {
   text-align: center;
   font-size: 2em;
   font-weight: bold;
+  z-index: 888;
 }
 #barragan-fetichista {
   height: 100vh;
@@ -856,10 +859,11 @@ nav {
   position: fixed;
   z-index: 600;
 }
-#barragan-fetichista-texto {
-  padding-bottom: 80px;
-}
+#barragan-fetichista-texto,
 #casa-luis-barragan,
+#estancia-femsa {
+  padding-top: 80px;
+}
 #estancia-femsa {
   padding-bottom: 120px;
 }
@@ -873,61 +877,151 @@ nav {
   left: 50%;
   z-index: -9;
 }
-@media screen and (max-width: 1032px) {
+@media screen and (max-width: 1048px) {
   .container {
     margin: 0 auto;
-    width: 936px;
+    width: 708px;
   }
   .col {
     margin-left: 7px;
     margin-right: 7px;
   }
   .col-1 {
-    width: 64px;
+    width: 45px;
   }
   .col-2 {
-    width: 142px;
+    width: 104px;
   }
   .col-3 {
-    width: 220px;
+    width: 163px;
   }
   .col-4 {
-    width: 298px;
+    width: 222px;
   }
   .col-5 {
-    width: 376px;
+    width: 281px;
   }
   .col-6 {
-    width: 454px;
+    width: 340px;
   }
   .col-7 {
-    width: 532px;
+    width: 399px;
   }
   .col-8 {
-    width: 610px;
+    width: 458px;
   }
   .col-9 {
-    width: 688px;
+    width: 517px;
   }
   .col-10 {
-    width: 766px;
+    width: 576px;
   }
   .col-11 {
-    width: 844px;
+    width: 635px;
   }
   .col-12 {
-    width: 922px;
+    width: 694px;
+  }
+  .row {
+    margin-bottom: 28px;
+  }
+  .nav-top {
+    top: 28px;
+  }
+  .nav-top-right {
+    top: 28px;
+    right: 28px;
+  }
+  .lang {
+    padding: 7px;
+  }
+  .nav-bottom {
+    bottom: 28px;
+  }
+  .splash-text {
+    font-size: 3.5em;
   }
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 760px) {
   .container {
     width: 95%;
   }
   .col {
     width: 100%;
-    margin-left: 8px;
-    margin-right: 8px;
-    box-sizing: content-box;
-    min-height: 1px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .row,
+  .mobile-bottom-padding {
+    margin-bottom: 32px;
+  }
+  body {
+    font-size: 15px;
+    line-height: 1.45em;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Calibre', helvetica, arial, sans-serif;
+    line-height: 1.3em;
+  }
+  h1 {
+    font-size: 5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  h4 {
+    font-size: 1em;
+  }
+  p {
+    margin-bottom: 1em;
+  }
+  .font-small {
+    font-size: 0.8em;
+    line-height: 1.45em;
+  }
+  .splash-text {
+    font-size: 2.5em;
+  }
+  .mobile-align-center {
+    text-align: center;
+  }
+  .nav-top {
+    top: 16px;
+  }
+  .nav-top-right {
+    top: 16px;
+    right: 16px;
+  }
+  .nav-bottom {
+    bottom: 16px;
+  }
+  .lang {
+    padding: 0 0 8px 0;
+    display: block;
+  }
+  #barragan-fetichista {
+    height: auto;
+  }
+  #barragan-fetichista .u-holder {
+    padding: 32px 0;
+  }
+  #offset-image-holder {
+    position: relative;
+    height: auto;
+  }
+  #offset-image {
+    position: static;
+    z-index: 1;
+    max-width: 85%;
+    margin: 0 auto 32px auto;
+    display: block;
   }
 }
