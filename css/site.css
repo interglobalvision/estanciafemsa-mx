@@ -945,7 +945,7 @@ nav {
 }
 @media screen and (max-width: 760px) {
   .container {
-    width: 95%;
+    width: 90%;
   }
   .col {
     width: 100%;
@@ -971,6 +971,7 @@ nav {
   }
   h1 {
     font-size: 5em;
+    margin: 0.3em 0;
   }
   h2 {
     font-size: 2em;
@@ -1024,5 +1025,8 @@ nav {
     max-width: 85%;
     margin: 0 auto 32px auto;
     display: block;
+  }
+  #femsa-collection-logo {
+    margin-bottom: 32px;
   }
 }
