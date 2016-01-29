@@ -799,6 +799,10 @@ img {
   font-size: 6em;
   line-height: 1;
 }
+.splash-text-inner {
+  max-width: 1365px;
+  margin: 0 auto;
+}
 #scroll-buffer {
   position: absolute;
   width: 100%;
