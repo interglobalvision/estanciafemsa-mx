@@ -103,7 +103,9 @@ $(document).ready(function () {
       }
     },
 
-    resize: onResize(),
+    resize: function() {
+      onResize();
+    },
   });
 
   $('.js-set-lang').on({

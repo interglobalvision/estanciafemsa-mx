@@ -698,6 +698,9 @@ body {
   line-height: 1.45em;
   letter-spacing: 0.001em;
 }
+i {
+  font-style: italic;
+}
 h1,
 h2,
 h3,
