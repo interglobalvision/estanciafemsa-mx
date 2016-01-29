@@ -808,6 +808,7 @@ img {
 nav {
   font-family: 'Calibre', helvetica, arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  line-height: 1.3em;
 }
 #main-container nav {
   position: fixed;
@@ -841,6 +842,7 @@ nav {
   text-align: center;
   font-size: 2em;
   font-weight: bold;
+  margin-bottom: -0.3em;
   z-index: 888;
 }
 #barragan-fetichista {
