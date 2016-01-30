@@ -698,6 +698,9 @@ body {
   line-height: 1.45em;
   letter-spacing: 0.001em;
 }
+i {
+  font-style: italic;
+}
 h1,
 h2,
 h3,
@@ -795,6 +798,10 @@ img {
   padding: 5%;
   font-size: 6em;
   line-height: 1;
+}
+.splash-text-inner {
+  max-width: 1365px;
+  margin: 0 auto;
 }
 #scroll-buffer {
   position: absolute;
