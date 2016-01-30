@@ -202,6 +202,7 @@ img
 nav
   font-family: $font-sans
   -webkit-font-smoothing: antialiased
+  line-height: 1.3em
 
 #main-container nav
   position: fixed
@@ -235,6 +236,8 @@ nav
   text-align: center
   font-size: 2em
   font-weight: bold
+  // this is to compensate for 1.3em line height to make safari show accents :/
+  margin-bottom: -.3em
   z-index: 888
 
 
