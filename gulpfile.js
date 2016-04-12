@@ -18,14 +18,14 @@ var gulp = require('gulp');
   minifycss = require('gulp-minify-css'),
   swiss = require('kouto-swiss'),
 
-  webserver = require('gulp-webserver'),
-
   imagemin = require('gulp-imagemin');
 
 function errorNotify(error){
   notify.onError("Error: <%= error.message %>")
   util.log(util.colors.red('Error'), error.message);
 }
+
+// JAVASCRIPT
 
 gulp.task('javascript', function() {
   gulp.src('js/main.js')
@@ -50,6 +50,8 @@ gulp.task('javascript-library', function() {
   .pipe(notify({ message: 'Javascript Library task complete' }));
 });
 
+// STYLES
+
 gulp.task('style', function() {
   return gulp.src('css/site.styl')
   .pipe(plumber())
@@ -69,33 +71,27 @@ gulp.task('style', function() {
   .pipe(notify({ message: 'Style task complete' }));
 });
 
+// IMAGES
+
 gulp.task('images', function () {
-    return gulp.src('src/images/*.*')
-    .pipe(cache('images'))
-    .pipe(imagemin({
-      progressive: false
-    }))
-    .on('error', errorNotify)
-    .pipe(gulp.dest('img/dist'))
-		.pipe(notify({ message: 'Images task complete' }));
+  return gulp.src('img/src/*.*')
+  .pipe(cache('images'))
+  .pipe(imagemin({
+    progressive: false
+  }))
+  .on('error', errorNotify)
+  .pipe(gulp.dest('img/dist'))
+	.pipe(notify({ message: 'Images task complete' }));
 });
+
+// TASKS
 
 gulp.task('watch', function() {
   gulp.watch(['js/main.js'], ['javascript']);
   gulp.watch(['js/library/*.js'], ['javascript-library']);
   gulp.watch(['css/site.styl'], ['style']);
-  gulp.watch(['img/src/**'], ['images']);
+  gulp.watch(['img/src/*.*'], ['images']);
 });
 
-gulp.task('webserver', function() {
-  gulp.src('')
-    .pipe(webserver({
-      livereload: true,
-      port: 3000,
-      fallback: 'index.html',
-      open: true
-    }));
-});
-
-gulp.task('default', ['webserver', 'watch']);
-gulp.task('build', ['images', 'style', 'javascript-library', 'javascript']);
+gulp.task('build', ['style', 'javascript', 'javascript-library']);
+gulp.task('default', ['watch']);

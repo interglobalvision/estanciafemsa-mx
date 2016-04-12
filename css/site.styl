@@ -1,15 +1,16 @@
 @import "kouto-swiss"
-@import "fonts"
 
-@import "sanitize"
 @import "helpers"
+@import "genericons"
 
 meyer-reset()
 box-sizing-reset()
 normalize()
 
+// GRID
+
 $cols = 12
-$col = 70px
+$col = 90px
 $gutter = 16px
 
 .container
@@ -17,25 +18,23 @@ $gutter = 16px
   width: ($col * $cols)+($gutter * $cols)
 
 .row
-  clear: both
+  clearfix()
 
 .col
   float: left
   margin-left: ($gutter/2)
   margin-right: ($gutter/2)
-  box-sizing: content-box
   min-height: 1px
 
 for col in 1..$cols
   .col-{col}
     width: ( col * $col ) + ( ( col - 1 ) * $gutter )
 
-
-// FLUID COLS
+    // FLUID COLS
 
 .percent-col
   float: left
-  box-sizing: content-box
+  box-sizing: border-box
 
 $pcols = 10
 
@@ -55,85 +54,79 @@ for pcol in 1..$pcols
     .l-into-{pcol}
       width: ( 100% / pcol )
 
-
 // VARIABLES
 
 $golden-ratio = 1.61803398875
 
 $margin-small = ($gutter)
-$margin-tiny = ($gutter/2)
-$margin-basic = ($gutter*2)
-$margin-large = ($gutter*5)
-$margin-larger = ($gutter*7.5)
+$margin-tiny = ($gutter / 2)
+$margin-basic = ($gutter * 2)
+$margin-mid = ($gutter * 3.5)
+$margin-large = ($gutter * 5)
 
-$font-size-basic = 17px
-$font-leading-basic = 1.45em
-$font-leading-tight = 1.3em
+$font-size-basic = 15px
+$font-leading-basic = 1.35em
 $font-tracking-basic = 0.001em
 
-$color-black-soft = rgb(14,14,14)
-$color-white-soft = rgb(253,253,253)
-$color-red = #ef5249
-
-$font-sans = 'Calibre', helvetica, arial, sans-serif
-$font-serif = 'Tiempos', serif
-
+$color-black-soft = rgb(14, 14, 14)
+$color-white-soft = rgb(253, 253, 253)
 
 // TYPOGRAPHY
 
 body
-  font-family: $font-serif
+  font-family: font-stack('Helvetica')
   font-size: $font-size-basic
   line-height: $font-leading-basic
   letter-spacing: $font-tracking-basic
 
-i
-  font-style: italic
-
-h1, h2, h3, h4, h5, h6
-  font-family: $font-sans
-  font-weight: normal
-  line-height: $font-leading-tight
+  // HTML ELEMENT STYLING
 
 h1
-  font-size: 5em
+  font-size: 3rem
 
 h2
-  font-size: 2em
+  font-size: 2rem
 
 h3
-  font-size: 1.2em
-
-h4
-  font-size: 1em
+  font-size: 1.5rem
 
 p
-  margin-bottom: 1em
+  margin-bottom: 1rem
 
-.font-red
-  color: $color-red
+  // FONT RULES
 
-.font-sans
-  font-family: $font-sans
+.font-italic
+  font-style: italic
 
-.font-small
-  font-size: 0.8em
-  line-height: $font-leading-basic
+.font-bold
+  font-weight: bold
+
+.font-small-caps
+  font-size: 0.85em
+  text-transform: uppercase
+
+  // TEXT RULES
+
+.text-overflow-ellipsis
+  overflow: ellipsis
+
+.text-align-left
+  text-align: left
+
+.text-align-right
+  text-align: right
+
+.text-align-center
+  text-align: center
 
 
 // LINKS
 
-a,a:active,a:visited
+a,
+a:active,
+a:visited
   color: inherit
-  transition: opacity .2s
-  cursor: pointer
-  &:hover
-    opacity: .5
-
-a,a:active,a:visited > h1
-  &:hover
-    opacity: 1
-    color: $color-red
+  text-decoration: none
 
 
 // BASIC
@@ -141,287 +134,24 @@ a,a:active,a:visited > h1
 html
   background-color: $color-white-soft
   color: $color-black-soft
-  min-height: 100%
 
 img
   max-width: 100%
   height: auto
 
-.row
-  margin-bottom: $margin-basic
-
-
-// LANG
-
-.lang-en
-  display: none
-
-
-// SPLASH
-
-#splash
-  position: fixed
-  width: 100%
-  height: 100%
-  top: 0
-  left: 0
-  background-color: $color-red
-  color: $color-white-soft
-  overflow: hidden
-  z-index: 800
-  font-family: $font-sans
-  font-size: 1em
-  cursor: pointer
-
-#splash-container
-  position: absolute
-  width: 100%
-  height: 100%
-
-.splash-text
-  padding: 5%
-  font-size: 6em
-  line-height: 1
-
-.splash-text-inner
-  max-width: 1365px
-  margin: 0 auto
-
-#scroll-buffer
-  position: absolute
-  width: 100%
-  height: 100%
-  top: 0
-  left: 0
-  z-index: 1000
-  pointer-events: none
-
-
-// NAV
-
-nav
-  font-family: $font-sans
-  -webkit-font-smoothing: antialiased
-  line-height: 1.3em
-
-#main-container nav
-  position: fixed
-  color: $color-red
-
-#splash-container nav
-  position: absolute
-
-.nav-top
-  top: $margin-basic
-  left: 0
-  width: 100%
-  text-align: center
-  font-size: 2em
-  font-weight: bold
-  z-index: 888
-
-.nav-top-right
-  top: $margin-basic
-  right: $margin-basic
-  font-size: 1.3em
-  z-index: 999
-
-.lang
-  padding: $margin-tiny
-
-.nav-bottom
-  bottom: $margin-basic
-  left: 0
-  width: 100%
-  text-align: center
-  font-size: 2em
-  font-weight: bold
-  // this is to compensate for 1.3em line height to make safari show accents :/
-  margin-bottom: -.3em
-  z-index: 888
-
-
-// TOP CONTENT
-
-#barragan-fetichista
-  height: 100vh
-
-.match-height
-  position: relative
-
-.align-bottom
-  position: absolute
-  bottom: 0
-  width: 100%
-
-
-// CONTENT
-
-#main-container
-  width: 100%
-  position: fixed // keeps it in place during splash scroll
-  z-index: 600 // under splash and nav
-
-#barragan-fetichista-texto, #casa-luis-barragan, #estancia-femsa
-  padding-top: $margin-large
-
-#estancia-femsa
-  padding-bottom: $margin-larger
-
-
-// OFFSET IMAGE
-
-#offset-image-holder
-  position: relative
-  height: 40vh
-
-#offset-image
-  position: absolute
-  top: 20%
-  left: 50%
-  z-index: -9
-
 
 // MEDIA QUERIES
 
-@media screen and (max-width: 1048px)
+@media screen and (max-width: ($col * $cols)+($gutter * $cols))
 
-  $col = 45px
-  $gutter = 14px
-  .container
-    margin: 0 auto
-    width: ($col * $cols)+($gutter * $cols)
-  .col
-    margin-left: ($gutter/2)
-    margin-right: ($gutter/2)
+  html
+    width: 100%
 
-  for col in 1..$cols
-    .col-{col}
-      width: ( col * $col ) + ( ( col - 1 ) * $gutter )
+@media screen and (max-width: 601px)
 
-  $margin-small = ($gutter)
-  $margin-tiny = ($gutter/2)
-  $margin-basic = ($gutter*2)
-  $margin-large = ($gutter*5)
-  $margin-larger = ($gutter*7.5)
-
-  .row
-    margin-bottom: $margin-basic
-
-  // NAV
-
-  .nav-top
-    top: $margin-basic
-
-  .nav-top-right
-    top: $margin-basic
-    right: $margin-basic
-
-  .lang
-    padding: $margin-tiny
-
-  .nav-bottom
-    bottom: $margin-basic
-
-  // CONTENT
-
-  .splash-text
-    font-size: 3.5em
-
-
-// Small grid break for mobile
-
-@media screen and (max-width: 760px)
-
-  .container
-    width: 90%
-
+   .container
+    width: 96%
   .col
     width: 100%
-    margin-left: 0
-    margin-right: 0
-
-  .row, .mobile-bottom-padding
-    margin-bottom: $margin-basic
-
-
-  // TYPOGRAPHY
-
-  $font-size-basic = 15px
-
-  body
-    font-size: $font-size-basic
-    line-height: $font-leading-basic
-
-  h1, h2, h3, h4, h5, h6
-    font-family: $font-sans
-    line-height: $font-leading-tight
-
-  h1
-    font-size: 5em
-    margin: .3em 0
-
-  h2
-    font-size: 2em
-
-  h3
-    font-size: 1.2em
-
-  h4
-    font-size: 1em
-
-  p
-    margin-bottom: 1em
-
-  .font-small
-    font-size: 0.8em
-    line-height: $font-leading-basic
-
-  .splash-text
-    font-size: 2.5em
-
-  .mobile-align-center
-    text-align: center
-
-  // NAV
-
-  .nav-top
-    top: $margin-small
-
-  .nav-top-right
-    top: $margin-small
-    right: $margin-small
-
-  .nav-bottom
-    bottom: $margin-small
-
-  .lang
-    padding: 0 0 $margin-tiny 0
-    display: block
-
-
-  // SECTION
-
-  #barragan-fetichista
-    height: auto
-    .u-holder
-      padding $margin-basic 0
-
-
-  // OFFSET IMAGE
-
-  #offset-image-holder
-    position: relative
-    height: auto
-
-  #offset-image
-    position: static
-    z-index: 1
-    max-width: 85%
-    margin: 0 auto $margin-basic auto
-    display: block
-
-  // MISC
-
-  #femsa-collection-logo
-    margin-bottom: $margin-basic
+    float: none
+    margin-left: ($gutter/2)
