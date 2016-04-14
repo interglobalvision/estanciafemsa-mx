@@ -59,18 +59,18 @@ function igv_cmb_metaboxes() {
 		'type' => 'text_date_timestamp',
 	) );
 
-	$program_meta->add_field( array(
-		'name'    => __( 'Event key color', 'cmb2' ),
-		'desc'    => __( '...', 'cmb2' ),
-		'id'      => $prefix . 'color',
-		'type'    => 'colorpicker',
-		'default' => '#ffffff',
-		// 'attributes' => array(
-		// 	'data-colorpicker' => json_encode( array(
-		// 		'palettes' => array( '#3dd0cc', '#ff834c', '#4fa2c0', '#0bc991', ),
-		// 	) ),
-		// ),
-	) );
+  $program_meta->add_field( array(
+    'name'    => __( 'Event key color', 'cmb2' ),
+    'desc'    => __( '...', 'cmb2' ),
+    'id'      => $prefix . 'color',
+    'type'    => 'colorpicker',
+    'default' => '#ffffff',
+    // 'attributes' => array(
+    // 	'data-colorpicker' => json_encode( array(
+    // 		'palettes' => array( '#3dd0cc', '#ff834c', '#4fa2c0', '#0bc991', ),
+    // 	) ),
+    // ),
+  ) );
 
   $program_meta->add_field( array(
 		'name'       => __( 'Event Number', 'cmb2' ),
