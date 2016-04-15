@@ -46,22 +46,19 @@ function igv_cmb_metaboxes() {
   ) );
 
   $program_meta->add_field( array(
-		'name' => __( 'Start Date', 'cmb2' ),
-		'desc' => __( 'Fecha de inicio', 'cmb2' ),
+		'name' => __( 'Fecha de inicio', 'cmb2' ),
 		'id'   => $prefix . 'start_time',
 		'type' => 'text_date_timestamp',
 	) );
 
   $program_meta->add_field( array(
-		'name' => __( 'End Date', 'cmb2' ),
-		'desc' => __( 'Fecha de fin', 'cmb2' ),
+		'name' => __( 'Fecha de fin', 'cmb2' ),
 		'id'   => $prefix . 'end_time',
 		'type' => 'text_date_timestamp',
 	) );
 
   $program_meta->add_field( array(
-    'name'    => __( 'Event key color', 'cmb2' ),
-    'desc'    => __( 'Color de evento', 'cmb2' ),
+    'name'    => __( 'Color del evento', 'cmb2' ),
     'id'      => $prefix . 'color',
     'type'    => 'colorpicker',
     'default' => '#ffffff',
@@ -73,22 +70,19 @@ function igv_cmb_metaboxes() {
   ) );
 
   $program_meta->add_field( array(
-		'name'       => __( 'Event Number', 'cmb2' ),
-		'desc'       => __( 'Número de evento', 'cmb2' ),
+		'name'       => __( 'Número de evento', 'cmb2' ),
 		'id'         => $prefix . 'number',
 		'type'       => 'text',
 	) );
 
   $program_meta->add_field( array(
-		'name'       => __( 'Sub-Title', 'cmb2' ),
-		'desc'       => __( 'Sub-titulo', 'cmb2' ),
+		'name'       => __( 'Sub-titulo', 'cmb2' ),
 		'id'         => $prefix . 'subtitle',
 		'type'       => 'text',
 	) );
 
   $program_meta->add_field( array(
-		'name'    => __( 'Credits', 'cmb2' ),
-		'desc'    => __( '...', 'cmb2' ),
+		'name'    => __( 'Creditos', 'cmb2' ),
 		'id'      => $prefix . 'credits',
 		'type'    => 'wysiwyg',
 		'options' => array( 'textarea_rows' => 14, ),
