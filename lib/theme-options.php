@@ -258,53 +258,15 @@ Miguel Hidalgo,
 CP 11840, Ciudad de México, D.F.',
 		) );
 
-		// DIRECTORY
-
-		$options_metabox = new_cmb2_box( array(
-			'id'      => $this->metabox_id,
-			'hookup'  => false,
-			'show_on' => array(
-				// These are important, don't remove
-				'key'   => 'options-page',
-				'value' => array( $this->key, )
-			),
-		) );
-
 		$options_metabox->add_field( array(
-			'name' => __( 'Directorio', 'cmb2' ),
-			'desc' => __( '', 'cmb2' ),
-			'id'   => $this->prefix . 'directory_title',
-			'type' => 'title',
-		) );
-
-		$directory_group_field_id = $options_metabox->add_field( array(
-			'id'          => $this->prefix . 'directory',
-			'type'        => 'group',
-			'description' => __( 'Entradas del directorio', 'cmb2' ),
-			'options'     => array(
-				'group_title'   => __( 'Entrada {#}', 'cmb2' ), // {#} gets replaced by row number
-				'add_button'    => __( 'Añadir Entrada', 'cmb2' ),
-				'remove_button' => __( 'Quitar Entrada', 'cmb2' ),
-				'sortable'      => true, // beta
+			'name' => __( 'Directorio', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'about_directory',
+			'type' => 'wysiwyg',
+			'options' => array( 
+				'textarea_rows' => 12, 
+				'media_buttons' => false,
 			),
-		) );
-
-		$options_metabox->add_group_field( $directory_group_field_id, array(
-			'name'       => __( 'Nombre', 'cmb2' ),
-			'id'         => 'name',
-			'type'       => 'text',
-		) );
-
-		$options_metabox->add_group_field( $directory_group_field_id, array(
-			'name'       => __( 'Puesto', 'cmb2' ),
-			'id'         => 'title',
-			'type'       => 'text',
-		) );
-
-		$options_metabox->add_group_field( $directory_group_field_id, array(
-			'name'       => __( 'E-mail', 'cmb2' ),
-			'id'         => 'email',
-			'type'       => 'text',
 		) );
 
 
