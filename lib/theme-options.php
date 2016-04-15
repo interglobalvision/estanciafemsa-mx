@@ -147,6 +147,39 @@ Ampliación Daniel Garza
 			'default' => 'info@estanciafemsa.mx',
 		) );
 
+		// SOCIAL
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Redes Sociales', 'cmb2' ),
+			'desc' => __( '', 'cmb2' ),
+			'id'   => $this->prefix . 'social_title',
+			'type' => 'title',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Facebook', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'social_facebook',
+			'type' => 'text',
+			'default' => 'https://www.facebook.com/EstanciaFEMSA/',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Twitter', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'social_twitter',
+			'type' => 'text',
+			'default' => 'https://twitter.com/estanciafemsa',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Instagram', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'social_instagram',
+			'type' => 'text',
+			'default' => 'https://www.instagram.com/estanciafemsa/',
+		) );
+
 		// VISITS
 
 		$options_metabox->add_field( array(
