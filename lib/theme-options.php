@@ -91,7 +91,7 @@ class IGV_Admin {
 	 */
 	function add_options_page_metabox() {
 
-		$cmb = new_cmb2_box( array(
+		$options_metabox = new_cmb2_box( array(
 			'id'      => $this->metabox_id,
 			'hookup'  => false,
 			'show_on' => array(
@@ -103,21 +103,172 @@ class IGV_Admin {
 
 		// Set our CMB2 fields
 
-		$cmb->add_field( array(
-			'name' => __( 'Test Text', 'IGV' ),
-			'desc' => __( 'field description (optional)', 'IGV' ),
-			'id'   => $this->prefix . 'test_text',
-			'type' => 'text',
-			'default' => 'Default Text',
+		// FOOTER
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Footer', 'cmb2' ),
+			'desc' => __( '', 'cmb2' ),
+			'id'   => $this->prefix . 'footer_title',
+			'type' => 'title',
 		) );
 
-		$cmb->add_field( array(
-			'name'    => __( 'Test Color Picker', 'IGV' ),
-			'desc'    => __( 'field description (optional)', 'IGV' ),
-			'id'      => $this->prefix . 'test_colorpicker',
-			'type'    => 'colorpicker',
-			'default' => '#bada55',
+		$options_metabox->add_field( array(
+			'name' => __( 'Descripcíon basico', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'footer_text',
+			'type' => 'text',
+			'default' => 'Estancia Femsa es una plataforma cultural y artística auspiciada por Casa Luis Barragán con el apoyo de Colección FEMSA.',
 		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Dirección', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'footer_address',
+			'type' => 'textarea_small',
+			'default' => 'Oficina Estancia FEMSA
+General Francisco Ramírez 17 
+Ampliación Daniel Garza 
+11840, Ciudad de México',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Numero telephono', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'footer_phone',
+			'type' => 'text',
+			'default' => '+52 (55) 2614 8427',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Email', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'footer_email',
+			'type' => 'text',
+			'default' => 'info@estanciafemsa.mx',
+		) );
+
+		// SOCIAL
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Redes Sociales', 'cmb2' ),
+			'desc' => __( '', 'cmb2' ),
+			'id'   => $this->prefix . 'social_title',
+			'type' => 'title',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Facebook', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'social_facebook',
+			'type' => 'text',
+			'default' => 'https://www.facebook.com/EstanciaFEMSA/',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Twitter', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'social_twitter',
+			'type' => 'text',
+			'default' => 'https://twitter.com/estanciafemsa',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Instagram', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'social_instagram',
+			'type' => 'text',
+			'default' => 'https://www.instagram.com/estanciafemsa/',
+		) );
+
+		// VISITS
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Citas', 'cmb2' ),
+			'desc' => __( '', 'cmb2' ),
+			'id'   => $this->prefix . 'visits_title',
+			'type' => 'title',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Previa Cita', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'visits_text',
+			'type' => 'textarea_small',
+			'default' => 'Para visitar Estancia FEMSA es necesario agendar una cita a través de:
+
++52 (55) 5515 4908 
++52 (55) 5272 4945 
+o por internet.',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Instrucciones', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'visits_guide',
+			'type' => 'textarea_small',
+			'default' => 'Se solicita llegar 15 minutos antes del horario asignado ya que no habrá tolerancia.',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Costo general', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'visits_cost_general',
+			'type' => 'text',
+			'default' => '200',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Costo especial', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'visits_cost_special',
+			'type' => 'text',
+			'default' => '100',
+		) );
+
+
+		// ABOUT
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Sobre Nosotros', 'cmb2' ),
+			'desc' => __( '', 'cmb2' ),
+			'id'   => $this->prefix . 'about_title',
+			'type' => 'title',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Sobre Estancia Femsa', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'about_text',
+			'type' => 'wysiwyg',
+			'options' => array( 
+				'textarea_rows' => 5, 
+				'media_buttons' => false,
+			),
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Contacto', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'about_contact',
+			'type' => 'textarea_small',
+			'default' => 'Oficinas Estancia FEMSA: 
+Pendiente
+General Francisco Ramírez 12-14
+Miguel Hidalgo,
+CP 11840, Ciudad de México, D.F.',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Directorio', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'about_directory',
+			'type' => 'wysiwyg',
+			'options' => array( 
+				'textarea_rows' => 12, 
+				'media_buttons' => false,
+			),
+		) );
+
 
 	}
 
