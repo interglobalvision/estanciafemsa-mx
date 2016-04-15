@@ -91,7 +91,7 @@ class IGV_Admin {
 	 */
 	function add_options_page_metabox() {
 
-		$footer = new_cmb2_box( array(
+		$options_metabox = new_cmb2_box( array(
 			'id'      => $this->metabox_id,
 			'hookup'  => false,
 			'show_on' => array(
@@ -103,14 +103,16 @@ class IGV_Admin {
 
 		// Set our CMB2 fields
 
-		$footer->add_field( array(
+		// FOOTER
+
+		$options_metabox->add_field( array(
 			'name' => __( 'Footer', 'cmb2' ),
 			'desc' => __( '', 'cmb2' ),
-			'id'   => $prefix . 'title',
+			'id'   => $this->prefix . 'footer_title',
 			'type' => 'title',
 		) );
 
-		$footer->add_field( array(
+		$options_metabox->add_field( array(
 			'name' => __( 'Descripcíon basico', 'IGV' ),
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'footer_text',
@@ -118,7 +120,7 @@ class IGV_Admin {
 			'default' => 'Estancia Femsa es una plataforma cultural y artística auspiciada por Casa Luis Barragán con el apoyo de Colección FEMSA.',
 		) );
 
-		$footer->add_field( array(
+		$options_metabox->add_field( array(
 			'name' => __( 'Dirección', 'IGV' ),
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'footer_address',
@@ -129,7 +131,7 @@ Ampliación Daniel Garza
 11840, Ciudad de México',
 		) );
 
-		$footer->add_field( array(
+		$options_metabox->add_field( array(
 			'name' => __( 'Numero telephono', 'IGV' ),
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'footer_phone',
@@ -137,12 +139,139 @@ Ampliación Daniel Garza
 			'default' => '+52 (55) 2614 8427',
 		) );
 
-		$footer->add_field( array(
+		$options_metabox->add_field( array(
 			'name' => __( 'Email', 'IGV' ),
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'footer_email',
 			'type' => 'text',
 			'default' => 'info@estanciafemsa.mx',
+		) );
+
+		// VISITS
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Citas', 'cmb2' ),
+			'desc' => __( '', 'cmb2' ),
+			'id'   => $this->prefix . 'visits_title',
+			'type' => 'title',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Previa Cita', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'visits_text',
+			'type' => 'textarea_small',
+			'default' => 'Para visitar Estancia FEMSA es necesario agendar una cita a través de:
+
++52 (55) 5515 4908 
++52 (55) 5272 4945 
+o por internet.',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Instrucciones', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'visits_guide',
+			'type' => 'textarea_small',
+			'default' => 'Se solicita llegar 15 minutos antes del horario asignado ya que no habrá tolerancia.',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Costo general', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'visits_cost_general',
+			'type' => 'text',
+			'default' => '200',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Costo especial', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'visits_cost_special',
+			'type' => 'text',
+			'default' => '100',
+		) );
+
+
+		// ABOUT
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Sobre Nosotros', 'cmb2' ),
+			'desc' => __( '', 'cmb2' ),
+			'id'   => $this->prefix . 'about_title',
+			'type' => 'title',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Sobre Estancia Femsa', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'about_text',
+			'type' => 'wysiwyg',
+			'options' => array( 
+				'textarea_rows' => 5, 
+				'media_buttons' => false,
+			),
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Contacto', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'about_contact',
+			'type' => 'textarea_small',
+			'default' => 'Oficinas Estancia FEMSA: 
+Pendiente
+General Francisco Ramírez 12-14
+Miguel Hidalgo,
+CP 11840, Ciudad de México, D.F.',
+		) );
+
+		// DIRECTORY
+
+		$options_metabox = new_cmb2_box( array(
+			'id'      => $this->metabox_id,
+			'hookup'  => false,
+			'show_on' => array(
+				// These are important, don't remove
+				'key'   => 'options-page',
+				'value' => array( $this->key, )
+			),
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Directorio', 'cmb2' ),
+			'desc' => __( '', 'cmb2' ),
+			'id'   => $this->prefix . 'directory_title',
+			'type' => 'title',
+		) );
+
+		$directory_group_field_id = $options_metabox->add_field( array(
+			'id'          => $this->prefix . 'directory',
+			'type'        => 'group',
+			'description' => __( 'Entradas del directorio', 'cmb2' ),
+			'options'     => array(
+				'group_title'   => __( 'Entrada {#}', 'cmb2' ), // {#} gets replaced by row number
+				'add_button'    => __( 'Añadir Entrada', 'cmb2' ),
+				'remove_button' => __( 'Quitar Entrada', 'cmb2' ),
+				'sortable'      => true, // beta
+			),
+		) );
+
+		$options_metabox->add_group_field( $directory_group_field_id, array(
+			'name'       => __( 'Nombre', 'cmb2' ),
+			'id'         => 'name',
+			'type'       => 'text',
+		) );
+
+		$options_metabox->add_group_field( $directory_group_field_id, array(
+			'name'       => __( 'Puesto', 'cmb2' ),
+			'id'         => 'title',
+			'type'       => 'text',
+		) );
+
+		$options_metabox->add_group_field( $directory_group_field_id, array(
+			'name'       => __( 'E-mail', 'cmb2' ),
+			'id'         => 'email',
+			'type'       => 'text',
 		) );
 
 
