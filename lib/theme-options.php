@@ -91,7 +91,7 @@ class IGV_Admin {
 	 */
 	function add_options_page_metabox() {
 
-		$cmb = new_cmb2_box( array(
+		$footer = new_cmb2_box( array(
 			'id'      => $this->metabox_id,
 			'hookup'  => false,
 			'show_on' => array(
@@ -103,21 +103,48 @@ class IGV_Admin {
 
 		// Set our CMB2 fields
 
-		$cmb->add_field( array(
-			'name' => __( 'Test Text', 'IGV' ),
-			'desc' => __( 'field description (optional)', 'IGV' ),
-			'id'   => $this->prefix . 'test_text',
-			'type' => 'text',
-			'default' => 'Default Text',
+		$footer->add_field( array(
+			'name' => __( 'Footer', 'cmb2' ),
+			'desc' => __( '', 'cmb2' ),
+			'id'   => $prefix . 'title',
+			'type' => 'title',
 		) );
 
-		$cmb->add_field( array(
-			'name'    => __( 'Test Color Picker', 'IGV' ),
-			'desc'    => __( 'field description (optional)', 'IGV' ),
-			'id'      => $this->prefix . 'test_colorpicker',
-			'type'    => 'colorpicker',
-			'default' => '#bada55',
+		$footer->add_field( array(
+			'name' => __( 'Descripcíon basico', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'footer_text',
+			'type' => 'text',
+			'default' => 'Estancia Femsa es una plataforma cultural y artística auspiciada por Casa Luis Barragán con el apoyo de Colección FEMSA.',
 		) );
+
+		$footer->add_field( array(
+			'name' => __( 'Dirección', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'footer_address',
+			'type' => 'textarea_small',
+			'default' => 'Oficina Estancia FEMSA
+General Francisco Ramírez 17 
+Ampliación Daniel Garza 
+11840, Ciudad de México',
+		) );
+
+		$footer->add_field( array(
+			'name' => __( 'Numero telephono', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'footer_phone',
+			'type' => 'text',
+			'default' => '+52 (55) 2614 8427',
+		) );
+
+		$footer->add_field( array(
+			'name' => __( 'Email', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'footer_email',
+			'type' => 'text',
+			'default' => 'info@estanciafemsa.mx',
+		) );
+
 
 	}
 
