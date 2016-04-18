@@ -121,13 +121,21 @@ class IGV_Admin {
 		) );
 
 		$options_metabox->add_field( array(
+			'name' => __( 'Descripcíon basico [EN]', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'footer_text_en',
+			'type' => 'text',
+			'default' => 'Estancia Femsa is a platform.',
+		) );
+
+		$options_metabox->add_field( array(
 			'name' => __( 'Dirección', 'IGV' ),
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'footer_address',
 			'type' => 'textarea_small',
 			'default' => 'Oficina Estancia FEMSA
-General Francisco Ramírez 17 
-Ampliación Daniel Garza 
+General Francisco Ramírez 17
+Ampliación Daniel Garza
 11840, Ciudad de México',
 		) );
 
@@ -145,6 +153,13 @@ Ampliación Daniel Garza
 			'id'   => $this->prefix . 'footer_email',
 			'type' => 'text',
 			'default' => 'info@estanciafemsa.mx',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Logos', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'footer_logos',
+			'type' => 'wysiwyg',
 		) );
 
 		// SOCIAL
@@ -196,8 +211,8 @@ Ampliación Daniel Garza
 			'type' => 'textarea_small',
 			'default' => 'Para visitar Estancia FEMSA es necesario agendar una cita a través de:
 
-+52 (55) 5515 4908 
-+52 (55) 5272 4945 
++52 (55) 5515 4908
++52 (55) 5272 4945
 o por internet.',
 		) );
 
@@ -240,8 +255,8 @@ o por internet.',
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'about_text',
 			'type' => 'wysiwyg',
-			'options' => array( 
-				'textarea_rows' => 5, 
+			'options' => array(
+				'textarea_rows' => 5,
 				'media_buttons' => false,
 			),
 		) );
@@ -251,7 +266,7 @@ o por internet.',
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'about_contact',
 			'type' => 'textarea_small',
-			'default' => 'Oficinas Estancia FEMSA: 
+			'default' => 'Oficinas Estancia FEMSA:
 Pendiente
 General Francisco Ramírez 12-14
 Miguel Hidalgo,
@@ -263,8 +278,8 @@ CP 11840, Ciudad de México, D.F.',
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'about_directory',
 			'type' => 'wysiwyg',
-			'options' => array( 
-				'textarea_rows' => 12, 
+			'options' => array(
+				'textarea_rows' => 12,
 				'media_buttons' => false,
 			),
 		) );
