@@ -727,7 +727,7 @@ p {
   margin-bottom: 1em;
 }
 .font-red {
-  color: #ef5249;
+  color: #4b254d;
 }
 .font-sans {
   font-family: 'Calibre', helvetica, arial, sans-serif;
@@ -758,7 +758,7 @@ a:visited > h1:hover {
   -webkit-filter: none;
           filter: none;
   opacity: 1;
-  color: #ef5249;
+  color: #4b254d;
 }
 html {
   background-color: #fdfdfd;
@@ -781,7 +781,7 @@ img {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #ef5249;
+  background-color: #4b254d;
   color: #fdfdfd;
   overflow: hidden;
   z-index: 800;
@@ -819,7 +819,7 @@ nav {
 }
 #main-container nav {
   position: fixed;
-  color: #ef5249;
+  color: #4b254d;
 }
 #splash-container nav {
   position: absolute;
