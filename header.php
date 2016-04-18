@@ -54,6 +54,17 @@
   <section id="main-container">
 
   <!-- start content -->
-  <header id="header">
-    <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+  <header id="header" class="container">
+    <div class="row">
+      <div class="col col-12 text-align-center font-sans">
+      <h1 class="font-bold font-uppercase"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+      <ul id="menu" class="u-inline-list">
+        <li><a href="<?php echo home_url('/sobre-nosotros'); ?>"><?php echo __('[:es]Sobre Nosotros[:en]About Us'); ?></a></li>
+        <li><a href="<?php echo home_url('/programacion'); ?>"><?php echo __('[:es]Programación[:en]Program'); ?></a></li>
+        <li><a href="<?php echo home_url('/noticias'); ?>"><?php echo __('[:es]Noticias[:en]News'); ?></a></li>
+        <li><a href="<?php echo home_url('/prensa'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a></li>
+        <li><a href="<?php echo home_url('/citas'); ?>"><?php echo __('[:es]Citas[:en]Appointments'); ?></a></li>
+      </ul>
+      </div>
+    </div>
   </header>

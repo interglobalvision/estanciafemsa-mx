@@ -609,6 +609,9 @@ p {
 .font-capitalize {
   text-transform: capitalize;
 }
+.font-uppercase {
+  text-transform: uppercase;
+}
 .font-sans {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
 }
