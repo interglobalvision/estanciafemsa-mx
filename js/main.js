@@ -34,7 +34,7 @@ jQuery(document).ready(function () {
     winHeight = $(window).height();
     winWidth = $(window).width();
 
-    $('html, body').css({
+    $('#scroll-buffer').css({
       'min-height': winHeight * 2,
     });
 
@@ -45,17 +45,6 @@ jQuery(document).ready(function () {
 
     matchHeights('.match-height');
 
-  }
-
-  // SCROLLTO EVENTS
-  function bindScrollEvent() {
-    $('.scroll').on('click', function() {
-      var target = $(this).attr('data-scroll');
-
-      $('html,body').animate({
-        scrollTop: $(target).offset().top - ( scrollOffset ),
-      }, 1000);
-    });
   }
 
   // SPLASH SCROLL
