@@ -51,7 +51,40 @@
 <body <?php body_class(); ?>>
 <!--[if lt IE 9]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
 
-  <section id="main-container">
+<?php if ( is_front_page() ) { ?>
+<div id="scroll-buffer"></div>
+
+<div id="splash">
+  <div id="splash-container">
+    <div class="splash-header text-align-center ">
+      ESTANCIA FEMSA
+    </div>
+
+    <div class="splash-footer text-align-center">
+      CASA LUIS BARRAGÁN
+    </div>
+
+    <div class="u-holder">
+      <div class="u-held text-align-center splash-text">
+        <?php echo 
+        '[:es]es una plataforma cultural y<br>
+        artística auspiciada por<br>
+        Casa Luis Barragán<br>
+        con el apoyo de<br> 
+        Colección FEMSA.
+        [:en]es una plataforma cultural y<br>
+        artística auspiciada por<br>
+        Casa Luis Barragán<br>
+        con el apoyo de<br>
+        Colección FEMSA.'
+        ?>
+      </div>
+    </div>
+  </div>
+</div>
+<?php } ?>
+
+  <section id="main-container" <?php if ( is_front_page() ) { ?> class="u-fixed" <?php } ?> >
 
   <!-- start content -->
   <header id="header" class="container">
@@ -68,3 +101,4 @@
       </div>
     </div>
   </header>
+  <div id="tagline">CASA LUIS BARRAGÁN</div>
