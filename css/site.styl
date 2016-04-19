@@ -1,5 +1,6 @@
 @import "kouto-swiss"
 
+@import "swiper"
 @import "helpers"
 @import "fonts"
 
@@ -257,6 +258,7 @@ img
 // ******************************************************
 
 // SPLASH
+
 #splash
   position: fixed
   width: 100%
@@ -290,7 +292,21 @@ img
   z-index: 1000
   pointer-events: none
 
+// ******************************************************
 
+// SWIPER
+
+.swiper-controls
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: space-between
+  align-items: center
+
+.swiper-navigation
+  display: flex
+  width: 55px
+  justify-content: space-between
 
 // ******************************************************
 
