@@ -36,11 +36,13 @@ Site.Gallery = {
       pagination: '.swiper-pagination',
       paginationType: 'custom',
       paginationCustomRender: function (swiper, current, total) {
-        return '<span id="gallery-index-active">' + current + '</span> / <span id="gallery-index-length">' + total + '</span>';
+        return '<span id="gallery-index-active">' + current + '</span>/<span id="gallery-index-length">' + total + '</span>';
       },
 
-      onClick: function(swiper) {
-        swiper.slideNext();
+      onTap: function(swiper, event) {
+        if (event.target.tagName === 'IMG') {
+          swiper.slideNext();
+        }
       },
     });
 
