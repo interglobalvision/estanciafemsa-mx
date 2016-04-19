@@ -13,11 +13,6 @@ function my_gallery_shortcode($attr) {
 		$attr['include'] = $attr['ids'];
 	}
 
-	// Allow plugins/themes to override the default gallery template.
-	$output = apply_filters('post_gallery', '', $attr);
-	if ( $output != '' )
-		return $output;
-
 	// We're trusting author input, so let's at least make sure it looks like a valid orderby statement
 	if ( isset( $attr['orderby'] ) ) {
 		$attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
@@ -32,7 +27,6 @@ function my_gallery_shortcode($attr) {
 		'itemtag'    => 'li',
 		'icontag'    => 'li',
 		'captiontag' => 'span',
-		'columns'    => 3,
 		'size'       => 'gallery',
 		'include'    => '',
 		'exclude'    => ''
@@ -58,6 +52,7 @@ function my_gallery_shortcode($attr) {
 	if ( empty($attachments) )
 		return '';
 
+  // check if this is RSS feed. lol
 	if ( is_feed() ) {
 		$output = "\n";
 		foreach ( $attachments as $att_id => $attachment )
@@ -67,26 +62,18 @@ function my_gallery_shortcode($attr) {
 
 	$itemtag = tag_escape($itemtag);
 	$captiontag = tag_escape($captiontag);
-	$icontag = tag_escape($icontag);
 	$valid_tags = wp_kses_allowed_html( 'post' );
 	if ( ! isset( $valid_tags[ $itemtag ] ) )
 		$itemtag = 'dl';
 	if ( ! isset( $valid_tags[ $captiontag ] ) )
 		$captiontag = 'dd';
-	if ( ! isset( $valid_tags[ $icontag ] ) )
-		$icontag = 'dt';
-
-	$columns = intval($columns);
-	$itemwidth = $columns > 0 ? floor(100/$columns) : 100;
-	$float = is_rtl() ? 'right' : 'left';
 
 	$selector = "gallery-{$instance}";
 
-	$gallery_div = "<div id='$selector' class='cycle-slideshow gallery galleryid-{$id}' data-cycle-fx='scrollHorz' data-cycle-timeout='0' data-cycle-swipe=true data-cycle-slides='div'>
-	<nav class='cycle-prev'></nav>
-    <nav class='cycle-next'></nav>
-    ";
-	$output = $gallery_div;
+  // Gallery container and wrapper
+  $gallery_div = "<div id='$selector' class='swiper-container gallery galleryid-{$id} u-pointer'>\n<div class='swiper-wrapper'>";
+  $output = $gallery_div;
+
 
 	$i = 0;
 	foreach ( $attachments as $id => $attachment ) {
@@ -94,38 +81,21 @@ function my_gallery_shortcode($attr) {
 		$tag = '';
 
 		$img = wp_get_attachment_image_src($id, $size);
-/*
-		$largeimg = wp_get_attachment_image_src($id, 'single');
-		$large = $largeimg[0];
-*/
 
-if ( $captiontag && trim($attachment->post_excerpt) ) {
-			$tag = "
-				<{$captiontag} class='wp-caption-text gallery-caption'>
-				" . wptexturize($attachment->post_excerpt) . "
-				</{$captiontag}>";
-		} else {
-			$tag = null;
-		}
+    $output .= "<div class='swiper-slide'><img src='{$img[0]}'>{$tag}</div>";
+  }
 
-		/*
+  $output .= "</div>\n";
 
-		$output .= "
-			<{$icontag} class='gallery-item'>
-			<div class='gallery-item-holder'>
-				<div class='gallery-img'>
-					<img src='{$img[0]}'>
-				</div>
-				{$tag}
-			</div>
-			</{$icontag}>";
-*/
+  $output .= "<div class=\"swiper-controls\">";
+  
+  $output .= "<div class=\"swiper-pagination\"></div>";
 
+  $output .= "<div class=\"swiper-navigation\"><div class=\"swiper-button-prev\"></div><div class=\"swiper-button-next\"></div></div>";
 
-		$output .= "<div><img src='{$img[0]}'>{$tag}</div>";
-		}
+  $output .= "</div>";
 
-	$output .= "</div>\n";
+  $output .= "</div>\n";
 
 	return $output;
 }
