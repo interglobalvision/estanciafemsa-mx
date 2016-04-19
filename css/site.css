@@ -1253,9 +1253,12 @@ img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-.swiper-button-prev {
-  margin-right: 32px;
+  width: 55px;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media screen and (max-width: 601px) {
   .container {
