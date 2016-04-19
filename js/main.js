@@ -25,12 +25,10 @@ Site.Gallery = {
   init: function() {
     var _this = this;
 
-    _this.Swiper = new Swiper ('.swiper-container', {
+    _this.Swiper = new Swiper('.swiper-container', {
       loop: true,
-      /*
-      nextButton: '.js-gallery-next',
-      prevButton: '.js-gallery-prev',
-      */
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
       preloadImages: false,
       lazyLoading: true,
       lazyLoadingInPrevNext: true,
