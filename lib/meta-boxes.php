@@ -61,7 +61,7 @@ function igv_cmb_metaboxes() {
     'name'    => __( 'Color del evento', 'cmb2' ),
     'id'      => $prefix . 'color',
     'type'    => 'colorpicker',
-    'default' => '#000000',
+    'default' => '#0e0e0e',
     // 'attributes' => array(
     // 	'data-colorpicker' => json_encode( array(
     // 		'palettes' => array( '#3dd0cc', '#ff834c', '#4fa2c0', '#0bc991', ),
