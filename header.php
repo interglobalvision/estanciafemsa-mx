@@ -45,6 +45,19 @@
     });
   </script>
 
+<?php
+  $key_color = get_key_color();
+?>
+  <style type="text/css">
+    .font-key-color {
+      color: <?php echo $key_color; ?>;
+    }
+
+    .background-key-color {
+      background-color:<?php echo $key_color; ?>;
+    }
+  </style>
+
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
   <?php wp_head(); ?>
 </head>
