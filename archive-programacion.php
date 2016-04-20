@@ -67,54 +67,52 @@ $date = time();
 
   </div>
 
-  <div>
-    <div class="row">
-      <div class="col col-12">
-        <h3><?php echo __('[:es]Pasadas[:en]Past'); ?></h3>
-      </div>
+  <div class="row">
+    <div class="col col-12">
+      <h3><?php echo __('[:es]Pasadas[:en]Past'); ?></h3>
     </div>
+  </div>
 
-    <div class="row">
+  <div class="row">
+  <?php
+      $args = array(
+        'post_type' => 'programacion',
+        'posts_per_page' => -1,
+        'meta_query' => array(
+          array(
+            'key'     => '_igv_end_time',
+            'value'   => $date,
+            'compare' => '<'
+          ),
+        )
+      );
+      $past = new WP_Query($args);
+      if ($past->have_posts()) {
+        $i = 0;
+        while ($past->have_posts()) {
+          $past->the_post();
+          if (($i % 2) == 0) {
+    ?>
+      <div class="col col-2"></div>
     <?php
-        $args = array(
-          'post_type' => 'programacion',
-          'posts_per_page' => -1,
-          'meta_query' => array(
-            array(
-              'key'     => '_igv_end_time',
-              'value'   => $date,
-              'compare' => '<'
-            ),
-          )
-        );
-        $past = new WP_Query($args);
-        if ($past->have_posts()) {
-          $i = 0;
-          while ($past->have_posts()) {
-            $past->the_post();
-            if (($i % 2) == 0) {
-      ?>
-        <div class="col col-2"></div>
-      <?php
-            }
-      ?>
-        <div class="col col-4">
-      <?php
-            render_programacion_index($post->ID);
-      ?>
-        </div>
-      <?php
-            if (($i % 2) == 1) {
-      ?>
-        <div class="col col-2"></div>
-      <?php
-            }
-          $i++;
           }
+    ?>
+      <div class="col col-4">
+    <?php
+          render_programacion_index($post->ID);
+    ?>
+      </div>
+    <?php
+          if (($i % 2) == 1) {
+    ?>
+      <div class="col col-2"></div>
+    <?php
+          }
+        $i++;
         }
-        wp_reset_postdata();
-      ?>
-    </div>
+      }
+      wp_reset_postdata();
+    ?>
   </div>
 
 <!-- end main-content -->
