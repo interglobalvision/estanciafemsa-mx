@@ -45,6 +45,19 @@
     });
   </script>
 
+<?php
+  $key_color = get_key_color();
+?>
+  <style type="text/css">
+    .font-key-color {
+      color: <?php echo $key_color; ?>;
+    }
+
+    .background-key-color {
+      background-color:<?php echo $key_color; ?>;
+    }
+  </style>
+
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
   <?php wp_head(); ?>
 </head>
@@ -57,7 +70,7 @@
   <header id="header" class="container">
     <div class="row">
       <div class="col col-12 text-align-center font-sans">
-      <h1 class="font-bold font-uppercase"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+      <h1 class="font-bold font-uppercase font-key-color"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
       <ul id="menu" class="u-inline-list">
         <li><a href="<?php echo home_url('/sobre-nosotros'); ?>"><?php echo __('[:es]Sobre Nosotros[:en]About Us'); ?></a></li>
         <li><a href="<?php echo home_url('/programacion'); ?>"><?php echo __('[:es]Programación[:en]Program'); ?></a></li>
