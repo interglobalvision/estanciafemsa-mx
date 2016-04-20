@@ -10,9 +10,27 @@ get_header();
   <section id="posts">
 
 <?php
-if( have_posts() ) {
-  while( have_posts() ) {
-    the_post();
+  $args = array(
+    'post_type' => 'programacion',
+    'posts_per_page' => 1,
+    'meta_query' => array(
+      'relation' => 'AND',
+      array(
+        'key'     => '_igv_start_time',
+        'value'   => $date,
+        'compare' => '<='
+      ),
+      array(
+        'key'     => '_igv_end_time',
+        'value'   => $date,
+        'compare' => '>='
+      )
+    )
+  );
+  $ahora = new WP_Query($args);
+  if ($ahora->have_posts()) {
+    while ($ahora->have_posts()) {
+      $ahora->the_post();
 ?>
 
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -24,12 +42,14 @@ if( have_posts() ) {
     </article>
 
 <?php
-  }
-} else {
+    }
+  } else {
 ?>
     <article class="u-alert"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
 <?php
-} ?>
+  }
+  wp_reset_postdata();
+?>
 
   <!-- end posts -->
   </section>
