@@ -64,13 +64,45 @@
 <body <?php body_class(); ?>>
 <!--[if lt IE 9]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
 
-  <section id="main-container">
+<?php if ( is_front_page() ) { ?>
+<div id="scroll-buffer"></div>
+
+<div id="splash">
+  <div id="splash-container">
+    <div class="text-align-center match-height">
+      ESTANCIA FEMSA
+    </div>
+
+    <div class="text-align-center match-height">
+      CASA LUIS BARRAGÁN
+    </div>
+
+    <div class="u-holder">
+      <div class="u-held text-align-center splash-text">
+        <?php echo __('[:es]es una plataforma cultural y<br>
+        artística auspiciada por<br>
+        Casa Luis Barragán<br>
+        con el apoyo de<br> 
+        Colección FEMSA.
+        [:en]es una plataforma cultural y<br>
+        artística auspiciada por<br>
+        Casa Luis Barragán<br>
+        con el apoyo de<br>
+        Colección FEMSA.');
+        ?>
+      </div>
+    </div>
+  </div>
+</div>
+<?php } ?>
+
+  <section id="main-container" <?php if ( is_front_page() ) { ?> class="u-fixed" <?php } ?> >
 
   <!-- start content -->
   <header id="header" class="container">
     <div class="row">
       <div class="col col-12 text-align-center font-sans">
-      <h1 class="font-bold font-uppercase font-key-color"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+      <h1 class="font-bold font-uppercase match-height"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
       <ul id="menu" class="u-inline-list">
         <li><a href="<?php echo home_url('/sobre-nosotros'); ?>"><?php echo __('[:es]Sobre Nosotros[:en]About Us'); ?></a></li>
         <li><a href="<?php echo home_url('/programacion'); ?>"><?php echo __('[:es]Programación[:en]Program'); ?></a></li>
