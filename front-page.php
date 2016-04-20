@@ -15,6 +15,9 @@ $date = time();
   $args = array(
     'post_type' => 'programacion',
     'posts_per_page' => 1,
+    'meta_key' => '_igv_start_time',
+    'orderby' => 'meta_value_num',
+    'order' => 'DESC',
     'meta_query' => array(
       'relation' => 'AND',
       array(
