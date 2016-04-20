@@ -1,5 +1,7 @@
 <?php
 get_header();
+
+$date = time();
 ?>
 
 <!-- main content -->
