@@ -56,6 +56,10 @@
     .background-key-color {
       background-color:<?php echo $key_color; ?>;
     }
+
+    .copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6, .copy blockquote {
+      color: <?php echo $key_color; ?>;
+    }
   </style>
 
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -82,7 +86,7 @@
         <?php echo __('[:es]es una plataforma cultural y<br>
         artística auspiciada por<br>
         Casa Luis Barragán<br>
-        con el apoyo de<br> 
+        con el apoyo de<br>
         Colección FEMSA.
         [:en]es una plataforma cultural y<br>
         artística auspiciada por<br>
