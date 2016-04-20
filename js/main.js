@@ -58,7 +58,7 @@ Site.Footer = {
 
     _this.bind();
     _this.layout();
-  },
+  }, 
 
   bind: function() {
     var _this = this;
@@ -79,15 +79,15 @@ Site.Footer = {
 
     _this.$footer.css('bottom', '-' + offset + 'px');
   },
-}
+};
 
 jQuery(document).ready(function () {
   'use strict';
 
-
   // utility class mainly for use on headines to avoid widows [single words on a new line]
   $('.js-fix-widows').each(function(){
     var string = $(this).html();
+    
     string = string.replace(/ ([^ ]*)$/,'&nbsp;$1');
     $(this).html(string);
   });
