@@ -45,6 +45,8 @@ function get_key_color() {
 
   return $key_color;
 
+}
+
 // RENDER functions
 
 function render_programacion_index($post_id) {
@@ -58,4 +60,5 @@ function render_programacion_index($post_id) {
 </div>
 
 <?php
-}
+
+} 
