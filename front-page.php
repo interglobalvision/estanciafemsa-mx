@@ -29,10 +29,11 @@ $date = time();
       )
     )
   );
-  $ahora = new WP_Query($args);
-  if ($ahora->have_posts()) {
-    while ($ahora->have_posts()) {
-      $ahora->the_post();
+  $query = new WP_Query($args);
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $post->the_post();
+      $meta = get_post_meta($post->ID);
 ?>
 
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
