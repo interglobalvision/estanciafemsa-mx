@@ -18,7 +18,7 @@ $date = time();
     'meta_query' => array(
       'relation' => 'AND',
       array(
-        'key'     => '_igv_end_time',
+        'key'     => '_igv_start_time',
         'value'   => $date,
         'compare' => '<='  //returns current or most recent past
       )
