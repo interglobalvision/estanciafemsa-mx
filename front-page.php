@@ -15,19 +15,38 @@ $date = time();
   $args = array(
     'post_type' => 'programacion',
     'posts_per_page' => 1,
-    'meta_key' => '_igv_start_time',
+    'meta_key' => '_igv_end_time',
     'orderby' => 'meta_value_num',
-    'order' => 'DESC',
+    'order' => 'ASC',
     'meta_query' => array(
       'relation' => 'AND',
       array(
-        'key'     => '_igv_start_time',
+        'key'     => '_igv_end_time',
         'value'   => $date,
-        'compare' => '<='  //returns current or most recent past
+        'compare' => '>='  //returns Current or nearest Future
       )
     )
   );
   $query = new WP_Query($args);
+
+  if (!$query->have_posts()) { // if no Current or Future, get Past
+    $args = array(
+      'post_type' => 'programacion',
+      'posts_per_page' => 1,
+      'meta_key' => '_igv_start_time',
+      'orderby' => 'meta_value_num',
+      'order' => 'DESC',
+      'meta_query' => array(
+        'relation' => 'AND',
+        array(
+          'key'     => '_igv_start_time',
+          'value'   => $date,
+          'compare' => '<'  //returns nearest Past
+        )
+      )
+    );
+    $query = new WP_Query($args);
+  }
 
   if ($query->have_posts()) {
     while ($query->have_posts()) {
