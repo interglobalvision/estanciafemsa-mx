@@ -78,6 +78,7 @@ $font-size-h2 = golden-ratio(1rem , 1.5)
 $font-size-h1 = golden-ratio(1rem , 2)
 
 $font-leading-basic = 1.35
+$font-leading-tighter = 1.15
 $font-leading-larger = 1.45
 
 $font-tracking-basic = 0.001em
@@ -109,14 +110,19 @@ body
 h1
   font-size: $font-size-h1
   font-family: $font-sans
+  line-height: $font-leading-tighter
 
 h2
   font-size: $font-size-h2
   font-family: $font-sans
+  line-height: $font-leading-tighter
 
 h3
   font-size: $font-size-h3
   font-family: $font-sans
+
+h4.font-sans
+  font-size: 1.15rem
 
 p
   margin-bottom: 1rem
@@ -305,6 +311,17 @@ img
   left: 0
   z-index: 1000
   pointer-events: none
+
+// ******************************************************
+
+// PROGRAMACION SINGLE
+
+.copy
+  h1, h2, h3, h4, h5, h6, blockquote
+    text-align: center
+    margin-top: $margin-basic
+    margin-bottom: $margin-basic
+
 
 // ******************************************************
 

@@ -1094,14 +1094,19 @@ body {
 h1 {
   font-size: 2.617924rem;
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
+  line-height: 1.15;
 }
 h2 {
   font-size: 2.058106176075472rem;
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
+  line-height: 1.15;
 }
 h3 {
   font-size: 1.618rem;
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
+}
+h4.font-sans {
+  font-size: 1.15rem;
 }
 p {
   margin-bottom: 1rem;
@@ -1266,6 +1271,17 @@ img {
   left: 0;
   z-index: 1000;
   pointer-events: none;
+}
+.copy h1,
+.copy h2,
+.copy h3,
+.copy h4,
+.copy h5,
+.copy h6,
+.copy blockquote {
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 .index-programacion-post {
   height: 300px;

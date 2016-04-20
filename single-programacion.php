@@ -17,17 +17,16 @@ if( have_posts() ) {
 
     <article <?php post_class('row'); ?> id="post-<?php the_ID(); ?>">
 
-      <div class="col col-8">
-
+      <div class="col col-1"></div>
+      <div class="col col-7 copy">
         <?php the_content(); ?>
-
       </div>
       <div class="col col-1"></div>
-      <div class="col col-3">
-        <header id="single-programacion-header" class="text-align-center font-key-color margin-bottom-large">
-          <h3><?php if (!empty($meta['_igv_number'][0])) { echo $meta['_igv_number'][0];} ?></h3>
-          <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-          <h3><?php if (!empty($meta['_igv_subtitle'][0])) { echo $meta['_igv_subtitle'][0];} ?></h3>
+      <div class="col col-2">
+        <header id="single-programacion-header" class="text-align-center font-key-color margin-bottom-mid">
+          <h4 class="font-sans"><?php if (!empty($meta['_igv_number'][0])) {echo 'No. ' . $meta['_igv_number'][0];} ?></h4>
+          <h2 class="margin-top-tiny margin-bottom-tiny"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+          <h4 class="font-sans"><?php if (!empty($meta['_igv_subtitle'][0])) { echo $meta['_igv_subtitle'][0];} ?></h4>
         </header>
 
         <?php if (!empty($meta['_igv_credits'][0])) { echo wpautop($meta['_igv_credits'][0]);} ?>
