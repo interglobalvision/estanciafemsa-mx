@@ -4,6 +4,8 @@
 
 function get_key_color() {
 
+  $key_color = 'red';
+
   // if on single programacion post get the current post ID
   global $post;
   if (is_single() && is_single_type('programacion', $post)) {
@@ -15,7 +17,7 @@ function get_key_color() {
     // get post ID from latest programacion. if none fallback
     $latest_programacion = get_posts(array(
       'post_type' => 'programacion',
-      'posts_per_page' => -1,
+      'posts_per_page' => 1,
     ));
 
     if (!empty($latest_programacion[0])) {
@@ -37,13 +39,7 @@ function get_key_color() {
 
     if (!empty($meta[0])) {
       $key_color = $meta[0];
-    } else {
-      $key_color = 'red';
     }
-
-  } else {
-
-    $key_color = 'red';
 
   }
 
