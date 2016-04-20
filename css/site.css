@@ -1085,9 +1085,11 @@ th {
 }
 html {
   font-family: 'Tiempos', Times, Baskerville, Georgia, serif;
-  font-size: 15px;
-  line-height: 1.35em;
+  font-size: 16px;
   letter-spacing: 0.001em;
+}
+body {
+  line-height: 1.35;
 }
 h1 {
   font-size: 2.617924rem;
@@ -1110,6 +1112,12 @@ p {
 .font-bold {
   font-weight: bold;
 }
+.font-larger {
+  font-size: 1.3em;
+}
+.font-smaller {
+  font-size: 0.8em;
+}
 .font-small-caps {
   font-size: 0.85em;
   text-transform: uppercase;
@@ -1122,6 +1130,9 @@ p {
 }
 .font-sans {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
+}
+.font-color-white {
+  color: #fdfdfd;
 }
 .text-overflow-ellipsis {
   white-space: nowrap;
@@ -1291,6 +1302,48 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+#close-footer {
+  display: none;
+}
+#footer {
+  position: fixed;
+  width: 100%;
+  bottom: -50vh;
+  -webkit-transition: bottom 500ms;
+  transition: bottom 500ms;
+}
+#footer.active {
+  bottom: 0 !important;
+}
+#footer.active #close-footer {
+  display: block;
+}
+#footer.active #open-footer {
+  display: none;
+}
+#footer svg {
+  fill: #fdfdfd;
+  height: 2rem;
+}
+#footer-subscribe-input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 1px #fdfdfd;
+  outline: 0;
+}
+#footer-social-links li {
+  padding: 0 8px;
+}
+#footer-text {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#footer-contact-text {
+  max-width: 180px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (max-width: 601px) {
   .container {
