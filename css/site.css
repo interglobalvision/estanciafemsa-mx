@@ -1267,6 +1267,16 @@ img {
   z-index: 1000;
   pointer-events: none;
 }
+.index-programacion-post {
+  height: 300px;
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 4.235801032000001rem;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: screen;
+}
 .swiper-controls {
   display: -webkit-box;
   display: -webkit-flex;
