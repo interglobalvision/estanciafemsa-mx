@@ -32,7 +32,8 @@ $date = time();
   $query = new WP_Query($args);
   if ($query->have_posts()) {
     while ($query->have_posts()) {
-      $post->the_post();
+      $query->the_post();
+      
       $meta = get_post_meta($post->ID);
 ?>
 
