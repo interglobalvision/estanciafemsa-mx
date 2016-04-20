@@ -18,7 +18,7 @@ $date = time();
     'meta_query' => array(
       'relation' => 'AND',
       array(
-        'key'     => '_igv_start_time',
+        'key'     => '_igv_end_time',
         'value'   => $date,
         'compare' => '<='  //returns current or most recent past
       )
@@ -40,7 +40,7 @@ $date = time();
           ?>
         <div>
           <div><?php echo __('[:es]Desde[:en]From'); ?></div>
-          <div><?php echo date( 'M', $start_time ) . '. ' . date( 'd', $start_time ); ?></div>
+          <div><?php echo date( 'M. d', $start_time ); ?></div>
           <div><?php echo date( 'Y', $start_time ); ?></div>
         </div>
         <?php } ?>
@@ -56,7 +56,7 @@ $date = time();
           ?>
         <div>
           <div><?php echo __('[:es]Hasta[:en]Until'); ?></div>
-          <div><?php echo date( 'M', $end_time ) . '. ' . date( 'd', $end_time ); ?></div>
+          <div><?php echo date( 'M. d', $end_time ); ?></div>
           <div><?php echo date( 'Y', $end_time ); ?></div>
         </div>
         <?php } ?>
