@@ -294,9 +294,10 @@ img
 #footer
   position: fixed
   width: 100%
+  bottom: -50vh
   transition: bottom $basic-animation-speed
   &.active
-    bottom: 0
+    bottom: 0 !important
     #close-footer
       display: block
     #open-footer

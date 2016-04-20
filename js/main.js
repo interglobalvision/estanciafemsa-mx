@@ -6,6 +6,7 @@ Site = {
     var _this = this;
 
     _this.Gallery.init();
+    _this.Footer.init();
 
     $(window).resize(function(){
       _this.onResize();
@@ -48,6 +49,37 @@ Site.Gallery = {
 
   },
 };
+
+Site.Footer = {
+  init: function() {
+    var _this = this;
+
+    _this.$footer = $('#footer');
+
+    _this.bind();
+    _this.layout();
+  },
+
+  bind: function() {
+    var _this = this;
+
+    $('#open-footer').click(function() {
+      _this.$footer.addClass('active');
+    });
+
+    $('#close-footer').click(function() {
+      _this.$footer.removeClass('active');
+    });
+
+  },
+
+  layout: function() {
+    var _this = this;
+    var offset = _this.$footer.innerHeight() - $('#footer-toogle-ui').outerHeight(true);
+
+    _this.$footer.css('bottom', '-' + offset + 'px');
+  },
+}
 
 jQuery(document).ready(function () {
   'use strict';
