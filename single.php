@@ -67,7 +67,7 @@ if( have_posts() ) {
 ?>
       <div class="col col-4">
         <h4 class="font-sans font-capitalize text-align-center margin-bottom-tiny"><?php the_time('M Y'); ?>
-        <h3 class="index-post-title font-serif"><?php the_title(); ?></h3>
+        <h3 class="index-post-title font-serif"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
       </div>
 <?php
           if ($i % 2 !== 0) {
