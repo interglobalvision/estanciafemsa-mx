@@ -20,7 +20,7 @@ if( have_posts() ) {
       <div class="row">
         <div class="col col-4">
 
-          <div class="font-key-color font-sans text-align-center"><?php the_title(); ?>:</div>
+          <h3 class="font-key-color text-align-center margin-top-basic margin-bottom-basic"><?php the_title(); ?>:</h3>
 
           <div class="copy"><?php the_content(); ?></div>
 
@@ -45,10 +45,10 @@ if( have_posts() ) {
           $program_files = get_post_meta($post->ID, '_igv_program_files');
 ?>
 
-          <div class="font-key-color font-sans text-align-center">
-            <?php if (!empty($number[0])) { echo 'No. ' . $number[0] . '<br>'; } ?>
+          <h3 class="font-key-color text-align-center margin-top-basic margin-bottom-basic">
+            <?php if (!empty($number[0])) { echo 'No. ' . add_leading_zero($number[0]) . '<br>'; } ?>
             <?php the_title(); ?>
-          </div>
+          </h3>
 
 <?php
 
