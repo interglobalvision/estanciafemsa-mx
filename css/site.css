@@ -1137,6 +1137,9 @@ p {
 .font-sans {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
 }
+.font-serif {
+  font-family: 'Tiempos', Times, Baskerville, Georgia, serif;
+}
 .font-color-white {
   color: #fdfdfd;
 }
