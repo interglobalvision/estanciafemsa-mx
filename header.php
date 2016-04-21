@@ -99,12 +99,15 @@
 // get slug for active menu item
 $active_slug = null;
 
-if ( is_single() || is_archive() ) {
-  $post_type_data = get_post_type_object( get_post_type() );
-  $active_slug = $post_type_data->rewrite['slug'];
-} else if (is_page()) {
-  $active_slug = $post->post_name;
-} 
+$queried_object = get_queried_object();
+
+if ( is_page() || is_home() ) {
+  $active_slug = $queried_object->post_name; 
+} else if (is_post_type_archive()) {
+  $active_slug = $queried_object->rewrite['slug']; 
+} else if (is_single()) {
+  $active_slug = $queried_object->post_type; 
+}
 
 ?>
 
@@ -123,7 +126,7 @@ if ( is_single() || is_archive() ) {
         <li class="menu-item <?php if ($active_slug === 'programacion') { echo 'font-key-color'; } ?>">
           <a href="<?php echo home_url('/programacion'); ?>"><?php echo __('[:es]Programación[:en]Program'); ?></a>
         </li>
-        <li class="menu-item <?php if ($active_slug === 'noticias') { echo 'font-key-color'; } ?>">
+        <li class="menu-item <?php if ($active_slug === 'noticias' || $active_slug === 'post') { echo 'font-key-color'; } ?>">
           <a href="<?php echo home_url('/noticias'); ?>"><?php echo __('[:es]Noticias[:en]News'); ?></a>
         </li>
         <li class="menu-item <?php if ($active_slug === 'prensa') { echo 'font-key-color'; } ?>">
