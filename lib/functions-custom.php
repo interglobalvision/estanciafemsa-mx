@@ -64,3 +64,47 @@ function render_programacion_index($post_id) {
 <?php
 
 }
+
+// Query Current Program
+
+function current_query() {
+  $date = time();
+
+  $args = array(
+    'post_type' => 'programacion',
+    'posts_per_page' => 1,
+    'meta_key' => '_igv_end_time',
+    'orderby' => 'meta_value_num',
+    'order' => 'ASC',
+    'meta_query' => array(
+      'relation' => 'AND',
+      array(
+        'key'     => '_igv_end_time',
+        'value'   => $date,
+        'compare' => '>='  //returns Current or nearest Future
+      )
+    )
+  );
+  $query = new WP_Query($args);
+
+  if (!$query->have_posts()) { // if no Current or Future, get Past
+    $args = array(
+      'post_type' => 'programacion',
+      'posts_per_page' => 1,
+      'meta_key' => '_igv_end_time',
+      'orderby' => 'meta_value_num',
+      'order' => 'DESC',
+      'meta_query' => array(
+        'relation' => 'AND',
+        array(
+          'key'     => '_igv_end_time',
+          'value'   => $date,
+          'compare' => '<'  //returns nearest Past
+        )
+      )
+    );
+    $query = new WP_Query($args);
+  }
+
+  return $query;
+}
