@@ -1294,15 +1294,44 @@ img {
   margin-top: 32px;
   margin-bottom: 32px;
 }
-.index-programacion-post {
+.index-programacion-post-container {
   height: 300px;
   max-width: 220px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 4.235801032000001rem;
+  position: relative;
+  -webkit-filter: saturate(1.5);
+          filter: saturate(1.5);
+}
+.index-programacion-post-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
   background-size: cover;
   background-position: center;
   background-blend-mode: screen;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+.index-programacion-post-image:hover {
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  opacity: 1;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+.index-programacion-post-number {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  font-size: 4.235801032000001rem;
+  pointer-events: none;
 }
 .swiper-controls {
   display: -webkit-box;

@@ -341,15 +341,34 @@ img
 
 // PROGRAMACION ARCHIVE
 
-.index-programacion-post
+.index-programacion-post-container
   height: 300px
   max-width: 220px
   margin-left: auto
   margin-right: auto
-  font-size: golden-ratio(1rem , 3)
+  position: relative
+  filter: saturate(1.5)
+
+.index-programacion-post-image
+  height: 100%
+  width: 100%
+  position: absolute
   background-size: cover
   background-position: center
   background-blend-mode: screen
+  opacity: .6
+  filter: grayscale(1)
+  transition: all 500ms
+  &:hover
+    opacity: 1
+    filter: grayscale(0)
+  
+.index-programacion-post-number
+  height: 100%
+  width: 100%
+  position: absolute
+  font-size: golden-ratio(1rem , 3)
+  pointer-events: none
 
 // ******************************************************
 
