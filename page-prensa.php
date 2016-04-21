@@ -28,13 +28,13 @@ if( have_posts() ) {
 
         <div class="col col-4">
 
-          <?php the_post_thumbnail(); ?>
-          
+          <?php the_post_thumbnail('col-4'); ?>
+
         </div>
 
         <div class="col col-4">
 
-<?php 
+<?php
       $current_query = current_query();
 
       if ($current_query->have_posts()) {
@@ -50,7 +50,7 @@ if( have_posts() ) {
             <?php the_title(); ?>
           </div>
 
-<?php 
+<?php
 
           if (!empty($program_files[0])) {
             echo '<ul>';
@@ -59,7 +59,7 @@ if( have_posts() ) {
             }
             echo '</ul>';
           } // end if
-        } // end while 
+        } // end while
       } // end if
       wp_reset_postdata();
 

@@ -12,5 +12,7 @@ if( function_exists( 'add_image_size' ) ) {
 
   add_image_size( 'gallery', 656, 450, false );
 
+  add_image_size( 'col-4', 368, 9999, false );
+
   add_image_size( 'name', 199, 299, true );
 }
