@@ -56,6 +56,10 @@
     .background-key-color {
       background-color:<?php echo $key_color; ?>;
     }
+
+    .copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6, .copy blockquote {
+      color: <?php echo $key_color; ?>;
+    }
   </style>
 
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -82,7 +86,7 @@
         <?php echo __('[:es]es una plataforma cultural y<br>
         artística auspiciada por<br>
         Casa Luis Barragán<br>
-        con el apoyo de<br> 
+        con el apoyo de<br>
         Colección FEMSA.
         [:en]es una plataforma cultural y<br>
         artística auspiciada por<br>
@@ -94,21 +98,47 @@
     </div>
   </div>
 </div>
-<?php } ?>
+<?php } 
+
+// get slug for active menu item
+$active_slug = null;
+
+$queried_object = get_queried_object();
+
+if ( is_page() || is_home() ) {
+  $active_slug = $queried_object->post_name; 
+} else if (is_post_type_archive()) {
+  $active_slug = $queried_object->rewrite['slug']; 
+} else if (is_single()) {
+  $active_slug = $queried_object->post_type; 
+}
+
+?>
 
   <section id="main-container" <?php if ( is_front_page() ) { ?> class="u-fixed" <?php } ?> >
 
   <!-- start content -->
-  <header id="header" class="container">
+
+  <header id="header" class="container margin-bottom-basic">
     <div class="row">
       <div class="col col-12 text-align-center font-sans">
-      <h1 class="font-bold font-uppercase match-height"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+      <h1 id="site-title" class="font-bold font-uppercase match-height margin-bottom-tiny font-key-color"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
       <ul id="menu" class="u-inline-list">
-        <li><a href="<?php echo home_url('/sobre-nosotros'); ?>"><?php echo __('[:es]Sobre Nosotros[:en]About Us'); ?></a></li>
-        <li><a href="<?php echo home_url('/programacion'); ?>"><?php echo __('[:es]Programación[:en]Program'); ?></a></li>
-        <li><a href="<?php echo home_url('/noticias'); ?>"><?php echo __('[:es]Noticias[:en]News'); ?></a></li>
-        <li><a href="<?php echo home_url('/prensa'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a></li>
-        <li><a href="<?php echo home_url('/citas'); ?>"><?php echo __('[:es]Citas[:en]Appointments'); ?></a></li>
+        <li class="menu-item <?php if ($active_slug === 'sobre-nosotros') { echo 'font-key-color'; } ?>">
+          <a href="<?php echo home_url('/sobre-nosotros'); ?>"><?php echo __('[:es]Sobre Nosotros[:en]About Us'); ?></a>
+        </li>
+        <li class="menu-item <?php if ($active_slug === 'programacion') { echo 'font-key-color'; } ?>">
+          <a href="<?php echo home_url('/programacion'); ?>"><?php echo __('[:es]Programación[:en]Program'); ?></a>
+        </li>
+        <li class="menu-item <?php if ($active_slug === 'noticias' || $active_slug === 'post') { echo 'font-key-color'; } ?>">
+          <a href="<?php echo home_url('/noticias'); ?>"><?php echo __('[:es]Noticias[:en]News'); ?></a>
+        </li>
+        <li class="menu-item <?php if ($active_slug === 'prensa') { echo 'font-key-color'; } ?>">
+          <a href="<?php echo home_url('/prensa'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a>
+        </li>
+        <li class="menu-item <?php if ($active_slug === 'citas') { echo 'font-key-color'; } ?>">
+          <a href="<?php echo home_url('/citas'); ?>"><?php echo __('[:es]Citas[:en]Appointments'); ?></a>
+        </li>
       </ul>
       </div>
     </div>

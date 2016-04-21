@@ -11,7 +11,7 @@ $date = time();
 
     <div class="col col-2"></div>
     <div class="col col-4">
-      <h3><?php echo __('[:es]Ahora[:en]Now'); ?></h3>
+      <h3 class="margin-bottom-small"><?php echo __('[:es]Ahora[:en]Now'); ?></h3>
         <?php
           $args = array(
             'post_type' => 'programacion',
@@ -41,7 +41,7 @@ $date = time();
         ?>
     </div>
     <div class="col col-4">
-      <h3><?php echo __('[:es]Futura[:en]Future'); ?></h3>
+      <h3 class="margin-bottom-small"><?php echo __('[:es]Futura[:en]Future'); ?></h3>
       <?php
           $args = array(
             'post_type' => 'programacion',
@@ -69,7 +69,7 @@ $date = time();
 
   <div class="row">
     <div class="col col-12">
-      <h3><?php echo __('[:es]Pasadas[:en]Past'); ?></h3>
+      <h3 class="margin-bottom-basic"><?php echo __('[:es]Pasadas[:en]Past'); ?></h3>
     </div>
   </div>
 
@@ -97,7 +97,7 @@ $date = time();
     <?php
           }
     ?>
-      <div class="col col-4">
+      <div class="col col-4 margin-bottom-small">
     <?php
           render_programacion_index($post->ID);
     ?>
