@@ -31,8 +31,10 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: -webkit-transform;
   transition-property: transform;
+  transition-property: transform, -webkit-transform;
   box-sizing: content-box;
 }
 .swiper-container-android .swiper-slide,
@@ -78,10 +80,14 @@
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-align-items: flex-start;
-  align-items: flex-start;
+  -ms-grid-row-align: flex-start;
+      align-items: flex-start;
   -webkit-transition-property: -webkit-transform, height;
-  -webkit-transition-property: -webkit-transform, height;
+  -webkit-transition-property: transform, height;
+  -webkit-transition-property: height, -webkit-transform;
+  transition-property: height, -webkit-transform;
   transition-property: transform, height;
+  transition-property: transform, height, -webkit-transform;
 }
 .swiper-container .swiper-notification {
   position: absolute;
@@ -270,7 +276,6 @@ button.swiper-pagination-bullet {
 .swiper-container-3d .swiper-slide-shadow-bottom,
 .swiper-container-3d .swiper-cube-shadow {
   -webkit-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
@@ -343,9 +348,7 @@ button.swiper-pagination-bullet {
 .swiper-container-flip .swiper-slide {
   pointer-events: none;
   -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 1;
 }
@@ -369,9 +372,7 @@ button.swiper-pagination-bullet {
 .swiper-container-flip .swiper-slide-shadow-right {
   z-index: 0;
   -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .swiper-container-cube .swiper-slide {
@@ -1334,6 +1335,7 @@ img {
 }
 #footer {
   position: fixed;
+  z-index: 500;
   width: 100%;
   bottom: -50vh;
   -webkit-transition: bottom 500ms;
