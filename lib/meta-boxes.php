@@ -93,22 +93,22 @@ function igv_cmb_metaboxes() {
     'type'        => 'group',
     'description' => __( '', 'cmb2' ),
     'options'     => array(
-      'group_title'   => __( 'File {#}', 'cmb2' ), // {#} gets replaced by row number
-      'add_button'    => __( 'Add Another File', 'cmb2' ),
-      'remove_button' => __( 'Remove File', 'cmb2' ),
+      'group_title'   => __( 'Archivo {#}', 'cmb2' ), // {#} gets replaced by row number
+      'add_button'    => __( 'Añadir Archivo', 'cmb2' ),
+      'remove_button' => __( 'Quitar Archivo', 'cmb2' ),
       'sortable'      => true, // beta
       // 'closed'     => true, // true to have the groups closed by default
     ),
   ) );
 
   $program_meta->add_group_field( $program_files_group, array(
-    'name' => __( 'File', 'cmb2' ),
+    'name' => __( 'Archivo', 'cmb2' ),
     'id'   => 'file',
     'type' => 'file',
   ) );
 
   $program_meta->add_group_field( $program_files_group, array(
-    'name' => __( 'Link Text', 'cmb2' ),
+    'name' => __( 'Texto de enlace', 'cmb2' ),
     'id'   => 'text',
     'type' => 'text',
   ) );
