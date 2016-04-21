@@ -1243,6 +1243,13 @@ img {
 .padding-bottom-large {
   padding-bottom: 80px;
 }
+#site-title {
+  font-size: 1.869270156846977rem;
+}
+.menu-item {
+  padding: 4.944271909998838px 8px;
+  margin: 0 8px;
+}
 #splash {
   position: fixed;
   width: 100%;
