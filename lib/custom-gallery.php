@@ -89,7 +89,7 @@ function my_gallery_shortcode($attr) {
 
   $output .= "<div class=\"swiper-controls\">";
   
-  $output .= "<div class=\"swiper-pagination\"></div>";
+  $output .= "<div class=\"swiper-pagination font-sans\"></div>";
 
   $output .= "<div class=\"swiper-navigation\"><div class=\"swiper-button-prev\"></div><div class=\"swiper-button-next\"></div></div>";
 
