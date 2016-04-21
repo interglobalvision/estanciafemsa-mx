@@ -1341,10 +1341,11 @@ img {
 }
 #footer-above {
   position: absolute;
-  top: -3.5rem;
+  top: -2.5rem;
   width: 100%;
 }
 #footer-title {
+  font-size: 1.869270156846977rem;
   margin: 0;
 }
 #footer-language-switcher {
