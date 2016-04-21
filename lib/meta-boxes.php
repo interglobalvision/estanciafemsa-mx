@@ -108,8 +108,14 @@ function igv_cmb_metaboxes() {
   ) );
 
   $program_meta->add_group_field( $program_files_group, array(
-    'name' => __( 'Texto de enlace', 'cmb2' ),
+    'name' => __( 'Texto de enlace (ES)', 'cmb2' ),
     'id'   => 'text',
+    'type' => 'text',
+  ) );
+
+  $program_meta->add_group_field( $program_files_group, array(
+    'name' => __( 'Texto de enlace (EN)', 'cmb2' ),
+    'id'   => 'text_en',
     'type' => 'text',
   ) );
 
