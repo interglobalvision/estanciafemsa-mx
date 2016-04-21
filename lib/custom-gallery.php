@@ -71,7 +71,7 @@ function my_gallery_shortcode($attr) {
 	$selector = "gallery-{$instance}";
 
   // Gallery container and wrapper
-  $gallery_div = "<div id='$selector' class='swiper-container gallery galleryid-{$id} u-pointer'>\n<div class='swiper-wrapper'>";
+  $gallery_div = "<div id='$selector' class='swiper-container gallery galleryid-{$id} margin-bottom-basic u-pointer'>\n<div class='swiper-wrapper'>";
   $output = $gallery_div;
 
 
@@ -88,10 +88,10 @@ function my_gallery_shortcode($attr) {
   $output .= "</div>\n";
 
   $output .= "<div class=\"swiper-controls\">";
-  
-  $output .= "<div class=\"swiper-pagination\"></div>";
 
-  $output .= "<div class=\"swiper-navigation\"><div class=\"swiper-button-prev\"></div><div class=\"swiper-button-next\"></div></div>";
+  $output .= "<div class=\"swiper-pagination font-sans font-key-color\"></div>";
+
+  $output .= "<div class=\"swiper-navigation font-key-color\"><div class=\"swiper-button-prev\"></div><div class=\"swiper-button-next\"></div></div>";
 
   $output .= "</div>";
 

@@ -10,7 +10,9 @@ Site = {
 
     _this.Gallery.init();
     _this.Footer.init();
-    _this.Splash.init();
+    if ($('body').hasClass('home')) {
+      _this.Splash.init();
+    }
 
     $(window).resize(function(){
       _this.onResize();
@@ -153,7 +155,7 @@ Site.Footer = {
 
     _this.bind();
     _this.layout();
-  }, 
+  },
 
   bind: function() {
     var _this = this;

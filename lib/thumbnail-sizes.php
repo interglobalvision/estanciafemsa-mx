@@ -10,5 +10,7 @@ if( function_exists( 'add_image_size' ) ) {
 
   add_image_size( 'index-programacion-post', 300, 50, true );
 
+  add_image_size( 'gallery', 656, 450, false );
+
   add_image_size( 'name', 199, 299, true );
 }
