@@ -160,12 +160,16 @@ Site.Footer = {
   bind: function() {
     var _this = this;
 
-    $('#open-footer').click(function() {
+    $('.js-open-footer').click(function() {
       _this.$footer.addClass('active');
     });
 
     $('#close-footer').click(function() {
       _this.$footer.removeClass('active');
+    });
+
+    $('#footer-title').click(function() {
+      _this.$footer.toggleClass('active');
     });
 
   },
