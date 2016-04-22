@@ -3,7 +3,6 @@
 // Custom functions (like special queries, etc)
 
 function get_key_color() {
-
   $key_color = 'red';
 
   // if on single programacion post get the current post ID
@@ -15,19 +14,12 @@ function get_key_color() {
   } else {
 
     // get post ID from latest programacion. if none fallback
-    $latest_programacion = get_posts(array(
-      'post_type' => 'programacion',
-      'posts_per_page' => 1,
-    ));
+    $latest = current_query();
 
-    if (!empty($latest_programacion[0])) {
-
-      $post_id = $latest_programacion[0]->ID;
-
+    if ($latest->have_posts()) {
+      $post_id = $latest->post->ID;
     } else {
-
       $post_id = false;
-
     }
 
   }
@@ -44,7 +36,6 @@ function get_key_color() {
   }
 
   return $key_color;
-
 }
 
 // RENDER functions
