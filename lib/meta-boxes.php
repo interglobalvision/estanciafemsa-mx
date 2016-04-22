@@ -88,5 +88,36 @@ function igv_cmb_metaboxes() {
 		'options' => array( 'textarea_rows' => 14, ),
 	) );
 
+  $program_files_group = $program_meta->add_field( array(
+    'id'          => $prefix . 'program_files',
+    'type'        => 'group',
+    'description' => __( '', 'cmb2' ),
+    'options'     => array(
+      'group_title'   => __( 'Archivo {#}', 'cmb2' ), // {#} gets replaced by row number
+      'add_button'    => __( 'Añadir Archivo', 'cmb2' ),
+      'remove_button' => __( 'Quitar Archivo', 'cmb2' ),
+      'sortable'      => true, // beta
+      // 'closed'     => true, // true to have the groups closed by default
+    ),
+  ) );
+
+  $program_meta->add_group_field( $program_files_group, array(
+    'name' => __( 'Archivo', 'cmb2' ),
+    'id'   => 'file',
+    'type' => 'file',
+  ) );
+
+  $program_meta->add_group_field( $program_files_group, array(
+    'name' => __( 'Texto de enlace (ES)', 'cmb2' ),
+    'id'   => 'text',
+    'type' => 'text',
+  ) );
+
+  $program_meta->add_group_field( $program_files_group, array(
+    'name' => __( 'Texto de enlace (EN)', 'cmb2' ),
+    'id'   => 'text_en',
+    'type' => 'text',
+  ) );
+
 }
 ?>
