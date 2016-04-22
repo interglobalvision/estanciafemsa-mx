@@ -160,7 +160,7 @@ Site.Footer = {
   bind: function() {
     var _this = this;
 
-    $('.js-open-footer').click(function() {
+    $('#open-footer').click(function() {
       _this.$footer.addClass('active');
     });
 
