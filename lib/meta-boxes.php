@@ -97,7 +97,8 @@ function igv_cmb_metaboxes() {
   $program_files_group = $program_meta->add_field( array(
     'id'          => $prefix . 'program_files',
     'type'        => 'group',
-    'description' => __( '', 'cmb2' ),
+    'name'    => __( 'Archivos para la pagina de Prensa', 'cmb2' ),
+    'description' => __( '...', 'cmb2' ),
     'options'     => array(
       'group_title'   => __( 'Archivo {#}', 'cmb2' ), // {#} gets replaced by row number
       'add_button'    => __( 'Añadir Archivo', 'cmb2' ),
