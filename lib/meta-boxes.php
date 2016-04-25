@@ -82,6 +82,12 @@ function igv_cmb_metaboxes() {
 	) );
 
   $program_meta->add_field( array(
+		'name'       => __( 'Sub-titulo [EN]', 'cmb2' ),
+		'id'         => $prefix . 'subtitle_en',
+		'type'       => 'text',
+	) );
+
+  $program_meta->add_field( array(
 		'name'    => __( 'Creditos', 'cmb2' ),
 		'id'      => $prefix . 'credits',
 		'type'    => 'wysiwyg',
