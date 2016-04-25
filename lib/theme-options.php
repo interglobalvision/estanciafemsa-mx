@@ -217,11 +217,31 @@ o por internet.',
 		) );
 
 		$options_metabox->add_field( array(
+			'name' => __( 'Previa Cita [EN]', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'visits_text_en',
+			'type' => 'textarea_small',
+			'default' => 'To visit Estancia FEMSA is is...:
+
++52 (55) 5515 4908
++52 (55) 5272 4945
+o por internet.',
+		) );
+
+		$options_metabox->add_field( array(
 			'name' => __( 'Instrucciones', 'IGV' ),
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'visits_guide',
 			'type' => 'textarea_small',
 			'default' => 'Se solicita llegar 15 minutos antes del horario asignado ya que no habrá tolerancia.',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Instrucciones [EN]', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'visits_guide_en',
+			'type' => 'textarea_small',
+			'default' => 'Dont turn up late',
 		) );
 
 		$options_metabox->add_field( array(
