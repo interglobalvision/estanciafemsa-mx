@@ -81,7 +81,7 @@ if( have_posts() ) {
   }
 } else {
 ?>
-    <article class="row"><div class="col col-12 text-align-center u-alert"><?php _e('Sorry, no posts matched your criteria'); ?></div></article>
+    <article class="row"><div class="col col-12 text-align-center u-alert"><?php _e('[:es]Lo sentimos, pero no podemos encontrar lo que estás buscando.[:en]Sorry, no posts matched your criteria[:]'); ?></div></article>
 <?php
 } ?>
 
