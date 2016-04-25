@@ -1342,6 +1342,27 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+#footer-above {
+  position: absolute;
+  top: -2.5rem;
+  width: 100%;
+}
+#footer-title {
+  font-size: 1.869270156846977rem;
+  margin: 0;
+}
+#footer-language-switcher {
+  position: absolute;
+  right: 16px;
+  text-align: right;
+  bottom: 0.5rem;
+  width: 10%;
+}
+#footer-language-switcher li {
+  color: #0e0e0e;
+  display: inline-block;
+  padding-right: 8px;
+}
 #close-footer {
   display: none;
 }

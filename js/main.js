@@ -168,6 +168,10 @@ Site.Footer = {
       _this.$footer.removeClass('active');
     });
 
+    $('#footer-title').click(function() {
+      _this.$footer.toggleClass('active');
+    });
+
   },
 
   layout: function() {
