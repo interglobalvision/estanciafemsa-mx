@@ -7,7 +7,7 @@ get_header();
 <main id="main-content">
 
   <!-- main posts loop -->
-  <section id="posts">
+  <section id="page">
 
 <?php
 if( have_posts() ) {
@@ -62,7 +62,12 @@ if( have_posts() ) {
         } // end while
       } // end if
       wp_reset_postdata();
+?>
+        </div>
+      </div>
 
+    </article>
+<?php
   } // end while
 } else {
 ?>
@@ -70,10 +75,8 @@ if( have_posts() ) {
 <?php
 } ?>
 
-  <!-- end posts -->
+  <!-- end page -->
   </section>
-
-  <?php get_template_part('partials/pagination'); ?>
 
 <!-- end main-content -->
 
