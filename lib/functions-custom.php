@@ -41,14 +41,17 @@ function get_key_color() {
 // RENDER functions
 
 function render_programacion_index($post_id) {
-
   $meta = get_post_meta($post_id);
   $img = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'index-programacion-post');
 ?>
 
 <a href="<?php echo get_the_permalink($post_id); ?>">
-  <div class="index-programacion-post u-flex-center font-sans font-color-white" style="background-color: <?php if (!empty($meta['_igv_color'][0])) {echo $meta['_igv_color'][0];} ?>; background-image: url(<?php if (!empty($img)) {echo $img[0];} ?>);">
-    <?php if (!empty($meta['_igv_number'][0])) {echo 'No. ' . add_leading_zero( $meta['_igv_number'][0] );} ?>
+  <div class="index-programacion-post-container" style="background-color: <?php if (!empty($meta['_igv_color'][0])) {echo $meta['_igv_color'][0];} ?>">
+    <div class="index-programacion-post-image image-key-color"
+    style="background-image: url(<?php if (!empty($img)) {echo $img[0];} ?>);"></div>
+    <div class="index-programacion-post-number u-flex-center font-sans font-color-white">
+      <?php if (!empty($meta['_igv_number'][0])) {echo 'No. ' . add_leading_zero( $meta['_igv_number'][0] );} ?>
+    </div>
   </div>
 </a>
 
