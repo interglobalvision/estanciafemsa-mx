@@ -62,7 +62,7 @@ function render_programacion_index($post_id) {
 // Query Current Program
 
 function current_query() {
-  $date = time();
+  $date = current_time( 'timestamp' );
 
   $args = array(
     'post_type' => 'programacion',
