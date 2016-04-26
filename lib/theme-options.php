@@ -221,11 +221,10 @@ o por internet.',
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'visits_text_en',
 			'type' => 'textarea_small',
-			'default' => 'To visit Estancia FEMSA is is...:
+			'default' => 'To visit Estancia FEMSA you may schedule an appointment by calling:
 
 +52 (55) 5515 4908
-+52 (55) 5272 4945
-o por internet.',
++52 (55) 5272 4945',
 		) );
 
 		$options_metabox->add_field( array(
