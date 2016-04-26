@@ -150,9 +150,9 @@ p
 
 .font-uppercase
   text-transform: uppercase
-  
+
 .font-underline
-  text-decoration: underline 
+  text-decoration: underline
 
 .font-sans
   font-family: $font-sans
@@ -331,6 +331,13 @@ img
 
 // ******************************************************
 
+// PAGE
+
+#page-key-color-image
+  min-height: 450px
+
+// ******************************************************
+
 // PROGRAMACION SINGLE
 
 .copy
@@ -339,6 +346,27 @@ img
     margin-top: $margin-basic
     margin-bottom: $margin-basic
 
+// ******************************************************
+
+// KEY COLOR IMAGE
+
+.image-key-color-holder
+  position: relative
+  filter: saturate(1.7)
+
+.image-key-color
+  height: 100%
+  width: 100%
+  position: absolute
+  background-size: cover
+  background-position: center
+  background-blend-mode: screen
+  opacity: .8
+  filter: grayscale(1)
+  transition: opacity $basic-animation-speed, filter $basic-animation-speed
+  &:hover
+    opacity: 1
+    filter: grayscale(0)
 
 // ******************************************************
 
@@ -349,22 +377,6 @@ img
   max-width: 220px
   margin-left: auto
   margin-right: auto
-  position: relative
-  filter: saturate(1.5)
-
-.index-programacion-post-image
-  height: 100%
-  width: 100%
-  position: absolute
-  background-size: cover
-  background-position: center
-  background-blend-mode: screen
-  opacity: .6
-  filter: grayscale(1)
-  transition: opacity $basic-animation-speed, filter $basic-animation-speed
-  &:hover
-    opacity: 1
-    filter: grayscale(0)
 
 .index-programacion-post-number
   height: 100%

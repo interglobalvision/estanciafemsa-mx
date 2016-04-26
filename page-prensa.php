@@ -7,7 +7,7 @@ get_header();
 <main id="main-content">
 
   <!-- main posts loop -->
-  <section id="posts">
+  <section id="page">
 
 <?php
 if( have_posts() ) {
@@ -28,7 +28,9 @@ if( have_posts() ) {
 
         <div class="col col-4">
 
-          <?php the_post_thumbnail('col-4'); ?>
+          <div id="page-key-color-image" class="image-key-color-holder background-key-color">
+            <div class="image-key-color" style="background-image: url(<?php if (!empty($img)) {echo $img[0];} ?>);"></div>
+          </div>
 
         </div>
 
@@ -62,18 +64,21 @@ if( have_posts() ) {
         } // end while
       } // end if
       wp_reset_postdata();
+?>
+        </div>
+      </div>
 
-  } // end while
+    </article>
+<?php
+  }
 } else {
 ?>
     <article class="u-alert"><?php _e('[:es]Lo sentimos, pero no podemos encontrar lo que estás buscando.[:en]Sorry, no posts matched your criteria[:]'); ?></article>
 <?php
 } ?>
 
-  <!-- end posts -->
+  <!-- end page -->
   </section>
-
-  <?php get_template_part('partials/pagination'); ?>
 
 <!-- end main-content -->
 

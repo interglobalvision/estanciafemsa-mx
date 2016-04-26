@@ -1285,6 +1285,9 @@ img {
   z-index: 1000;
   pointer-events: none;
 }
+#page-key-color-image {
+  min-height: 450px;
+}
 .copy h1,
 .copy h2,
 .copy h3,
@@ -1296,40 +1299,39 @@ img {
   margin-top: 32px;
   margin-bottom: 32px;
 }
-.index-programacion-post-container {
-  height: 300px;
-  max-width: 220px;
-  margin-left: auto;
-  margin-right: auto;
+.image-key-color-holder {
   position: relative;
-  -webkit-filter: saturate(1.5);
-          filter: saturate(1.5);
+  -webkit-filter: saturate(1.7);
+          filter: saturate(1.7);
 }
-.index-programacion-post-image {
+.image-key-color {
   height: 100%;
   width: 100%;
   position: absolute;
   background-size: cover;
   background-position: center;
   background-blend-mode: screen;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-  filter: alpha(opacity=60);
-  opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  opacity: 0.8;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
-  -webkit-transition: opacity 500ms, filter 500ms;
-  -webkit-transition: opacity 500ms, -webkit-filter 500ms;
-  transition: opacity 500ms, -webkit-filter 500ms;
+  -webkit-transition: opacity 500ms, -webkit-filter 500ms, opacity 500ms, filter 500ms;
   transition: opacity 500ms, filter 500ms;
-  transition: opacity 500ms, filter 500ms, -webkit-filter 500ms;
 }
-.index-programacion-post-image:hover {
+.image-key-color:hover {
   -ms-filter: none;
   -webkit-filter: none;
           filter: none;
   opacity: 1;
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
+}
+.index-programacion-post-container {
+  height: 300px;
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .index-programacion-post-number {
   height: 100%;

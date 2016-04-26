@@ -46,9 +46,8 @@ function render_programacion_index($post_id) {
 ?>
 
 <a href="<?php echo get_the_permalink($post_id); ?>">
-  <div class="index-programacion-post-container" style="background-color: <?php if (!empty($meta['_igv_color'][0])) {echo $meta['_igv_color'][0];} ?>">
-    <div class="index-programacion-post-image image-key-color"
-    style="background-image: url(<?php if (!empty($img)) {echo $img[0];} ?>);"></div>
+  <div class="index-programacion-post-container image-key-color-holder" style="background-color: <?php if (!empty($meta['_igv_color'][0])) {echo $meta['_igv_color'][0];} ?>">
+    <div class="index-programacion-post-image image-key-color" style="background-image: url(<?php if (!empty($img)) {echo $img[0];} ?>);"></div>
     <div class="index-programacion-post-number u-flex-center font-sans font-color-white">
       <?php if (!empty($meta['_igv_number'][0])) {echo 'No. ' . add_leading_zero( $meta['_igv_number'][0] );} ?>
     </div>
