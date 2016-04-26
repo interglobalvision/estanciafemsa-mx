@@ -1,7 +1,7 @@
 <?php
 get_header();
 
-$date = time();
+$date = current_time( 'timestamp' );
 ?>
 
 <!-- main content -->
