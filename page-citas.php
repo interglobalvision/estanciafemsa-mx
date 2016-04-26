@@ -94,13 +94,7 @@ if(have_posts()) {
   }
 } else {
 ?>
-    <article class="container">
-      <div class="row">
-        <div class="col col-12">
-          <?php _e('Sorry, no page matched your criteria'); ?>
-        </div>
-      </div>
-    </article>
+    <article class="u-alert"><?php _e('[:es]Lo sentimos, pero no podemos encontrar lo que estás buscando.[:en]Sorry, no posts matched your criteria[:]'); ?></article>
 <?php
 } ?>
 

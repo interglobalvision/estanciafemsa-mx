@@ -82,6 +82,12 @@ function igv_cmb_metaboxes() {
 	) );
 
   $program_meta->add_field( array(
+		'name'       => __( 'Sub-titulo [EN]', 'cmb2' ),
+		'id'         => $prefix . 'subtitle_en',
+		'type'       => 'text',
+	) );
+
+  $program_meta->add_field( array(
 		'name'    => __( 'Creditos', 'cmb2' ),
 		'id'      => $prefix . 'credits',
 		'type'    => 'wysiwyg',
@@ -91,7 +97,8 @@ function igv_cmb_metaboxes() {
   $program_files_group = $program_meta->add_field( array(
     'id'          => $prefix . 'program_files',
     'type'        => 'group',
-    'description' => __( '', 'cmb2' ),
+    'name'    => __( 'Archivos para la sección de Prensa (Ej. PDF, zip).', 'cmb2' ),
+    'description' => __( 'Es necesario incluir el texto del link para cada idioma', 'cmb2' ),
     'options'     => array(
       'group_title'   => __( 'Archivo {#}', 'cmb2' ), // {#} gets replaced by row number
       'add_button'    => __( 'Añadir Archivo', 'cmb2' ),
