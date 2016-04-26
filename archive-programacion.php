@@ -1,36 +1,66 @@
 <?php
 get_header();
 
-$date = current_time( 'timestamp' );
+$date = time();
+
+$args = array(
+  'post_type' => 'programacion',
+  'posts_per_page' => 1,
+  'meta_query' => array(
+    'relation' => 'AND',
+    array(
+      'key'     => '_igv_start_time',
+      'value'   => $date,
+      'compare' => '<='
+    ),
+    array(
+      'key'     => '_igv_end_time',
+      'value'   => $date,
+      'compare' => '>='
+    )
+  )
+);
+$ahora = new WP_Query($args);
+
+$args = array(
+  'post_type' => 'programacion',
+  'posts_per_page' => 1,
+  'meta_query' => array(
+    array(
+      'key'     => '_igv_start_time',
+      'value'   => $date,
+      'compare' => '>'
+    ),
+  )
+);
+$future = new WP_Query($args);
+
+$args = array(
+  'post_type' => 'programacion',
+  'posts_per_page' => -1,
+  'meta_query' => array(
+    array(
+      'key'     => '_igv_end_time',
+      'value'   => $date,
+      'compare' => '<'
+    ),
+  )
+);
+$past = new WP_Query($args);
 ?>
 
 <!-- main content -->
 <main id="main-content" class="container text-align-center">
 
   <div class="row margin-bottom-basic">
+<?php
+if($ahora->have_posts() || $future->have_posts() || $past->have_posts()) {
+?>
 
     <div class="col col-2"></div>
     <div class="col col-4">
       <h3 class="margin-bottom-small"><?php echo __('[:es]Ahora[:en]Now'); ?></h3>
         <?php
-          $args = array(
-            'post_type' => 'programacion',
-            'posts_per_page' => 1,
-            'meta_query' => array(
-              'relation' => 'AND',
-              array(
-                'key'     => '_igv_start_time',
-                'value'   => $date,
-                'compare' => '<='
-              ),
-              array(
-                'key'     => '_igv_end_time',
-                'value'   => $date,
-                'compare' => '>='
-              )
-            )
-          );
-          $ahora = new WP_Query($args);
           if ($ahora->have_posts()) {
             while ($ahora->have_posts()) {
               $ahora->the_post();
@@ -43,18 +73,6 @@ $date = current_time( 'timestamp' );
     <div class="col col-4">
       <h3 class="margin-bottom-small"><?php echo __('[:es]Futura[:en]Future'); ?></h3>
       <?php
-          $args = array(
-            'post_type' => 'programacion',
-            'posts_per_page' => 1,
-            'meta_query' => array(
-              array(
-                'key'     => '_igv_start_time',
-                'value'   => $date,
-                'compare' => '>'
-              ),
-            )
-          );
-          $future = new WP_Query($args);
           if ($future->have_posts()) {
             while ($future->have_posts()) {
               $future->the_post();
@@ -75,18 +93,6 @@ $date = current_time( 'timestamp' );
 
   <div class="row">
   <?php
-      $args = array(
-        'post_type' => 'programacion',
-        'posts_per_page' => -1,
-        'meta_query' => array(
-          array(
-            'key'     => '_igv_end_time',
-            'value'   => $date,
-            'compare' => '<'
-          ),
-        )
-      );
-      $past = new WP_Query($args);
       if ($past->have_posts()) {
         $i = 0;
         while ($past->have_posts()) {
@@ -111,8 +117,16 @@ $date = current_time( 'timestamp' );
         $i++;
         }
       }
+?>
+<?php
       wp_reset_postdata();
-    ?>
+} else {
+?>  
+
+    <article class="u-alert"><?php _e('[:es]Lo sentimos, pero no podemos encontrar lo que estás buscando.[:en]Sorry, no posts matched your criteria[:]'); ?></article>
+    
+<?php } ?>
+
   </div>
 
 <!-- end main-content -->
