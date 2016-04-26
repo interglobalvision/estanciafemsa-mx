@@ -28,7 +28,9 @@ if( have_posts() ) {
 
         <div class="col col-4">
 
-          <?php the_post_thumbnail('col-4'); ?>
+          <div id="page-key-color-image" class="image-key-color-holder background-key-color">
+            <div class="image-key-color" style="background-image: url(<?php if (!empty($img)) {echo $img[0];} ?>);"></div>
+          </div>
 
         </div>
 
@@ -68,10 +70,16 @@ if( have_posts() ) {
 
     </article>
 <?php
-  } // end while
+  }
 } else {
 ?>
-    <article class="u-alert"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
+    <article class="container">
+      <div class="row">
+        <div class="col col-12">
+          <?php _e('Sorry, no page matched your criteria'); ?>
+        </div>
+      </div>
+    </article>
 <?php
 } ?>
 
