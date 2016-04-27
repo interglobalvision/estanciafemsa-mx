@@ -1438,6 +1438,21 @@ img {
   border-bottom: solid 1px #fdfdfd;
   outline: 0;
 }
+#subscribe-arrow {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: -8px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+#subscribe-arrow:focus {
+  outline: none;
+}
+#subscribe-arrow svg {
+  height: 1.3rem;
+  width: 1.8rem;
+}
 #footer-social-links li {
   padding: 0 8px;
 }
