@@ -1173,6 +1173,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+.ui-arrow svg {
+  height: 1rem;
+  width: 1rem;
+}
 .margin-top-micro {
   margin-top: 4.944271909998838px;
 }
