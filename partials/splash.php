@@ -3,7 +3,7 @@
 <div id="splash" class="background-key-color font-sans text-align-center u-pointer">
   <div id="splash-container">
     <div id="splash-top">
-      <h3 class="font-larger font-bold font-uppercase">ESTANCIA FEMSA</h3>
+      <h3 class="font-larger font-bold font-uppercase"><?php bloginfo('name'); ?></h3>
     </div>
 
     <div id="splash-bottom">
