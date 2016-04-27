@@ -1369,12 +1369,23 @@ img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 55px;
   -webkit-justify-content: space-between;
   -ms-justify-content: space-between;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  background: none;
+  width: initial;
+  padding: 0 16px;
+  line-height: 0.7;
+}
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  height: 0.7rem;
+  width: 0.5rem;
 }
 #footer-above {
   position: absolute;
