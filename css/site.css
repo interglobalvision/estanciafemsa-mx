@@ -1111,10 +1111,14 @@ h4.font-sans {
 p {
   margin-bottom: 1rem;
 }
-.font-italic {
+.font-italic,
+i,
+em {
   font-style: italic;
 }
-.font-bold {
+.font-bold,
+b,
+strong {
   font-weight: bold;
 }
 .font-larger {
