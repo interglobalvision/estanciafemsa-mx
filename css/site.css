@@ -1117,8 +1117,14 @@ p {
 .font-bold {
   font-weight: bold;
 }
+.font-leading-zero {
+  line-height: 1;
+}
 .font-larger {
   font-size: 1.869270156846977rem;
+}
+.font-huge {
+  font-size: 6rem;
 }
 .font-smaller {
   font-size: 0.8em;
@@ -1172,6 +1178,9 @@ html {
 img {
   max-width: 100%;
   height: auto;
+}
+#main-container {
+  width: 100%;
 }
 .margin-top-micro {
   margin-top: 4.944271909998838px;
@@ -1266,8 +1275,6 @@ img {
 }
 #splash-text {
   padding: 5%;
-  font-size: 6em;
-  line-height: 1;
   min-height: 100vh;
 }
 #splash-top {
@@ -1288,6 +1295,9 @@ img {
   left: 0;
   z-index: 1000;
   pointer-events: none;
+}
+.home-programacion-height-fix {
+  min-height: 60vh;
 }
 #page-key-color-image {
   min-height: 450px;
