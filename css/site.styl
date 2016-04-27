@@ -71,7 +71,7 @@ $margin-mid = ($gutter * 3.5)
 $margin-large = ($gutter * 5)
 
 $font-size-basic = 16px
-$font-size-larger = 1.3em
+$font-size-larger = golden-ratio(1rem , 1.3)
 $font-size-smaller = 0.8em
 $font-size-h3 = golden-ratio(1rem , 1)
 $font-size-h2 = golden-ratio(1rem , 1.5)
@@ -285,9 +285,6 @@ img
 
 // HEADER
 
-#site-title
-  font-size: golden-ratio(1rem , 1.3)
-
 .menu-item
   padding: $margin-micro $margin-tiny
   margin: 0 $margin-tiny
@@ -299,26 +296,33 @@ img
 #splash
   position: fixed
   width: 100%
-  height: 100%
+  height: 100vh
   top: 0
   left: 0
-  background-color: $color-red
   color: $color-white-soft
   overflow: hidden
   z-index: 800
-  font-family: $font-sans
-  font-size: 1em
-  cursor: pointer
 
 #splash-container
   position: absolute
   width: 100%
   height: 100%
 
-.splash-text
+#splash-text
   padding: 5%
   font-size: 6em
   line-height: 1
+  min-height: 100vh
+
+#splash-top
+  position: absolute
+  width: 100%
+  top: $margin-small
+
+#splash-bottom
+  position: absolute
+  width: 100%
+  bottom: $margin-small
 
 #scroll-buffer
   position: absolute
@@ -411,7 +415,6 @@ img
   width: 100%
 
 #footer-title
-  font-size: golden-ratio(1rem , 1.3)
   margin: 0
 
 #footer-language-switcher

@@ -1,29 +1,18 @@
 <div id="scroll-buffer"></div>
 
-<div id="splash">
+<div id="splash" class="background-key-color font-sans u-pointer">
   <div id="splash-container">
-    <div class="text-align-center match-height">
-      ESTANCIA FEMSA
+    <div id="splash-top" class="text-align-center">
+      <h3 class="font-larger font-bold font-uppercase">ESTANCIA FEMSA</h3>
     </div>
 
-    <div class="text-align-center match-height">
-      CASA LUIS BARRAGÁN
+    <div id="splash-bottom" class="text-align-center">
+      <h3 class="font-larger font-bold font-uppercase">CASA LUIS BARRAGÁN</h3>
     </div>
 
-    <div class="u-holder">
-      <div class="u-held text-align-center splash-text">
-        <?php echo __('[:es]es una plataforma cultural y<br>
-        artística auspiciada por<br>
-        Casa Luis Barragán<br>
-        con el apoyo de<br>
-        Colección FEMSA.
-        [:en]es una plataforma cultural y<br>
-        artística auspiciada por<br>
-        Casa Luis Barragán<br>
-        con el apoyo de<br>
-        Colección FEMSA.');
-        ?>
-      </div>
+    <div id="splash-text" class="u-flex-center text-align-center">
+      <?php echo __('[:es]es una plataforma cultural y artística auspiciada por Casa Luis Barragán con el apoyo de Colección FEMSA.[:en]a cultural and artistic platform hosted by Casa Luis Barragán with the support of Colección FEMSA.');
+      ?>
     </div>
   </div>
 </div>

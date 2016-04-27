@@ -80,7 +80,7 @@ if (is_front_page()) {
     <?php $active_slug = get_active_slug(); ?>
     <div class="row">
       <div class="col col-12 text-align-center font-sans">
-      <h1 id="site-title" class="font-bold font-uppercase match-height margin-bottom-tiny font-key-color"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+      <h1 class="font-larger font-bold font-uppercase match-height margin-bottom-tiny font-key-color"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
       <ul id="menu" class="u-inline-list">
         <li class="menu-item <?php if ($active_slug === 'sobre-nosotros') { echo 'font-key-color'; } ?>">
           <a href="<?php echo home_url('/sobre-nosotros'); ?>"><?php echo __('[:es]Sobre Nosotros[:en]About Us'); ?></a>
