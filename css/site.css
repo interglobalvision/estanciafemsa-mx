@@ -1318,6 +1318,10 @@ img {
 .home-programacion-height-fix {
   min-height: 60vh;
 }
+.page .col-4 .copy {
+  max-width: 300px;
+  margin: 0 auto;
+}
 #page-key-color-image {
   min-height: 450px;
 }
