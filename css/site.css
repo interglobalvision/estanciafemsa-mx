@@ -624,6 +624,20 @@ ul.u-inline-list li {
   font-weight: normal;
   font-style: italic;
 }
+@font-face {
+  font-family: 'Tiempos';
+  src: url("fonts/TiemposText-Semibold.eot");
+  src: url("fonts/TiemposText-Semibold.eot?#iefix") format('embedded-opentype'), url("fonts/TiemposText-Semibold.woff2") format('woff2'), url("fonts/TiemposText-Semibold.woff") format('woff'), url("fonts/TiemposText-Semibold.ttf") format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Tiempos';
+  src: url("fonts/TiemposText-SemiboldItalic.eot");
+  src: url("fonts/TiemposText-SemiboldItalic.eot?#iefix") format('embedded-opentype'), url("fonts/TiemposText-SemiboldItalic.woff2") format('woff2'), url("fonts/TiemposText-SemiboldItalic.woff") format('woff'), url("fonts/TiemposText-SemiboldItalic.ttf") format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
 html,
 body,
 div,
@@ -1111,10 +1125,14 @@ h4.font-sans {
 p {
   margin-bottom: 1rem;
 }
-.font-italic {
+.font-italic,
+i,
+em {
   font-style: italic;
 }
-.font-bold {
+.font-bold,
+b,
+strong {
   font-weight: bold;
 }
 .font-leading-zero {
