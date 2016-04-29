@@ -60,6 +60,10 @@
     .copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6, .copy blockquote {
       color: <?php echo $key_color; ?>;
     }
+
+    .swiper-button-prev svg, .swiper-button-next svg {
+      fill: <?php echo $key_color; ?>;
+    }
   </style>
 
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />

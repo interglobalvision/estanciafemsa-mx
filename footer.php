@@ -32,7 +32,7 @@
           <div class="margin-bottom-basic">
             <h3>Newsletter</h3>
             <form class="margin-bottom-tiny">
-              <input id="footer-subscribe-input" />
+              <input id="footer-subscribe-input" /> <button id="subscribe-arrow" type="submit"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-arrow-right.svg'); ?></button>
             </form>
             <?php echo __('[:es]Suscríbete ahora.[:en]Subscribe now.'); ?>
           </div>
