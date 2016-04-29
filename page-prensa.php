@@ -52,6 +52,7 @@ if( have_posts() ) {
             <?php the_title(); ?>
           </h3>
 
+          <div class="copy">
 <?php
 
           if (!empty($program_files[0])) {
@@ -65,6 +66,7 @@ if( have_posts() ) {
       } // end if
       wp_reset_postdata();
 ?>
+          </div>
         </div>
       </div>
 

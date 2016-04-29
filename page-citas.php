@@ -49,7 +49,7 @@ if(have_posts()) {
 
         <div class="col col-4">
 
-          <h3 class="font-key-color text-align-center margin-top-basic margin-bottom-basic"><?php echo __('[:es]Agendar cita[:en]Schedule appointment'); ?></h3>
+          <h3 class="font-key-color text-align-center margin-top-basic margin-bottom-basic"><?php echo __('[:es]Agendar cita[:en]Schedule appointment'); ?>&nbsp;&nbsp;<span class="ui-arrow"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-arrow-right.svg'); ?></span></h3>
 
           <div class="copy">
           <?php
