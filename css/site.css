@@ -2205,6 +2205,9 @@ img {
   .padding-bottom-large {
     padding-bottom: 80px;
   }
+  #header {
+    margin-bottom: 16px;
+  }
   .menu-item {
     padding: 4.944271909998838px 8px;
     margin: 0 8px;
