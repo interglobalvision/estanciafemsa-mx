@@ -91,7 +91,7 @@ function my_gallery_shortcode($attr) {
 
   $output .= "<div class=\"swiper-pagination font-sans font-key-color\"></div>";
 
-  $output .= "<div class=\"swiper-navigation font-key-color\"><div class=\"swiper-button-prev\"></div><div class=\"swiper-button-next\"></div></div>";
+  $output .= "<div class=\"swiper-navigation font-key-color\"><div class=\"swiper-button-prev\">" . url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-slider-left.svg') . "</div><div class=\"swiper-button-next\">" . url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-slider-right.svg') . "</div></div>";
 
   $output .= "</div>";
 
