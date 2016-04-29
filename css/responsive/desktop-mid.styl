@@ -264,31 +264,8 @@ p
 
 .copy
   h1, h2, h3, h4, h5, h6, blockquote
-    text-align: center
     margin-top: $margin-basic
     margin-bottom: $margin-basic
-
-// ******************************************************
-
-// KEY COLOR IMAGE
-
-.image-key-color-holder
-  position: relative
-  filter: saturate(1.7)
-
-.image-key-color
-  height: 100%
-  width: 100%
-  position: absolute
-  background-size: cover
-  background-position: center
-  background-blend-mode: screen
-  opacity: .8
-  filter: grayscale(1)
-  transition: opacity $basic-animation-speed, filter $basic-animation-speed
-  &:hover
-    opacity: 1
-    filter: grayscale(0)
 
 // ******************************************************
 
@@ -305,28 +282,13 @@ p
   width: 100%
   position: absolute
   font-size: golden-ratio(1rem , 3)
-  pointer-events: none
 
 // ******************************************************
 
 // SWIPER
 
-.swiper-controls
-  display: flex
-  flex-direction: row
-  flex-wrap: nowrap
-  justify-content: space-between
-  align-items: center
-
-.swiper-navigation
-  display: flex
-  justify-content: space-between
-
 .swiper-button-prev, .swiper-button-next
-  background: none
-  width: initial
   padding: 0 $margin-small
-  line-height: .7
   svg
     height: .7rem
     width: .5rem
@@ -340,9 +302,6 @@ p
   top: -2.5rem
   width: 100%
 
-#footer-title
-  margin: 0
-
 #footer-language-switcher
   position: absolute
   right: $margin-small
@@ -354,14 +313,11 @@ p
     display: inline-block
     padding-right: $margin-tiny
 
-#close-footer
-  display: none
-
 #footer
   position: fixed
   z-index: 500
   width: 100%
-  bottom: -50vh
+  bottom: -100vh
   transition: bottom $basic-animation-speed
   &.active
     bottom: 0 !important
@@ -373,21 +329,8 @@ p
     fill: $color-white-soft
     height: 2rem
 
-#footer-subscribe-input
-  background-color: transparent
-  border: 0
-  border-bottom: solid 1px $color-white-soft
-  outline: 0
-
 #subscribe-arrow
-  display: inline-block
-  vertical-align: bottom
   margin-left: - $margin-tiny
-  padding: 0
-  border: none
-  background: none
-  &:focus
-    outline: none
   svg
     height: 1.3rem
     width: 1.8rem
