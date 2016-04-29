@@ -1,7 +1,22 @@
 <?php
 
-// Custom functions (like special queries, etc)
+// get slug of active template/page for menu actives
+function get_active_slug() {
+  $active_slug = null;
+  $queried_object = get_queried_object();
 
+  if ( is_page() || is_home() ) {
+    $active_slug = $queried_object->post_name;
+  } else if (is_post_type_archive()) {
+    $active_slug = $queried_object->rewrite['slug'];
+  } else if (is_single()) {
+    $active_slug = $queried_object->post_type;
+  }
+
+  return $active_slug;
+}
+
+// get key color from approriate programacion post
 function get_key_color() {
   $key_color = 'red';
 
@@ -38,8 +53,7 @@ function get_key_color() {
   return $key_color;
 }
 
-// RENDER functions
-
+// render programacion post on index
 function render_programacion_index($post_id) {
   $meta = get_post_meta($post_id);
   $img = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'index-programacion-post');
@@ -58,8 +72,7 @@ function render_programacion_index($post_id) {
 
 }
 
-// Query Current Program
-
+// query current programacion post
 function current_query() {
   $date = current_time( 'timestamp' );
 
@@ -101,8 +114,8 @@ function current_query() {
 
   return $query;
 }
-// adds leading 0 for numbers less than 2 digits
 
+// adds leading 0 for numbers less than 2 digits
 function add_leading_zero($number) {
   return sprintf("%02d", $number);
 }
