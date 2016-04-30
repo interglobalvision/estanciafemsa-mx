@@ -19,45 +19,46 @@
       <nav id="footer-language-switcher" class="font-sans"><?php echo qtranxf_generateLanguageSelectCode('both'); ?></nav>
     </div>
 
-
-    <div class="container">
-      <nav id="footer-toogle-ui" class="row margin-top-tiny margin-bottom-tiny">
-        <div class="col col-12 text-align-center">
-          <nav id="open-footer" class="u-pointer"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-arrow-up.svg'); ?></nav>
-          <nav id="close-footer" class="u-pointer"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-close.svg'); ?></nav>
-        </div>
-      </nav>
-      <div class="row text-align-center margin-bottom-tiny">
-        <div class="col col-3">
-          <div class="margin-bottom-basic">
-            <h3>Newsletter</h3>
-            <form action="//estanciafemsa.us12.list-manage.com/subscribe/post?u=dac8a23df9d04e8715078fbf8&amp;id=1308107034" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate margin-bottom-tiny" target="_blank" novalidate>
-              <input value="" name="EMAIL" class="required email" id="mce-EMAIL" /> <button id="subscribe-arrow" type="submit"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-arrow-right.svg'); ?></button>
-              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_dac8a23df9d04e8715078fbf8_1308107034" tabindex="-1" value=""></div>
-            </form>
-            <?php echo __('[:es]Suscríbete ahora.[:en]Subscribe now.'); ?>
+    <div id="footer-inner">
+      <div class="container">
+        <nav id="footer-toogle-ui" class="row margin-top-tiny margin-bottom-tiny">
+          <div class="col col-12 text-align-center">
+            <nav id="open-footer" class="u-pointer"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-arrow-up.svg'); ?></nav>
+            <nav id="close-footer" class="u-pointer"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-close.svg'); ?></nav>
           </div>
-          <div>
-            <h4 class="margin-bottom-tiny"><?php echo __('[:es]Sigue nuestras redes:[:en]Follow us:'); ?></h4>
-            <ul id="footer-social-links" class="u-inline-list">
-              <li><h3><a href="<?php echo $twitter; ?>" target="_blank">TW</a></h3></li>
-              <li><h3><a href="<?php echo $facebook; ?>" target="_blank">FB</a></h3></li>
-              <li><h3><a href="<?php echo $instagram; ?>" target="_blank">IN</a></h3></li>
-            </ul>
+        </nav>
+        <div class="row text-align-center margin-bottom-tiny">
+          <div class="col col-3">
+            <div class="margin-bottom-basic">
+              <h3>Newsletter</h3>
+              <form action="//estanciafemsa.us12.list-manage.com/subscribe/post?u=dac8a23df9d04e8715078fbf8&amp;id=1308107034" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate margin-bottom-tiny" target="_blank" novalidate>
+                <input value="" name="EMAIL" class="required email" id="mce-EMAIL" /> <button id="subscribe-arrow" type="submit"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-arrow-right.svg'); ?></button>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_dac8a23df9d04e8715078fbf8_1308107034" tabindex="-1" value=""></div>
+              </form>
+              <?php echo __('[:es]Suscríbete ahora.[:en]Subscribe now.'); ?>
+            </div>
+            <div>
+              <h4 class="margin-bottom-tiny"><?php echo __('[:es]Sigue nuestras redes:[:en]Follow us:'); ?></h4>
+              <ul id="footer-social-links" class="u-inline-list">
+                <li><h3><a href="<?php echo $twitter; ?>" target="_blank">TW</a></h3></li>
+                <li><h3><a href="<?php echo $facebook; ?>" target="_blank">FB</a></h3></li>
+                <li><h3><a href="<?php echo $instagram; ?>" target="_blank">IN</a></h3></li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="col col-6">
-          <h3 id="footer-text"><?php echo __('[:es]' . $footer_text . '[:en]' . $footer_text_en); ?></h3>
-        </div>
-        <div class="col col-3">
-          <h3><?php echo __('[:es]Contacto[:en]Contact'); ?></h3>
-          <div id="footer-contact-text" class="font-smaller text-align-left margin-bottom-small">
-            <?php echo wpautop($footer_address); ?>
-            <?php echo $footer_phone; ?><br/>
-            <a href="mailto:<?php echo $footer_email; ?>"><?php echo $footer_email; ?></a>
+          <div class="col col-6">
+            <h3 id="footer-text"><?php echo __('[:es]' . $footer_text . '[:en]' . $footer_text_en); ?></h3>
           </div>
-          <div>
-            <?php echo $footer_logos; ?>
+          <div class="col col-3">
+            <h3><?php echo __('[:es]Contacto[:en]Contact'); ?></h3>
+            <div id="footer-contact-text" class="font-smaller text-align-left margin-bottom-small">
+              <?php echo wpautop($footer_address); ?>
+              <?php echo $footer_phone; ?><br/>
+              <a href="mailto:<?php echo $footer_email; ?>"><?php echo $footer_email; ?></a>
+            </div>
+            <div>
+              <?php echo $footer_logos; ?>
+            </div>
           </div>
         </div>
       </div>
