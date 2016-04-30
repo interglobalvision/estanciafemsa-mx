@@ -172,6 +172,12 @@ Site.Footer = {
       _this.$footer.toggleClass('active');
     });
 
+    $('#mce-EMAIL').keydown(function(e) {
+      if (e.keyCode === 13) {
+        $('#mc-embedded-subscribe-form').submit();
+      }
+    });
+
   },
 
   layout: function() {

@@ -31,8 +31,9 @@
           <div class="col col-3">
             <div class="margin-bottom-basic">
               <h3>Newsletter</h3>
-              <form class="margin-bottom-tiny">
-                <input id="footer-subscribe-input" /> <button id="subscribe-arrow" type="submit"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-arrow-right.svg'); ?></button>
+              <form action="//estanciafemsa.us12.list-manage.com/subscribe/post?u=dac8a23df9d04e8715078fbf8&amp;id=1308107034" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate margin-bottom-tiny" target="_blank" novalidate>
+                <input value="" name="EMAIL" class="required email" id="mce-EMAIL" /> <button id="subscribe-arrow" type="submit"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-arrow-right.svg'); ?></button>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_dac8a23df9d04e8715078fbf8_1308107034" tabindex="-1" value=""></div>
               </form>
               <?php echo __('[:es]Suscríbete ahora.[:en]Subscribe now.'); ?>
             </div>
