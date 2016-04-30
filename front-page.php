@@ -52,17 +52,17 @@ $date = current_time( 'timestamp' );
       $meta = get_post_meta($post->ID);
 ?>
     <a href="<?php the_permalink() ?>">
-      <article <?php post_class('row font-sans font-key-color text-align-center home-programacion-height-fix'); ?>>
+      <article id="home-programacion" <?php post_class('row font-sans font-key-color text-align-center home-programacion-height-fix'); ?>>
 
           <div class="col col-1"></div>
 
-          <div class="col col-3 home-programacion-height-fix u-flex-center">
+          <div class="col col-3 home-programacion-height-fix u-flex-center only-desktop">
             <div>
             <?php if (!empty($meta['_igv_start_time'][0])) {
                 $start_time = $meta['_igv_start_time'][0];
               ?>
               <h6><?php echo __('[:es]Desde[:en]From'); ?></h6>
-              <h3 class="font-leading-zero"><?php echo date( 'M. d', $start_time ); ?><br/>
+              <h3><?php echo date( 'M. d', $start_time ); ?><br/>
                 <?php echo date( 'Y', $start_time ); ?></h3>
             <?php } ?>
             </div>
@@ -71,18 +71,39 @@ $date = current_time( 'timestamp' );
           <div class="col col-4 home-programacion-height-fix u-flex-center">
             <div>
               <h3><?php if (!empty($meta['_igv_number'][0])) { echo 'No. ' . add_leading_zero( $meta['_igv_number'][0] ); } ?></h3>
-              <h2 class="font-huge font-leading-zero margin-top-basic margin-bottom-tiny"><?php the_title(); ?></h2>
+              <h2 id="home-programacion-title" class="font-huge font-leading-zero margin-top-basic margin-bottom-tiny"><?php the_title(); ?></h2>
               <h3><?php if (!empty($meta['_igv_subtitle'][0])) { echo $meta['_igv_subtitle'][0];} ?></h3>
             </div>
           </div>
 
-          <div class="col col-3 home-programacion-height-fix u-flex-center">
+          <div class="col col-3 home-programacion-height-fix u-flex-center only-desktop">
             <div>
             <?php if (!empty($meta['_igv_end_time'][0])) {
                 $end_time = $meta['_igv_end_time'][0];
               ?>
               <h6><?php echo __('[:es]Hasta[:en]Until'); ?></h6>
-              <h3 class="font-leading-zero"><?php echo date( 'M. d', $end_time ); ?><br/>
+              <h3><?php echo date( 'M. d', $end_time ); ?><br/>
+              <?php echo date( 'Y', $end_time ); ?></h3>
+            <?php } ?>
+            </div>
+          </div>
+
+          <div class="only-mobile">
+             <div class="margin-bottom-basic">
+            <?php if (!empty($meta['_igv_start_time'][0])) {
+                $start_time = $meta['_igv_start_time'][0];
+              ?>
+              <h6><?php echo __('[:es]Desde[:en]From'); ?></h6>
+              <h3><?php echo date( 'M. d', $start_time ); ?><br/>
+                <?php echo date( 'Y', $start_time ); ?></h3>
+            <?php } ?>
+            </div>
+            <div>
+            <?php if (!empty($meta['_igv_end_time'][0])) {
+                $end_time = $meta['_igv_end_time'][0];
+              ?>
+              <h6><?php echo __('[:es]Hasta[:en]Until'); ?></h6>
+              <h3><?php echo date( 'M. d', $end_time ); ?><br/>
               <?php echo date( 'Y', $end_time ); ?></h3>
             <?php } ?>
             </div>
