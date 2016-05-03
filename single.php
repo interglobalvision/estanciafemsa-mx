@@ -6,7 +6,7 @@ get_header();
 <main id="main-content" class="container">
 
   <!-- main posts loop -->
-  <section id="single-programacion">
+  <section id="single-post">
 
 <?php
 if( have_posts() ) {
