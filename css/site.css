@@ -1280,6 +1280,12 @@ img {
 .padding-bottom-large {
   padding-bottom: 110px;
 }
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
 .menu-item {
   padding: 6.798373876248402px 11px;
   margin: 0 11px;
