@@ -1,5 +1,5 @@
 /* jshint browser: true, devel: true, indent: 2, curly: true, eqeqeq: true, futurehostile: true, latedef: true, undef: true, unused: true */
-/* global $, jQuery, document, Modernizr, Site */
+/* global $, jQuery, document, Modernizr, Site, Swiper */
 Site = {
   mobileThreshold: 1008,
   init: function() {
@@ -9,6 +9,7 @@ Site = {
     _this.windowWidth = $(window).width();
 
     _this.Gallery.init();
+    _this.Header.init();
     _this.Footer.init();
     if ($('body').hasClass('home')) {
       _this.Splash.init();
@@ -27,6 +28,7 @@ Site = {
     _this.windowWidth = $(window).width();
 
     _this.Splash.resize();
+    _this.Header.layout();
 
   },
 };
@@ -144,6 +146,24 @@ Site.Gallery = {
       },
     });
 
+  },
+};
+
+Site.Header = {
+  init: function() {
+    var _this = this;
+
+    _this.$header = $('#header');
+    _this.$main = $('#main-container');
+
+    _this.layout();
+  },
+
+  layout: function() {
+    var _this = this;
+    var offset = _this.$header.outerHeight(true);
+
+    _this.$main.css('margin-top', offset + 'px');
   },
 };
 
