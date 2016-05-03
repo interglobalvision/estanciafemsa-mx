@@ -2022,9 +2022,18 @@ img {
   .copy h5,
   .copy h6,
   .copy blockquote {
-    text-align: center;
     margin-top: 36px;
     margin-bottom: 36px;
+  }
+  #single-programacion .copy,
+  #single-programacion-credits {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .post-type-archive-programacion #main-content .col-4 {
+    width: 50%;
+    float: left;
   }
   .index-programacion-post-container {
     height: 300px;
@@ -2290,11 +2299,16 @@ img {
     margin-top: 32px;
     margin-bottom: 32px;
   }
+  .post-type-archive-programacion #main-content .col-4 {
+    width: 100%;
+    float: none;
+  }
   .index-programacion-post-container {
     height: 300px;
     max-width: 220px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 32px;
   }
   .index-programacion-post-number {
     height: 100%;
