@@ -13,13 +13,13 @@
   $instagram = IGV_get_option('_igv_social_instagram');
 ?>
 
-  <footer id="footer" class="background-key-color font-color-white">
+  <footer id="footer" class="background-key-color">
     <div id="footer-above">
-      <h1 id="footer-title" class="u-pointer font-larger font-bold font-uppercase font-key-color text-align-center">CASA LUIS BARRAGÁN</h1>
+      <h1 id="footer-title" class="u-pointer font-larger font-bold font-uppercase text-align-center">CASA LUIS BARRAGÁN</h1>
       <nav id="footer-language-switcher" class="font-sans"><?php echo qtranxf_generateLanguageSelectCode('both'); ?></nav>
     </div>
 
-    <div id="footer-inner">
+    <div id="footer-inner" class="font-color-white">
       <div class="container">
         <nav id="footer-toogle-ui" class="row margin-top-tiny margin-bottom-tiny">
           <div class="col col-12 text-align-center">

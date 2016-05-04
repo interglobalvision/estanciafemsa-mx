@@ -16,7 +16,7 @@ if( have_posts() ) {
 ?>
 
     <article <?php post_class('row'); ?> id="post-<?php the_ID(); ?>">
-      <div id="single-programacion-header-mobile" class="text-align-center font-key-color only-mobile">
+      <div id="single-programacion-header-mobile" class="text-align-center only-mobile">
         <h4 class="font-sans"><?php if (!empty($meta['_igv_number'][0])) {echo 'No. ' . add_leading_zero($meta['_igv_number'][0]);} ?></h4>
         <h2 class="margin-top-tiny margin-bottom-tiny"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
         <h4 class="font-sans margin-bottom-basic"><?php if (!empty($meta['_igv_subtitle'][0]) && !empty($meta['_igv_subtitle_en'][0])) {
@@ -30,7 +30,7 @@ if( have_posts() ) {
       </div>
       <div class="col col-1"></div>
       <div class="col col-2">
-        <header id="single-programacion-header" class="text-align-center font-key-color margin-bottom-mid only-desktop">
+        <header id="single-programacion-header" class="text-align-center margin-bottom-mid only-desktop">
           <h4 class="font-sans"><?php if (!empty($meta['_igv_number'][0])) {echo 'No. ' . add_leading_zero($meta['_igv_number'][0]);} ?></h4>
           <h2 class="margin-top-tiny margin-bottom-tiny"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
           <h4 class="font-sans"><?php if (!empty($meta['_igv_subtitle'][0]) && !empty($meta['_igv_subtitle_en'][0])) {

@@ -52,7 +52,7 @@ $date = current_time( 'timestamp' );
       $meta = get_post_meta($post->ID);
 ?>
     <a href="<?php the_permalink() ?>">
-      <article id="home-programacion" <?php post_class('row font-sans font-key-color text-align-center home-programacion-height-fix'); ?>>
+      <article id="home-programacion" <?php post_class('row font-sans text-align-center home-programacion-height-fix'); ?>>
 
           <div class="col col-1"></div>
 
