@@ -1466,6 +1466,11 @@ img {
   display: inline-block;
   padding-right: 11px;
 }
+#open-footer {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
 #close-footer {
   display: none;
 }
@@ -2100,6 +2105,12 @@ img {
   #footer-inner {
     max-height: 100vh;
     overflow-x: auto;
+  }
+  #open-footer {
+    -ms-filter: none;
+    -webkit-filter: none;
+            filter: none;
+    opacity: 1;
   }
   #subscribe-arrow {
     margin-left: -9px;

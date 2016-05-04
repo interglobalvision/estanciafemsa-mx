@@ -20,13 +20,17 @@
     </div>
 
     <div id="footer-inner" class="font-color-white">
+      <div id="footer-toogle-ui" class="padding-top-tiny padding-bottom-tiny u-pointer">
+        <div class="container">
+          <nav class="row">
+            <div class="col col-12 text-align-center">
+              <nav id="open-footer"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-arrow-up.svg'); ?></nav>
+              <nav id="close-footer"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-close.svg'); ?></nav>
+            </div>
+          </nav>
+        </div>
+      </div>
       <div class="container">
-        <nav id="footer-toogle-ui" class="row margin-top-tiny margin-bottom-tiny">
-          <div class="col col-12 text-align-center">
-            <nav id="open-footer" class="u-pointer"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-arrow-up.svg'); ?></nav>
-            <nav id="close-footer" class="u-pointer"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-close.svg'); ?></nav>
-          </div>
-        </nav>
         <div class="row text-align-center margin-bottom-tiny">
           <div class="col col-3">
             <div class="margin-bottom-basic">
