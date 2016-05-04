@@ -1290,6 +1290,13 @@ img {
   padding: 6.798373876248402px 11px;
   margin: 0 11px;
 }
+.menu-link {
+  display: inline-block;
+  vertical-align: top;
+}
+.menu-link.active {
+  padding-top: 11px;
+}
 #splash {
   position: fixed;
   width: 100%;
@@ -1685,6 +1692,9 @@ img {
     padding: 6.180339887498547px 10px;
     margin: 0 10px;
   }
+  .menu-link.active {
+    padding-top: 10px;
+  }
   #splash {
     position: fixed;
     width: 100%;
@@ -1962,6 +1972,9 @@ img {
   .menu-item {
     padding: 5.562305898748693px 9px;
     margin: 0 9px;
+  }
+  .menu-link.active {
+    padding-top: 9px;
   }
   #splash {
     position: fixed;
@@ -2245,6 +2258,9 @@ img {
   .menu-item {
     padding: 4.944271909998838px 8px;
     margin: 0 8px;
+  }
+  .menu-link.active {
+    padding-top: 8px;
   }
   #splash {
     position: fixed;
