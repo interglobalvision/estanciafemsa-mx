@@ -21,7 +21,7 @@ if(have_posts()) {
       <div class="row">
         <div class="col col-4">
 
-          <h3 class="font-key-color text-align-center margin-top-basic margin-bottom-basic"><?php echo __('[:es]Previa Cita[:en]Appointments'); ?></h3>
+          <h3 class="text-align-center margin-top-basic margin-bottom-basic"><?php echo __('[:es]Previa Cita[:en]Appointments'); ?></h3>
 
           <div class="copy"><?php
             if (qtranxf_getLanguage() === 'es') {
@@ -49,7 +49,7 @@ if(have_posts()) {
 
         <div class="col col-4">
 
-          <h3 class="font-key-color text-align-center margin-top-basic margin-bottom-basic"><?php echo __('[:es]Agendar cita[:en]Schedule appointment'); ?>&nbsp;&nbsp;<span class="ui-arrow"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-arrow-right.svg'); ?></span></h3>
+          <h3 class="text-align-center margin-top-basic margin-bottom-basic"><?php echo __('[:es]Agendar cita[:en]Schedule appointment'); ?>&nbsp;&nbsp;<span class="ui-arrow"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-arrow-right.svg'); ?></span></h3>
 
           <div class="copy">
           <?php
@@ -75,9 +75,9 @@ if(have_posts()) {
             $cost_special_terms_en = IGV_get_option('_igv_visits_cost_special_terms_en');
           ?>
 
-            <span class="font-key-color"><?php echo __('[:es]Costo de entrada general[:en]Cost of general entry'); ?></span><br/>
-            <span class="font-key-color"><?php echo $cost_general; ?></span> pesos<br/>
-            <span class="font-key-color"><?php echo $cost_special; ?></span> pesos <?php
+            <span><?php echo __('[:es]Costo de entrada general[:en]Cost of general entry'); ?></span><br/>
+            <span><?php echo $cost_general; ?></span> pesos<br/>
+            <span><?php echo $cost_special; ?></span> pesos <?php
               if (!empty($cost_special_terms) && !empty($cost_special_terms_en)) {
                 echo __('[:es]' . $cost_special_terms . '[:en]' . $cost_special_terms_en);
               }

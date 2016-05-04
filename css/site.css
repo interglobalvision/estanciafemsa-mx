@@ -1290,6 +1290,13 @@ img {
   padding: 6.798373876248402px 11px;
   margin: 0 11px;
 }
+.menu-link {
+  display: inline-block;
+  vertical-align: top;
+}
+.menu-link.active {
+  padding-top: 11px;
+}
 #splash {
   position: fixed;
   width: 100%;
@@ -1458,6 +1465,11 @@ img {
   color: #0e0e0e;
   display: inline-block;
   padding-right: 11px;
+}
+#open-footer {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
 }
 #close-footer {
   display: none;
@@ -1684,6 +1696,9 @@ img {
   .menu-item {
     padding: 6.180339887498547px 10px;
     margin: 0 10px;
+  }
+  .menu-link.active {
+    padding-top: 10px;
   }
   #splash {
     position: fixed;
@@ -1963,6 +1978,9 @@ img {
     padding: 5.562305898748693px 9px;
     margin: 0 9px;
   }
+  .menu-link.active {
+    padding-top: 9px;
+  }
   #splash {
     position: fixed;
     width: 100%;
@@ -2087,6 +2105,12 @@ img {
   #footer-inner {
     max-height: 100vh;
     overflow-x: auto;
+  }
+  #open-footer {
+    -ms-filter: none;
+    -webkit-filter: none;
+            filter: none;
+    opacity: 1;
   }
   #subscribe-arrow {
     margin-left: -9px;
@@ -2245,6 +2269,9 @@ img {
   .menu-item {
     padding: 4.944271909998838px 8px;
     margin: 0 8px;
+  }
+  .menu-link.active {
+    padding-top: 8px;
   }
   #splash {
     position: fixed;

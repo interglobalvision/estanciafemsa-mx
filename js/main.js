@@ -180,12 +180,8 @@ Site.Footer = {
   bind: function() {
     var _this = this;
 
-    $('#open-footer').click(function() {
-      _this.$footer.addClass('active');
-    });
-
-    $('#close-footer').click(function() {
-      _this.$footer.removeClass('active');
+    $('#footer-toogle-ui').click(function() {
+      _this.$footer.toggleClass('active');
     });
 
     $('#footer-title').click(function() {

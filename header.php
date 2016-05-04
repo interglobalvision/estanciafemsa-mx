@@ -49,20 +49,8 @@
   $key_color = get_key_color();
 ?>
   <style type="text/css">
-    .font-key-color {
-      color: <?php echo $key_color; ?>;
-    }
-
     .background-key-color {
       background-color:<?php echo $key_color; ?>;
-    }
-
-    .copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6, .copy blockquote {
-      color: <?php echo $key_color; ?>;
-    }
-
-    .swiper-button-prev svg, .swiper-button-next svg {
-      fill: <?php echo $key_color; ?>;
     }
   </style>
 
@@ -81,26 +69,26 @@ if (is_front_page()) {
 <section id="main-container" <?php if ( is_front_page() ) { ?> class="u-fixed" <?php } ?> >
 
   <header id="header">
-    <div class="container margin-bottom-basic">
+    <div class="container font-sans font-bold font-uppercase margin-bottom-basic">
       <?php $active_slug = get_active_slug(); ?>
       <div class="row">
-        <div class="col col-12 text-align-center font-sans">
-        <h1 class="font-larger font-bold font-uppercase match-height margin-bottom-tiny font-key-color"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+        <div class="col col-12 text-align-center">
+        <h1 class="font-larger margin-bottom-tiny"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
         <ul id="menu" class="u-inline-list">
-          <li class="menu-item <?php if ($active_slug === 'sobre-nosotros') { echo 'font-key-color'; } ?>">
-            <a href="<?php echo home_url('/sobre-nosotros'); ?>"><?php echo __('[:es]Sobre Nosotros[:en]About Us'); ?></a>
+          <li class="menu-item">
+            <a class="menu-link <?php if ($active_slug === 'sobre-nosotros') { echo 'active'; } ?>" href="<?php echo home_url('/sobre-nosotros'); ?>"><?php echo __('[:es]Sobre Nosotros[:en]About Us'); ?></a>
           </li>
-          <li class="menu-item <?php if ($active_slug === 'programacion') { echo 'font-key-color'; } ?>">
-            <a href="<?php echo home_url('/programacion'); ?>"><?php echo __('[:es]Programación[:en]Program'); ?></a>
+          <li class="menu-item">
+            <a class="menu-link <?php if ($active_slug === 'programacion') { echo 'active'; } ?>" href="<?php echo home_url('/programacion'); ?>"><?php echo __('[:es]Programación[:en]Program'); ?></a>
           </li>
-          <li class="menu-item <?php if ($active_slug === 'contenido' || $active_slug === 'post') { echo 'font-key-color'; } ?>">
-            <a href="<?php echo home_url('/contenido'); ?>"><?php echo __('[:es]Contenido[:en]Content'); ?></a>
+          <li class="menu-item">
+            <a class="menu-link <?php if ($active_slug === 'contenido' || $active_slug === 'post') { echo 'active'; } ?>" href="<?php echo home_url('/contenido'); ?>"><?php echo __('[:es]Contenido[:en]Content'); ?></a>
           </li>
-          <li class="menu-item <?php if ($active_slug === 'prensa') { echo 'font-key-color'; } ?>">
-            <a href="<?php echo home_url('/prensa'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a>
+          <li class="menu-item">
+            <a class="menu-link <?php if ($active_slug === 'prensa') { echo 'active'; } ?>" href="<?php echo home_url('/prensa'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a>
           </li>
-          <li class="menu-item <?php if ($active_slug === 'citas') { echo 'font-key-color'; } ?>">
-            <a href="<?php echo home_url('/citas'); ?>"><?php echo __('[:es]Citas[:en]Appointments'); ?></a>
+          <li class="menu-item">
+            <a class="menu-link <?php if ($active_slug === 'citas') { echo 'active'; } ?>" href="<?php echo home_url('/citas'); ?>"><?php echo __('[:es]Citas[:en]Appointments'); ?></a>
           </li>
         </ul>
         </div>
