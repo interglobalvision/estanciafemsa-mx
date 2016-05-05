@@ -94,6 +94,7 @@ $color-white-soft = rgb(253, 253, 253)
 $color-red = rgb(253, 20, 20)
 
 $basic-animation-speed = 500ms
+$fast-animation-speed = $basic-animation-speed / 2
 
 // ******************************************************
 
@@ -213,6 +214,8 @@ img
 #main-container
   width: 100%
   margin-bottom: $margin-large + $margin-mid
+  margin-top: 155px
+  transition margin-top $fast-animation-speed
 
 .only-mobile
   display: none

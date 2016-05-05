@@ -1,16 +1,20 @@
 /* jshint browser: true, devel: true, indent: 2, curly: true, eqeqeq: true, futurehostile: true, latedef: true, undef: true, unused: true */
-/* global $, jQuery, document, Modernizr, Site, Swiper */
-Site = {
+/* global $, document, Swiper */
+var Site = {
   mobileThreshold: 1008,
   init: function() {
     var _this = this;
 
+    _this.bind();
+
     _this.windowHeight = $(window).height();
     _this.windowWidth = $(window).width();
 
-    _this.Gallery.init();
     _this.Header.init();
     _this.Footer.init();
+
+    _this.fixWidows();
+
     if ($('body').hasClass('home')) {
       _this.Splash.init();
     }
@@ -21,15 +25,41 @@ Site = {
 
   },
 
+  bind: function() {
+    var _this = this;
+
+    $(document).ready(function () {
+
+      _this.Gallery.init();
+
+      _this.Splash.layout();
+      _this.Header.layout();
+      _this.Footer.layout();
+
+    });
+
+  },
+
   onResize: function() {
     var _this = this;
 
     _this.windowHeight = $(window).height();
     _this.windowWidth = $(window).width();
 
-    _this.Splash.resize();
+    _this.Splash.layout();
     _this.Header.layout();
+    _this.Footer.layout();
 
+  },
+
+  fixWidows: function() {
+    // utility class mainly for use on headines to avoid widows [single words on a new line]
+    $('.js-fix-widows').each(function(){
+      var string = $(this).html();
+
+      string = string.replace(/ ([^ ]*)$/,'&nbsp;$1');
+      $(this).html(string);
+    });
   },
 };
 
@@ -72,10 +102,6 @@ Site.Splash = {
         }
       },
     });
-  },
-
-  resize: function() {
-    this.layout();
   },
 
   layout: function() {
@@ -204,17 +230,4 @@ Site.Footer = {
   },
 };
 
-jQuery(document).ready(function () {
-  'use strict';
-
-  // utility class mainly for use on headines to avoid widows [single words on a new line]
-  $('.js-fix-widows').each(function(){
-    var string = $(this).html();
-
-    string = string.replace(/ ([^ ]*)$/,'&nbsp;$1');
-    $(this).html(string);
-  });
-
-  Site.init();
-
-});
+Site.init();

@@ -28,6 +28,8 @@ function scripts_and_styles_method() {
     wp_enqueue_style( 'dashicons' );
   }
 
+  wp_deregister_script( 'wp-embed' );
+
 }
 add_action('wp_enqueue_scripts', 'scripts_and_styles_method');
 

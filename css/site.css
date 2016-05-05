@@ -1204,6 +1204,9 @@ img {
 #main-container {
   width: 100%;
   margin-bottom: 187px;
+  margin-top: 155px;
+  -webkit-transition: margin-top 250ms;
+  transition: margin-top 250ms;
 }
 .only-mobile {
   display: none;
@@ -2263,7 +2266,7 @@ img {
   .padding-bottom-large {
     padding-bottom: 80px;
   }
-  #header {
+  #header-container {
     margin-bottom: 16px;
   }
   .menu-item {
