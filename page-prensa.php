@@ -26,16 +26,6 @@ if( have_posts() ) {
 
         </div>
 
-        <div class="col col-4">
-
-          <div id="page-key-color-image" class="image-key-color-holder background-key-color">
-            <div class="image-key-color" style="background-image: url(<?php if (!empty($img)) {echo $img[0];} ?>);"></div>
-          </div>
-
-        </div>
-
-        <div class="col col-4">
-
 <?php
       $current_query = current_query();
 
@@ -45,7 +35,18 @@ if( have_posts() ) {
 
           $number = get_post_meta($post->ID, '_igv_number');
           $program_files = get_post_meta($post->ID, '_igv_program_files');
+
+          $img = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'col-4');
 ?>
+        <div class="col col-4">
+
+          <div id="page-key-color-image" class="image-key-color-holder background-key-color">
+            <div class="image-key-color" style="background-image: url(<?php if (!empty($img)) {echo $img[0];} ?>);"></div>
+          </div>
+
+        </div>
+
+        <div class="col col-4">
 
           <h3 class="text-align-center margin-top-basic margin-bottom-basic">
             <?php if (!empty($number[0])) { echo 'No. ' . add_leading_zero($number[0]) . '<br>'; } ?>
@@ -61,9 +62,10 @@ if( have_posts() ) {
               echo "<li><a href=" . $file['file'] . " target='_blank' class='font-underline'>" . __('[:es]' . $file['text'] . '[:en]' . $file['text_en']) . "</a></li>";
             }
             echo '</ul>';
-          } // end if
-        } // end while
-      } // end if
+          }
+        }
+      }
+
       wp_reset_postdata();
 ?>
           </div>
