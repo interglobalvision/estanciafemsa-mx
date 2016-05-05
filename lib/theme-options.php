@@ -318,6 +318,16 @@ CP 11840, Ciudad de México, D.F.',
 			),
 		) );
 
+		$options_metabox->add_field( array(
+			'name' => __( 'Directorio [EN]', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'about_directory_en',
+			'type' => 'wysiwyg',
+			'options' => array(
+				'textarea_rows' => 12,
+				'media_buttons' => false,
+			),
+		) );
 
 	}
 
