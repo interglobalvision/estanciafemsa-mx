@@ -10,10 +10,19 @@ get_header();
   <section id="posts">
 
 <?php
-if(have_posts()) {
-  while(have_posts()) {
+if (have_posts()) {
+  while (have_posts()) {
     the_post();
     $img = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'col-4');
+
+    if (empty($img)) {
+      $current_query = current_query();
+      if ($current_query->have_posts()) {
+        $current_query->the_post();
+        $img = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'col-4');
+      }
+      wp_reset_postdata();
+    }
 ?>
 
     <article <?php post_class('container'); ?> id="post-<?php the_ID(); ?>">
@@ -26,14 +35,12 @@ if(have_posts()) {
           <div class="copy"><?php
             if (qtranxf_getLanguage() === 'es') {
               $cita_text = IGV_get_option('_igv_visits_text');
-              if (!empty($cita_text)) {
-                echo wpautop($cita_text);
-              }
             } else {
               $cita_text = IGV_get_option('_igv_visits_text_en');
-              if (!empty($cita_text)) {
-                echo wpautop($cita_text);
-              }
+            }
+
+            if (!empty($cita_text)) {
+              echo wpautop($cita_text);
             }
           ?></div>
 
@@ -55,14 +62,12 @@ if(have_posts()) {
           <?php
             if (qtranxf_getLanguage() === 'es') {
               $cita_text_2 = IGV_get_option('_igv_visits_guide');
-              if (!empty($cita_text_2)) {
-                echo wpautop($cita_text_2);
-              }
             } else {
               $cita_text_2 = IGV_get_option('_igv_visits_guide_en');
-              if (!empty($cita_text_2)) {
-                echo wpautop($cita_text_2);
-              }
+            }
+
+            if (!empty($cita_text_2)) {
+              echo wpautop($cita_text_2);
             }
 
             $cost_general = '200';
