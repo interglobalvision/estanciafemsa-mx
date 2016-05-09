@@ -62,6 +62,8 @@
 if (is_front_page()) {
   get_template_part('partials/splash');
 }
+
+$hide_contenido = IGV_get_option('_igv_contenido_toggle');
 ?>
 
 <section id="main-container" <?php if ( is_front_page() ) { ?> class="u-fixed" <?php } ?> >
@@ -79,9 +81,13 @@ if (is_front_page()) {
           <li class="menu-item">
             <a class="menu-link <?php if ($active_slug === 'programacion') { echo 'active'; } ?>" href="<?php echo home_url('/programacion'); ?>"><?php echo __('[:es]Programación[:en]Program'); ?></a>
           </li>
+          <?php
+            if (!$hide_contenido) {
+          ?>
           <li class="menu-item">
             <a class="menu-link <?php if ($active_slug === 'contenido' || $active_slug === 'post') { echo 'active'; } ?>" href="<?php echo home_url('/contenido'); ?>"><?php echo __('[:es]Contenido[:en]Content'); ?></a>
           </li>
+          <?php } ?>
           <li class="menu-item">
             <a class="menu-link <?php if ($active_slug === 'prensa') { echo 'active'; } ?>" href="<?php echo home_url('/prensa'); ?>"><?php echo __('[:es]Prensa[:en]Press'); ?></a>
           </li>

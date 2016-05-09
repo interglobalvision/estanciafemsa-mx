@@ -103,6 +103,22 @@ class IGV_Admin {
 
 		// Set our CMB2 fields
 
+		// GENERAL
+
+		$options_metabox->add_field( array(
+			'name' => __( 'General', 'cmb2' ),
+			'desc' => __( '', 'cmb2' ),
+			'id'   => $this->prefix . 'general_title',
+			'type' => 'title',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Ocultar <i>Contenido</i>', 'cmb2' ),
+			'desc' => __( 'Marca este campo para ocultar el link de "Contenido" del menu.', 'cmb2' ),
+			'id'   => $this->prefix . 'contenido_toggle',
+			'type' => 'checkbox',
+		) );
+
 		// FOOTER
 
 		$options_metabox->add_field( array(
@@ -125,7 +141,7 @@ class IGV_Admin {
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'footer_text_en',
 			'type' => 'text',
-			'default' => 'Estancia Femsa is a platform.',
+			'default' => '...',
 		) );
 
 		$options_metabox->add_field( array(
@@ -240,7 +256,7 @@ o por internet.',
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'visits_guide_en',
 			'type' => 'textarea_small',
-			'default' => 'Dont turn up late',
+			'default' => '...',
 		) );
 
 		$options_metabox->add_field( array(
@@ -272,7 +288,7 @@ o por internet.',
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'visits_cost_special_terms_en',
 			'type' => 'textarea_small',
-			'default' => 'for students, teachers, ...',
+			'default' => '...',
 		) );
 
 		// ABOUT
@@ -282,17 +298,6 @@ o por internet.',
 			'desc' => __( '', 'cmb2' ),
 			'id'   => $this->prefix . 'about_title',
 			'type' => 'title',
-		) );
-
-		$options_metabox->add_field( array(
-			'name' => __( 'Sobre Estancia Femsa', 'IGV' ),
-			'desc' => __( '', 'IGV' ),
-			'id'   => $this->prefix . 'about_text',
-			'type' => 'wysiwyg',
-			'options' => array(
-				'textarea_rows' => 5,
-				'media_buttons' => false,
-			),
 		) );
 
 		$options_metabox->add_field( array(
