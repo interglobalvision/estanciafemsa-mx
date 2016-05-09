@@ -41,7 +41,7 @@ if( have_posts() ) {
         <div id="single-programacion-credits">
         <?php
           if (!empty($meta['_igv_credits'][0])) {
-            echo wpautop($meta['_igv_credits'][0]);
+            echo apply_filters('the_content', $meta['_igv_credits'][0]);
           }
         ?>
         </div>
