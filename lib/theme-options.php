@@ -103,6 +103,22 @@ class IGV_Admin {
 
 		// Set our CMB2 fields
 
+		// GENERAL
+
+		$options_metabox->add_field( array(
+			'name' => __( 'General', 'cmb2' ),
+			'desc' => __( '', 'cmb2' ),
+			'id'   => $this->prefix . 'general_title',
+			'type' => 'title',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Hide contenido', 'cmb2' ),
+			'desc' => __( 'check this to hide the contentido section in the menu', 'cmb2' ),
+			'id'   => $this->prefix . 'contenido_toggle',
+			'type' => 'checkbox',
+		) );
+
 		// FOOTER
 
 		$options_metabox->add_field( array(
