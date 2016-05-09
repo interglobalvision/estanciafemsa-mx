@@ -301,17 +301,6 @@ o por internet.',
 		) );
 
 		$options_metabox->add_field( array(
-			'name' => __( 'Sobre Estancia Femsa', 'IGV' ),
-			'desc' => __( '', 'IGV' ),
-			'id'   => $this->prefix . 'about_text',
-			'type' => 'wysiwyg',
-			'options' => array(
-				'textarea_rows' => 5,
-				'media_buttons' => false,
-			),
-		) );
-
-		$options_metabox->add_field( array(
 			'name' => __( 'Contacto', 'IGV' ),
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'about_contact',
