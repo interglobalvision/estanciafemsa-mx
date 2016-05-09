@@ -40,7 +40,7 @@ if (have_posts()) {
             }
 
             if (!empty($cita_text)) {
-              echo wpautop($cita_text);
+              echo apply_filters('the_content', $cita_text);
             }
           ?></div>
 
@@ -67,7 +67,7 @@ if (have_posts()) {
             }
 
             if (!empty($cita_text_2)) {
-              echo wpautop($cita_text_2);
+              echo apply_filters('the_content', $cita_text_2);
             }
 
             $cost_general = '200';

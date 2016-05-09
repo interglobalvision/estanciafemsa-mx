@@ -56,7 +56,7 @@
           <div class="col col-3">
             <h3><?php echo __('[:es]Contacto[:en]Contact'); ?></h3>
             <div id="footer-contact-text" class="font-smaller text-align-left margin-bottom-small">
-              <?php echo wpautop($footer_address); ?>
+              <?php echo apply_filters('the_content', $footer_address); ?>
               <?php echo $footer_phone; ?><br/>
               <a href="mailto:<?php echo $footer_email; ?>"><?php echo $footer_email; ?></a>
             </div>

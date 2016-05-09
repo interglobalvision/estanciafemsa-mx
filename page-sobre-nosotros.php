@@ -37,7 +37,7 @@ if(have_posts()) {
           <?php
             $about_contact = IGV_get_option('_igv_about_contact');
             if (!empty($about_contact)) {
-              echo wpautop($about_contact);
+              echo apply_filters('the_content', $about_contact);
             }
           ?>
           </div>
@@ -53,7 +53,7 @@ if(have_posts()) {
             }
 
             if (!empty($about_directoy)) {
-              echo wpautop($about_directoy);
+              echo apply_filters('the_content', $about_directoy);
             }
           ?>
           </div>
