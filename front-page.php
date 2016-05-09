@@ -72,7 +72,7 @@ $date = current_time( 'timestamp' );
             <div>
               <h3><?php if (!empty($meta['_igv_number'][0])) { echo 'No. ' . add_leading_zero( $meta['_igv_number'][0] ); } ?></h3>
               <h2 id="home-programacion-title" class="font-huge font-leading-zero margin-top-basic margin-bottom-tiny"><?php the_title(); ?></h2>
-              <h3><?php if (!empty($meta['_igv_subtitle'][0])) { echo $meta['_igv_subtitle'][0];} ?></h3>
+              <h3><?php if (!empty($meta['_igv_subtitle'][0])) { echo __($meta['_igv_subtitle'][0]);} ?></h3>
             </div>
           </div>
 

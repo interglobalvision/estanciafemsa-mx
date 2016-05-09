@@ -3,7 +3,7 @@ get_header();
 
 $date = time();
 
-$args = array(
+$ahora = new WP_Query(array(
   'post_type' => 'programacion',
   'posts_per_page' => 1,
   'meta_query' => array(
@@ -11,42 +11,43 @@ $args = array(
     array(
       'key'     => '_igv_start_time',
       'value'   => $date,
-      'compare' => '<='
+      'compare' => '<=',
+      'type'    => 'NUMERIC'
     ),
     array(
       'key'     => '_igv_end_time',
       'value'   => $date,
-      'compare' => '>='
+      'compare' => '>=',
+      'type'    => 'NUMERIC'
     )
   )
-);
-$ahora = new WP_Query($args);
+));
 
-$args = array(
+$future = new WP_Query(array(
   'post_type' => 'programacion',
   'posts_per_page' => 1,
   'meta_query' => array(
     array(
       'key'     => '_igv_start_time',
       'value'   => $date,
-      'compare' => '>'
+      'compare' => '>',
+      'type'    => 'NUMERIC'
     ),
   )
-);
-$future = new WP_Query($args);
+));
 
-$args = array(
+$past = new WP_Query(array(
   'post_type' => 'programacion',
   'posts_per_page' => -1,
   'meta_query' => array(
     array(
       'key'     => '_igv_end_time',
       'value'   => $date,
-      'compare' => '<'
+      'compare' => '<',
+      'type'    => 'NUMERIC'
     ),
   )
-);
-$past = new WP_Query($args);
+));
 ?>
 
 <!-- main content -->
@@ -121,10 +122,10 @@ if($ahora->have_posts() || $future->have_posts() || $past->have_posts()) {
 <?php
       wp_reset_postdata();
 } else {
-?>  
+?>
 
     <article class="u-alert"><?php _e('[:es]Lo sentimos, pero no podemos encontrar lo que estás buscando.[:en]Sorry, no posts matched your criteria[:]'); ?></article>
-    
+
 <?php } ?>
 
   </div>

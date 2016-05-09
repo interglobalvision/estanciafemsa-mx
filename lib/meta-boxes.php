@@ -79,19 +79,19 @@ function igv_cmb_metaboxes() {
 		'name'       => __( 'Sub-titulo', 'cmb2' ),
 		'id'         => $prefix . 'subtitle',
 		'type'       => 'text',
-	) );
-
-  $program_meta->add_field( array(
-		'name'       => __( 'Sub-titulo [EN]', 'cmb2' ),
-		'id'         => $prefix . 'subtitle_en',
-		'type'       => 'text',
+    'attributes' => array(
+      'class' => 'cmb2-qtranslate'
+    )
 	) );
 
   $program_meta->add_field( array(
 		'name'    => __( 'Creditos', 'cmb2' ),
 		'id'      => $prefix . 'credits',
 		'type'    => 'wysiwyg',
-		'options' => array( 'textarea_rows' => 14, ),
+		'options' => array(
+		  'textarea_rows' => 14,
+      'editor_class' => 'cmb2-qtranslate'
+     ),
 	) );
 
   $program_files_group = $program_meta->add_field( array(
@@ -115,15 +115,12 @@ function igv_cmb_metaboxes() {
   ) );
 
   $program_meta->add_group_field( $program_files_group, array(
-    'name' => __( 'Texto de enlace (ES)', 'cmb2' ),
+    'name' => __( 'Texto de enlace', 'cmb2' ),
     'id'   => 'text',
     'type' => 'text',
-  ) );
-
-  $program_meta->add_group_field( $program_files_group, array(
-    'name' => __( 'Texto de enlace (EN)', 'cmb2' ),
-    'id'   => 'text_en',
-    'type' => 'text',
+    'attributes' => array(
+      'class' => 'cmb2-qtranslate'
+    )
   ) );
 
 }
