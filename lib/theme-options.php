@@ -141,7 +141,7 @@ class IGV_Admin {
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'footer_text_en',
 			'type' => 'text',
-			'default' => 'Estancia Femsa is a platform.',
+			'default' => '...',
 		) );
 
 		$options_metabox->add_field( array(
@@ -256,7 +256,7 @@ o por internet.',
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'visits_guide_en',
 			'type' => 'textarea_small',
-			'default' => 'Dont turn up late',
+			'default' => '...',
 		) );
 
 		$options_metabox->add_field( array(
@@ -288,7 +288,7 @@ o por internet.',
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'visits_cost_special_terms_en',
 			'type' => 'textarea_small',
-			'default' => 'for students, teachers, ...',
+			'default' => '...',
 		) );
 
 		// ABOUT
