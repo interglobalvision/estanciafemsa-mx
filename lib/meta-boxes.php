@@ -49,12 +49,14 @@ function igv_cmb_metaboxes() {
 		'name' => __( 'Fecha de inicio', 'cmb2' ),
 		'id'   => $prefix . 'start_time',
 		'type' => 'text_date_timestamp',
+    'date_format' => 'd/m/Y'
 	) );
 
   $program_meta->add_field( array(
 		'name' => __( 'Fecha de fin', 'cmb2' ),
 		'id'   => $prefix . 'end_time',
 		'type' => 'text_date_timestamp',
+    'date_format' => 'd/m/Y'
 	) );
 
   $program_meta->add_field( array(
