@@ -59,7 +59,7 @@ if( have_posts() ) {
           if (!empty($program_files[0])) {
             echo '<ul>';
             foreach ($program_files[0] as $file) {
-              echo "<li><a href=" . $file['file'] . " target='_blank' class='font-underline'>" . __('[:es]' . $file['text'] . '[:en]' . $file['text_en']) . "</a></li>";
+              echo "<li><a href=" . $file['file'] . " target='_blank' class='font-underline'>" . __($file['text']) . "</a></li>";
             }
             echo '</ul>';
           }
