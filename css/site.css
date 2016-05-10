@@ -1441,7 +1441,7 @@ img {
 .swiper-button-next {
   background: none;
   width: initial;
-  padding: 0 22px;
+  padding-left: 22px;
   line-height: 0.7;
 }
 .swiper-button-prev svg,
@@ -1775,7 +1775,7 @@ img {
   }
   .swiper-button-prev,
   .swiper-button-next {
-    padding: 0 20px;
+    padding-left: 20px;
   }
   .swiper-button-prev svg,
   .swiper-button-next svg {
@@ -2076,7 +2076,7 @@ img {
   }
   .swiper-button-prev,
   .swiper-button-next {
-    padding: 0 18px;
+    padding-left: 18px;
   }
   .swiper-button-prev svg,
   .swiper-button-next svg {
@@ -2354,7 +2354,7 @@ img {
   }
   .swiper-button-prev,
   .swiper-button-next {
-    padding: 0 16px;
+    padding-left: 16px;
   }
   .swiper-button-prev svg,
   .swiper-button-next svg {
