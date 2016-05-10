@@ -1287,7 +1287,7 @@ img {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 500;
 }
 .menu-item {
   padding: 6.798373876248402px 11px;
@@ -1308,7 +1308,7 @@ img {
   left: 0;
   color: #fdfdfd;
   overflow: hidden;
-  z-index: 800;
+  z-index: 900;
 }
 #splash-container {
   position: absolute;
@@ -1449,6 +1449,27 @@ img {
   height: 0.7rem;
   width: 0.5rem;
 }
+#footer {
+  position: fixed;
+  z-index: 600;
+  width: 100%;
+  bottom: -100vh;
+  -webkit-transition: bottom 500ms;
+  transition: bottom 500ms;
+}
+#footer.active {
+  bottom: 0 !important;
+}
+#footer.active #close-footer {
+  display: block;
+}
+#footer.active #open-footer {
+  display: none;
+}
+#footer svg {
+  fill: #fdfdfd;
+  height: 1.7rem;
+}
 #footer-above {
   position: absolute;
   top: -2.5rem;
@@ -1476,27 +1497,6 @@ img {
 }
 #close-footer {
   display: none;
-}
-#footer {
-  position: fixed;
-  z-index: 500;
-  width: 100%;
-  bottom: -100vh;
-  -webkit-transition: bottom 500ms;
-  transition: bottom 500ms;
-}
-#footer.active {
-  bottom: 0 !important;
-}
-#footer.active #close-footer {
-  display: block;
-}
-#footer.active #open-footer {
-  display: none;
-}
-#footer svg {
-  fill: #fdfdfd;
-  height: 2rem;
 }
 #mce-EMAIL {
   background-color: transparent;
@@ -2101,12 +2101,18 @@ img {
   #footer {
     bottom: -120vh;
   }
+  #footer .col-3:first-child {
+    padding-top: 3vh;
+  }
+  #footer .col-3:last-child {
+    padding-bottom: 3vh;
+  }
   #footer .col-6 {
     padding-top: 36px;
     padding-bottom: 36px;
   }
   #footer-inner {
-    max-height: 100vh;
+    height: 100vh;
     overflow-x: auto;
   }
   #open-footer {

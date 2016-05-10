@@ -312,7 +312,7 @@ img
   position: fixed
   top: 0
   width: 100%
-  z-index: 9999
+  z-index: 500
 
 .menu-item
   padding: $margin-micro $margin-tiny
@@ -336,7 +336,7 @@ img
   left: 0
   color: $color-white-soft
   overflow: hidden
-  z-index: 800
+  z-index: 900
 
 #splash-container
   position: absolute
@@ -466,6 +466,22 @@ img
 
 // FOOTER
 
+#footer
+  position: fixed
+  z-index: 600
+  width: 100%
+  bottom: -100vh
+  transition: bottom $basic-animation-speed
+  &.active
+    bottom: 0 !important
+    #close-footer
+      display: block
+    #open-footer
+      display: none
+  svg
+    fill: $color-white-soft
+    height: 1.7rem
+
 #footer-above
   position: absolute
   top: -2.5rem
@@ -490,22 +506,6 @@ img
 
 #close-footer
   display: none
-
-#footer
-  position: fixed
-  z-index: 500
-  width: 100%
-  bottom: -100vh
-  transition: bottom $basic-animation-speed
-  &.active
-    bottom: 0 !important
-    #close-footer
-      display: block
-    #open-footer
-      display: none
-  svg
-    fill: $color-white-soft
-    height: 2rem
 
 #mce-EMAIL
   background-color: transparent
