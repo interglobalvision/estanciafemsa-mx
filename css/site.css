@@ -1373,21 +1373,11 @@ img {
   background-size: cover;
   background-position: center;
   background-blend-mode: screen;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  filter: alpha(opacity=80);
-  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=73)";
+  filter: alpha(opacity=73);
+  opacity: 0.73;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
-  -webkit-transition: opacity 500ms, -webkit-filter 500ms, opacity 500ms, filter 500ms;
-  transition: opacity 500ms, filter 500ms;
-}
-.image-key-color:hover {
-  -ms-filter: none;
-  -webkit-filter: none;
-          filter: none;
-  opacity: 1;
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
 }
 .index-programacion-post-container {
   height: 300px;
