@@ -20,7 +20,7 @@
     </div>
 
     <div id="footer-inner" class="font-color-white">
-      <div id="footer-toogle-ui" class="padding-top-tiny padding-bottom-tiny u-pointer">
+      <div id="footer-toogle-ui" class="padding-top-micro padding-bottom-micro u-pointer">
         <div class="container">
           <nav class="row">
             <div class="col col-12 text-align-center">
