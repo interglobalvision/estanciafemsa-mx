@@ -53,11 +53,34 @@ $past = new WP_Query(array(
 <!-- main content -->
 <main id="main-content" class="container text-align-center">
 
-  <div class="row margin-bottom-basic">
 <?php
-if($ahora->have_posts() || $future->have_posts() || $past->have_posts()) {
+if ($ahora->have_posts() || $future->have_posts() || $past->have_posts()) {
+  if (!$future->have_posts()) {
 ?>
+  <div class="row">
+    <div class="col col-12">
+      <h3 class="margin-bottom-small"><?php echo __('[:es]Ahora[:en]Now'); ?></h3>
+    </div>
+  </div>
 
+  <div class="row margin-bottom-basic">
+    <div class="col col-4"></div>
+    <div class="col col-4">
+        <?php
+          if ($ahora->have_posts()) {
+            while ($ahora->have_posts()) {
+              $ahora->the_post();
+              render_programacion_index($post->ID);
+            }
+          }
+          wp_reset_postdata();
+        ?>
+    </div>
+  </div>
+<?php
+  } else {
+?>
+  <div class="row margin-bottom-basic">
     <div class="col col-2"></div>
     <div class="col col-4">
       <h3 class="margin-bottom-small"><?php echo __('[:es]Ahora[:en]Now'); ?></h3>
@@ -83,8 +106,10 @@ if($ahora->have_posts() || $future->have_posts() || $past->have_posts()) {
           wp_reset_postdata();
         ?>
     </div>
-
   </div>
+<?php
+  }
+?>
 
   <div class="row">
     <div class="col col-12">
@@ -99,9 +124,15 @@ if($ahora->have_posts() || $future->have_posts() || $past->have_posts()) {
         while ($past->have_posts()) {
           $past->the_post();
           if (($i % 2) == 0) {
+            if (count($past->posts) > 1) {
     ?>
       <div class="col col-2"></div>
     <?php
+            } else {
+    ?>
+      <div class="col col-4"></div>
+    <?php
+            }
           }
     ?>
       <div class="col col-4 margin-bottom-small">
@@ -119,16 +150,15 @@ if($ahora->have_posts() || $future->have_posts() || $past->have_posts()) {
         }
       }
 ?>
+  </div>
 <?php
       wp_reset_postdata();
 } else {
 ?>
-
-    <article class="u-alert"><?php _e('[:es]Lo sentimos, pero no podemos encontrar lo que estás buscando.[:en]Sorry, no posts matched your criteria[:]'); ?></article>
-
-<?php } ?>
-
+  <div class="row margin-bottom-basic">
+    <article class="col col-12 u-alert"><?php _e('[:es]Lo sentimos, pero no podemos encontrar lo que estás buscando.[:en]Sorry, no posts matched your criteria[:]'); ?></article>
   </div>
+<?php } ?>
 
 <!-- end main-content -->
 </main>
