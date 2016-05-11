@@ -7,11 +7,21 @@
     </div>
 
     <div id="splash-bottom">
-      <h3 class="font-larger font-bold font-uppercase">CASA LUIS BARRAGÁN</h3>
+      <h3 class="font-larger font-bold font-uppercase">CASA LUIS BARRAGÁN</h3>
     </div>
 
     <div id="splash-text" class="font-huge font-leading-zero u-flex-center">
-      <?php echo __('[:es]es una plataforma cultural y artística auspiciada por Casa Luis Barragán con el apoyo de Colección FEMSA.[:en]a cultural and artistic platform hosted by Casa Luis Barragán with the support of Colección FEMSA.');
+      <?php
+
+        if (qtranxf_getLanguage() === 'es') {
+          $splash_text = IGV_get_option('_igv_splash_text');
+        } else {
+          $splash_text = IGV_get_option('_igv_splash_text_en');
+        }
+
+        if (!empty($splash_text)) {
+          echo $splash_text;
+        }
       ?>
     </div>
   </div>
