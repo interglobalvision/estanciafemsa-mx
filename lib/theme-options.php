@@ -260,35 +260,17 @@ o por internet.',
 		) );
 
 		$options_metabox->add_field( array(
-			'name' => __( 'Costo general', 'IGV' ),
+			'name' => __( 'Costo', 'IGV' ),
 			'desc' => __( '', 'IGV' ),
-			'id'   => $this->prefix . 'visits_cost_general',
-			'type' => 'text',
-			'default' => '200',
-		) );
-
-		$options_metabox->add_field( array(
-			'name' => __( 'Costo especial', 'IGV' ),
-			'desc' => __( '', 'IGV' ),
-			'id'   => $this->prefix . 'visits_cost_special',
-			'type' => 'text',
-			'default' => '100',
-		) );
-
-		$options_metabox->add_field( array(
-			'name' => __( 'Costo especial condiciones', 'IGV' ),
-			'desc' => __( '', 'IGV' ),
-			'id'   => $this->prefix . 'visits_cost_special_terms',
+			'id'   => $this->prefix . 'visits_cost',
 			'type' => 'textarea_small',
-			'default' => 'para estudiantes, maestros y adultos mayores, de nacionalidad mexicana.',
 		) );
 
 		$options_metabox->add_field( array(
-			'name' => __( 'Costo especial condiciones [EN]', 'IGV' ),
+			'name' => __( 'Costo [EN]', 'IGV' ),
 			'desc' => __( '', 'IGV' ),
-			'id'   => $this->prefix . 'visits_cost_special_terms_en',
+			'id'   => $this->prefix . 'visits_cost_en',
 			'type' => 'textarea_small',
-			'default' => '...',
 		) );
 
 		// ABOUT
