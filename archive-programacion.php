@@ -81,19 +81,23 @@ if ($ahora->have_posts() || $future->have_posts() || $past->have_posts()) {
   } else {
 ?>
   <div class="row margin-bottom-basic">
+    <?php
+      if ($ahora->have_posts()) {
+        $ahora->the_post();
+    ?>
     <div class="col col-2"></div>
     <div class="col col-4">
       <h3 class="margin-bottom-small"><?php echo __('[:es]Ahora[:en]Now'); ?></h3>
-        <?php
-          if ($ahora->have_posts()) {
-            while ($ahora->have_posts()) {
-              $ahora->the_post();
-              render_programacion_index($post->ID);
-            }
-          }
-          wp_reset_postdata();
-        ?>
+      <?php render_programacion_index($post->ID); ?>
     </div>
+    <?php
+      } else {
+    ?>
+    <div class="col col-4"></div>
+    <?php
+      }
+      wp_reset_postdata();
+    ?>
     <div class="col col-4">
       <h3 class="margin-bottom-small"><?php echo __('[:es]Futura[:en]Future'); ?></h3>
       <?php
