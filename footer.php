@@ -15,7 +15,7 @@
 
   <footer id="footer" class="background-key-color">
     <div id="footer-above">
-      <h1 id="footer-title" class="u-pointer font-larger font-bold font-uppercase text-align-center">CASA LUIS BARRAGÁN</h1>
+      <h1 id="footer-title" class="u-pointer font-larger font-bold font-uppercase text-align-center">CASA LUIS BARRAGÁN</h1>
       <nav id="footer-language-switcher" class="font-sans"><?php echo qtranxf_generateLanguageSelectCode('both'); ?></nav>
     </div>
 

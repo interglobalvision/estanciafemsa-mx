@@ -79,7 +79,7 @@ $hide_contenido = IGV_get_option('_igv_contenido_toggle');
             <a class="menu-link <?php if ($active_slug === 'sobre-nosotros') { echo 'active'; } ?>" href="<?php echo home_url('/sobre-nosotros'); ?>"><?php echo __('[:es]Sobre Nosotros[:en]About Us'); ?></a>
           </li>
           <li class="menu-item">
-            <a class="menu-link <?php if ($active_slug === 'programacion') { echo 'active'; } ?>" href="<?php echo home_url('/programacion'); ?>"><?php echo __('[:es]Programación[:en]Program'); ?></a>
+            <a class="menu-link <?php if ($active_slug === 'programacion') { echo 'active'; } ?>" href="<?php echo home_url('/programacion'); ?>"><?php echo __('[:es]Programación[:en]Program'); ?></a>
           </li>
           <?php
             if (!$hide_contenido) {
