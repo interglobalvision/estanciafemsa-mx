@@ -62,31 +62,20 @@ if (have_posts()) {
           <?php
             if (qtranxf_getLanguage() === 'es') {
               $cita_text_2 = IGV_get_option('_igv_visits_guide');
+              $cost = IGV_get_option('_igv_visits_cost');
             } else {
               $cita_text_2 = IGV_get_option('_igv_visits_guide_en');
+              $cost = IGV_get_option('_igv_visits_cost_en');
             }
 
             if (!empty($cita_text_2)) {
               echo apply_filters('the_content', $cita_text_2);
             }
 
-            $cost_general = '200';
-            $cost_special = '100';
-            // if set override
-            $cost_general = IGV_get_option('_igv_visits_cost_general');
-            $cost_special = IGV_get_option('_igv_visits_cost_special');
-
-            $cost_special_terms = IGV_get_option('_igv_visits_cost_special_terms');
-            $cost_special_terms_en = IGV_get_option('_igv_visits_cost_special_terms_en');
+            if (!empty($cost)) {
+              echo wpautop($cost);
+            }
           ?>
-
-            <span><?php echo __('[:es]Costo de entrada general[:en]Cost of general entry'); ?></span><br/>
-            <span><?php echo $cost_general; ?></span> pesos<br/>
-            <span><?php echo $cost_special; ?></span> pesos <?php
-              if (!empty($cost_special_terms) && !empty($cost_special_terms_en)) {
-                echo __('[:es]' . $cost_special_terms . '[:en]' . $cost_special_terms_en);
-              }
-            ?>
 
           </div>
 
