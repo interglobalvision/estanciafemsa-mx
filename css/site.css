@@ -1462,11 +1462,12 @@ img {
 }
 #footer-above {
   position: absolute;
-  top: -2.5rem;
+  top: -2.8rem;
   width: 100%;
 }
 #footer-title {
   margin: 0;
+  padding-top: 5px;
 }
 #footer-language-switcher {
   position: absolute;
