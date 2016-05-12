@@ -198,13 +198,15 @@ Site.Footer = {
     var _this = this;
 
     _this.$footer = $('#footer');
-
     _this.bind();
-    _this.layout();
   },
 
   bind: function() {
     var _this = this;
+
+    _this.$footer.imagesLoaded(function() {
+      _this.layout();
+    });
 
     $('#footer-toogle-ui').click(function() {
       _this.$footer.toggleClass('active');
