@@ -514,7 +514,7 @@ th {
 }
 .container {
   margin: 0 auto;
-  width: 100%;
+  width: 480px;
 }
 .row {
   box-sizing: border-box;
@@ -711,7 +711,82 @@ th {
       flex-basis: 100%;
   max-width: 100%;
 }
+.margin-top-micro {
+  margin-top: 7.416407864998257px;
+}
+.margin-top-tiny {
+  margin-top: 12px;
+}
+.margin-top-small {
+  margin-top: 24px;
+}
+.margin-top-basic {
+  margin-top: 48px;
+}
+.margin-top-mid {
+  margin-top: 84px;
+}
+.margin-top-large {
+  margin-top: 120px;
+}
+.margin-bottom-micro {
+  margin-bottom: 7.416407864998257px;
+}
+.margin-bottom-tiny {
+  margin-bottom: 12px;
+}
+.margin-bottom-small {
+  margin-bottom: 24px;
+}
+.margin-bottom-basic {
+  margin-bottom: 48px;
+}
+.margin-bottom-mid {
+  margin-bottom: 84px;
+}
+.margin-bottom-large {
+  margin-bottom: 120px;
+}
+.padding-top-micro {
+  padding-top: 7.416407864998257px;
+}
+.padding-top-tiny {
+  padding-top: 12px;
+}
+.padding-top-small {
+  padding-top: 24px;
+}
+.padding-top-basic {
+  padding-top: 48px;
+}
+.padding-top-mid {
+  padding-top: 84px;
+}
+.padding-top-large {
+  padding-top: 120px;
+}
+.padding-bottom-micro {
+  padding-bottom: 7.416407864998257px;
+}
+.padding-bottom-tiny {
+  padding-bottom: 12px;
+}
+.padding-bottom-small {
+  padding-bottom: 24px;
+}
+.padding-bottom-basic {
+  padding-bottom: 48px;
+}
+.padding-bottom-mid {
+  padding-bottom: 84px;
+}
+.padding-bottom-large {
+  padding-bottom: 120px;
+}
 @media screen and (min-width: 750px) {
+  .container {
+    width: 760px;
+  }
   .col {
     padding: 0 16px;
   }
@@ -824,9 +899,143 @@ th {
     max-width: 100%;
   }
 }
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1020px) {
+  .container {
+    width: 1024px;
+  }
   .col {
     padding: 0 24px;
+  }
+  .offset-l-0 {
+    margin-left: 0%;
+  }
+  .offset-l-1 {
+    margin-left: 8.333333333333334%;
+  }
+  .offset-l-2 {
+    margin-left: 16.666666666666668%;
+  }
+  .offset-l-3 {
+    margin-left: 25%;
+  }
+  .offset-l-4 {
+    margin-left: 33.333333333333336%;
+  }
+  .offset-l-5 {
+    margin-left: 41.66666666666667%;
+  }
+  .offset-l-6 {
+    margin-left: 50%;
+  }
+  .offset-l-7 {
+    margin-left: 58.333333333333336%;
+  }
+  .offset-l-8 {
+    margin-left: 66.66666666666667%;
+  }
+  .offset-l-9 {
+    margin-left: 75%;
+  }
+  .offset-l-10 {
+    margin-left: 83.33333333333334%;
+  }
+  .offset-l-11 {
+    margin-left: 91.66666666666667%;
+  }
+  .col-l-1 {
+    -ms-flex-basis: 8.333333333333334%;
+    -ms-flex-preferred-size: 8.333333333333334%;
+        flex-basis: 8.333333333333334%;
+    max-width: 8.333333333333334%;
+  }
+  .col-l-2 {
+    -ms-flex-basis: 16.666666666666668%;
+    -ms-flex-preferred-size: 16.666666666666668%;
+        flex-basis: 16.666666666666668%;
+    max-width: 16.666666666666668%;
+  }
+  .col-l-3 {
+    -ms-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    max-width: 25%;
+  }
+  .col-l-4 {
+    -ms-flex-basis: 33.333333333333336%;
+    -ms-flex-preferred-size: 33.333333333333336%;
+        flex-basis: 33.333333333333336%;
+    max-width: 33.333333333333336%;
+  }
+  .col-l-5 {
+    -ms-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+        flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+  }
+  .col-l-6 {
+    -ms-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%;
+  }
+  .col-l-7 {
+    -ms-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+        flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+  }
+  .col-l-8 {
+    -ms-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+        flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+  }
+  .col-l-9 {
+    -ms-flex-basis: 75%;
+    -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
+    max-width: 75%;
+  }
+  .col-l-10 {
+    -ms-flex-basis: 83.33333333333334%;
+    -ms-flex-preferred-size: 83.33333333333334%;
+        flex-basis: 83.33333333333334%;
+    max-width: 83.33333333333334%;
+  }
+  .col-l-11 {
+    -ms-flex-basis: 91.66666666666667%;
+    -ms-flex-preferred-size: 91.66666666666667%;
+        flex-basis: 91.66666666666667%;
+    max-width: 91.66666666666667%;
+  }
+  .col-l-12 {
+    -ms-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1280px;
+  }
+}
+@media screen and (min-width: 1360px) {
+  .container {
+    width: 1366px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .container {
+    width: 1680px;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .container {
+    width: 1920px;
+  }
+  .col {
+    padding: 0 27px;
   }
   .offset-l-0 {
     margin-left: 0%;
@@ -1018,78 +1227,6 @@ html {
 img {
   max-width: 100%;
   height: auto;
-}
-.margin-top-micro {
-  margin-top: 7.416407864998257px;
-}
-.margin-top-tiny {
-  margin-top: 12px;
-}
-.margin-top-small {
-  margin-top: 24px;
-}
-.margin-top-basic {
-  margin-top: 48px;
-}
-.margin-top-mid {
-  margin-top: 84px;
-}
-.margin-top-large {
-  margin-top: 120px;
-}
-.margin-bottom-micro {
-  margin-bottom: 7.416407864998257px;
-}
-.margin-bottom-tiny {
-  margin-bottom: 12px;
-}
-.margin-bottom-small {
-  margin-bottom: 24px;
-}
-.margin-bottom-basic {
-  margin-bottom: 48px;
-}
-.margin-bottom-mid {
-  margin-bottom: 84px;
-}
-.margin-bottom-large {
-  margin-bottom: 120px;
-}
-.padding-top-micro {
-  padding-top: 7.416407864998257px;
-}
-.padding-top-tiny {
-  padding-top: 12px;
-}
-.padding-top-small {
-  padding-top: 24px;
-}
-.padding-top-basic {
-  padding-top: 48px;
-}
-.padding-top-mid {
-  padding-top: 84px;
-}
-.padding-top-large {
-  padding-top: 120px;
-}
-.padding-bottom-micro {
-  padding-bottom: 7.416407864998257px;
-}
-.padding-bottom-tiny {
-  padding-bottom: 12px;
-}
-.padding-bottom-small {
-  padding-bottom: 24px;
-}
-.padding-bottom-basic {
-  padding-bottom: 48px;
-}
-.padding-bottom-mid {
-  padding-bottom: 84px;
-}
-.padding-bottom-large {
-  padding-bottom: 120px;
 }
 #header h1 {
   font-size: 1.469544744064506rem;
