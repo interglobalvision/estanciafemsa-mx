@@ -28,75 +28,19 @@ normalize()
 
 // ******************************************************
 
-// GRID
-
-$cols = 12
-$col = 90px
-$gutter = 16px
-
-.container
-  margin: 0 auto
-  width: ($col * $cols)+($gutter * $cols)
-
-.row
-  clearfix()
-
-.col
-  float: left
-  margin-left: ($gutter/2)
-  margin-right: ($gutter/2)
-  min-height: 1px
-
-for col in 1..$cols
-  .col{col}
-    width: ( col * $col ) + ( ( col - 1 ) * $gutter )
-
-    // FLUID COLS
-
-.percent-col
-  float: left
-  box-sizing: border-box
-
-$pcols = 10
-
-for pcol in 1..$pcols
-  .s-into-{pcol}
-    width: ( 100% / pcol )
-
-@media screen and (min-width: 601px)
-
-  for pcol in 1..$pcols
-    .m-into-{pcol}
-      width: ( 100% / pcol )
-
-@media screen and (min-width: 993px)
-
-  for pcol in 1..$pcols
-    .l-into-{pcol}
-      width: ( 100% / pcol )
-
-// ******************************************************
-
 // VARIABLES
 
 $golden-ratio = 1.61803398875
 
-$margin-small = ($gutter)
-$margin-tiny = ($gutter / 2)
-$margin-micro = ($gutter / (2 * $golden-ratio))
-$margin-basic = ($gutter * 2)
-$margin-mid = ($gutter * 3.5)
-$margin-large = ($gutter * 5)
-
-$font-size-basic = 15px
+$font-size-basic = 16px
 $font-size-larger = 1.3rem
-$font-size-h3 = golden-ratio(1rem , 1)
-$font-size-h2 = golden-ratio(1rem , 1.5)
-$font-size-h1 = golden-ratio(1rem , 2)
+$font-size-h3 = golden-ratio(1rem , .8)
+$font-size-h2 = golden-ratio(1rem , 1)
+$font-size-h1 = golden-ratio(1rem , 1.2)
 
-$font-leading-basic = 1.35
-$font-leading-tighter = 1.15
-$font-leading-larger = 1.45
+$font-leading-basic = 1.45
+$font-leading-tighter = 1.25
+$font-leading-larger = 1.55
 
 $font-tracking-basic = 0.001em
 $font-tracking-wider = 0.05em
@@ -106,6 +50,174 @@ $font-serif = 'Tiempos', Times, Baskerville, Georgia, serif
 
 $color-black-soft = rgb(14, 14, 14)
 $color-white-soft = rgb(253, 253, 253)
+
+// ******************************************************
+
+.only-desktop
+  display: none
+
+.only-mobile
+  display: initial
+
+// GRID
+
+$cols = 12
+$gutter = 24px
+
+.container
+  margin: 0 auto
+  width: 480px
+
+.row
+  box-sizing: border-box
+  display: flex
+  flex: 0 1 auto
+  flex-direction: row
+  flex-wrap: wrap
+  &.reverse
+    flex-direction: row-reverse
+
+// FLEX POSITIONING
+
+.justify-start
+  justify-content: flex-start
+
+.justify-center
+  justify-content: center
+
+.justify-end
+  justify-content: flex-end
+
+.align-start
+  align-items: flex-start
+
+.align-center
+  align-items: center
+
+.align-end
+  align-items: flex-end
+
+.align-content-start
+  align-content: flex-start
+
+.align-content-center
+  align-content: center
+
+.align-content-end
+  align-content: flex-end
+
+// COLUMN SIZES & OFFSETS
+
+.col
+  flex: 1 1 auto
+  box-sizing: border-box
+  max-width: 100%
+  padding: 0 ($gutter / 2)
+
+.col-no-gutter
+  padding-left: 0
+  padding-right: 0
+
+for offset in 0..($cols - 1)
+  .offset-s-{offset}
+    margin-left: ( 100% / $cols ) * offset
+
+for col in 1..$cols
+  .col-s-{col}
+    flex-basis: ( 100% / $cols ) * col
+    max-width: ( 100% / $cols ) * col
+
+@import "responsive/mobile"
+
+@media screen and (min-width: 760px)
+
+  .only-desktop
+    display: initial
+
+  .only-mobile
+    display: none
+
+  .container
+    width: 760px
+
+  $gutter = 32px
+
+  // COLUMN SIZES & OFFSETS
+
+  .col
+    padding: 0 ($gutter / 2)
+
+  for offset in 0..($cols - 1)
+    .offset-m-{offset}
+      margin-left: ( 100% / $cols ) * offset
+
+  for col in 1..$cols
+    .col-m-{col}
+      flex-basis: ( 100% / $cols ) * col
+      max-width: ( 100% / $cols ) * col
+
+  @import "responsive/tablet"
+
+@media screen and (min-width: 1024px)
+
+  .container
+    width: 1024px
+
+  $gutter = 48px
+
+  // COLUMN SIZES & OFFSETS
+
+  .col
+    padding: 0 ($gutter / 2)
+
+  for offset in 0..($cols - 1)
+    .offset-l-{offset}
+      margin-left: ( 100% / $cols ) * offset
+
+  for col in 1..$cols
+    .col-l-{col}
+      flex-basis: ( 100% / $cols ) * col
+      max-width: ( 100% / $cols ) * col
+
+  @import "responsive/desktop"
+
+@media screen and (min-width: 1280px)
+
+  .container
+    width: 1280px
+
+@media screen and (min-width: 1366px)
+
+  .container
+    width: 1366px
+
+@media screen and (min-width: 1680px)
+
+  .container
+    width: 1680px
+
+@media screen and (min-width: 1920px)
+
+  .container
+    width: 1920px
+
+  $gutter = 54px
+
+  // COLUMN SIZES & OFFSETS
+
+  .col
+    padding: 0 ($gutter / 2)
+
+  for offset in 0..($cols - 1)
+    .offset-l-{offset}
+      margin-left: ( 100% / $cols ) * offset
+
+  for col in 1..$cols
+    .col-l-{col}
+      flex-basis: ( 100% / $cols ) * col
+      max-width: ( 100% / $cols ) * col
+
+  @import "responsive/large"
 
 // ******************************************************
 
@@ -121,15 +233,23 @@ body
 
   // HTML ELEMENT STYLING
 
+h1, h2, h3
+  font-family: $font-sans
+
 h1
   font-size: $font-size-h1
   line-height: $font-leading-tighter
+  font-weight: bold
 
 h2
   font-size: $font-size-h2
   line-height: $font-leading-tighter
+  font-weight: bold
 
 h3
+  font-size: $font-size-h3
+
+h4
   font-size: $font-size-h3
 
 p
@@ -149,6 +269,9 @@ p
 
 .font-capitalize
   text-transform: capitalize
+
+.font-uppercase
+  text-transform: uppercase
 
 .font-sans
   font-family: $font-sans
@@ -190,105 +313,15 @@ img
   max-width: 100%
   height: auto
 
-// ******************************************************
-
-// MARGINS AND PADDING
-
-  // MARGIN TOP
-
-.margin-top-micro
-  margin-top: $margin-micro
-
-.margin-top-tiny
-  margin-top: $margin-tiny
-
-.margin-top-small
-  margin-top: $margin-small
-
-.margin-top-basic
-  margin-top: $margin-basic
-
-.margin-top-mid
-  margin-top: $margin-mid
-
-.margin-top-large
-  margin-top: $margin-large
-
-  // MARGIN BOTTOM
-
-.margin-bottom-micro
-  margin-bottom: $margin-micro
-
-.margin-bottom-tiny
-  margin-bottom: $margin-tiny
-
-.margin-bottom-small
-  margin-bottom: $margin-small
-
-.margin-bottom-basic
-  margin-bottom: $margin-basic
-
-.margin-bottom-mid
-  margin-bottom: $margin-mid
-
-.margin-bottom-large
-  margin-bottom: $margin-large
-
-  // PADDING TOP
-
-.padding-top-micro
-  padding-top: $margin-micro
-
-.padding-top-tiny
-  padding-top: $margin-tiny
-
-.padding-top-small
-  padding-top: $margin-small
-
-.padding-top-basic
-  padding-top: $margin-basic
-
-.padding-top-mid
-  padding-top: $margin-mid
-
-.padding-top-large
-  padding-top: $margin-large
-
-  // PADDING BOTTOM
-
-.padding-bottom-micro
-  padding-bottom: $margin-micro
-
-.padding-bottom-tiny
-  padding-bottom: $margin-tiny
-
-.padding-bottom-small
-  padding-bottom: $margin-small
-
-.padding-bottom-basic
-  padding-bottom: $margin-basic
-
-.padding-bottom-mid
-  padding-bottom: $margin-mid
-
-.padding-bottom-large
-  padding-bottom: $margin-large
 
 // ******************************************************
 
+// HEADER
 
+#header
+  h1
+    font-size: $font-size-h3
+    margin: 0
 
-
-
-
-// ******************************************************
-
-// MEDIA QUERIES
-
-@media screen and (max-width: ($col * $cols)+($gutter * $cols))
-
-  @import "responsive/desktop-mid"
-
-@media screen and (max-width: 601px)
-
-  @import "responsive/mobile"
+#header-menu
+  font-size: $font-size-h3

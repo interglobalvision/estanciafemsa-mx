@@ -4,7 +4,7 @@ get_header();
 
 <!-- main content -->
 
-<main id="main-content">
+<main id="main-content" class="container">
 
   <!-- main posts loop -->
   <section id="posts">
@@ -15,11 +15,24 @@ if( have_posts() ) {
     the_post();
 ?>
 
-    <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+    <article <?php post_class('row margin-bottom-mid'); ?> id="post-<?php the_ID(); ?>">
 
-      <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+      <div class="article-meta col col-s-12 col-m-3">
+        <div class="article-date margin-bottom-small">
+          <h3><?php the_time('j F'); ?><br/><?php the_time('Y'); ?></h3>
+        </div>
+        <div class="article-author">
+          <?php echo __('[:es]Por[:en]By'); ?>:<br/>
+          <?php the_author(); ?>
+        </div>
+      </div>
 
-      <?php the_content(); ?>
+      <div class="article-content col col-s-12 col-m-6">
+        <header class="article-content-header margin-bottom-small">
+          <a href="<?php the_permalink() ?>"><h3><?php the_title(); ?></h3></a> — <h4>//>>> custom tax</h4>
+        </header>
+        <?php the_content(); ?>
+      </div>
 
     </article>
 
