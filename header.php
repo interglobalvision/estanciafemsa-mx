@@ -56,6 +56,21 @@
   <section id="main-container">
 
   <!-- start content -->
-  <header id="header">
-    <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+  <header id="header" class="container padding-top-small margin-bottom-basic">
+    <div class="row">
+      <div class="col col-s-3 col-m-2">
+        <h1 class="font-uppercase"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+      </div>
+      <div class="col col-s-6 col-m-7">
+        <ul id="header-menu" class="font-sans u-inline-list">
+          <li><a href="<?php echo site_url(); ?>">Home</a></li>
+          <li><a href="<?php echo site_url('/prensa'); ?>">Prensa</a></li>
+          <li><a href="<?php echo site_url('/contacto'); ?>">Contacto</a></li>
+          <li><a href="<?php echo site_url('/noticias'); ?>">Noticias</a></li>
+        </ul>
+      </div>
+      <div class="col col-s-3 text-align-right">
+        <h1 class="font-uppercase">Casa Luis Barragán</h1>
+      </div>
+    </div>
   </header>
