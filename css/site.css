@@ -783,7 +783,7 @@ th {
 .padding-bottom-large {
   padding-bottom: 120px;
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 760px) {
   .container {
     width: 760px;
   }
@@ -899,7 +899,7 @@ th {
     max-width: 100%;
   }
 }
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1024px) {
   .container {
     width: 1024px;
   }
@@ -1015,22 +1015,22 @@ th {
     max-width: 100%;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .container {
     width: 1280px;
   }
 }
-@media screen and (min-width: 1360px) {
+@media screen and (min-width: 1366px) {
   .container {
     width: 1366px;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1680px) {
   .container {
     width: 1680px;
   }
 }
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1920px) {
   .container {
     width: 1920px;
   }
