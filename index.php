@@ -17,7 +17,7 @@ if( have_posts() ) {
 
     <article <?php post_class('row margin-bottom-mid'); ?> id="post-<?php the_ID(); ?>">
 
-      <div class="article-meta col col-s-3">
+      <div class="article-meta col col-s-12 col-m-3">
         <div class="article-date margin-bottom-small">
           <h3><?php the_time('j F'); ?><br/><?php the_time('Y'); ?></h3>
         </div>
@@ -27,7 +27,7 @@ if( have_posts() ) {
         </div>
       </div>
 
-      <div class="article-content col col-s-6">
+      <div class="article-content col col-s-12 col-m-6">
         <header class="article-content-header margin-bottom-small">
           <a href="<?php the_permalink() ?>"><h3><?php the_title(); ?></h3></a> — <h4>//>>> custom tax</h4>
         </header>

@@ -58,10 +58,10 @@
   <!-- start content -->
   <header id="header" class="container padding-top-small margin-bottom-basic">
     <div class="row">
-      <div class="col col-s-3">
+      <div class="col col-s-12 col-m-3">
         <h1 class="font-uppercase"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
       </div>
-      <div class="col col-s-6">
+      <div class="col col-s-12 col-m-6">
         <ul id="header-menu" class="font-sans u-inline-list">
           <li><a href="<?php echo site_url(); ?>">Home</a></li>
           <li><a href="<?php echo site_url('/prensa'); ?>">Prensa</a></li>
@@ -69,7 +69,7 @@
           <li><a href="<?php echo site_url('/noticias'); ?>">Noticias</a></li>
         </ul>
       </div>
-      <div class="col col-s-3 text-align-right">
+      <div class="col col-s-3 text-align-right only-desktop">
         <h1 class="font-uppercase">Casa Luis Barragán</h1>
       </div>
     </div>

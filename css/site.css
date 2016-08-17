@@ -512,6 +512,12 @@ td,
 th {
   padding: 0;
 }
+.only-desktop {
+  display: none;
+}
+.only-mobile {
+  display: initial;
+}
 .container {
   margin: 0 auto;
   width: 480px;
@@ -784,6 +790,12 @@ th {
   padding-bottom: 120px;
 }
 @media screen and (min-width: 760px) {
+  .only-desktop {
+    display: initial;
+  }
+  .only-mobile {
+    display: none;
+  }
   .container {
     width: 760px;
   }

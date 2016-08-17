@@ -53,6 +53,12 @@ $color-white-soft = rgb(253, 253, 253)
 
 // ******************************************************
 
+.only-desktop
+  display: none
+
+.only-mobile
+  display: initial
+
 // GRID
 
 $cols = 12
@@ -124,6 +130,12 @@ for col in 1..$cols
 @import "responsive/mobile"
 
 @media screen and (min-width: 760px)
+
+  .only-desktop
+    display: initial
+
+  .only-mobile
+    display: none
 
   .container
     width: 760px
