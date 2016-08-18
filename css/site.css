@@ -1159,7 +1159,7 @@ th {
   }
 }
 html {
-  font-family: 'Tiempos', Times, Baskerville, Georgia, serif;
+  font-family: 'Calibre', Helvetica, Arial, sans-serif;
   font-size: 16px;
   letter-spacing: 0.001em;
 }
@@ -1188,6 +1188,7 @@ h4 {
   font-size: 1.469544744064506rem;
 }
 p {
+  font-family: 'Tiempos', Times, Baskerville, Georgia, serif;
   margin-bottom: 1rem;
 }
 .font-italic {
