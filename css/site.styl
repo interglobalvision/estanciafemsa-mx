@@ -163,6 +163,11 @@ for col in 1..$cols
   .container
     width: 1024px
 
+@media screen and (min-width: 1280px)
+
+  .container
+    width: 1280px
+
   $gutter = 48px
 
   // COLUMN SIZES & OFFSETS
@@ -181,11 +186,6 @@ for col in 1..$cols
 
   @import "responsive/desktop"
 
-@media screen and (min-width: 1280px)
-
-  .container
-    width: 1280px
-
 @media screen and (min-width: 1366px)
 
   .container
@@ -203,19 +203,10 @@ for col in 1..$cols
 
   $gutter = 54px
 
-  // COLUMN SIZES & OFFSETS
+  // COLUMN GUTTER
 
   .col
     padding: 0 ($gutter / 2)
-
-  for offset in 0..($cols - 1)
-    .offset-l-{offset}
-      margin-left: ( 100% / $cols ) * offset
-
-  for col in 1..$cols
-    .col-l-{col}
-      flex-basis: ( 100% / $cols ) * col
-      max-width: ( 100% / $cols ) * col
 
   @import "responsive/large"
 
