@@ -320,6 +320,22 @@ CP 11840, Ciudad de México, D.F.',
 		) );
 
 		$options_metabox->add_field( array(
+			'name' => __( 'Email para Prensa', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'prensa_email',
+			'type' => 'text',
+			'default' => 'press@estanciafemsa.mx'
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Numero telephono para Prensa', 'IGV' ),
+			'desc' => __( '', 'IGV' ),
+			'id'   => $this->prefix . 'prensa_telephone',
+			'type' => 'text',
+			'default' => '+52 (55) 4357 1095'
+		) );
+
+		$options_metabox->add_field( array(
 			'name' => __( 'Directorio', 'IGV' ),
 			'desc' => __( '', 'IGV' ),
 			'id'   => $this->prefix . 'about_directory',
