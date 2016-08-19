@@ -60,6 +60,15 @@ function igv_cmb_metaboxes() {
 	) );
 
   $program_meta->add_field( array(
+		'name'    => __( 'Gallery', 'cmb2' ),
+		'id'      => $prefix . 'gallery',
+		'type'    => 'wysiwyg',
+		'options' => array(
+		  'textarea_rows' => 14
+     ),
+	) );
+
+  $program_meta->add_field( array(
     'name'    => __( 'Color del evento', 'cmb2' ),
     'id'      => $prefix . 'color',
     'type'    => 'colorpicker',

@@ -915,6 +915,11 @@ th {
   .container {
     width: 1024px;
   }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
   .col {
     padding: 0 24px;
   }
@@ -1027,11 +1032,6 @@ th {
     max-width: 100%;
   }
 }
-@media screen and (min-width: 1280px) {
-  .container {
-    width: 1280px;
-  }
-}
 @media screen and (min-width: 1366px) {
   .container {
     width: 1366px;
@@ -1049,117 +1049,9 @@ th {
   .col {
     padding: 0 27px;
   }
-  .offset-l-0 {
-    margin-left: 0%;
-  }
-  .offset-l-1 {
-    margin-left: 8.333333333333334%;
-  }
-  .offset-l-2 {
-    margin-left: 16.666666666666668%;
-  }
-  .offset-l-3 {
-    margin-left: 25%;
-  }
-  .offset-l-4 {
-    margin-left: 33.333333333333336%;
-  }
-  .offset-l-5 {
-    margin-left: 41.66666666666667%;
-  }
-  .offset-l-6 {
-    margin-left: 50%;
-  }
-  .offset-l-7 {
-    margin-left: 58.333333333333336%;
-  }
-  .offset-l-8 {
-    margin-left: 66.66666666666667%;
-  }
-  .offset-l-9 {
-    margin-left: 75%;
-  }
-  .offset-l-10 {
-    margin-left: 83.33333333333334%;
-  }
-  .offset-l-11 {
-    margin-left: 91.66666666666667%;
-  }
-  .col-l-1 {
-    -ms-flex-basis: 8.333333333333334%;
-    -ms-flex-preferred-size: 8.333333333333334%;
-        flex-basis: 8.333333333333334%;
-    max-width: 8.333333333333334%;
-  }
-  .col-l-2 {
-    -ms-flex-basis: 16.666666666666668%;
-    -ms-flex-preferred-size: 16.666666666666668%;
-        flex-basis: 16.666666666666668%;
-    max-width: 16.666666666666668%;
-  }
-  .col-l-3 {
-    -ms-flex-basis: 25%;
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
-    max-width: 25%;
-  }
-  .col-l-4 {
-    -ms-flex-basis: 33.333333333333336%;
-    -ms-flex-preferred-size: 33.333333333333336%;
-        flex-basis: 33.333333333333336%;
-    max-width: 33.333333333333336%;
-  }
-  .col-l-5 {
-    -ms-flex-basis: 41.66666666666667%;
-    -ms-flex-preferred-size: 41.66666666666667%;
-        flex-basis: 41.66666666666667%;
-    max-width: 41.66666666666667%;
-  }
-  .col-l-6 {
-    -ms-flex-basis: 50%;
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    max-width: 50%;
-  }
-  .col-l-7 {
-    -ms-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-        flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-  }
-  .col-l-8 {
-    -ms-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-        flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-  .col-l-9 {
-    -ms-flex-basis: 75%;
-    -ms-flex-preferred-size: 75%;
-        flex-basis: 75%;
-    max-width: 75%;
-  }
-  .col-l-10 {
-    -ms-flex-basis: 83.33333333333334%;
-    -ms-flex-preferred-size: 83.33333333333334%;
-        flex-basis: 83.33333333333334%;
-    max-width: 83.33333333333334%;
-  }
-  .col-l-11 {
-    -ms-flex-basis: 91.66666666666667%;
-    -ms-flex-preferred-size: 91.66666666666667%;
-        flex-basis: 91.66666666666667%;
-    max-width: 91.66666666666667%;
-  }
-  .col-l-12 {
-    -ms-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    max-width: 100%;
-  }
 }
 html {
-  font-family: 'Tiempos', Times, Baskerville, Georgia, serif;
+  font-family: 'Calibre', Helvetica, Arial, sans-serif;
   font-size: 16px;
   letter-spacing: 0.001em;
 }
@@ -1188,6 +1080,7 @@ h4 {
   font-size: 1.469544744064506rem;
 }
 p {
+  font-family: 'Tiempos', Times, Baskerville, Georgia, serif;
   margin-bottom: 1rem;
 }
 .font-italic {
