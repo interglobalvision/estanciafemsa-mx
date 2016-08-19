@@ -520,7 +520,7 @@ th {
 }
 .container {
   margin: 0 auto;
-  width: 480px;
+  max-width: 480px;
 }
 .row {
   box-sizing: border-box;
