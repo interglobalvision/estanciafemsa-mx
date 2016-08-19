@@ -17,12 +17,7 @@ if( have_posts() ) {
 
     <article <?php post_class('row margin-bottom-small'); ?> id="page-<?php the_ID(); ?>">
 
-      <div class="page-content col col-s-12 offset-m-3 col-m-6">
-        <header class="article-content-header margin-bottom-small">
-          <h3><?php the_title(); ?></h3>
-        </header>
-
-
+      <div class="page-content col col-s-12 col-m-9 col-l-6">
         <div class="margin-bottom-small">
           <?php the_content(); ?>
         </div>
