@@ -133,7 +133,7 @@ class IGV_Admin {
 			'desc' => __( '...', 'cmb2' ),
 			'id'   => $this->prefix . 'splash_text',
 			'type' => 'text',
-			'default' => 'es una plataforma cultural y artística auspiciada por Casa Luis Barragán con el apoyo de Colección FEMSA.',
+			'default' => 'ESTANCIA FEMSA es una plataforma cultural y artística auspiciada por Casa Luis Barragán con el apoyo de Colección FEMSA.',
 		) );
 
 		$options_metabox->add_field( array(
@@ -141,7 +141,7 @@ class IGV_Admin {
 			'desc' => __( '...', 'cmb2' ),
 			'id'   => $this->prefix . 'splash_text_en',
 			'type' => 'text',
-			'default' => 'a cultural and artistic platform hosted by Casa Luis Barragán with the support of Colección FEMSA.',
+			'default' => 'ESTANCIA FEMSA is a cultural and artistic platform hosted by Casa Luis Barragán with the support of Colección FEMSA.',
 		) );
 
 		// FOOTER

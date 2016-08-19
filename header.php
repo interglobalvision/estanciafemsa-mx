@@ -55,6 +55,7 @@
 
   <section id="main-container">
 
+  <?php if (!is_front_page()) { ?>
   <!-- start content -->
   <header id="header" class="container padding-top-small margin-bottom-basic">
     <div class="row">
@@ -74,3 +75,4 @@
       </div>
     </div>
   </header>
+  <?php } ?>
