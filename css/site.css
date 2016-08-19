@@ -789,6 +789,17 @@ th {
 .padding-bottom-large {
   padding-bottom: 120px;
 }
+#front-page {
+  font-size: 1.3rem;
+}
+#front-page .front-page-block {
+  display: block;
+  height: 50vh;
+  padding: 24px;
+}
+#front-page .front-page-block:nth-child(1) {
+  border-bottom: 3px solid #0e0e0e;
+}
 @media screen and (min-width: 760px) {
   .only-desktop {
     display: initial;
@@ -909,6 +920,101 @@ th {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     max-width: 100%;
+  }
+  .margin-top-micro {
+    margin-top: 9.888543819997675px;
+  }
+  .margin-top-tiny {
+    margin-top: 16px;
+  }
+  .margin-top-small {
+    margin-top: 32px;
+  }
+  .margin-top-basic {
+    margin-top: 64px;
+  }
+  .margin-top-mid {
+    margin-top: 112px;
+  }
+  .margin-top-large {
+    margin-top: 160px;
+  }
+  .margin-bottom-micro {
+    margin-bottom: 9.888543819997675px;
+  }
+  .margin-bottom-tiny {
+    margin-bottom: 16px;
+  }
+  .margin-bottom-small {
+    margin-bottom: 32px;
+  }
+  .margin-bottom-basic {
+    margin-bottom: 64px;
+  }
+  .margin-bottom-mid {
+    margin-bottom: 112px;
+  }
+  .margin-bottom-large {
+    margin-bottom: 160px;
+  }
+  .padding-top-micro {
+    padding-top: 9.888543819997675px;
+  }
+  .padding-top-tiny {
+    padding-top: 16px;
+  }
+  .padding-top-small {
+    padding-top: 32px;
+  }
+  .padding-top-basic {
+    padding-top: 64px;
+  }
+  .padding-top-mid {
+    padding-top: 112px;
+  }
+  .padding-top-large {
+    padding-top: 160px;
+  }
+  .padding-bottom-micro {
+    padding-bottom: 9.888543819997675px;
+  }
+  .padding-bottom-tiny {
+    padding-bottom: 16px;
+  }
+  .padding-bottom-small {
+    padding-bottom: 32px;
+  }
+  .padding-bottom-basic {
+    padding-bottom: 64px;
+  }
+  .padding-bottom-mid {
+    padding-bottom: 112px;
+  }
+  .padding-bottom-large {
+    padding-bottom: 160px;
+  }
+  #front-page {
+    font-size: 1.618rem;
+  }
+  #front-page:before,
+  #front-page:after {
+    content: " ";
+    display: table;
+  }
+  #front-page:after {
+    clear: both;
+  }
+  #front-page .front-page-block {
+    float: left;
+    min-height: 50vh;
+    width: 50%;
+    padding: 32px;
+  }
+  #front-page .front-page-block:nth-child(2n) {
+    border-left: 3px solid #0e0e0e;
+  }
+  #front-page .front-page-block:nth-child(2) {
+    border-bottom: 3px solid #0e0e0e;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1092,6 +1198,9 @@ p {
 .font-small-caps {
   font-size: 0.85em;
   text-transform: uppercase;
+}
+.font-larger {
+  font-size: 1.3rem;
 }
 .font-capitalize {
   text-transform: capitalize;
