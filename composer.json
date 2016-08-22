@@ -1,0 +1,12 @@
+{
+    "name": "igv/estanciafemsa-mx",
+    "authors": [
+        {
+            "name": "interglobal.vision",
+            "email": "globie@interglobal.vision"
+        }
+    ],
+    "require": {
+      "fightbulc/moment": "*"
+    }
+}

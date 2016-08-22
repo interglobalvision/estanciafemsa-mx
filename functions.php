@@ -54,6 +54,7 @@ get_template_part( 'lib/theme-options' );
 
 
 // Add third party PHP libs
+require_once 'vendor/autoload.php';
 
 add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
 function cmb_initialize_cmb_meta_boxes() {
