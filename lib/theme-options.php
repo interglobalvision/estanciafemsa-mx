@@ -169,8 +169,23 @@ class IGV_Admin {
 
     $options_metabox->add_group_field( $home_content, array(
       'name' => 'Image',
+			'desc' => __( '...', 'cmb2' ),
       'id'   => 'image',
       'type' => 'file',
+    ) );
+
+    $options_metabox->add_group_field( $home_content, array(
+      'name' => 'Caption',
+			'desc' => __( '...', 'cmb2' ),
+      'id'   => 'caption',
+      'type' => 'text',
+    ) );
+
+    $options_metabox->add_group_field( $home_content, array(
+      'name' => 'Text',
+			'desc' => __( '...', 'cmb2' ),
+      'id'   => 'text',
+      'type' => 'text',
     ) );
 
     $options_metabox->add_group_field( $home_content, array(
