@@ -29,7 +29,14 @@ if( have_posts() ) {
 
       <div class="article-content col col-s-12 col-m-6">
         <header class="article-content-header margin-bottom-small">
-          <a href="<?php the_permalink() ?>"><h3><?php the_title(); ?></h3></a> — <h4>//>>> custom tax</h4>
+          <a href="<?php the_permalink() ?>"><h3 class="u-inline-block"><?php the_title(); ?></h3></a><?php
+            $sources = get_the_terms($post, 'source');
+
+            if ($sources) {
+              echo '&nbsp;<h4 class="font-serif u-inline-block">&nbsp;—&nbsp;</h4>&nbsp;';
+              echo '<h4 class="font-serif u-inline-block"><a href="' . get_term_link($sources[0]) . '">' . $sources[0]->name . '</a></h4>';
+            }
+          ?>
         </header>
         <?php the_content(); ?>
       </div>
