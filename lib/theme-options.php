@@ -112,13 +112,6 @@ class IGV_Admin {
 			'type' => 'title',
 		) );
 
-		$options_metabox->add_field( array(
-			'name' => __( 'Ocultar <i>Contenido</i>', 'cmb2' ),
-			'desc' => __( 'Marca este campo para ocultar el link de "Contenido" del menu.', 'cmb2' ),
-			'id'   => $this->prefix . 'contenido_toggle',
-			'type' => 'checkbox',
-		) );
-
 		// SPLASH
 
 		$options_metabox->add_field( array(
