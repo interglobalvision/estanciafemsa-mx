@@ -64,10 +64,36 @@
       </div>
       <div class="col col-s-12 col-m-6">
         <ul id="header-menu" class="font-sans u-inline-list">
-          <li><a href="<?php echo site_url(); ?>">Home</a></li>
-          <li><a href="<?php echo site_url('/prensa'); ?>">Prensa</a></li>
-          <li><a href="<?php echo site_url('/contacto'); ?>">Contacto</a></li>
+          <?php
+            if (!is_page('home')) {
+          ?>
+          <li><a href="<?php echo site_url('/sobre-nosotros'); ?>">Home</a></li>
+          <?php
+            }
+            global $post;
+            if ($post && is_single_type('programacion', $post)) {
+          ?>
+          <?php
+              $programacion_posts = get_posts('post_type=programacion&posts_per_page=-1');
+              if ($programacion_posts) {
+                foreach ($programacion_posts as $programacion) {
+                  $number = get_post_meta($programacion->ID, '_igv_number', true);
+          ?>
+          <li><a href="<?php echo the_permalink($programacion->ID); ?>"><?php echo $number;?></a></li>
+          <?php
+                }
+              }
+          ?>
+          <li><a href="<?php echo site_url('/programacion'); ?>">+</a></li>
+          <?php
+            } else if (!is_page('home') && !is_post_type_archive('programacion')) {
+          ?>
+          <li><a href="<?php echo site_url('/sobre-nosotros#prensa'); ?>">Prensa</a></li>
+          <li><a href="<?php echo site_url('/sobre-nosotros#contacto'); ?>">Contacto</a></li>
           <li><a href="<?php echo site_url('/noticias'); ?>">Noticias</a></li>
+          <?php
+            }
+          ?>
         </ul>
       </div>
       <div class="col col-s-3 text-align-right only-desktop">
