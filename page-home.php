@@ -35,6 +35,10 @@ get_header();
 <!-- end main-content -->
 </main>
 
+<nav id="home-plus">
+  <a href="<?php echo site_url('/noticias'); ?>">+</a>
+</nav>
+
 <?php
 get_footer();
 ?>
