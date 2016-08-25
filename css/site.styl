@@ -318,12 +318,21 @@ img
 // HEADER
 
 #header
+  position: fixed
+  width: 100%
+  z-index: 1000
+  line-height: 1
   h1
     font-size: $font-size-h3
     margin: 0
 
 #header-menu
   font-size: $font-size-h3
+  li
+    &:after
+      content: ', '
+    &:last-of-type:after
+      content: ''
 
 // ******************************************************
 
