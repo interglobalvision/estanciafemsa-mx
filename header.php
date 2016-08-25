@@ -98,7 +98,7 @@
           </ul>
         </div>
         <div class="col col-s-4 text-align-right only-desktop">
-          <h1 class="font-uppercase">Casa Luis Barragán</h1>
+          <h1 class="font-uppercase"><a href="<?php echo home_url('/citas'); ?>">Casa Luis Barragán</a></h1>
         </div>
       </div>
     </div>
