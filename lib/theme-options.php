@@ -112,13 +112,6 @@ class IGV_Admin {
 			'type' => 'title',
 		) );
 
-		$options_metabox->add_field( array(
-			'name' => __( 'Ocultar <i>Contenido</i>', 'cmb2' ),
-			'desc' => __( 'Marca este campo para ocultar el link de "Contenido" del menu.', 'cmb2' ),
-			'id'   => $this->prefix . 'contenido_toggle',
-			'type' => 'checkbox',
-		) );
-
 		// SPLASH
 
 		$options_metabox->add_field( array(
@@ -143,6 +136,66 @@ class IGV_Admin {
 			'type' => 'text',
 			'default' => 'ESTANCIA FEMSA is a cultural and artistic platform hosted by Casa Luis Barragán with the support of Colección FEMSA.',
 		) );
+
+		// HOME
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Home', 'cmb2' ),
+			'desc' => __( '', 'cmb2' ),
+			'id'   => $this->prefix . 'home_title',
+			'type' => 'title',
+		) );
+
+		$options_metabox->add_field( array(
+			'name' => __( 'Home Content', 'cmb2' ),
+			'desc' => __( '...', 'cmb2' ),
+			'id'   => $this->prefix . 'home_content',
+			'type' => 'text',
+			'default' => 'ESTANCIA FEMSA es una plataforma cultural y artística auspiciada por Casa Luis Barragán con el apoyo de Colección FEMSA.',
+		) );
+
+		$home_content = $options_metabox->add_field( array(
+			'name' => __( 'Home Content', 'cmb2' ),
+			'desc' => __( '...', 'cmb2' ),
+      'id' => $this->prefix . 'home_content',
+      'type' => 'group',
+      'options'     => array(
+        'group_title'   => __( 'Entry {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
+        'add_button'    => __( 'Add Another Entry', 'cmb2' ),
+        'remove_button' => __( 'Remove Entry', 'cmb2' ),
+        'sortable'      => true, // beta
+      ),
+    ) );
+
+    $options_metabox->add_group_field( $home_content, array(
+      'name' => 'Image',
+			'desc' => __( '...', 'cmb2' ),
+      'id'   => 'image',
+      'type' => 'file',
+    ) );
+
+    $options_metabox->add_group_field( $home_content, array(
+      'name' => 'Caption',
+			'desc' => __( '...', 'cmb2' ),
+      'id'   => 'caption',
+      'type' => 'text',
+    ) );
+
+    $options_metabox->add_group_field( $home_content, array(
+      'name' => 'Text',
+			'desc' => __( '...', 'cmb2' ),
+      'id'   => 'text',
+      'type' => 'text',
+    ) );
+
+    $options_metabox->add_group_field( $home_content, array(
+      'name' => 'Link',
+      'id'   => 'link',
+      'type' => 'post_search_text',
+      'post_type' => array('post', 'programacion'),
+      'select_type' => 'radio',
+      'select_behavior' => 'replace',
+    ) );
 
 		// FOOTER
 

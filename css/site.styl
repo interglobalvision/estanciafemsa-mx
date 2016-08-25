@@ -53,6 +53,9 @@ $color-white-soft = rgb(253, 253, 253)
 
 $border = 3px solid $color-black-soft
 
+$basic-animation-speed = 600
+$fast-animation-speed = $basic-animation-speed / 2
+
 // ******************************************************
 
 .only-desktop
@@ -310,7 +313,6 @@ img
   max-width: 100%
   height: auto
 
-
 // ******************************************************
 
 // HEADER
@@ -322,3 +324,27 @@ img
 
 #header-menu
   font-size: $font-size-h3
+
+// ******************************************************
+
+// HOME
+
+.home-item
+  max-width: 50%
+  float: left
+  .attachment-home-thumb
+    display: block
+  &:hover
+    .home-item-image-caption
+      opacity: 1
+    .attachment-home-thumb
+      opacity: 0
+    .home-item-image-holder
+      border: $border
+
+.home-item-image-holder
+  border: 3px solid transparent
+
+.home-item-image-caption
+  opacity: 0
+  transition: opacity $fast-animation-speed
