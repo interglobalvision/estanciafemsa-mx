@@ -48,7 +48,17 @@
   <?php if (is_singular() && pings_open(get_queried_object())) { ?>
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
   <?php } ?>
-  <?php wp_head(); ?>
+  <?php
+    wp_head();
+
+    if (qtranxf_getLanguage() == 'es') {
+      $locale = 'es_ES';
+    } else {
+      $locale = 'en_US';
+    }
+
+    \Moment\Moment::setLocale($locale);
+  ?>
 </head>
 <body <?php body_class(); ?>>
 <!--[if lt IE 9]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
