@@ -47,7 +47,7 @@ if( have_posts() ) {
             }
           ?>
         </header>
-        <?php the_content(); ?>
+        <?php the_content(__('[:es]LEER MAS[:en]READ MORE')); ?>
       </div>
 
     </article>
