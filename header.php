@@ -57,47 +57,49 @@
 
   <?php if (!is_front_page()) { ?>
   <!-- start content -->
-  <header id="header" class="container padding-top-small margin-bottom-basic">
-    <div class="row">
-      <div class="col col-s-12 col-m-3">
-        <h1 class="font-uppercase"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-      </div>
-      <div class="col col-s-12 col-m-6">
-        <ul id="header-menu" class="font-sans u-inline-list">
-          <?php
-            if (!is_page('home')) {
-          ?>
-          <li><a href="<?php echo site_url('/sobre-nosotros'); ?>">Home</a></li>
-          <?php
-            }
-            global $post;
-            if ($post && is_single_type('programacion', $post)) {
-          ?>
-          <?php
-              $programacion_posts = get_posts('post_type=programacion&posts_per_page=-1');
-              if ($programacion_posts) {
-                foreach ($programacion_posts as $programacion) {
-                  $number = get_post_meta($programacion->ID, '_igv_number', true);
-          ?>
-          <li><a href="<?php echo the_permalink($programacion->ID); ?>"><?php echo $number;?></a></li>
-          <?php
-                }
+  <header id="header">
+    <div class="container padding-top-tiny">
+      <div class="row">
+        <div class="col col-s-12 col-m-3">
+          <h1 class="font-uppercase"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+        </div>
+        <div class="col col-s-12 col-m-5">
+          <ul id="header-menu" class="font-sans u-inline-list">
+            <?php
+              if (!is_page('home')) {
+            ?>
+            <li><a href="<?php echo site_url('/sobre-nosotros'); ?>">Home</a></li>
+            <?php
               }
-          ?>
-          <li><a href="<?php echo site_url('/programacion'); ?>">+</a></li>
-          <?php
-            } else if (!is_page('home') && !is_post_type_archive('programacion')) {
-          ?>
-          <li><a href="<?php echo site_url('/sobre-nosotros#prensa'); ?>">Prensa</a></li>
-          <li><a href="<?php echo site_url('/sobre-nosotros#contacto'); ?>">Contacto</a></li>
-          <li><a href="<?php echo site_url('/noticias'); ?>">Noticias</a></li>
-          <?php
-            }
-          ?>
-        </ul>
-      </div>
-      <div class="col col-s-3 text-align-right only-desktop">
-        <h1 class="font-uppercase">Casa Luis Barragán</h1>
+              global $post;
+              if ($post && is_single_type('programacion', $post)) {
+            ?>
+            <?php
+                $programacion_posts = get_posts('post_type=programacion&posts_per_page=-1');
+                if ($programacion_posts) {
+                  foreach ($programacion_posts as $programacion) {
+                    $number = get_post_meta($programacion->ID, '_igv_number', true);
+            ?>
+            <li><a href="<?php echo the_permalink($programacion->ID); ?>"><?php echo $number;?></a></li>
+            <?php
+                  }
+                }
+            ?>
+            <li><a href="<?php echo site_url('/programacion'); ?>">+</a></li>
+            <?php
+              } else if (!is_page('home') && !is_post_type_archive('programacion')) {
+            ?>
+            <li><a href="<?php echo site_url('/sobre-nosotros#prensa'); ?>">Prensa</a></li>
+            <li><a href="<?php echo site_url('/sobre-nosotros#contacto'); ?>">Contacto</a></li>
+            <li><a href="<?php echo site_url('/noticias'); ?>">Noticias</a></li>
+            <?php
+              }
+            ?>
+          </ul>
+        </div>
+        <div class="col col-s-4 text-align-right only-desktop">
+          <h1 class="font-uppercase"><a href="<?php echo home_url('/citas'); ?>">Casa Luis Barragán</a></h1>
+        </div>
       </div>
     </div>
   </header>
