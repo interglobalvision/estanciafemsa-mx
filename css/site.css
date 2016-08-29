@@ -1331,20 +1331,22 @@ body {
 }
 h1,
 h2,
-h3 {
-  font-family: 'Calibre', Helvetica, Arial, sans-serif;
+h3,
+h4 {
+  line-height: 1.25;
 }
 h1 {
+  font-family: 'Calibre', Helvetica, Arial, sans-serif;
   font-size: 1.781452392364234rem;
-  line-height: 1.25;
   font-weight: bold;
 }
 h2 {
+  font-family: 'Calibre', Helvetica, Arial, sans-serif;
   font-size: 1.618rem;
-  line-height: 1.25;
   font-weight: bold;
 }
 h3 {
+  font-family: 'Calibre', Helvetica, Arial, sans-serif;
   font-size: 1.469544744064506rem;
 }
 h4 {
@@ -1465,4 +1467,7 @@ img {
   opacity: 0;
   -webkit-transition: opacity 300;
   transition: opacity 300;
+}
+.more-link {
+  font-family: 'Calibre', Helvetica, Arial, sans-serif;
 }
