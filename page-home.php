@@ -7,7 +7,7 @@ get_header();
   <div class="row">
     <div class="col col-s-12 col-m-11 col-l-10">
 <?php
-  $home_content = IGV_get_option('_igv_home_content');
+  $home_content = get_post_meta( get_the_ID(), '_igv_home_content', true);
 
   if ($home_content) {
     foreach ($home_content as $item) {
