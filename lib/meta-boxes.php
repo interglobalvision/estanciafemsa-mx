@@ -140,6 +140,7 @@ function igv_cmb_metaboxes() {
   	'id'            => $prefix . 'home_metabox',
   	'title'         => __( 'Home Content', 'cmb2' ),
   	'object_types'  => array( 'page', ), // Post type
+    'show_on_cb' => 'metabox_only_on_page_home',
   ) );
 
   $home_content = $home_meta->add_field( array(
@@ -151,7 +152,6 @@ function igv_cmb_metaboxes() {
       'remove_button' => __( 'Remove Entry', 'cmb2' ),
       'sortable'      => true, // beta
     ),
-    'show_on_cb' => 'metabox_only_on_page_home',
   ) );
 
   $home_meta->add_group_field( $home_content, array(
