@@ -39,6 +39,7 @@ function igv_cmb_metaboxes() {
    * Reference: https://github.com/WebDevStudios/CMB2/blob/master/example-functions.php
 	 */
 
+  // **** PROGRAM
   $program_meta = new_cmb2_box( array(
   	'id'            => $prefix . 'programacion_metabox',
   	'title'         => __( 'Programación Metabox', 'cmb2' ),
@@ -134,5 +135,58 @@ function igv_cmb_metaboxes() {
     )
   ) );
 
+  // *** HOME
+  $home_meta = new_cmb2_box( array(
+  	'id'            => $prefix . 'home_metabox',
+  	'title'         => __( 'Home Content', 'cmb2' ),
+  	'object_types'  => array( 'page', ), // Post type
+    'show_on_cb' => 'metabox_only_on_page_home',
+  ) );
+
+  $home_content = $home_meta->add_field( array(
+    'id' => $prefix . 'home_content',
+    'type' => 'group',
+    'options'     => array(
+      'group_title'   => __( 'Entry {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
+      'add_button'    => __( 'Add Another Entry', 'cmb2' ),
+      'remove_button' => __( 'Remove Entry', 'cmb2' ),
+      'sortable'      => true, // beta
+    ),
+  ) );
+
+  $home_meta->add_group_field( $home_content, array(
+    'name' => 'Image',
+    'desc' => __( '...', 'cmb2' ),
+    'id'   => 'image',
+    'type' => 'file',
+  ) );
+
+  $home_meta->add_group_field( $home_content, array(
+    'name' => 'Caption',
+    'desc' => __( '...', 'cmb2' ),
+    'id'   => 'caption',
+    'type' => 'text',
+  ) );
+
+  $home_meta->add_group_field( $home_content, array(
+    'name' => 'Text',
+    'desc' => __( '...', 'cmb2' ),
+    'id'   => 'text',
+    'type' => 'text',
+  ) );
+
+  $home_meta->add_group_field( $home_content, array(
+    'name' => 'Link',
+    'id'   => 'link',
+    'type' => 'post_search_text',
+    'post_type' => array('post', 'programacion'),
+    'select_type' => 'radio',
+    'select_behavior' => 'replace',
+  ) );
+}
+
+function metabox_only_on_page_home($cmb) {
+  $home = get_page_by_path( 'home' );
+  return $home->ID == $cmb->object_id;
 }
 ?>
