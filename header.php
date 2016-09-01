@@ -85,7 +85,7 @@
               if ($post && is_single_type('programacion', $post)) {
             ?>
             <?php
-                $programacion_posts = get_posts('post_type=programacion&posts_per_page=-1');
+                $programacion_posts = get_posts('post_type=programacion&posts_per_page=3');
                 if ($programacion_posts) {
                   foreach ($programacion_posts as $programacion) {
                     $number = get_post_meta($programacion->ID, '_igv_number', true);
