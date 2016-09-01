@@ -14,6 +14,10 @@ Site = {
 
     });
 
+    if ($('body').hasClass('single-programacion')) {
+      _this.Programacion.Single.init();
+    }
+
   },
 
   onResize: function() {
@@ -29,6 +33,31 @@ Site = {
       $(this).html(string);
     });
   },
+};
+
+Site.Programacion = {
+
+  Single: {
+    init: function() {
+      var _this = this;
+
+      $(document).ready(function () {
+        _this.initGallery();
+      });
+    },
+
+    initGallery: function() {
+      var _this = this;
+
+      _this.swiper = new Swiper('.swiper-container', {
+        loop: true,
+        onClick: function(swiper) {
+          swiper.slideNext();
+        },
+      });
+    },
+  }
+
 };
 
 Site.init();

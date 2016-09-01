@@ -133,7 +133,7 @@ function my_gallery_shortcode($attr) {
       $tag = null;
     }
 
-    $output .= "<div>{$img}{$tag}</div>";
+    $output .= "<div class='swiper-slide'>{$img}{$tag}</div>";
   }
 
   // Finish markup and return
