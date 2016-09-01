@@ -19,8 +19,11 @@ if( have_posts() ) {
 
       <div class="page-images col col-s-12 col-m-9">
 
-        //>>> query exactly where these images come from
-        <?php the_content(); ?>
+        <?php
+          $home_content = get_post_meta( get_the_ID(), '_igv_home_content', true);
+
+          render_home_style_content($home_content);
+        ?>
 
       </div>
 
