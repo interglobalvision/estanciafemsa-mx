@@ -6,11 +6,9 @@ get_header();
 <main id="main-content" class="container">
   <div class="row">
     <div class="col col-s-12 col-m-11 col-l-10">
-<?php
-  $home_content = get_post_meta( get_the_ID(), '_igv_home_content', true);
-
-  render_home_style_content($home_content);
-?>
+      <?php
+        get_template_part('partials/home-content');
+      ?>
     </div>
   </div>
 <!-- end main-content -->

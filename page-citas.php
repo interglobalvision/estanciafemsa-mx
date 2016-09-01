@@ -20,9 +20,7 @@ if( have_posts() ) {
       <div class="page-images col col-s-12 col-m-9">
 
         <?php
-          $home_content = get_post_meta( get_the_ID(), '_igv_home_content', true);
-
-          render_home_style_content($home_content);
+          get_template_part('partials/home-content');
         ?>
 
       </div>
