@@ -140,7 +140,7 @@ function igv_cmb_metaboxes() {
   	'id'            => $prefix . 'home_metabox',
   	'title'         => __( 'Home Content', 'cmb2' ),
   	'object_types'  => array( 'page', ), // Post type
-    'show_on_cb' => 'metabox_only_on_page_home',
+    'show_on_cb' => 'metabox_for_home_style_content',
   ) );
 
   $home_content = $home_meta->add_field( array(
@@ -185,8 +185,14 @@ function igv_cmb_metaboxes() {
   ) );
 }
 
-function metabox_only_on_page_home($cmb) {
-  $home = get_page_by_path( 'home' );
-  return $home->ID == $cmb->object_id;
+function metabox_for_home_style_content($cmb) {
+  $home = get_page_by_path('home');
+  $citas = get_page_by_path('citas');
+
+  if ($home->ID == $cmb->object_id || $citas->ID == $cmb->object_id) {
+    return true;
+  } else {
+    return false;
+  }
 }
 ?>

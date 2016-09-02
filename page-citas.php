@@ -19,8 +19,9 @@ if( have_posts() ) {
 
       <div class="page-images col col-s-12 col-m-9">
 
-        //>>> query exactly where these images come from
-        <?php the_content(); ?>
+        <?php
+          get_template_part('partials/home-content');
+        ?>
 
       </div>
 
