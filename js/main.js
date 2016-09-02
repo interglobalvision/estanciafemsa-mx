@@ -18,6 +18,10 @@ Site = {
       _this.Programacion.Single.init();
     }
 
+    if ($('body').hasClass('blog') || $('body').hasClass('single-post')) {
+      _this.Noticias.init();
+    }
+
   },
 
   onResize: function() {
@@ -66,5 +70,24 @@ Site.Programacion = {
   }
 
 };
+
+Site.Noticias = {
+  init: function() {
+    this.Galleries.init();
+  },
+
+  Galleries: {
+    init: function() {
+      $('.swiper-container').each(function() {
+        var swiper = new Swiper($(this), {
+          loop: true,
+          onClick: function(swiper) {
+            swiper.slideNext();
+          },
+        });
+      });
+    },
+  }
+}
 
 Site.init();
