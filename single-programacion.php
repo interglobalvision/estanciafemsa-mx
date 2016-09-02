@@ -29,7 +29,7 @@ if( have_posts() ) {
           <h2><?php the_title(); ?></h2>
         </div>
         <div class="col col-s-6 col-m-2">
-          // gallery pagination
+          <span class="swiper-prev">< </span><span id="single-programacion-gallery-pagination"></span><span class="swiper-next"> ></span>
         </div>
         <div class="col col-s-6 col-m-2">
           <?php

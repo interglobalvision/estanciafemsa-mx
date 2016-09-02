@@ -51,6 +51,13 @@ Site.Programacion = {
 
       _this.swiper = new Swiper('.swiper-container', {
         loop: true,
+        nextButton: '.swiper-next',
+        prevButton: '.swiper-prev',
+        pagination: '#single-programacion-gallery-pagination',
+        paginationType: 'custom',
+        paginationCustomRender: function (swiper, current, total) {
+          return '<span id="gallery-index-active">' + current + '</span> / <span id="gallery-index-length">' + total + '</span>';
+        },
         onClick: function(swiper) {
           swiper.slideNext();
         },
