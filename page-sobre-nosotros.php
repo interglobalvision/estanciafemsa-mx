@@ -36,7 +36,7 @@ if( have_posts() ) {
           ?>
         </div>
 
-        <div class="margin-bottom-small">
+        <div class="margin-bottom-small" id="prensa">
           <h3 class="margin-bottom-small"><?php echo __('[:es]Prensa[:en]Press'); ?></h3>
 <?php
       $current_query = current_query();
@@ -67,7 +67,7 @@ if( have_posts() ) {
           </p>
         </div>
 
-        <div class="margin-bottom-small">
+        <div class="margin-bottom-small" id="contacto">
           <h3 class="margin-bottom-small"><?php echo __('[:es]Contacto[:en]Contact'); ?></h3>
           <?php
             $about_contact = IGV_get_option('_igv_about_contact');
