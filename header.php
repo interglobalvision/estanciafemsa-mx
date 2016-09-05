@@ -99,8 +99,8 @@
             <?php
               } else if (!is_page('home') && !is_post_type_archive('programacion')) {
             ?>
-            <li><a href="<?php echo site_url('/sobre-nosotros#prensa'); ?>">Prensa</a></li>
-            <li><a href="<?php echo site_url('/sobre-nosotros#contacto'); ?>">Contacto</a></li>
+            <li><a href="<?php echo get_the_permalink(get_id_by_slug('sobre-nosotros')); ?>#prensa">Prensa</a></li>
+            <li><a href="<?php echo get_the_permalink(get_id_by_slug('sobre-nosotros')); ?>#contacto">Contacto</a></li>
             <li><a href="<?php echo site_url('/noticias'); ?>">Noticias</a></li>
             <?php
               }
