@@ -10,5 +10,5 @@ if( function_exists( 'add_image_size' ) ) {
 
   add_image_size( 'gallery', 1200, 9999, false );
 
-  add_image_size( 'home-thumb', 500, 500, false );
+  add_image_size( 'home-thumb', 550, 550, false );
 }
