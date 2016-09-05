@@ -6,7 +6,7 @@ if ($home_content) {
   foreach ($home_content as $item) {
     echo '<div class="home-item"><div class="home-item-holder">';
     if (!empty($item['link'])) {
-      echo '<a href="' . get_permalink($item['link']) . '" class="u-pointer">';
+      echo '<a href="' . get_permalink($item['link']) . '">';
     }
     if (!empty($item['image_id'])) {
       echo '<div class="home-item-image-holder">' . wp_get_attachment_image($item['image_id'], 'home-thumb') . '</div>';
