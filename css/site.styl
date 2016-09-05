@@ -356,11 +356,15 @@ img
 // HOME
 
 .home-item
-  max-width: 50%
-  float: left
+  text-align: center
   .attachment-home-thumb
     display: block
+
+.home-item-holder
+  text-align: center
+  display: inline-block
   &:hover
+    //cursor: pointer 
     .home-item-image-caption
       opacity: 1
     .attachment-home-thumb
@@ -369,7 +373,11 @@ img
       border: $border
 
 .home-item-image-holder
+  display: inline-block
   border: 3px solid transparent
+  img 
+    max-height: 400px
+    width: auto
 
 .home-item-image-caption
   opacity: 0

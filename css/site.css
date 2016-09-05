@@ -1323,7 +1323,8 @@ th {
   border-bottom: 3px solid #0e0e0e;
 }
 .home-item {
-  padding: 24px;
+  padding: 84px 0 0 0;
+  width: 100%;
 }
 @media screen and (min-width: 760px) {
   .only-desktop {
@@ -1546,6 +1547,10 @@ th {
   }
   #front-page .front-page-block:nth-child(2) {
     border-bottom: 3px solid #0e0e0e;
+  }
+  .home-item {
+    padding: 112px 112px 0 0;
+    width: 50%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1954,28 +1959,36 @@ img {
   margin: 0;
 }
 .home-item {
-  max-width: 50%;
-  float: left;
+  text-align: center;
 }
 .home-item .attachment-home-thumb {
   display: block;
 }
-.home-item:hover .home-item-image-caption {
+.home-item-holder {
+  text-align: center;
+  display: inline-block;
+}
+.home-item-holder:hover .home-item-image-caption {
   -ms-filter: none;
   -webkit-filter: none;
           filter: none;
   opacity: 1;
 }
-.home-item:hover .attachment-home-thumb {
+.home-item-holder:hover .attachment-home-thumb {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
 }
-.home-item:hover .home-item-image-holder {
+.home-item-holder:hover .home-item-image-holder {
   border: 3px solid #0e0e0e;
 }
 .home-item-image-holder {
+  display: inline-block;
   border: 3px solid transparent;
+}
+.home-item-image-holder img {
+  max-height: 400px;
+  width: auto;
 }
 .home-item-image-caption {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
