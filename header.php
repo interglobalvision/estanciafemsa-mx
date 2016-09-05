@@ -90,7 +90,7 @@
                   foreach ($programacion_posts as $programacion) {
                     $number = get_post_meta($programacion->ID, '_igv_number', true);
             ?>
-            <li><a href="<?php echo the_permalink($programacion->ID); ?>"><?php echo $number;?></a></li>
+            <li><a href="<?php echo the_permalink($programacion->ID); ?>" <?php echo $programacion->ID == $post->ID ? 'class="font-italic"' : ''; ?>>No. <?php echo $number;?></a></li>
             <?php
                   }
                 }
