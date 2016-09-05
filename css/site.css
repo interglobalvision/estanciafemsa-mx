@@ -1987,3 +1987,6 @@ img {
 .more-link {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
 }
+.swiper-slide {
+  cursor: pointer;
+}
