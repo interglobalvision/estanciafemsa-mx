@@ -22,6 +22,10 @@ Site = {
       _this.Noticias.init();
     }
 
+    if ($('body').hasClass('page-home') || $('body').hasClass('page-citas')) {
+      _this.layoutMasonry();
+    }
+
   },
 
   onResize: function() {
@@ -37,6 +41,19 @@ Site = {
       $(this).html(string);
     });
   },
+
+  layoutMasonry: function() {
+    if ($('.home-item').length) {
+      var $masonry = $('#home-holder').masonry({
+        itemSelector: '.home-item',
+        //columnWidth: '.home-item',
+      });
+
+      $masonry.imagesLoaded().progress( function() {
+        $masonry.masonry('layout');
+      });
+    }
+  }
 };
 
 Site.Programacion = {
