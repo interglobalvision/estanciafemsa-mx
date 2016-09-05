@@ -29,9 +29,9 @@ if( have_posts() ) {
           <h2><?php the_title(); ?></h2>
         </div>
         <div class="col col-s-6 col-m-2">
-          // gallery pagination
+          <span class="swiper-prev u-pointer">< </span><span id="single-programacion-gallery-pagination"></span><span class="swiper-next u-pointer"> ></span>
         </div>
-        <div class="col col-s-6 col-m-2">
+        <div class="col col-s-6 col-m-2 text-align-right">
           <?php
             if (!empty($meta['_igv_number'][0])) {
               echo 'No. ' . add_leading_zero( $meta['_igv_number'][0] );
