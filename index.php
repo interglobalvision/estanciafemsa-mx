@@ -14,6 +14,9 @@ if( have_posts() ) {
   while( have_posts() ) {
     the_post();
     $time = new \Moment\Moment(get_the_date('r'));
+
+    $event = get_post_meta($post->ID, '_igv_related_event', true);
+    $color = !empty($event) ? get_post_meta($event, '_igv_color', true) : false;
 ?>
 
     <article <?php post_class('row margin-bottom-mid'); ?> id="post-<?php the_ID(); ?>">
@@ -38,7 +41,7 @@ if( have_posts() ) {
       <!-- Article Content -->
       <div class="article-content col col-s-12 col-m-6">
         <header class="article-content-header margin-bottom-small">
-          <a href="<?php the_permalink() ?>"><h3 class="u-inline-block"><?php the_title(); ?></h3></a><?php
+          <a href="<?php the_permalink() ?>"><h3 class="u-inline-block" <?php echo $color ? 'style="color: ' . $color . '"' : ''; ?>><?php the_title(); ?></h3></a><?php
             $sources = get_the_terms($post, 'source');
 
             if ($sources) {
