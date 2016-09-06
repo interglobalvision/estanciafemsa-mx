@@ -12,6 +12,8 @@ Site = {
 
     $(document).ready(function () {
 
+      _this.hoverColor();
+  
     });
 
     if ($('body').hasClass('single-programacion')) {
@@ -37,6 +39,19 @@ Site = {
       $(this).html(string);
     });
   },
+
+  hoverColor: function(s) {
+    if ($('[data-hover-color]').length) {
+      $('[data-hover-color]').hover(
+        function() {
+          $(this).css('color', $(this).attr('data-hover-color'));
+        }, 
+        function() {
+          $(this).css('color', 'inherit');
+        }
+      );
+    }
+  }
 };
 
 Site.Programacion = {
