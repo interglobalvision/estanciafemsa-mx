@@ -39,6 +39,22 @@ function igv_cmb_metaboxes() {
    * Reference: https://github.com/WebDevStudios/CMB2/blob/master/example-functions.php
 	 */
 
+  // **** POST
+  $post_meta = new_cmb2_box( array(
+    'id'            => $prefix . 'post_metabox',
+    'title'         => __( 'Entrada Metabox', 'cmb2' ),
+    'object_types'  => array( 'post', ), // Post type
+  ) );
+
+  $post_meta->add_field( array(
+    'name' => __( 'Evento relacionado', 'cmb2' ),
+    'id'   => $prefix . 'related_event',
+    'type' => 'post_search_text',
+    'post_type' => array('programacion'),
+    'select_type' => 'radio',
+    'select_behavior' => 'replace',
+  ) );
+
   // **** PROGRAM
   $program_meta = new_cmb2_box( array(
   	'id'            => $prefix . 'programacion_metabox',
