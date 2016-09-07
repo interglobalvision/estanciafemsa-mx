@@ -1233,7 +1233,7 @@ img {
   content: '';
 }
 .menu-toggle svg {
-  height: 15px;
+  height: 20px;
 }
 .menu-toggle .menu-close {
   display: none;
