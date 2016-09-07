@@ -21,6 +21,8 @@ Site = {
     if ($('body').hasClass('blog') || $('body').hasClass('single-post')) {
       _this.Noticias.init();
     }
+
+    _this.Home.init();
   },
 
   onResize: function() {
@@ -56,6 +58,30 @@ Site.Layout = {
     $masonry.imagesLoaded().progress( function() {
       $masonry.masonry('layout');
     });
+  }
+};
+
+Site.Home = {
+  init: function() {
+    var _this = this;
+
+    console.log('Home');
+
+    if ($('.home-item').length) {
+      _this.bindItemHover();
+    }
+  },
+
+  bindItemHover: function() {
+    $('.home-item a').hover(
+      function() {
+        $('.home-item a').not(this).parent('.home-item').addClass('home-item-hidden');
+        $(this).parent('.home-item').addClass('home-item-hover');
+      }, 
+      function() {
+        $('.home-item').removeClass('home-item-hidden home-item-hover');
+      }
+    );
   }
 };
 
