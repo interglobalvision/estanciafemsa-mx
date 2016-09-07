@@ -246,6 +246,19 @@ img
       content: ', '
     &:last-of-type:after
       content: ''
+      
+.menu-toggle
+  svg
+    height: 15px
+  .menu-close
+    display: none
+  .menu-open
+    display: initial
+  &.open 
+    .menu-close
+      display: initial
+    .menu-open
+      display: none
 
 // ******************************************************
 

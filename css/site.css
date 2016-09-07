@@ -1232,6 +1232,21 @@ img {
 #header-menu li:last-of-type:after {
   content: '';
 }
+.menu-toggle svg {
+  height: 15px;
+}
+.menu-toggle .menu-close {
+  display: none;
+}
+.menu-toggle .menu-open {
+  display: initial;
+}
+.menu-toggle.open .menu-close {
+  display: initial;
+}
+.menu-toggle.open .menu-open {
+  display: none;
+}
 #footer {
   position: fixed;
   bottom: 0;
@@ -1467,7 +1482,7 @@ img {
   font-size: 1.400505962399693rem;
   display: none;
 }
-#header-menu.menu-open {
+#header-menu.open {
   display: initial;
 }
 #front-page {

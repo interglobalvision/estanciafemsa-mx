@@ -76,7 +76,11 @@
           <h1 class="font-uppercase"><a href="<?php echo site_url('/home'); ?>"><?php bloginfo('name'); ?></a></h1>
         </div>
         <div class="col col-s-3 only-mobile text-align-right">
-          <div class="menu-toggle u-pointer u-inline-block">=</div>
+          <div class="menu-toggle u-pointer u-inline-block"><span class="menu-open"><?php 
+            echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-menu.svg'); 
+          ?></span><span class="menu-close"><?php 
+            echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-close.svg'); 
+          ?></span></div>
         </div>
         <div class="col col-s-12 col-l-5">
           <ul id="header-menu" class="font-sans">
