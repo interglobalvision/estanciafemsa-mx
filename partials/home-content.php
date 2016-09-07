@@ -3,6 +3,7 @@
 $home_content = get_post_meta( get_the_ID(), '_igv_home_content', true);
 
 if ($home_content) {
+  echo '<div id="home-holder">';
   foreach ($home_content as $item) {
     echo '<div class="home-item margin-top-';
     echo rand(0,1) == 1 ? 'mid' : 'basic';
@@ -24,6 +25,7 @@ if ($home_content) {
     }
     echo '</div></div>';
   }
+  echo '</div>';
 }
 
 ?>
