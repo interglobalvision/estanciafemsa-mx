@@ -1219,12 +1219,10 @@ img {
   top: 0;
   width: 100%;
   z-index: 1000;
-  line-height: 1;
 }
 #header h1 {
   font-size: 1.469544744064506rem;
   margin: 0;
-  line-height: 1;
 }
 #header-menu li:after {
   content: ', ';
@@ -1485,7 +1483,7 @@ body.menu-active .menu-open {
   display: none;
 }
 #header-menu li {
-  line-height: 1.3;
+  line-height: 1.45;
 }
 body.menu-active #header-menu {
   display: block;
@@ -1922,7 +1920,7 @@ body.menu-active #header-menu {
   }
   #header-menu li {
     display: inline-block;
-    line-height: 1;
+    line-height: 1.25;
     float: left;
   }
   #header-menu li:after {
