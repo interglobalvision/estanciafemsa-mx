@@ -1963,25 +1963,22 @@ img {
 .home-item .attachment-home-thumb {
   display: block;
 }
-.home-item-holder {
-  text-align: center;
+.home-item a {
   display: inline-block;
-}
-.home-item-holder a:hover {
   cursor: pointer;
 }
-.home-item-holder a:hover .home-item-image-caption {
+.home-item a:hover .home-item-image-caption {
   -ms-filter: none;
   -webkit-filter: none;
           filter: none;
   opacity: 1;
 }
-.home-item-holder a:hover .attachment-home-thumb {
+.home-item a:hover .attachment-home-thumb {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
 }
-.home-item-holder a:hover .home-item-image-holder {
+.home-item a:hover .home-item-image-holder {
   border: 3px solid #0e0e0e;
 }
 .home-item-image-holder {

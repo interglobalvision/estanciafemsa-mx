@@ -7,7 +7,7 @@ if ($home_content) {
   foreach ($home_content as $item) {
     echo '<div class="home-item margin-top-';
     echo rand(0,1) == 1 ? 'mid' : 'basic';
-    echo '"><div class="home-item-holder">';
+    echo '">';
     if (!empty($item['link'])) {
       echo '<a href="' . get_permalink($item['link']) . '">';
     }
@@ -23,7 +23,7 @@ if ($home_content) {
     if (!empty($item['link'])) {
       echo '</a>';
     }
-    echo '</div></div>';
+    echo '</div>';
   }
   echo '</div>';
 }

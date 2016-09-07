@@ -359,18 +359,16 @@ img
   text-align: center
   .attachment-home-thumb
     display: block
-
-.home-item-holder
-  text-align: center
-  display: inline-block
-  a:hover
+  a
+    display: inline-block
     cursor: pointer 
-    .home-item-image-caption
-      opacity: 1
-    .attachment-home-thumb
-      opacity: 0
-    .home-item-image-holder
-      border: $border
+    &:hover
+      .home-item-image-caption
+        opacity: 1
+      .attachment-home-thumb
+        opacity: 0
+      .home-item-image-holder
+        border: $border
 
 .home-item-image-holder
   display: inline-block
