@@ -12,9 +12,13 @@ Site = {
 
     $(document).ready(function () {
 
-      _this.hoverColor();
+      _this.Menu.init();
   
     });
+
+    if ($('body').hasClass('post-type-archive-programacion')) {
+      _this.Programacion.Archive.init();
+    }
 
     if ($('body').hasClass('single-programacion')) {
       _this.Programacion.Single.init();
@@ -29,6 +33,7 @@ Site = {
   onResize: function() {
     var _this = this;
 
+    _this.Menu.closeMenu();
   },
 
   fixWidows: function() {
@@ -39,9 +44,38 @@ Site = {
       $(this).html(string);
     });
   },
+};
 
-  hoverColor: function(s) {
-    if ($('[data-hover-color]').length) {
+Site.Menu = {
+  init: function() {
+    var _this = this;
+
+    _this.bindToggle();
+  },
+
+  bindToggle: function() {
+    $('.menu-toggle').on('click', function() {
+      $('body').toggleClass('menu-active');
+    });
+  },
+
+  closeMenu: function() {
+    $('body').removeClass('menu-active');
+  },
+};
+
+Site.Programacion = {
+
+  Archive: {
+    init: function() {
+      var _this = this;
+
+      if ($('[data-hover-color]').length) {
+        _this.bindHoverColor();
+      }
+    },
+
+    bindHoverColor: function() {
       $('[data-hover-color]').hover(
         function() {
           $(this).css('color', $(this).attr('data-hover-color'));
@@ -51,10 +85,7 @@ Site = {
         }
       );
     }
-  }
-};
-
-Site.Programacion = {
+  },
 
   Single: {
     init: function() {

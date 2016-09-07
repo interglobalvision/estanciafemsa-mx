@@ -33,13 +33,13 @@ if( have_posts() ) {
       </div>
 
       <!-- Mobile Article Meta -->
-      <div class="article-meta col col-s-12 only-mobile">
+      <div class="article-meta col col-s-12 col-m-3 only-mobile">
         <h3 class="font-capitalize"><?php echo $time->format('j F, Y');?></h3>
         <h4><?php echo __('[:es]Por[:en]By'); ?>: <?php the_author(); ?></h4>
       </div>
 
       <!-- Article Content -->
-      <div class="article-content col col-s-12 col-m-6">
+      <div class="article-content col col-s-12 col-m-9 col-l-6">
         <header class="article-content-header margin-bottom-small">
           <a href="<?php the_permalink() ?>"><h3 class="u-inline-block" <?php echo $color ? 'style="color: ' . $color . '"' : ''; ?>><?php the_title(); ?></h3></a><?php
             $sources = get_the_terms($post, 'source');
