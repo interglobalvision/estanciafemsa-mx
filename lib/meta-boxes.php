@@ -162,22 +162,8 @@ function igv_cmb_metaboxes() {
   ) );
 
   $home_meta->add_group_field( $home_content, array(
-    'name' => 'Caption',
-    'desc' => __( '...', 'cmb2' ),
-    'id'   => 'caption',
-    'type' => 'text',
-  ) );
-
-  $home_meta->add_group_field( $home_content, array(
-    'name' => 'Text',
-    'desc' => __( '...', 'cmb2' ),
-    'id'   => 'text',
-    'type' => 'text',
-  ) );
-
-  $home_meta->add_group_field( $home_content, array(
-    'name' => 'Link',
-    'id'   => 'link',
+    'name' => 'Event',
+    'id'   => 'event',
     'type' => 'post_search_text',
     'post_type' => array('post', 'programacion'),
     'select_type' => 'radio',
