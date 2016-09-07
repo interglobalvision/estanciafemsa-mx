@@ -1479,6 +1479,8 @@ body.menu-active .menu-open {
   padding-top: 87px;
 }
 #header-menu {
+  padding-top: 12px;
+  padding-bottom: 7.416407864998257px;
   font-size: 1.400505962399693rem;
   display: none;
 }
@@ -1910,6 +1912,8 @@ body.menu-active #header-menu {
     padding-top: 82px;
   }
   #header-menu {
+    padding-top: 0;
+    padding-bottom: 0;
     font-size: 1.469544744064506rem;
     display: initial;
   }
