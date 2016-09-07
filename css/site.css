@@ -1323,7 +1323,7 @@ th {
   border-bottom: 3px solid #0e0e0e;
 }
 .home-item {
-  padding-right: 24px;
+  padding-right: 12px;
 }
 @media screen and (min-width: 760px) {
   .only-desktop {
@@ -1548,7 +1548,7 @@ th {
     border-bottom: 3px solid #0e0e0e;
   }
   .home-item {
-    padding-right: 112px;
+    padding-right: 32px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1956,34 +1956,47 @@ img {
   font-size: 1.469544744064506rem;
   margin: 0;
 }
-.home-item {
-  width: 50%;
-  text-align: center;
+#home-holder {
+  pointer-events: none;
 }
-.home-item .attachment-home-thumb {
+#home-holder:hover .attachment-home-thumb {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+#home-holder:hover .home-item-image-holder {
+  border: 3px solid #0e0e0e;
+}
+#home-holder .home-item {
+  pointer-events: auto;
+  width: 50%;
+}
+#home-holder .home-item .attachment-home-thumb {
   display: block;
 }
-.home-item a {
+#home-holder .home-item a {
   display: inline-block;
   cursor: pointer;
 }
-.home-item a:hover .home-item-image-caption {
+#home-holder .home-item:hover .attachment-home-thumb {
   -ms-filter: none;
   -webkit-filter: none;
           filter: none;
   opacity: 1;
 }
-.home-item a:hover .attachment-home-thumb {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  opacity: 0;
+#home-holder .home-item:hover .home-item-image-caption {
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  opacity: 1;
 }
-.home-item a:hover .home-item-image-holder {
-  border: 3px solid #0e0e0e;
+#home-holder .home-item:hover .home-item-image-holder {
+  border: 3px solid transparent;
 }
 .home-item-image-holder {
-  display: inline-block;
+  margin: 0 auto;
   border: 3px solid transparent;
+  max-width: 80%;
 }
 .home-item-image-holder img {
   max-height: 400px;

@@ -354,26 +354,35 @@ img
 // ******************************************************
 
 // HOME
-
-.home-item
-  width: 50%
-  text-align: center
-  .attachment-home-thumb
-    display: block
-  a
-    display: inline-block
-    cursor: pointer 
+#home-holder 
+  pointer-events: none
+  &:hover
+    .attachment-home-thumb
+      opacity: 0
+    .home-item-image-holder
+      border: $border
+  .home-item
+    pointer-events: auto
+    width: 50%
+    .attachment-home-thumb
+      display: block
+    a
+      display: inline-block
+      cursor: pointer 
     &:hover
+      .attachment-home-thumb
+        opacity: 1
       .home-item-image-caption
         opacity: 1
-      .attachment-home-thumb
-        opacity: 0
       .home-item-image-holder
-        border: $border
+        border: 3px solid transparent
+
+
 
 .home-item-image-holder
-  display: inline-block
+  margin: 0 auto
   border: 3px solid transparent
+  max-width: 80%
   img 
     max-height: 400px
     width: auto
