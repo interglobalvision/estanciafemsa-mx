@@ -52,8 +52,10 @@
     wp_head();
 
     if (qtranxf_getLanguage() == 'es') {
+      $lang_switch = is_404() ? site_url() : qtranxf_convertURL('', 'en', false, true);
       $locale = 'es_ES';
     } else {
+      $lang_switch = is_404() ? site_url() : qtranxf_convertURL('', 'es', false, true);
       $locale = 'en_US';
     }
 
@@ -70,15 +72,19 @@
   <header id="header">
     <div class="container padding-top-tiny">
       <div class="row">
-        <div class="col col-s-12 col-m-3">
+        <div class="col col-s-9 col-l-3">
           <h1 class="font-uppercase"><a href="<?php echo site_url('/home'); ?>"><?php bloginfo('name'); ?></a></h1>
         </div>
-        <div class="col col-s-12 col-m-5">
-          <ul id="header-menu" class="font-sans u-inline-list">
+        <div class="col col-s-3 only-mobile text-align-right">
+          <div class="menu-toggle u-pointer u-inline-block">=</div>
+        </div>
+        <div class="col col-s-12 col-l-5">
+          <ul id="header-menu" class="font-sans">
             <li><a href="<?php echo site_url('/nosotros'); ?>"><?php _e('[:es]Nosotros[:en]About'); ?></a></li>
             <li><a href="<?php echo site_url('/programacion'); ?>"><?php _e('[:es]Programación[:en]Program'); ?></a></li>
             <li><a href="<?php echo site_url('/noticias'); ?>"><?php _e('[:es]Noticias[:en]News'); ?></a></li>
             <li><a href="<?php echo site_url('/citas'); ?>"><?php _e('[:es]Citas[:en]Visit'); ?></a></li>
+            <li class="only-mobile"><a href="<?php echo $lang_switch; ?>"><?php _e('[:es]Read in English[:en]Leer en Español'); ?></a></li>
           </ul>
         </div>
         <div class="col col-s-4 text-align-right only-desktop">
