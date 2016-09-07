@@ -95,3 +95,20 @@ $margin-large = ($gutter * 5)
 
 #main-content
   padding-top: 58px + $margin-tiny
+
+// ******************************************************
+
+// HEADER
+
+#header-menu
+  font-size: $font-size-h3
+  display: initial
+  li
+    display: inline-block
+    float: left
+    &:after
+      content: none
+    &:before
+      content: ', '
+    &:first-of-type:before
+      content: ''
