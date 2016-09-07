@@ -1322,6 +1322,9 @@ th {
 #front-page .front-page-block:nth-child(1) {
   border-bottom: 3px solid #0e0e0e;
 }
+.home-item {
+  padding-right: 24px;
+}
 @media screen and (min-width: 760px) {
   .only-desktop {
     display: initial;
