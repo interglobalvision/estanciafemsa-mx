@@ -12,6 +12,7 @@ Site = {
 
     $(document).ready(function () {
 
+      _this.toggleMenu();
       _this.hoverColor();
   
     });
@@ -37,6 +38,12 @@ Site = {
       var string = $(this).html();
       string = string.replace(/ ([^ ]*)$/,'&nbsp;$1');
       $(this).html(string);
+    });
+  },
+
+  toggleMenu: function() {
+    $('.menu-toggle').on('click', function() {
+      $('#header-menu').toggleClass('menu-open');
     });
   },
 
