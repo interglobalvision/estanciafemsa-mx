@@ -176,8 +176,8 @@ function igv_cmb_metaboxes() {
   ) );
 
   $home_meta->add_group_field( $home_content, array(
-    'name' => 'Evento',
-    'id'   => 'event',
+    'name' => 'Link',
+    'id'   => 'link',
     'type' => 'post_search_text',
     'post_type' => array('post', 'programacion'),
     'select_type' => 'radio',
