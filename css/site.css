@@ -1484,6 +1484,9 @@ body.menu-active .menu-open {
   font-size: 1.400505962399693rem;
   display: none;
 }
+#header-menu li {
+  line-height: 1.3;
+}
 body.menu-active #header-menu {
   display: block;
 }
@@ -1919,6 +1922,7 @@ body.menu-active #header-menu {
   }
   #header-menu li {
     display: inline-block;
+    line-height: 1;
     float: left;
   }
   #header-menu li:after {
