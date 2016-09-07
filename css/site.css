@@ -60,7 +60,7 @@ ul.u-inline-list li {
 .u-fixed {
   position: fixed;
 }
-.u-pointer:hover {
+.u-pointer {
   cursor: pointer;
 }
 .u-holder {
@@ -1029,10 +1029,10 @@ th {
   padding: 0;
 }
 .only-desktop {
-  display: none;
+  display: none !important;
 }
 .only-mobile {
-  display: initial;
+  display: initial !important;
 }
 .container {
   margin: 0 auto;
@@ -1124,6 +1124,161 @@ th {
 .col-no-gutter {
   padding-left: 0;
   padding-right: 0;
+}
+html {
+  font-family: 'Calibre', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.001em;
+}
+body {
+  line-height: 1.45;
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+}
+h1 {
+  font-family: 'Calibre', Helvetica, Arial, sans-serif;
+  font-size: 1.781452392364234rem;
+  font-weight: bold;
+}
+h2 {
+  font-family: 'Calibre', Helvetica, Arial, sans-serif;
+  font-size: 1.618rem;
+  font-weight: bold;
+}
+h3 {
+  font-family: 'Calibre', Helvetica, Arial, sans-serif;
+  font-size: 1.469544744064506rem;
+}
+h4 {
+  font-size: 1.400505962399693rem;
+}
+p {
+  font-family: 'Tiempos', Times, Baskerville, Georgia, serif;
+  margin-bottom: 1rem;
+}
+.font-italic {
+  font-style: italic;
+}
+.font-bold {
+  font-weight: bold;
+}
+.font-small-caps {
+  font-size: 0.85em;
+  text-transform: uppercase;
+}
+.font-larger {
+  font-size: 1.3rem;
+}
+.font-capitalize {
+  text-transform: capitalize;
+}
+.font-uppercase {
+  text-transform: uppercase;
+}
+.font-sans {
+  font-family: 'Calibre', Helvetica, Arial, sans-serif;
+}
+.font-serif {
+  font-family: 'Tiempos', Times, Baskerville, Georgia, serif;
+}
+.text-overflow-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.text-align-left {
+  text-align: left;
+}
+.text-align-right {
+  text-align: right;
+}
+.text-align-center {
+  text-align: center;
+}
+a,
+a:active,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+html {
+  background-color: #fff;
+  color: #000;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+#header {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  line-height: 1;
+}
+#header h1 {
+  font-size: 1.469544744064506rem;
+  margin: 0;
+  line-height: 1;
+}
+#header-menu li:after {
+  content: ', ';
+}
+#header-menu li:last-of-type:after {
+  content: '';
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  line-height: 1;
+}
+#footer h1 {
+  font-size: 1.469544744064506rem;
+  margin: 0;
+}
+.home-item {
+  max-width: 50%;
+  float: left;
+}
+.home-item .attachment-home-thumb {
+  display: block;
+}
+.home-item:hover .home-item-image-caption {
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  opacity: 1;
+}
+.home-item:hover .attachment-home-thumb {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.home-item:hover .home-item-image-holder {
+  border: 3px solid #000;
+}
+.home-item-image-holder {
+  border: 3px solid transparent;
+}
+.home-item-image-caption {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 300;
+  transition: opacity 300;
+}
+.more-link {
+  font-family: 'Calibre', Helvetica, Arial, sans-serif;
+}
+.swiper-slide {
+  cursor: pointer;
 }
 .offset-s-0 {
   margin-left: 0%;
@@ -1310,6 +1465,10 @@ th {
 }
 #header-menu {
   font-size: 1.400505962399693rem;
+  display: none;
+}
+#header-menu.menu-open {
+  display: initial;
 }
 #front-page {
   font-size: 1.3rem;
@@ -1320,18 +1479,12 @@ th {
   padding: 24px;
 }
 #front-page .front-page-block:nth-child(1) {
-  border-bottom: 3px solid #0e0e0e;
+  border-bottom: 3px solid #000;
 }
 .home-item {
   padding: 24px;
 }
 @media screen and (min-width: 760px) {
-  .only-desktop {
-    display: initial;
-  }
-  .only-mobile {
-    display: none;
-  }
   .container {
     width: 760px;
   }
@@ -1521,9 +1674,6 @@ th {
   #main-content {
     padding-top: 90px;
   }
-  #header-menu {
-    font-size: 1.469544744064506rem;
-  }
   #front-page {
     font-size: 1.618rem;
   }
@@ -1542,20 +1692,21 @@ th {
     padding: 32px;
   }
   #front-page .front-page-block:nth-child(2n) {
-    border-left: 3px solid #0e0e0e;
+    border-left: 3px solid #000;
   }
   #front-page .front-page-block:nth-child(2) {
-    border-bottom: 3px solid #0e0e0e;
+    border-bottom: 3px solid #000;
   }
 }
 @media screen and (min-width: 1024px) {
+  .only-desktop {
+    display: initial !important;
+  }
+  .only-mobile {
+    display: none !important;
+  }
   .container {
     width: 1024px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .container {
-    width: 1280px;
   }
   .col {
     padding: 0 24px;
@@ -1743,6 +1894,28 @@ th {
   #main-content {
     padding-top: 82px;
   }
+  #header-menu {
+    font-size: 1.469544744064506rem;
+    display: initial;
+  }
+  #header-menu li {
+    display: inline-block;
+    float: left;
+  }
+  #header-menu li:after {
+    content: none;
+  }
+  #header-menu li:before {
+    content: ', ';
+  }
+  #header-menu li:first-of-type:before {
+    content: '';
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
 }
 @media screen and (min-width: 1366px) {
   .container {
@@ -1836,157 +2009,4 @@ th {
   #main-content {
     padding-top: 85px;
   }
-}
-html {
-  font-family: 'Calibre', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.001em;
-}
-body {
-  line-height: 1.45;
-}
-h1,
-h2,
-h3,
-h4 {
-  line-height: 1.25;
-}
-h1 {
-  font-family: 'Calibre', Helvetica, Arial, sans-serif;
-  font-size: 1.781452392364234rem;
-  font-weight: bold;
-}
-h2 {
-  font-family: 'Calibre', Helvetica, Arial, sans-serif;
-  font-size: 1.618rem;
-  font-weight: bold;
-}
-h3 {
-  font-family: 'Calibre', Helvetica, Arial, sans-serif;
-  font-size: 1.469544744064506rem;
-}
-h4 {
-  font-size: 1.400505962399693rem;
-}
-p {
-  font-family: 'Tiempos', Times, Baskerville, Georgia, serif;
-  margin-bottom: 1rem;
-}
-.font-italic {
-  font-style: italic;
-}
-.font-bold {
-  font-weight: bold;
-}
-.font-small-caps {
-  font-size: 0.85em;
-  text-transform: uppercase;
-}
-.font-larger {
-  font-size: 1.3rem;
-}
-.font-capitalize {
-  text-transform: capitalize;
-}
-.font-uppercase {
-  text-transform: uppercase;
-}
-.font-sans {
-  font-family: 'Calibre', Helvetica, Arial, sans-serif;
-}
-.font-serif {
-  font-family: 'Tiempos', Times, Baskerville, Georgia, serif;
-}
-.text-overflow-ellipsis {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.text-align-left {
-  text-align: left;
-}
-.text-align-right {
-  text-align: right;
-}
-.text-align-center {
-  text-align: center;
-}
-a,
-a:active,
-a:visited {
-  color: inherit;
-  text-decoration: none;
-}
-html {
-  background-color: #fdfdfd;
-  color: #0e0e0e;
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
-#header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  line-height: 1;
-}
-#header h1 {
-  font-size: 1.469544744064506rem;
-  margin: 0;
-}
-#header-menu li:after {
-  content: ', ';
-}
-#header-menu li:last-of-type:after {
-  content: '';
-}
-#footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: 1000;
-  line-height: 1;
-}
-#footer h1 {
-  font-size: 1.469544744064506rem;
-  margin: 0;
-}
-.home-item {
-  max-width: 50%;
-  float: left;
-}
-.home-item .attachment-home-thumb {
-  display: block;
-}
-.home-item:hover .home-item-image-caption {
-  -ms-filter: none;
-  -webkit-filter: none;
-          filter: none;
-  opacity: 1;
-}
-.home-item:hover .attachment-home-thumb {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  opacity: 0;
-}
-.home-item:hover .home-item-image-holder {
-  border: 3px solid #0e0e0e;
-}
-.home-item-image-holder {
-  border: 3px solid transparent;
-}
-.home-item-image-caption {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 300;
-  transition: opacity 300;
-}
-.more-link {
-  font-family: 'Calibre', Helvetica, Arial, sans-serif;
-}
-.swiper-slide {
-  cursor: pointer;
 }
