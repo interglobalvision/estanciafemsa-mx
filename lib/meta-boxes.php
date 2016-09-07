@@ -156,27 +156,28 @@ function igv_cmb_metaboxes() {
 
   $home_meta->add_group_field( $home_content, array(
     'name' => 'Imagen',
-    'desc' => __( '...', 'cmb2' ),
+    'desc' => __( 'Optional, but required if Link is to Entrada', 'cmb2' ),
     'id'   => 'image',
     'type' => 'file',
   ) );
 
   $home_meta->add_group_field( $home_content, array(
     'name' => 'Caption Title',
-    'desc' => __( 'Appears in italics before caption', 'cmb2' ),
+    'desc' => __( 'Appears in italics before caption if image selected', 'cmb2' ),
     'id'   => 'title',
     'type' => 'text',
   ) );
 
   $home_meta->add_group_field( $home_content, array(
     'name' => 'Caption',
-    'desc' => __( 'Follows caption title', 'cmb2' ),
+    'desc' => __( 'Follows caption title if image selected', 'cmb2' ),
     'id'   => 'caption',
     'type' => 'text',
   ) );
 
   $home_meta->add_group_field( $home_content, array(
     'name' => 'Link',
+    'desc' => __( 'Required', 'cmb2' ),
     'id'   => 'link',
     'type' => 'post_search_text',
     'post_type' => array('post', 'programacion'),
