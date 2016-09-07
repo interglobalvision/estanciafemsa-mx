@@ -1323,7 +1323,6 @@ th {
   border-bottom: 3px solid #0e0e0e;
 }
 .home-item {
-  padding: 84px 0 0 0;
   width: 100%;
 }
 @media screen and (min-width: 760px) {
@@ -1549,7 +1548,7 @@ th {
     border-bottom: 3px solid #0e0e0e;
   }
   .home-item {
-    padding: 112px 112px 0 0;
+    padding-right: 112px;
     width: 50%;
   }
 }
