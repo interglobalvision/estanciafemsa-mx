@@ -75,10 +75,10 @@
         </div>
         <div class="col col-s-12 col-m-5">
           <ul id="header-menu" class="font-sans u-inline-list">
-            <li><a href="<?php echo site_url('/nosotros'); ?>">Nosotros</a></li>
-            <li><a href="<?php echo site_url('/programacion'); ?>">Programacion</a></li>
-            <li><a href="<?php echo site_url('/noticias'); ?>">Noticias</a></li>
-            <li><a href="<?php echo site_url('/citas'); ?>">Citas</a></li>
+            <li><a href="<?php echo site_url('/nosotros'); ?>"><?php _e('[:es]Nosotros[:en]About'); ?></a></li>
+            <li><a href="<?php echo site_url('/programacion'); ?>"><?php _e('[:es]Programación[:en]Program'); ?></a></li>
+            <li><a href="<?php echo site_url('/noticias'); ?>"><?php _e('[:es]Noticias[:en]News'); ?></a></li>
+            <li><a href="<?php echo site_url('/citas'); ?>"><?php _e('[:es]Citas[:en]Visit'); ?></a></li>
           </ul>
         </div>
         <div class="col col-s-4 text-align-right only-desktop">
