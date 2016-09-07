@@ -1235,16 +1235,16 @@ img {
 .menu-toggle svg {
   height: 20px;
 }
-.menu-toggle .menu-close {
+.menu-close {
   display: none;
 }
-.menu-toggle .menu-open {
+.menu-open {
   display: initial;
 }
-.menu-toggle.open .menu-close {
+body.menu-active .menu-close {
   display: initial;
 }
-.menu-toggle.open .menu-open {
+body.menu-active .menu-open {
   display: none;
 }
 #footer {
@@ -1482,8 +1482,8 @@ img {
   font-size: 1.400505962399693rem;
   display: none;
 }
-#header-menu.open {
-  display: initial;
+body.menu-active #header-menu {
+  display: block;
 }
 #front-page {
   font-size: 1.3rem;

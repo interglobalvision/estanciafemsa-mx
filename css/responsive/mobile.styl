@@ -103,8 +103,10 @@ $margin-large = ($gutter * 5)
 #header-menu
   font-size: $font-size-h4
   display: none
-  &.open
-    display: initial
+  
+body.menu-active
+  #header-menu
+    display: block
 
 // ******************************************************
 

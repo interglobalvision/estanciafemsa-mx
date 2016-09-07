@@ -43,8 +43,7 @@ Site = {
 
   toggleMenu: function() {
     $('.menu-toggle').on('click', function() {
-      $('#header-menu').toggleClass('open');
-      $('.menu-toggle').toggleClass('open');
+      $('body').toggleClass('menu-active');
     });
   },
 

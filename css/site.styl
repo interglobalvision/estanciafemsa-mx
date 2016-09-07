@@ -250,15 +250,17 @@ img
 .menu-toggle
   svg
     height: 20px
+    
+.menu-close
+  display: none
+.menu-open
+  display: initial
+    
+body.menu-active
   .menu-close
-    display: none
-  .menu-open
     display: initial
-  &.open 
-    .menu-close
-      display: initial
-    .menu-open
-      display: none
+  .menu-open
+    display: none
 
 // ******************************************************
 
