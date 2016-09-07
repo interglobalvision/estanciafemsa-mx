@@ -50,6 +50,7 @@ Site.Layout = {
   layoutMasonry: function() {
     var $masonry = $('#home-holder').masonry({
       itemSelector: '.home-item',
+      transitionDuration: 0,
     });
 
     $masonry.imagesLoaded().progress( function() {
