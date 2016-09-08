@@ -6,9 +6,7 @@ get_header();
 <main id="main-content" class="container">
   <div class="row">
     <div class="col col-s-12 col-m-11 col-l-10">
-      <?php
-        get_template_part('partials/home-content');
-      ?>
+      <?php get_template_part('partials/home-content'); ?>
     </div>
   </div>
 <!-- end main-content -->

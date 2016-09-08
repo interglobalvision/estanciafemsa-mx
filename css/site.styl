@@ -277,22 +277,31 @@ body.menu-active
 // ******************************************************
 
 // HOME
-
 .home-item
-  max-width: 50%
-  float: left
+  width: 50%
   .attachment-home-thumb
     display: block
-  &:hover
+  &.home-item-hover
+    .attachment-home-thumb
+      opacity: 1
     .home-item-image-caption
       opacity: 1
+    .home-item-image-holder
+      border: 3px solid transparent
+  &.home-item-hidden
     .attachment-home-thumb
       opacity: 0
     .home-item-image-holder
       border: $border
 
 .home-item-image-holder
+  margin: 0 auto
   border: 3px solid transparent
+  max-width: 80%
+  display: inline-block
+  img 
+    max-height: 400px
+    width: auto
 
 .home-item-image-caption
   opacity: 0
