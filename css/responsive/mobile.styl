@@ -101,7 +101,16 @@ $margin-large = ($gutter * 5)
 // HEADER
 
 #header-menu
+  padding-top: $margin-tiny
+  padding-bottom: $margin-micro
   font-size: $font-size-h4
+  display: none
+  li 
+    line-height: $font-leading-basic
+  
+body.menu-active
+  #header-menu
+    display: block
 
 // ******************************************************
 

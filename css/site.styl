@@ -50,10 +50,10 @@ $font-tracking-wider = 0.05em
 $font-sans = 'Calibre', Helvetica, Arial, sans-serif
 $font-serif = 'Tiempos', Times, Baskerville, Georgia, serif
 
-$color-black-soft = rgb(14, 14, 14)
-$color-white-soft = rgb(253, 253, 253)
+$color-black = rgb(0, 0, 0)
+$color-white = rgb(255, 255, 255)
 
-$border = 3px solid $color-black-soft
+$border = 3px solid $color-black
 
 $basic-animation-speed = 600
 $fast-animation-speed = $basic-animation-speed / 2
@@ -61,10 +61,10 @@ $fast-animation-speed = $basic-animation-speed / 2
 // ******************************************************
 
 .only-desktop
-  display: none
+  display: none !important
 
 .only-mobile
-  display: initial
+  display: initial !important
 
 // GRID
 
@@ -124,98 +124,6 @@ $gutter = 24px
 .col-no-gutter
   padding-left: 0
   padding-right: 0
-
-for offset in 0..($cols - 1)
-  .offset-s-{offset}
-    margin-left: ( 100% / $cols ) * offset
-
-for col in 1..$cols
-  .col-s-{col}
-    flex-basis: ( 100% / $cols ) * col
-    max-width: ( 100% / $cols ) * col
-
-@import "responsive/mobile"
-
-@media screen and (min-width: 760px)
-
-  .only-desktop
-    display: initial
-
-  .only-mobile
-    display: none
-
-  .container
-    width: 760px
-
-  $gutter = 32px
-
-  // COLUMN SIZES & OFFSETS
-
-  .col
-    padding: 0 ($gutter / 2)
-
-  for offset in 0..($cols - 1)
-    .offset-m-{offset}
-      margin-left: ( 100% / $cols ) * offset
-
-  for col in 1..$cols
-    .col-m-{col}
-      flex-basis: ( 100% / $cols ) * col
-      max-width: ( 100% / $cols ) * col
-
-  @import "responsive/tablet"
-
-@media screen and (min-width: 1024px)
-
-  .container
-    width: 1024px
-
-@media screen and (min-width: 1280px)
-
-  .container
-    width: 1280px
-
-  $gutter = 48px
-
-  // COLUMN SIZES & OFFSETS
-
-  .col
-    padding: 0 ($gutter / 2)
-
-  for offset in 0..($cols - 1)
-    .offset-l-{offset}
-      margin-left: ( 100% / $cols ) * offset
-
-  for col in 1..$cols
-    .col-l-{col}
-      flex-basis: ( 100% / $cols ) * col
-      max-width: ( 100% / $cols ) * col
-
-  @import "responsive/desktop"
-
-@media screen and (min-width: 1366px)
-
-  .container
-    width: 1366px
-
-@media screen and (min-width: 1680px)
-
-  .container
-    width: 1680px
-
-@media screen and (min-width: 1920px)
-
-  .container
-    width: 1920px
-
-  $gutter = 54px
-
-  // COLUMN GUTTER
-
-  .col
-    padding: 0 ($gutter / 2)
-
-  @import "responsive/large"
 
 // ******************************************************
 
@@ -309,8 +217,8 @@ a:visited
 // BASIC
 
 html
-  background-color: $color-white-soft
-  color: $color-black-soft
+  background-color: $color-white
+  color: $color-black
 
 img
   max-width: 100%
@@ -321,11 +229,11 @@ img
 // HEADER
 
 #header
+  background-color: $color-white
   position: fixed
   top: 0
   width: 100%
   z-index: 1000
-  line-height: 1
   h1
     font-size: $font-size-h3
     margin: 0
@@ -336,6 +244,21 @@ img
       content: ', '
     &:last-of-type:after
       content: ''
+      
+.menu-toggle
+  svg
+    height: 20px
+    
+.menu-close
+  display: none
+.menu-open
+  display: initial
+    
+body.menu-active
+  .menu-close
+    display: initial
+  .menu-open
+    display: none
 
 // ******************************************************
 
@@ -397,3 +320,97 @@ img
 
 .swiper-slide
   cursor: pointer
+  
+// ******************************************************
+  
+for offset in 0..($cols - 1)
+  .offset-s-{offset}
+    margin-left: ( 100% / $cols ) * offset
+
+for col in 1..$cols
+  .col-s-{col}
+    flex-basis: ( 100% / $cols ) * col
+    max-width: ( 100% / $cols ) * col
+
+@import "responsive/mobile"
+
+@media screen and (min-width: 760px)
+
+  .container
+    width: 760px
+
+  $gutter = 32px
+
+  // COLUMN SIZES & OFFSETS
+
+  .col
+    padding: 0 ($gutter / 2)
+
+  for offset in 0..($cols - 1)
+    .offset-m-{offset}
+      margin-left: ( 100% / $cols ) * offset
+
+  for col in 1..$cols
+    .col-m-{col}
+      flex-basis: ( 100% / $cols ) * col
+      max-width: ( 100% / $cols ) * col
+
+  @import "responsive/tablet"
+
+@media screen and (min-width: 1024px)
+
+  .only-desktop
+    display: initial !important
+
+  .only-mobile
+    display: none !important
+
+  .container
+    width: 1024px
+    
+  $gutter = 48px
+
+  // COLUMN SIZES & OFFSETS
+
+  .col
+    padding: 0 ($gutter / 2)
+
+  for offset in 0..($cols - 1)
+    .offset-l-{offset}
+      margin-left: ( 100% / $cols ) * offset
+
+  for col in 1..$cols
+    .col-l-{col}
+      flex-basis: ( 100% / $cols ) * col
+      max-width: ( 100% / $cols ) * col
+      
+  @import "responsive/desktop"
+
+@media screen and (min-width: 1280px)
+
+  .container
+    width: 1280px
+
+@media screen and (min-width: 1366px)
+
+  .container
+    width: 1366px
+
+@media screen and (min-width: 1680px)
+
+  .container
+    width: 1680px
+
+@media screen and (min-width: 1920px)
+
+  .container
+    width: 1920px
+
+  $gutter = 54px
+
+  // COLUMN GUTTER
+
+  .col
+    padding: 0 ($gutter / 2)
+
+  @import "responsive/large"
