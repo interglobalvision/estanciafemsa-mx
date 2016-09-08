@@ -94,6 +94,7 @@ $margin-large = ($gutter * 5)
 // HEADER
 
 #header 
+  background-color: initial
   h1
     font-size: $font-size-h3 
 
@@ -109,9 +110,14 @@ $margin-large = ($gutter * 5)
 // FOOTER
 
 #footer
+  padding: $margin-micro 0
   font-size: $font-size-h4
   h1
     font-size: $font-size-h3
+    
+body.single-programacion 
+  #footer
+    padding: 0
 
 // ******************************************************
 
@@ -139,3 +145,93 @@ $margin-large = ($gutter * 5)
       content: ', '
     &:first-of-type:before
       content: ''
+      
+// ******************************************************
+
+// PROGRAMACION
+
+#programacion-slider
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 0
+  .swiper-container
+    height: 100%
+    top: 0   
+  .swiper-slide
+    .container
+      height: 100%
+      position: relative
+      
+.slide-image-holder 
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  justify-content: center
+    
+.full-slide.container
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-size: cover
+  background-position: center
+  .slide-image-holder 
+    opacity: 0
+  
+#programacion-content
+  background-color: transparent
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 76px
+  z-index: 0
+  overflow: hidden
+  transition: all 200ms linear
+
+.programacion-header
+  background-color: transparent
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: auto
+  z-index: 400
+  
+.programacion-content-toggle
+  cursor: pointer
+  display: inline-block
+  &:after
+    content: '+'
+  
+body.content-open
+  #programacion-content
+    background-color: $color-white
+    height: 550px
+  .programacion-content-toggle
+    display: inline-block
+    &:after
+      content: '\2013'
+      
+.programacion-text-holder
+  position: absolute
+  height: 474px
+  width: 100%
+  top: 76px
+  overflow-y: scroll
+  z-index: 300
+  
+.programaction-text
+  column-count: 2
+  column-gap: $margin-small
+
+  

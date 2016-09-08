@@ -1139,21 +1139,25 @@ h3,
 h4 {
   line-height: 1.25;
 }
-h1 {
+h1,
+.font-size-h1 {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
   font-size: 1.781452392364234rem;
   font-weight: bold;
 }
-h2 {
+h2,
+.font-size-h2 {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
   font-size: 1.618rem;
   font-weight: bold;
 }
-h3 {
+h3,
+.font-size-h3 {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
   font-size: 1.469544744064506rem;
 }
-h4 {
+h4,
+.font-size-h4 {
   font-size: 1.400505962399693rem;
 }
 p {
@@ -1307,8 +1311,43 @@ body.single-programacion .footer-lang-switch {
 .more-link {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
 }
+#programacion-slider {
+  position: relative;
+}
+.full-slide.container {
+  background-size: 0;
+}
 .swiper-slide {
   cursor: pointer;
+}
+.slide-image-holder img {
+  max-height: 100%;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+.slider-cursor-pagination {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.slider-cursor-pagination .cursor-pagination-button {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  cursor: pointer;
+}
+.slider-cursor-pagination .cursor-pagination-button.swiper-prev {
+  left: 0;
+  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto;
+}
+.slider-cursor-pagination .cursor-pagination-button.swiper-next {
+  right: 0;
+  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto;
 }
 .offset-s-0 {
   margin-left: 0%;
@@ -1509,6 +1548,7 @@ body.menu-active #header-menu {
   display: block;
 }
 #footer {
+  padding: 7.416407864998257px 0;
   background-color: #fff;
   font-size: 1.400505962399693rem;
 }
@@ -1528,6 +1568,12 @@ body.menu-active #header-menu {
 }
 .home-item {
   padding-right: 12px;
+}
+body.content-open #programacion-content {
+  height: auto;
+}
+body.content-open .programacion-content-toggle {
+  display: none;
 }
 @media screen and (min-width: 760px) {
   .container {
@@ -1728,6 +1774,7 @@ body.menu-active #header-menu {
     line-height: 1.45;
   }
   #footer {
+    padding: 9.888543819997675px 0;
     pointer-events: none;
     background-color: initial;
     font-size: 1.400505962399693rem;
@@ -1767,34 +1814,6 @@ body.menu-active #header-menu {
   }
   .home-item {
     padding-right: 32px;
-  }
-  #programacion-slider {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
-  #programacion-slider .swiper-container {
-    height: 100%;
-    top: 0;
-  }
-  .full-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-  }
-  #programacion-content {
-    position: fixed;
-    top: 90%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1990,6 +2009,9 @@ body.menu-active #header-menu {
   .padding-bottom-large {
     padding-bottom: 240px;
   }
+  #header {
+    background-color: initial;
+  }
   #header h1 {
     font-size: 1.469544744064506rem;
   }
@@ -2002,10 +2024,14 @@ body.menu-active #header-menu {
     line-height: 1.45;
   }
   #footer {
+    padding: 14.832815729996513px 0;
     font-size: 1.400505962399693rem;
   }
   #footer h1 {
     font-size: 1.469544744064506rem;
+  }
+  body.single-programacion #footer {
+    padding: 0;
   }
   #main-content {
     padding-top: 82px;
@@ -2029,6 +2055,109 @@ body.menu-active #header-menu {
   }
   #header-menu li:first-of-type:before {
     content: '';
+  }
+  #programacion-slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  #programacion-slider .swiper-container {
+    height: 100%;
+    top: 0;
+  }
+  #programacion-slider .swiper-slide .container {
+    height: 100%;
+    position: relative;
+  }
+  .slide-image-holder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .full-slide.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .full-slide.container .slide-image-holder {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  #programacion-content {
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 76px;
+    z-index: 0;
+    overflow: hidden;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+  }
+  .programacion-header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 400;
+  }
+  .programacion-content-toggle {
+    cursor: pointer;
+    display: inline-block;
+  }
+  .programacion-content-toggle:after {
+    content: '+';
+  }
+  body.content-open #programacion-content {
+    background-color: #fff;
+    height: 550px;
+  }
+  body.content-open .programacion-content-toggle {
+    display: inline-block;
+  }
+  body.content-open .programacion-content-toggle:after {
+    content: '\2013';
+  }
+  .programacion-text-holder {
+    position: absolute;
+    height: 474px;
+    width: 100%;
+    top: 76px;
+    overflow-y: scroll;
+    z-index: 300;
+  }
+  .programaction-text {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 48px;
+    -moz-column-gap: 48px;
+    column-gap: 48px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -2137,10 +2266,14 @@ body.menu-active #header-menu {
     line-height: 1.45;
   }
   #footer {
+    padding: 16.686917696246077px 0;
     font-size: 1.400505962399693rem;
   }
   #footer h1 {
     font-size: 1.469544744064506rem;
+  }
+  body.single-programacion #footer {
+    padding: 0;
   }
   #main-content {
     padding-top: 85px;

@@ -142,21 +142,21 @@ body
 h1, h2, h3, h4
   line-height: $font-leading-tighter
 
-h1
+h1, .font-size-h1 
   font-family: $font-sans
   font-size: $font-size-h1
   font-weight: bold
 
-h2
+h2, .font-size-h2
   font-family: $font-sans
   font-size: $font-size-h2
   font-weight: bold
 
-h3
+h3, .font-size-h3
   font-family: $font-sans
   font-size: $font-size-h3
 
-h4
+h4, .font-size-h4
   font-size: $font-size-h4
 
 p
@@ -273,8 +273,9 @@ body.menu-active
   h1
     margin: 0
     
-body.single-programacion .footer-lang-switch
-  display: none !important
+body.single-programacion 
+  .footer-lang-switch
+    display: none !important
   
 
 // ******************************************************
@@ -321,8 +322,43 @@ body.single-programacion .footer-lang-switch
 
 // PROGRAMACION
 
+#programacion-slider
+  position: relative
+  
+.full-slide.container
+  background-size: 0
+
 .swiper-slide
   cursor: pointer
+  
+.slide-image-holder
+  img 
+    max-height: 100%
+    width: auto
+    display: block
+    margin: 0 auto
+    
+.slider-cursor-pagination
+  position: absolute
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0
+  z-index: 100
+  .cursor-pagination-button
+    position: absolute
+    width: 50%
+    height: 100%
+    top: 0
+    cursor: pointer
+    &.swiper-prev
+      left: 0
+      cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto
+    &.swiper-next
+      right: 0
+      cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto
+    
+  
   
 // ******************************************************
   
