@@ -1,5 +1,5 @@
   <?php if (!is_front_page()) { ?>
-    <footer id="footer" class="padding-top-micro padding-bottom-micro">
+    <footer id="footer">
       <div class="container">
         <div class="col s-col-12 text-align-right">
           <h1 class="font-uppercase only-mobile"><a href="<?php echo home_url('/citas'); ?>">Casa Luis Barragán</a></h1>
