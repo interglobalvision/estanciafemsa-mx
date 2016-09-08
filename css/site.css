@@ -1516,6 +1516,12 @@ body.menu-active #header-menu {
 .home-item {
   padding-right: 12px;
 }
+.page-citas-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
 @media screen and (min-width: 760px) {
   .container {
     width: 760px;
@@ -1731,6 +1737,12 @@ body.menu-active #header-menu {
   }
   .home-item {
     padding-right: 32px;
+  }
+  .page-citas-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 1024px) {
