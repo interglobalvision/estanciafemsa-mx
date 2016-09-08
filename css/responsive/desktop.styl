@@ -150,6 +150,7 @@ body.single-programacion
 
 // PROGRAMACION
 
+  // SLIDER
 #programacion-slider
   position: fixed
   top: 0
@@ -186,54 +187,7 @@ body.single-programacion
   background-position: center
   .slide-image-holder 
     opacity: 0
-  
-#programacion-content
-  background-color: transparent
-  position: fixed
-  bottom: 0
-  left: 0
-  width: 100%
-  height: 76px
-  z-index: 0
-  overflow: hidden
-  transition: all 200ms linear
-
-.programacion-header
-  background-color: transparent
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: auto
-  z-index: 400
-  
-.programacion-content-toggle
-  cursor: pointer
-  display: inline-block
-  &:after
-    content: '+'
-  
-body.content-open
-  #programacion-content
-    background-color: $color-white
-    height: 550px
-  .programacion-content-toggle
-    display: inline-block
-    &:after
-      content: '\2013'
-      
-.programacion-text-holder
-  position: absolute
-  height: 474px
-  width: 100%
-  top: 76px
-  overflow-y: scroll
-  z-index: 300
-  
-.programaction-text
-  column-count: 2
-  column-gap: $margin-small
-
+    
 .slider-cursor-pagination
   display: initial
   position: absolute
@@ -254,4 +208,53 @@ body.content-open
     &.swiper-next
       right: 0
       cursor: url('../img/dist/ui-cursor-right.png'), auto
+      
+  // DRAWER
+  
+#programacion-drawer
+  background-color: transparent
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 76px
+  z-index: 0
+  overflow: hidden
+  transition: all 200ms linear
+
+.programacion-header
+  background-color: transparent
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: auto
+  z-index: 400
+  
+.programacion-drawer-toggle
+  cursor: pointer
+  display: inline-block
+  &:after
+    content: '+'
+  
+body.drawer-open
+  #programacion-drawer
+    background-color: $color-white
+    height: 550px
+  .programacion-drawer-toggle
+    display: inline-block
+    &:after
+      content: '\2013'
+      
+.programacion-content-holder
+  position: absolute
+  height: 474px
+  width: 100%
+  top: 76px
+  overflow-y: scroll
+  z-index: 300
+  
+.programaction-content
+  column-count: 2
+  column-gap: $margin-small
   

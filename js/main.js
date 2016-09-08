@@ -165,8 +165,8 @@ Site.Programacion = {
         windowWidth = $(window).width(),
         headerHeight = $('#header').outerHeight(true);
 
-      $('.programacion-text-holder').scrollTop(0);
-      $('body').removeClass('content-open');
+      $('.programacion-content-holder').scrollTop(0);
+      $('body').removeClass('drawer-open');
       
       var contentHeight = $('.programacion-header').outerHeight(true);
 
@@ -186,14 +186,14 @@ Site.Programacion = {
     bindToggle: function() {
       var _this = this;
 
-      $('.programacion-content-toggle').on('click', function() {
+      $('.programacion-drawer-toggle').on('click', function() {
         _this.toggleContent();
       });
     },
 
     toggleContent: function() {
-      $('body').toggleClass('content-open');
-      $('.programacion-text-holder').scrollTop(0);
+      $('body').toggleClass('drawer-open');
+      $('.programacion-content-holder').scrollTop(0);
     }
   }
 

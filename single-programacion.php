@@ -55,12 +55,12 @@ if( have_posts() ) {
         </div>
       </div>
 
-      <div id="programacion-content">
+      <div id="programacion-drawer">
         <header class="programacion-header padding-top-tiny padding-bottom-micro">
           <div class="container">
             <div class="row font-size-h2">
               <div class="col col-s-12 col-m-6 col-l-5">
-                <h2 class="u-inline-block"><?php the_title(); ?></h2> <span class="programacion-content-toggle"></span>
+                <h2 class="u-inline-block"><?php the_title(); ?></h2> <span class="programacion-drawer-toggle"></span>
               </div>
               <div class="col col-s-6 col-m-3 col-l-2 text-align-left">
                 <span class="swiper-prev u-pointer">< </span><span id="single-programacion-gallery-pagination"></span><span class="swiper-next u-pointer"> ></span>
@@ -83,10 +83,10 @@ if( have_posts() ) {
           </div>
         </header>
 
-        <div class="programacion-text-holder padding-top-micro">
+        <div class="programacion-content-holder padding-top-micro">
           <div class="container">
             <div class="row">
-              <div class="col col-s-12 programaction-text">
+              <div class="col col-s-12 programaction-content">
                 <?php the_content(); ?>
               </div>
 <?php
