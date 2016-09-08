@@ -1326,29 +1326,6 @@ body.single-programacion .footer-lang-switch {
   display: block;
   margin: 0 auto;
 }
-.slider-cursor-pagination {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-.slider-cursor-pagination .cursor-pagination-button {
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  top: 0;
-  cursor: pointer;
-}
-.slider-cursor-pagination .cursor-pagination-button.swiper-prev {
-  left: 0;
-  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto;
-}
-.slider-cursor-pagination .cursor-pagination-button.swiper-next {
-  right: 0;
-  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto;
-}
 .offset-s-0 {
   margin-left: 0%;
 }
@@ -1573,6 +1550,9 @@ body.content-open #programacion-content {
   height: auto;
 }
 body.content-open .programacion-content-toggle {
+  display: none;
+}
+.slider-cursor-pagination {
   display: none;
 }
 @media screen and (min-width: 760px) {
@@ -2158,6 +2138,30 @@ body.content-open .programacion-content-toggle {
     -webkit-column-gap: 48px;
     -moz-column-gap: 48px;
     column-gap: 48px;
+  }
+  .slider-cursor-pagination {
+    display: initial;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  .slider-cursor-pagination .cursor-pagination-button {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    cursor: pointer;
+  }
+  .slider-cursor-pagination .cursor-pagination-button.swiper-prev {
+    left: 0;
+    cursor: url("../img/dist/ui-cursor-left.png"), auto;
+  }
+  .slider-cursor-pagination .cursor-pagination-button.swiper-next {
+    right: 0;
+    cursor: url("../img/dist/ui-cursor-right.png"), auto;
   }
 }
 @media screen and (min-width: 1280px) {
