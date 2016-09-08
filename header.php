@@ -68,7 +68,7 @@
   <?php if (!is_front_page()) { ?>
   <!-- start content -->
   <header id="header">
-    <div class="container padding-top-tiny">
+    <div class="container padding-top-tiny padding-bottom-micro">
       <div class="row">
         <div class="col col-s-9 col-l-3">
           <h1 class="font-uppercase"><a href="<?php echo site_url('/home'); ?>"><?php bloginfo('name'); ?></a></h1>
