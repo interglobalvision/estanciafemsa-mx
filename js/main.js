@@ -65,8 +65,6 @@ Site.Home = {
   init: function() {
     var _this = this;
 
-    console.log('Home');
-
     if ($('.home-item').length) {
       _this.bindItemHover();
     }
