@@ -1308,13 +1308,9 @@ body.menu-active .menu-open {
 .swiper-slide {
   cursor: pointer;
 }
-.prensa-files li,
-.prensa-files a {
-  display: inline-block;
-}
-.prensa-files a {
+.file-icon {
   font-size: 1.3rem;
-  background: url("../img/dist/file-icon.svg") center;
+  background: url("../img/dist/file-icon.svg") center no-repeat;
   width: 90px;
   height: 120px;
   text-align: center;

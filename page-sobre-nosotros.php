@@ -49,17 +49,17 @@ if( have_posts() ) {
 
       if ($prensa_query->have_posts()) {
       ?>
-          <ul class="prensa-files">
+          <ul class="u-inline-list">
       <?php
         while ($prensa_query->have_posts()) {
           $prensa_query->the_post();
-          $number = get_post_meta($post->ID, '_igv_number');
-          $program_file = get_post_meta($post->ID, '_igv_program_file');
-          $color = get_post_meta($post->ID, '_igv_color');
+          $number = get_post_meta($post->ID, '_igv_number', true);
+          $program_file = get_post_meta($post->ID, '_igv_program_file', true);
+          $color = get_post_meta($post->ID, '_igv_color', true);
 
           if (!empty($program_file)) {
           ?>
-            <li><a href="<?php echo $program_file[0]; ?>" target="_blank" rel="noopener" class="font-underline" style="color: <?php echo $color[0]; ?>">No. <?php echo $number[0]; ?></a></li>
+            <li><a class="file-icon u-inline-block" href="<?php echo $program_file; ?>" target="_blank" rel="noopener" class="font-underline" style="color: <?php echo $color; ?>">No. <?php echo $number; ?></a></li>
           <?php
           }
         }
