@@ -1253,8 +1253,10 @@ body.menu-active .menu-open {
   line-height: 1;
 }
 #footer h1 {
-  font-size: 1.469544744064506rem;
   margin: 0;
+}
+body.single-programacion .footer-lang-switch {
+  display: none !important;
 }
 .home-item {
   width: 50%;
@@ -1491,6 +1493,9 @@ body.menu-active .menu-open {
 #main-content {
   padding-top: 87px;
 }
+#header h1 {
+  font-size: 1.469544744064506rem;
+}
 #header-menu {
   padding-top: 12px;
   padding-bottom: 7.416407864998257px;
@@ -1502,6 +1507,13 @@ body.menu-active .menu-open {
 }
 body.menu-active #header-menu {
   display: block;
+}
+#footer {
+  background-color: #fff;
+  font-size: 1.400505962399693rem;
+}
+#footer h1 {
+  font-size: 1.469544744064506rem;
 }
 #front-page {
   font-size: 1.3rem;
@@ -1704,6 +1716,29 @@ body.menu-active #header-menu {
   .padding-bottom-large {
     padding-bottom: 160px;
   }
+  #header h1 {
+    font-size: 1.469544744064506rem;
+  }
+  #header-menu {
+    padding-top: 16px;
+    padding-bottom: 9.888543819997675px;
+    font-size: 1.400505962399693rem;
+  }
+  #header-menu li {
+    line-height: 1.45;
+  }
+  #footer {
+    pointer-events: none;
+    background-color: initial;
+    font-size: 1.400505962399693rem;
+  }
+  #footer h1 {
+    font-size: 1.469544744064506rem;
+  }
+  #footer h1,
+  #footer .footer-lang-switch {
+    pointer-events: auto;
+  }
   #main-content {
     padding-top: 90px;
   }
@@ -1732,6 +1767,34 @@ body.menu-active #header-menu {
   }
   .home-item {
     padding-right: 32px;
+  }
+  #programacion-slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  #programacion-slider .swiper-container {
+    height: 100%;
+    top: 0;
+  }
+  .full-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+  #programacion-content {
+    position: fixed;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1927,6 +1990,23 @@ body.menu-active #header-menu {
   .padding-bottom-large {
     padding-bottom: 240px;
   }
+  #header h1 {
+    font-size: 1.469544744064506rem;
+  }
+  #header-menu {
+    padding-top: 24px;
+    padding-bottom: 14.832815729996513px;
+    font-size: 1.400505962399693rem;
+  }
+  #header-menu li {
+    line-height: 1.45;
+  }
+  #footer {
+    font-size: 1.400505962399693rem;
+  }
+  #footer h1 {
+    font-size: 1.469544744064506rem;
+  }
   #main-content {
     padding-top: 82px;
   }
@@ -2044,6 +2124,23 @@ body.menu-active #header-menu {
   }
   .padding-bottom-large {
     padding-bottom: 270px;
+  }
+  #header h1 {
+    font-size: 1.469544744064506rem;
+  }
+  #header-menu {
+    padding-top: 27px;
+    padding-bottom: 16.686917696246077px;
+    font-size: 1.400505962399693rem;
+  }
+  #header-menu li {
+    line-height: 1.45;
+  }
+  #footer {
+    font-size: 1.400505962399693rem;
+  }
+  #footer h1 {
+    font-size: 1.469544744064506rem;
   }
   #main-content {
     padding-top: 85px;
