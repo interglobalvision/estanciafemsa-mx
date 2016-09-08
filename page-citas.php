@@ -15,7 +15,7 @@ if( have_posts() ) {
     the_post();
 ?>
 
-    <article <?php post_class('row margin-bottom-small'); ?> id="page-<?php the_ID(); ?>">
+    <article <?php post_class('row page-citas-row margin-bottom-small'); ?> id="page-<?php the_ID(); ?>">
 
       <div class="page-images col col-s-12 col-m-9">
 
