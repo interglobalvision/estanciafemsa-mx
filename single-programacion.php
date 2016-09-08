@@ -25,62 +25,79 @@ if( have_posts() ) {
           <div class="swiper-wrapper">
 <?php 
   if (!empty($gallery)) {
-    foreach ($gallery as $image) {
-      $full = get_post_meta($image, '_igv_full_view', true);
-
-      if ($full == 'on') {
+    foreach ($gallery as $image_id) {
+      $full = get_post_meta($image_id, '_igv_full_view', true);
 ?>
             <div class="swiper-slide">
-              <div class="full-slide" style="background-image: url('<?php echo wp_get_attachment_image_src($image, 'full')[0]; ?>'"></div>
-            </div>
+<?php
+      if ($full == 'on') {
+?>
+              <div class="container full-slide" style="background-image: url('<?php echo wp_get_attachment_image_src($image_id, 'full')[0]; ?>'">
 <?php 
       } else {
 ?>
-            <div class="swiper-slide">
               <div class="container">
-                <?php echo wp_get_attachment_image($image, 'full'); ?>
+<?php } ?>
+                <div class="slide-image-holder">
+                  <?php echo wp_get_attachment_image($image_id, 'full'); ?>
+                </div>
               </div>
             </div>
 <?php
-      }
     }
   } 
 ?>
           </div>
         </div>
+        <div class="slider-cursor-pagination">
+          <div class="cursor-pagination-button swiper-prev"></div>
+          <div class="cursor-pagination-button swiper-next"></div>
+        </div>
       </div>
 
       <div id="programacion-content">
-        <div class="container">
-          <div class="row">
-            <div class="col col-s-12 col-m-8">
-              <h2><?php the_title(); ?></h2>
-            </div>
-            <div class="col col-s-6 col-m-2">
-              <span class="swiper-prev u-pointer">< </span><span id="single-programacion-gallery-pagination"></span><span class="swiper-next u-pointer"> ></span>
-            </div>
-            <div class="col col-s-6 col-m-2 text-align-right">
-              <?php
-                previous_post_link('%link', '< ');
+        <header class="programacion-header padding-top-tiny padding-bottom-micro">
+          <div class="container">
+            <div class="row font-size-h2">
+              <div class="col col-s-12 col-m-6 col-l-5">
+                <h2 class="u-inline-block"><?php the_title(); ?></h2> <span class="programacion-content-toggle"></span>
+              </div>
+              <div class="col col-s-6 col-m-3 col-l-2 text-align-left">
+                <span class="swiper-prev u-pointer">< </span><span id="single-programacion-gallery-pagination"></span><span class="swiper-next u-pointer"> ></span>
+              </div>
+              <div class="col col-s-6 col-m-3 col-l-2 text-align-right">
+                <?php
+                  previous_post_link('%link', '< ');
 
-                if (!empty($number)) {
-                  echo 'No. ' . add_leading_zero($number);
-                }
+                  if (!empty($number)) {
+                    echo 'No. ' . add_leading_zero($number);
+                  }
 
-                next_post_link('%link', ' >');
-              ?>
+                  next_post_link('%link', ' >');
+                ?>
+              </div>
+              <div class="col col-s-3 text-align-right only-desktop">
+                <?php get_template_part('partials/language-switch'); ?>
+              </div>
             </div>
           </div>
+        </header>
 
-          <div class="row">
-            <div class="col col-s-12">
-              <?php
-                the_content();
-
-                if (!empty($credits)) {
-                  echo apply_filters('the_content', $credits);
-                }
-              ?>
+        <div class="programacion-text-holder padding-top-micro">
+          <div class="container">
+            <div class="row">
+              <div class="col col-s-12 programaction-text">
+                <?php the_content(); ?>
+              </div>
+<?php
+if (!empty($credits)) {
+?>
+              <div class="col col-s-12 margin-top-small padding-bottom-micro">
+                <?php echo apply_filters('the_content', $credits); ?>
+              </div>
+<?php 
+}
+?>
             </div>
           </div>
         </div>
