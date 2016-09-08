@@ -52,10 +52,8 @@
     wp_head();
 
     if (qtranxf_getLanguage() == 'es') {
-      $lang_switch = is_404() ? site_url() : qtranxf_convertURL('', 'en', false, true);
       $locale = 'es_ES';
     } else {
-      $lang_switch = is_404() ? site_url() : qtranxf_convertURL('', 'es', false, true);
       $locale = 'en_US';
     }
 
@@ -88,7 +86,7 @@
             <li><a href="<?php echo site_url('/programacion'); ?>"><?php _e('[:es]Programación[:en]Program'); ?></a></li>
             <li><a href="<?php echo site_url('/noticias'); ?>"><?php _e('[:es]Noticias[:en]News'); ?></a></li>
             <li><a href="<?php echo site_url('/citas'); ?>"><?php _e('[:es]Citas[:en]Visit'); ?></a></li>
-            <li class="only-mobile"><a href="<?php echo $lang_switch; ?>"><?php _e('[:es]Read in English[:en]Leer en Español'); ?></a></li>
+            <li class="only-mobile"><?php get_template_part('partials/language-switch'); ?></li>
           </ul>
         </div>
         <div class="col col-s-4 text-align-right only-desktop">
