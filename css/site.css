@@ -2103,11 +2103,11 @@ body.drawer-open .programacion-drawer-toggle {
   }
   .slider-cursor-pagination .cursor-pagination-button.swiper-prev {
     left: 0;
-    cursor: url("../img/dist/ui-cursor-left.png"), auto;
+    cursor: url("../img/dist/ui-cursor-left.png"), w-resize;
   }
   .slider-cursor-pagination .cursor-pagination-button.swiper-next {
     right: 0;
-    cursor: url("../img/dist/ui-cursor-right.png"), auto;
+    cursor: url("../img/dist/ui-cursor-right.png"), e-resize;
   }
   #programacion-drawer {
     background-color: transparent;
