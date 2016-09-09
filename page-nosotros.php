@@ -38,22 +38,34 @@ if( have_posts() ) {
 
         <div class="margin-bottom-small" id="prensa">
           <h3 class="margin-bottom-small"><?php echo __('[:es]Prensa[:en]Press'); ?></h3>
-<?php
-      $current_query = current_query();
-      if ($current_query->have_posts()) {
-        while ($current_query->have_posts()) {
-          $current_query->the_post();
-/*           $number = get_post_meta($post->ID, '_igv_number'); */
-          $program_files = get_post_meta($post->ID, '_igv_program_files');
+      <?php
+      $prensa_query = new WP_query( array(
+        'post_type' => 'programacion',
+        'posts_per_page' => -1,
+        'meta_key' => '_igv_number',
+        'orderby' => 'meta_value_num',
+        'order' => 'ASC',
+      ));
 
-          if (!empty($program_files[0])) {
-            echo '<ul>';
-            foreach ($program_files[0] as $file) {
-              echo "<li><a href=" . $file['file'] . " target='_blank' class='font-underline'>File: " . __($file['text']) . "</a></li>";
-            }
-            echo '</ul>';
+      if ($prensa_query->have_posts()) {
+      ?>
+          <ul class="u-inline-list">
+      <?php
+        while ($prensa_query->have_posts()) {
+          $prensa_query->the_post();
+          $number = get_post_meta($post->ID, '_igv_number', true);
+          $program_file = get_post_meta($post->ID, '_igv_program_file', true);
+          $color = get_post_meta($post->ID, '_igv_color', true);
+
+          if (!empty($program_file)) {
+          ?>
+            <li><a class="file-icon u-inline-block" href="<?php echo $program_file; ?>" target="_blank" rel="noopener" class="font-underline" style="color: <?php echo $color; ?>">No. <?php echo $number; ?></a></li>
+          <?php
           }
         }
+        ?>
+          </ul>
+      <?php
       }
       wp_reset_postdata();
 ?>

@@ -123,6 +123,7 @@ function igv_cmb_metaboxes() {
      ),
 	) );
 
+  /*
   $program_files_group = $program_meta->add_field( array(
     'id'          => $prefix . 'program_files',
     'type'        => 'group',
@@ -136,20 +137,12 @@ function igv_cmb_metaboxes() {
       // 'closed'     => true, // true to have the groups closed by default
     ),
   ) );
+   */
 
-  $program_meta->add_group_field( $program_files_group, array(
-    'name' => __( 'Archivo', 'cmb2' ),
-    'id'   => 'file',
+  $program_meta->add_field( array(
+    'name' => __( 'Archivo (prensa)', 'cmb2' ),
+    'id'   => $prefix . 'program_file',
     'type' => 'file',
-  ) );
-
-  $program_meta->add_group_field( $program_files_group, array(
-    'name' => __( 'Texto de enlace', 'cmb2' ),
-    'id'   => 'text',
-    'type' => 'text',
-    'attributes' => array(
-      'class' => 'cmb2-qtranslate'
-    )
   ) );
 
   // *** HOME
