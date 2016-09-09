@@ -88,7 +88,36 @@ $margin-large = ($gutter * 5)
 
 .padding-bottom-large
   padding-bottom: $margin-large
+  
+// ******************************************************
 
+// HEADER
+
+#header 
+  h1
+    font-size: $font-size-h3 
+
+#header-menu
+  padding-top: $margin-tiny
+  padding-bottom: $margin-micro
+  font-size: $font-size-h4
+  li 
+    line-height: $font-leading-basic
+
+// ******************************************************
+
+// FOOTER
+
+#footer 
+  padding: $margin-micro 0
+  pointer-events: none
+  background-color: initial
+  font-size: $font-size-h4
+  h1
+    font-size: $font-size-h3
+  h1, .footer-lang-switch
+    pointer-events: auto
+    
 // ******************************************************
 
 // BASIC
@@ -109,7 +138,7 @@ $margin-large = ($gutter * 5)
     width: 50%
     padding: $margin-small
     &:nth-child(2n)
-      border-left: $border
+      border-left: $border 
     &:nth-child(2)
       border-bottom: $border
 
@@ -120,6 +149,11 @@ $margin-large = ($gutter * 5)
 .home-item
   padding-right: $margin-small
   
+  
+// ******************************************************
+
+// PROGRAMACION
+
 // ******************************************************
 
 // CITAS

@@ -78,11 +78,12 @@ function igv_cmb_metaboxes() {
 
   $program_meta->add_field( array(
 		'name'    => __( 'Gallery', 'cmb2' ),
-		'id'      => $prefix . 'gallery',
-		'type'    => 'wysiwyg',
-		'options' => array(
-		  'textarea_rows' => 14
-     ),
+    'button' => 'Manage gallery', // Optionally set button label
+    'clear-button' => 'Clear gallery', // Optionally set clear button label
+		'id'      => $prefix . 'program_gallery',
+		'type' => 'pw_gallery',
+    'preview_size' => array( 150, 150 ), // Set the size of the thumbnails
+    'sanitization_cb' => 'pw_gallery_field_sanitise', // REQUIRED
 	) );
 
   $program_meta->add_field( array(

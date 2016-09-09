@@ -100,6 +100,10 @@ $margin-large = ($gutter * 5)
 
 // HEADER
 
+#header 
+  h1
+    font-size: $font-size-h3 
+
 #header-menu
   padding-top: $margin-tiny
   padding-bottom: $margin-micro
@@ -111,6 +115,17 @@ $margin-large = ($gutter * 5)
 body.menu-active
   #header-menu
     display: block
+
+// ******************************************************
+
+// FOOTER
+
+#footer
+  padding: $margin-micro 0
+  background-color: $color-white
+  font-size: $font-size-h4
+  h1
+    font-size: $font-size-h3
 
 // ******************************************************
 
@@ -131,6 +146,19 @@ body.menu-active
 
 .home-item
   padding-right: $margin-tiny
+  
+// ******************************************************
+
+// PROGRAMACION
+
+body.drawer-open
+  #programacion-drawer
+    height: auto
+  .programacion-drawer-toggle
+    display: none
+    
+.slider-cursor-pagination
+  display: none
 
 // ******************************************************
 
@@ -138,4 +166,3 @@ body.menu-active
 
 .page-citas-row
   flex-direction: column-reverse
-    
