@@ -19,7 +19,7 @@ if( have_posts() ) {
     $color = !empty($event) ? get_post_meta($event, '_igv_color', true) : false;
 ?>
 
-    <article <?php post_class('row margin-bottom-mid'); ?> id="post-<?php the_ID(); ?>">
+    <article <?php post_class('row margin-bottom-small'); ?> id="post-<?php the_ID(); ?>">
 
       <!-- Desktop Article Meta -->
       <div class="article-meta col col-s-12 col-m-3 only-desktop">
