@@ -3,7 +3,7 @@
       <div class="container">
         <div class="col s-col-12 text-align-right">
           <h1 class="font-uppercase only-mobile"><a href="<?php echo home_url('/citas'); ?>">Casa Luis Barragán</a></h1>
-          <div class="footer-lang-switch only-desktop"><?php get_template_part('partials/language-switch'); ?></div>
+          <div class="font-bold footer-lang-switch only-desktop"><?php get_template_part('partials/language-switch'); ?></div>
         </div>
       </div>
     </footer>

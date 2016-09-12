@@ -23,7 +23,7 @@ if( have_posts() ) {
         </div>
 
         <div class="margin-bottom-small">
-          <h3 class="margin-bottom-small"><?php echo __('[:es]Directorio[:en]Directory'); ?></h3>
+          <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Directorio[:en]Directory'); ?></h3>
           <?php
             if (qtranxf_getLanguage() === 'es') {
               $about_directory = IGV_get_option('_igv_about_directory');
@@ -37,7 +37,7 @@ if( have_posts() ) {
         </div>
 
         <div class="margin-bottom-small" id="prensa">
-          <h3 class="margin-bottom-small"><?php echo __('[:es]Prensa[:en]Press'); ?></h3>
+          <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Prensa[:en]Press'); ?></h3>
       <?php
       $prensa_query = new WP_query( array(
         'post_type' => 'programacion',
@@ -80,7 +80,7 @@ if( have_posts() ) {
         </div>
 
         <div class="margin-bottom-small" id="contacto">
-          <h3 class="margin-bottom-small"><?php echo __('[:es]Contacto[:en]Contact'); ?></h3>
+          <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Contacto[:en]Contact'); ?></h3>
           <?php
             $about_contact = IGV_get_option('_igv_about_contact');
             if (!empty($about_contact)) {

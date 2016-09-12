@@ -145,12 +145,12 @@ h1, h2, h3, h4
 h1, .font-size-h1 
   font-family: $font-sans
   font-size: $font-size-h1
-  font-weight: bold
+  font-weight: 600
 
 h2, .font-size-h2
   font-family: $font-sans
   font-size: $font-size-h2
-  font-weight: bold
+  font-weight: 500
 
 h3, .font-size-h3
   font-family: $font-sans
@@ -169,7 +169,10 @@ p
   font-style: italic
 
 .font-bold
-  font-weight: bold
+  font-weight: 500
+  
+.font-bolder
+  font-weight: 600
 
 .font-small-caps
   font-size: 0.85em
@@ -349,6 +352,15 @@ body.single-programacion
     width: auto
     display: block
     margin: 0 auto
+    
+.programacion-item
+  height: 100%
+  display: flex
+  flex-direction: column 
+  justify-content: center
+  
+.archive-programacion-post-title
+  font-weight: normal
   
 // ******************************************************
 
