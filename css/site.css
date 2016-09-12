@@ -1262,6 +1262,9 @@ body.menu-active .menu-open {
 body.single-programacion .footer-lang-switch {
   display: none !important;
 }
+#front-page {
+  letter-spacing: 1px;
+}
 .home-item {
   width: 50%;
 }
