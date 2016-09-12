@@ -6,9 +6,10 @@ Site = {
   init: function() {
     var _this = this;
 
-    $(window).resize(function(){
+    $(window).resize($.debounce(250, function(){
+      console.log('resize');
       _this.onResize();
-    });
+    }));
 
     $(document).ready(function () {
       _this.Layout.init();
@@ -35,6 +36,7 @@ Site = {
 
     _this.Programacion.Single.sizeSlideImageHolder();
     _this.Menu.closeMenu();
+    _this.Layout.layoutMasonry();
   },
 
   fixWidows: function() {
@@ -48,23 +50,36 @@ Site = {
 };
 
 Site.Layout = {
+  $masonry: null,
+
   init: function() {
     var _this = this;
 
     if ($('.home-item').length) {
-      _this.layoutMasonry();
+      _this.initMasonry();
     }
   },
 
-  layoutMasonry: function() {
-    var $masonry = $('#home-holder').masonry({
+  initMasonry: function() {
+    var _this = this;
+
+    _this.$masonry = $('#home-holder').masonry({
       itemSelector: '.home-item',
       transitionDuration: 0,
+      resize: false
     });
 
-    $masonry.imagesLoaded().progress( function() {
-      $masonry.masonry('layout');
+    _this.$masonry.imagesLoaded().progress( function() {
+      _this.layoutMasonry();
     });
+  },
+
+  layoutMasonry: function() {
+    var _this = this;
+
+    if ($('.home-item').length) {
+      _this.$masonry.masonry('layout');
+    }
   }
 };
 
