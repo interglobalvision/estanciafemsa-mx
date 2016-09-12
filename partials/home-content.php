@@ -17,7 +17,7 @@ if ($home_content) {
         $subtitle = get_post_meta($item['link'], '_igv_subtitle', true);
         $color = get_post_meta($item['link'], '_igv_color', true);
 
-        echo '<h3 class="u-inline-block"';
+        echo '<h3 class="u-inline-block font-bold"';
         echo !empty($color) ? ' style="color: ' . $color . '">' : '>';
         echo 'No. ' . add_leading_zero($number) . '<br>';
         echo get_the_title($item['link']); 
