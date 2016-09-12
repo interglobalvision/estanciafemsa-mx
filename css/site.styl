@@ -311,8 +311,11 @@ body.single-programacion
   transition: opacity $fast-animation-speed
   
 .home-plus
-  a svg
-    height: 50px
+  pointer-events: none
+  a 
+    pointer-events: auto
+    svg
+      height: 50px
   &.only-desktop
     position: fixed
     text-align: right
