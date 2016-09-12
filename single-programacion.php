@@ -92,7 +92,8 @@ if( have_posts() ) {
 <?php
 if (!empty($credits)) {
 ?>
-              <div class="col col-s-12 col-l-8 margin-top-small padding-bottom-micro">
+              <div class="col col-l-4"></div>
+              <div class="col col-s-12 col-l-4 margin-top-small padding-bottom-micro">
                 <?php echo apply_filters('the_content', $credits); ?>
               </div>
 <?php 
