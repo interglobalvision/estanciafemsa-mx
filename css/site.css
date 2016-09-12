@@ -1349,6 +1349,23 @@ body.single-programacion .footer-lang-switch {
   display: block;
   margin: 0 auto;
 }
+.programacion-item {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.archive-programacion-post-title {
+  font-weight: normal;
+}
 .file-icon {
   font-size: 1.3rem;
   background: url("../img/dist/file-icon.svg") center no-repeat;
@@ -1585,6 +1602,9 @@ body.drawer-open .programacion-drawer-toggle {
 }
 .slider-cursor-pagination {
   display: none;
+}
+.archive-programacion-post-title {
+  font-size: 40px;
 }
 .page-citas-row {
   -webkit-box-orient: horizontal;
@@ -1832,6 +1852,9 @@ body.drawer-open .programacion-drawer-toggle {
   .home-item {
     padding-right: 32px;
   }
+  .archive-programacion-post-title {
+    font-size: 48px;
+  }
   .page-citas-row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2078,6 +2101,9 @@ body.drawer-open .programacion-drawer-toggle {
   }
   #header-menu li:first-of-type:before {
     content: '';
+  }
+  .archive-programacion-post-title {
+    font-size: 60px;
   }
   #programacion-slider {
     position: fixed;
