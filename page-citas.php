@@ -27,37 +27,41 @@ if( have_posts() ) {
 
       <div class="page-content col col-s-12 col-m-3">
 
-        <div class="margin-bottom-small">
-          <h3 class="margin-bottom-small"><?php echo __('[:es]Previa Cita[:en]Appointments'); ?></h3>
-          <?php
-            if (qtranxf_getLanguage() === 'es') {
-              $cita_text = IGV_get_option('_igv_visits_text');
-            } else {
-              $cita_text = IGV_get_option('_igv_visits_text_en');
-            }
-            if (!empty($cita_text)) {
-              echo apply_filters('the_content', $cita_text);
-            }
-          ?>
+        <div class="margin-bottom-small font-sans">
+          <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Previa Cita[:en]Appointments'); ?></h3>
+          <div class="font-bold">
+            <?php
+              if (qtranxf_getLanguage() === 'es') {
+                $cita_text = IGV_get_option('_igv_visits_text');
+              } else {
+                $cita_text = IGV_get_option('_igv_visits_text_en');
+              }
+              if (!empty($cita_text)) {
+                echo apply_filters('the_content', $cita_text);
+              }
+            ?>
+          </div>
         </div>
 
-        <div class="margin-bottom-small">
-          <h3 class="margin-bottom-small"><?php echo __('[:es]Agendar cita[:en]Schedule appointment'); ?></h3>
-          <?php
-            if (qtranxf_getLanguage() === 'es') {
-              $cita_text_2 = IGV_get_option('_igv_visits_guide');
-              $cost = IGV_get_option('_igv_visits_cost');
-            } else {
-              $cita_text_2 = IGV_get_option('_igv_visits_guide_en');
-              $cost = IGV_get_option('_igv_visits_cost_en');
-            }
-            if (!empty($cita_text_2)) {
-              echo apply_filters('the_content', $cita_text_2);
-            }
-            if (!empty($cost)) {
-              echo wpautop($cost);
-            }
-          ?>
+        <div class="margin-bottom-small font-sans">
+          <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Agendar cita[:en]Schedule appointment'); ?></h3>
+          <div class="font-bold">
+            <?php
+              if (qtranxf_getLanguage() === 'es') {
+                $cita_text_2 = IGV_get_option('_igv_visits_guide');
+                $cost = IGV_get_option('_igv_visits_cost');
+              } else {
+                $cita_text_2 = IGV_get_option('_igv_visits_guide_en');
+                $cost = IGV_get_option('_igv_visits_cost_en');
+              }
+              if (!empty($cita_text_2)) {
+                echo apply_filters('the_content', $cita_text_2);
+              }
+              if (!empty($cost)) {
+                echo wpautop($cost);
+              }
+            ?>
+          </div>
         </div>
 
       </div>
