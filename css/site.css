@@ -1180,6 +1180,7 @@ h3,
 h4,
 .font-size-h4 {
   font-size: 1.400505962399693rem;
+  line-height: 1.1;
 }
 p {
   margin-bottom: 1rem;

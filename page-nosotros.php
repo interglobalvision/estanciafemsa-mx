@@ -18,22 +18,24 @@ if( have_posts() ) {
     <article <?php post_class('row margin-bottom-small'); ?> id="page-<?php the_ID(); ?>">
 
       <div class="page-content col col-s-12 col-m-9 col-l-6">
-        <div class="margin-bottom-small">
+        <div class="margin-bottom-small font-bold font-size-h4">
           <?php the_content(); ?>
         </div>
 
         <div class="margin-bottom-small">
           <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Directorio[:en]Directory'); ?></h3>
-          <?php
-            if (qtranxf_getLanguage() === 'es') {
-              $about_directory = IGV_get_option('_igv_about_directory');
-            } else {
-              $about_directory = IGV_get_option('_igv_about_directory_en');
-            }
-            if (!empty($about_directory)) {
-              echo apply_filters('the_content', $about_directory);
-            }
-          ?>
+          <div class="font-bold font-size-h4">
+            <?php
+              if (qtranxf_getLanguage() === 'es') {
+                $about_directory = IGV_get_option('_igv_about_directory');
+              } else {
+                $about_directory = IGV_get_option('_igv_about_directory_en');
+              }
+              if (!empty($about_directory)) {
+                echo apply_filters('the_content', $about_directory);
+              }
+            ?>
+          </div>
         </div>
 
         <div class="margin-bottom-small" id="prensa">
@@ -49,7 +51,7 @@ if( have_posts() ) {
 
       if ($prensa_query->have_posts()) {
       ?>
-          <ul class="u-inline-list">
+          <ul class="u-inline-list margin-bottom-micro">
       <?php
         while ($prensa_query->have_posts()) {
           $prensa_query->the_post();
@@ -69,7 +71,7 @@ if( have_posts() ) {
       }
       wp_reset_postdata();
 ?>
-          <p>
+          <p class="font-bold font-size-h4">
           <?php
             $press_email = IGV_get_option('_igv_prensa_email');
             $press_telephone = IGV_get_option('_igv_prensa_telephone');
@@ -81,12 +83,14 @@ if( have_posts() ) {
 
         <div class="margin-bottom-small" id="contacto">
           <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Contacto[:en]Contact'); ?></h3>
-          <?php
-            $about_contact = IGV_get_option('_igv_about_contact');
-            if (!empty($about_contact)) {
-              echo apply_filters('the_content', $about_contact);
-            }
-          ?>
+          <div class="font-bold font-size-h4">
+            <?php
+              $about_contact = IGV_get_option('_igv_about_contact');
+              if (!empty($about_contact)) {
+                echo apply_filters('the_content', $about_contact);
+              }
+            ?>
+          </div>
         </div>
 
       </div>
