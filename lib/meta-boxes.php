@@ -77,9 +77,9 @@ function igv_cmb_metaboxes() {
 	) );
 
   $program_meta->add_field( array(
-		'name'    => __( 'Gallery', 'cmb2' ),
-    'button' => 'Manage gallery', // Optionally set button label
-    'clear-button' => 'Clear gallery', // Optionally set clear button label
+		'name'    => __( 'Galería', 'cmb2' ),
+    'button' => 'Modificar galería', // Optionally set button label
+    'clear-button' => 'Eliminar galería', // Optionally set clear button label
 		'id'      => $prefix . 'program_gallery',
 		'type' => 'pw_gallery',
     'preview_size' => array( 150, 150 ), // Set the size of the thumbnails
@@ -105,7 +105,7 @@ function igv_cmb_metaboxes() {
 	) );
 
   $program_meta->add_field( array(
-		'name'       => __( 'Sub-titulo', 'cmb2' ),
+		'name'       => __( 'Sub-título', 'cmb2' ),
 		'id'         => $prefix . 'subtitle',
 		'type'       => 'text',
     'attributes' => array(
@@ -148,7 +148,7 @@ function igv_cmb_metaboxes() {
   // *** HOME
   $home_meta = new_cmb2_box( array(
   	'id'            => $prefix . 'home_metabox',
-  	'title'         => __( 'Home Content', 'cmb2' ),
+  	'title'         => __( 'Contenido del Home', 'cmb2' ),
   	'object_types'  => array( 'page', ), // Post type
     'show_on_cb' => 'metabox_for_home_style_content',
   ) );
@@ -157,37 +157,37 @@ function igv_cmb_metaboxes() {
     'id' => $prefix . 'home_content',
     'type' => 'group',
     'options'     => array(
-      'group_title'   => __( 'Entry {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
-      'add_button'    => __( 'Add Another Entry', 'cmb2' ),
-      'remove_button' => __( 'Remove Entry', 'cmb2' ),
+      'group_title'   => __( 'Entrada {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
+      'add_button'    => __( 'Agregar otra entrada', 'cmb2' ),
+      'remove_button' => __( 'Eliminar entrada', 'cmb2' ),
       'sortable'      => true, // beta
     ),
   ) );
 
   $home_meta->add_group_field( $home_content, array(
     'name' => 'Imagen',
-    'desc' => __( 'Optional, but required if Link is to Entrada', 'cmb2' ),
+    'desc' => __( 'Opcional, pero es requerida si el Link es a una Entrada', 'cmb2' ),
     'id'   => 'image',
     'type' => 'file',
   ) );
 
   $home_meta->add_group_field( $home_content, array(
-    'name' => 'Caption Title',
-    'desc' => __( 'Appears in italics before caption if image selected', 'cmb2' ),
+    'name' => 'Título',
+    'desc' => __( 'Aparece en itálicas en hover', 'cmb2' ),
     'id'   => 'title',
     'type' => 'text',
   ) );
 
   $home_meta->add_group_field( $home_content, array(
-    'name' => 'Caption',
-    'desc' => __( 'Follows caption title if image selected', 'cmb2' ),
+    'name' => 'Sub-tíitulo',
+    'desc' => __( 'Aparece despues del título en hover', 'cmb2' ),
     'id'   => 'caption',
     'type' => 'text',
   ) );
 
   $home_meta->add_group_field( $home_content, array(
     'name' => 'Link',
-    'desc' => __( 'Required', 'cmb2' ),
+    'desc' => __( 'Requerido', 'cmb2' ),
     'id'   => 'link',
     'type' => 'post_search_text',
     'post_type' => array('post', 'programacion'),
