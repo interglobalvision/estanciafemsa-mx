@@ -47,6 +47,18 @@ function igv_cmb_metaboxes() {
   ) );
 
   $post_meta->add_field( array(
+    'name' => __( 'Source', 'cmb2' ),
+    'id'   => $prefix . 'source_text',
+    'type' => 'text',
+  ) );
+
+  $post_meta->add_field( array(
+    'name' => __( 'Source Link', 'cmb2' ),
+    'id'   => $prefix . 'source_link',
+    'type' => 'text',
+  ) );
+
+  $post_meta->add_field( array(
     'name' => __( 'Evento relacionado', 'cmb2' ),
     'id'   => $prefix . 'related_event',
     'type' => 'post_search_text',
