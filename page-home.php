@@ -15,7 +15,7 @@ get_header();
 <nav class="home-plus only-desktop">
   <div class="container">
     <div class="row">
-      <div class="col col-s-12">
+      <div class="col offset-s-10 col-s-2 text-align-center">
         <a href="<?php echo site_url('/noticias'); ?>"><?php 
           echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-plus.svg'); 
         ?></a>
