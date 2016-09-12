@@ -50,7 +50,8 @@ if( have_posts() ) {
             }
           ?>
         </header>
-        <?php the_content(__('[:es]LEER MAS[:en]READ MORE')); ?>
+        <?php the_content(''); ?>
+        <a class="more-link" href="<?php echo the_permalink(); ?>"><?php echo __('[:es]LEER MÁS[:en]READ MORE'); ?></a>
       </div>
 
     </article>
