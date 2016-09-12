@@ -34,6 +34,14 @@ if ($home_content) {
       echo '</div>';
     }
   }
+  if (is_page('home')) {
+    echo '<div class="home-item margin-top-';
+    echo rand(0,1) == 1 ? 'mid' : 'basic';
+    echo ' text-align-center only-mobile">';
+    echo '<nav class="home-plus">';
+    echo '<a href="' . site_url('/noticias') . '">' . file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-plus.svg') . '</a>';
+    echo '</div>';
+  }
   echo '</div>';
 }
 
