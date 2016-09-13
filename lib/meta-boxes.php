@@ -179,6 +179,7 @@ function igv_cmb_metaboxes() {
     'name' => __( 'Prensa (archivo en español)', 'cmb2' ),
     'id'   => $prefix . 'program_file_es',
     'type' => 'file',
+    'desc' => __( 'Max. 64mb', 'cmb2' ),
   ) );
 
 
@@ -186,6 +187,7 @@ function igv_cmb_metaboxes() {
     'name' => __( 'Prensa (archivo en inglés)', 'cmb2' ),
     'id'   => $prefix . 'program_file_en',
     'type' => 'file',
+    'desc' => __( 'Max. 64mb', 'cmb2' ),
   ) );
 
   // *** HOME
@@ -209,7 +211,7 @@ function igv_cmb_metaboxes() {
 
   $home_meta->add_group_field( $home_content, array(
     'name' => 'Imagen',
-    'desc' => __( 'Opcional, pero es requerida si el Link es a una Entrada', 'cmb2' ),
+    'desc' => __( 'Opcional, pero es requerida si el Link es a una Entrada (Max. 64mb)', 'cmb2' ),
     'id'   => 'image',
     'type' => 'file',
   ) );
@@ -301,7 +303,7 @@ o por internet.',
 
   $citas_meta->add_group_field( $citas_content, array(
     'name' => 'Imagen',
-    'desc' => __( 'Opcional, pero es requerida si el Link es a una Entrada', 'cmb2' ),
+    'desc' => __( 'Opcional, pero es requerida si el Link es a una Entrada (Max. 64mb)', 'cmb2' ),
     'id'   => 'image',
     'type' => 'file',
   ) );
