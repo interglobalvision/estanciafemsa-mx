@@ -42,11 +42,14 @@ if( have_posts() ) {
       <div class="article-content col col-s-12 col-m-9 col-l-6">
         <header class="article-content-header margin-bottom-tiny">
           <a href="<?php the_permalink() ?>"><h3 class="u-inline-block font-bold" <?php echo $color ? 'style="color: ' . $color . '"' : ''; ?>><?php the_title(); ?></h3></a><?php
-            $sources = get_the_terms($post, 'source');
+            $source = get_post_meta($post->ID, '_igv_source_text', true);
+            $link = get_post_meta($post->ID, '_igv_source_link', true);
 
-            if ($sources) {
+            if (!empty($source)) {
               echo '&nbsp;<h4 class="font-serif u-inline-block">&nbsp;—&nbsp;</h4>&nbsp;';
-              echo '<h4 class="font-serif u-inline-block"><a href="' . get_term_link($sources[0]) . '">' . $sources[0]->name . '</a></h4>';
+              echo '<h4 class="font-serif u-inline-block">';
+              echo !empty($link) ? '<a href="' . esc_url($link) . '" rel="noopener noreferrer">' . $source . '</a>' : $source;
+              echo '</h4>';
             }
           ?>
         </header>
