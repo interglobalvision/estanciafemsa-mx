@@ -1350,6 +1350,9 @@ body.single-programacion .footer-lang-switch {
   right: 0;
   width: 100%;
 }
+.article-content p a:link {
+  text-decoration: underline;
+}
 .more-link {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
 }

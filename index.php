@@ -50,9 +50,13 @@ if( have_posts() ) {
             }
           ?>
         </header>
-        <div class="font-serif">
-          <?php the_content(__('[:es]LEER MAS[:en]READ MORE')); ?>
-        </div>
+        <?php
+        if( is_single() ) {
+          the_content(); 
+        } else {
+          the_excerpt(); 
+        }
+        ?>		
       </div>
 
     </article>
