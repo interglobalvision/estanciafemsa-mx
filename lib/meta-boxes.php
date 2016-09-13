@@ -152,7 +152,7 @@ function igv_cmb_metaboxes() {
   	'id'            => $prefix . 'home_metabox',
   	'title'         => __( 'Contenido del Home', 'cmb2' ),
   	'object_types'  => array( 'page', ), // Post type
-    'show_on_cb' => 'metabox_for_home_style_content',
+    'show_on'       => array( 'key' => 'id', 'value' => array( get_id_by_slug('home') ) ),
   ) );
 
   $home_content = $home_meta->add_field( array(
@@ -202,16 +202,33 @@ function igv_cmb_metaboxes() {
     'select_type' => 'radio',
     'select_behavior' => 'replace',
   ) );
+
+  // *** CITAS
+  $citas_meta = new_cmb2_box( array(
+    'id'            => $prefix . 'citas_metabox',
+    'title'         => __( 'Imagenes', 'cmb2' ),
+    'object_types'  => array( 'page', ), // Post type
+    'show_on'       => array( 'key' => 'id', 'value' => array( get_id_by_slug('citas') ) ),
+  ) );
+
+  $citas_content = $citas_meta->add_field( array(
+    'id' => $prefix . 'citas_content',
+    'type' => 'group',
+    'options'     => array(
+      'group_title'   => __( 'Imagen {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
+      'add_button'    => __( 'Agregar otra imagen', 'cmb2' ),
+      'remove_button' => __( 'Eliminar imagen', 'cmb2' ),
+      'sortable'      => true, // beta
+    ),
+  ) );
+
+  $citas_meta->add_group_field( $citas_content, array(
+    'name' => 'Imagen',
+    'desc' => __( 'Opcional, pero es requerida si el Link es a una Entrada', 'cmb2' ),
+    'id'   => 'image',
+    'type' => 'file',
+  ) );
+
 }
 
-function metabox_for_home_style_content($cmb) {
-  $home = get_page_by_path('home');
-  $citas = get_page_by_path('citas');
-
-  if ($home->ID == $cmb->object_id || $citas->ID == $cmb->object_id) {
-    return true;
-  } else {
-    return false;
-  }
-}
 ?>
