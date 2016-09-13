@@ -158,12 +158,14 @@ function igv_cmb_metaboxes() {
     'name' => __( 'Visitantes (archivo en español)', 'cmb2' ),
     'id'   => $prefix . 'program_visitors_file_es',
     'type' => 'file',
+    'desc' => __( 'Max. 64mb', 'cmb2' ),
   ) );
 
   $program_meta->add_field( array(
     'name' => __( 'Visitantes (archivo en inglés)', 'cmb2' ),
     'id'   => $prefix . 'program_visitors_file_en',
     'type' => 'file',
+    'desc' => __( 'Max. 64mb', 'cmb2' ),
   ) );
 
   $program_meta->add_field( array(
