@@ -13,7 +13,9 @@ get_header();
 if( have_posts() ) {
   while( have_posts() ) {
     the_post();
-    $time = new \Moment\Moment(get_the_date('r'));
+    $author = get_post_meta($post->ID, '_igv_post_author', true);
+    $date = get_post_meta($post->ID, '_igv_post_date', true);
+    $time = new \Moment\Moment(date('c', $date));
 
     $event = get_post_meta($post->ID, '_igv_related_event', true);
     $color = !empty($event) ? get_post_meta($event, '_igv_color', true) : false;
@@ -28,7 +30,7 @@ if( have_posts() ) {
         </div>
         <div class="article-author font-serif">
           <?php echo __('[:es]Por[:en]By'); ?>:<br/>
-          <?php the_author(); ?>
+          <?php echo !empty($author) ? $author : ''; ?>
         </div>
       </div>
 
@@ -68,7 +70,11 @@ if( have_posts() ) {
   }
 } else {
 ?>
-    <article class="u-alert"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
+    <article class="u-alert row">
+      <div class="col col-s-12">
+        <?php _e('[:es]Lo sentimos, no hemos encontrado lo que estás buscando[:en]Sorry, no posts matched your criteria'); ?>
+      </div>
+    </article>
 <?php
 } ?>
 
