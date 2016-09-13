@@ -113,16 +113,6 @@ function igv_cmb_metaboxes() {
     )
 	) );
 
-  $program_meta->add_field( array(
-		'name'    => __( 'Creditos', 'cmb2' ),
-		'id'      => $prefix . 'credits',
-		'type'    => 'wysiwyg',
-		'options' => array(
-		  'textarea_rows' => 14,
-      'editor_class' => 'cmb2-qtranslate'
-     ),
-	) );
-
   /*
   $program_files_group = $program_meta->add_field( array(
     'id'          => $prefix . 'program_files',
