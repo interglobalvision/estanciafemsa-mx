@@ -1293,6 +1293,9 @@ body.single-programacion .footer-lang-switch {
 #front-page {
   letter-spacing: 1px;
 }
+.front-page-block-bottom {
+  display: none;
+}
 .home-item {
   width: 50%;
 }
@@ -1876,6 +1879,9 @@ body.drawer-open .programacion-drawer-toggle {
   #front-page .front-page-block:nth-child(2) {
     border-bottom: 3px solid #000;
   }
+  .front-page-block-bottom {
+    display: initial;
+  }
   .home-item {
     padding-right: 28px;
   }
@@ -2111,6 +2117,7 @@ body.drawer-open .programacion-drawer-toggle {
   }
   #header h1.site-title {
     margin-right: 32px;
+    line-height: 1.25;
   }
   #header-menu {
     padding-top: 0;
@@ -2361,10 +2368,9 @@ body.drawer-open .programacion-drawer-toggle {
   }
   #header h1 {
     font-size: 1.469544744064506rem;
+    line-height: 1.45;
   }
   #header-menu {
-    padding-top: 27px;
-    padding-bottom: 16.686917696246077px;
     font-size: 1.400505962399693rem;
   }
   #header-menu li {
