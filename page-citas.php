@@ -17,7 +17,7 @@ if( have_posts() ) {
 
     <article <?php post_class('row page-citas-row margin-bottom-small'); ?> id="page-<?php the_ID(); ?>">
 
-      <div class="page-images col col-s-12 col-m-9 font-size-h4 font-bold">
+      <div class="page-images col col-s-12 col-m-7 col-l-9 font-size-h4 font-bold">
       <?php 
         $citas_content = get_post_meta( get_the_ID(), '_igv_citas_content', true);
 
@@ -43,7 +43,7 @@ if( have_posts() ) {
       ?>
       </div>
 
-      <div class="page-content col col-s-12 col-m-3">
+      <div class="page-content col col-s-12 col-m-5 col-l-3">
 
         <div class="margin-bottom-small font-sans">
           <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Previa Cita[:en]Appointments'); ?></h3>
