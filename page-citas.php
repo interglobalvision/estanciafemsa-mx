@@ -18,11 +18,29 @@ if( have_posts() ) {
     <article <?php post_class('row page-citas-row margin-bottom-small'); ?> id="page-<?php the_ID(); ?>">
 
       <div class="page-images col col-s-12 col-m-9 font-size-h4 font-bold">
+      <?php 
+        $citas_content = get_post_meta( get_the_ID(), '_igv_citas_content', true);
 
-        <?php
-          get_template_part('partials/home-content');
-        ?>
-
+        if ($citas_content) {
+      ?>
+        <div id="home-holder">
+          <?php
+          foreach ($citas_content as $item) {
+            if (!empty($item['image_id'])) {
+          ?>
+          <div class="home-item margin-top-<?php echo rand(0,1) == 1 ? 'mid' : 'basic'; ?> text-align-center">
+            <div class="home-item-image-holder">
+              <?php echo wp_get_attachment_image($item['image_id'], 'home-thumb'); ?>
+            </div>
+          </div>
+          <?php
+            }
+          }
+          ?>
+        </div>
+      <?php 
+        }
+      ?>
       </div>
 
       <div class="page-content col col-s-12 col-m-3">
