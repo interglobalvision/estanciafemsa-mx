@@ -15,7 +15,6 @@ if( have_posts() ) {
     the_post();
     $gallery = get_post_meta($post->ID, '_igv_program_gallery', true);
     $number = get_post_meta($post->ID, '_igv_number', true);
-    $credits = get_post_meta($post->ID, '_igv_credits', true);
 ?>
 
     <article <?php post_class(''); ?> id="post-<?php the_ID(); ?>">
@@ -83,22 +82,12 @@ if( have_posts() ) {
           </div>
         </header>
 
-        <div class="programacion-content-holder padding-top-micro">
+        <div class="programacion-content-holder padding-top-micro padding-bottom-micro">
           <div class="container">
             <div class="row">
               <div class="col col-s-12 col-l-8 programaction-content">
                 <?php the_content(); ?>
               </div>
-<?php
-if (!empty($credits)) {
-?>
-              <div class="col col-l-4"></div>
-              <div class="col col-s-12 col-l-4 margin-top-small padding-bottom-micro">
-                <?php echo apply_filters('the_content', $credits); ?>
-              </div>
-<?php 
-}
-?>
             </div>
           </div>
         </div>
