@@ -47,6 +47,19 @@ function igv_cmb_metaboxes() {
   ) );
 
   $post_meta->add_field( array(
+    'name' => __( 'Autor', 'cmb2' ),
+    'id'   => $prefix . 'author',
+    'type' => 'text',
+  ) );
+
+  $post_meta->add_field( array(
+    'name' => __( 'Fecha', 'cmb2' ),
+    'desc' => __( 'de publicación', 'cmb2' ),
+    'id'   => $prefix . 'date',
+    'type' => 'text_date_timestamp',
+  ) );
+
+  $post_meta->add_field( array(
     'name' => __( 'Source', 'cmb2' ),
     'id'   => $prefix . 'source_text',
     'type' => 'text',
