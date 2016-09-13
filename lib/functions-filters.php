@@ -39,3 +39,10 @@ function add_image_attachment_fields_to_save($post, $attachment) {
   return $post;
 }
 add_filter("attachment_fields_to_save", "add_image_attachment_fields_to_save", null , 2);
+
+// Changing excerpt more
+function custom_excerpt_more($more) {
+  global $post;
+  return ' <a class="more-link" href="'. get_permalink($post->ID) .'">' . __('[:es]LEER MÁS[:en]READ MORE') . '</a>';
+}
+add_filter('excerpt_more', 'custom_excerpt_more');
