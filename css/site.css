@@ -1643,7 +1643,7 @@ body.drawer-open .programacion-drawer-toggle {
     width: 760px;
   }
   .col {
-    padding: 0 16px;
+    padding: 0 14px;
   }
   .offset-m-0 {
     margin-left: 0%;
@@ -1754,90 +1754,90 @@ body.drawer-open .programacion-drawer-toggle {
     max-width: 100%;
   }
   .margin-top-micro {
-    margin-top: 9.888543819997675px;
+    margin-top: 8.652475842497966px;
   }
   .margin-top-tiny {
-    margin-top: 16px;
+    margin-top: 14px;
   }
   .margin-top-small {
-    margin-top: 32px;
+    margin-top: 28px;
   }
   .margin-top-basic {
-    margin-top: 64px;
+    margin-top: 56px;
   }
   .margin-top-mid {
-    margin-top: 112px;
+    margin-top: 98px;
   }
   .margin-top-large {
-    margin-top: 160px;
+    margin-top: 140px;
   }
   .margin-bottom-micro {
-    margin-bottom: 9.888543819997675px;
+    margin-bottom: 8.652475842497966px;
   }
   .margin-bottom-tiny {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
   .margin-bottom-small {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
   }
   .margin-bottom-basic {
-    margin-bottom: 64px;
+    margin-bottom: 56px;
   }
   .margin-bottom-mid {
-    margin-bottom: 112px;
+    margin-bottom: 98px;
   }
   .margin-bottom-large {
-    margin-bottom: 160px;
+    margin-bottom: 140px;
   }
   .padding-top-micro {
-    padding-top: 9.888543819997675px;
+    padding-top: 8.652475842497966px;
   }
   .padding-top-tiny {
-    padding-top: 16px;
+    padding-top: 14px;
   }
   .padding-top-small {
-    padding-top: 32px;
+    padding-top: 28px;
   }
   .padding-top-basic {
-    padding-top: 64px;
+    padding-top: 56px;
   }
   .padding-top-mid {
-    padding-top: 112px;
+    padding-top: 98px;
   }
   .padding-top-large {
-    padding-top: 160px;
+    padding-top: 140px;
   }
   .padding-bottom-micro {
-    padding-bottom: 9.888543819997675px;
+    padding-bottom: 8.652475842497966px;
   }
   .padding-bottom-tiny {
-    padding-bottom: 16px;
+    padding-bottom: 14px;
   }
   .padding-bottom-small {
-    padding-bottom: 32px;
+    padding-bottom: 28px;
   }
   .padding-bottom-basic {
-    padding-bottom: 64px;
+    padding-bottom: 56px;
   }
   .padding-bottom-mid {
-    padding-bottom: 112px;
+    padding-bottom: 98px;
   }
   .padding-bottom-large {
-    padding-bottom: 160px;
+    padding-bottom: 140px;
   }
   #header h1 {
     font-size: 1.469544744064506rem;
   }
   #header-menu {
-    padding-top: 16px;
-    padding-bottom: 9.888543819997675px;
+    padding-top: 14px;
+    padding-bottom: 8.652475842497966px;
     font-size: 1.400505962399693rem;
   }
   #header-menu li {
     line-height: 1.45;
   }
   #footer {
-    padding: 9.888543819997675px 0;
+    padding: 8.652475842497966px 0;
     pointer-events: none;
     background-color: initial;
     font-size: 1.400505962399693rem;
@@ -1850,7 +1850,7 @@ body.drawer-open .programacion-drawer-toggle {
     pointer-events: auto;
   }
   #main-content {
-    padding-top: 90px;
+    padding-top: 88px;
   }
   #front-page {
     font-size: 1.618rem;
@@ -1867,7 +1867,7 @@ body.drawer-open .programacion-drawer-toggle {
     float: left;
     min-height: 50vh;
     width: 50%;
-    padding: 32px;
+    padding: 28px;
   }
   #front-page .front-page-block:nth-child(2n) {
     border-left: 3px solid #000;
@@ -1876,7 +1876,7 @@ body.drawer-open .programacion-drawer-toggle {
     border-bottom: 3px solid #000;
   }
   .home-item {
-    padding-right: 32px;
+    padding-right: 28px;
   }
   .archive-programacion-post-title {
     font-size: 48px;
@@ -1899,7 +1899,7 @@ body.drawer-open .programacion-drawer-toggle {
     width: 1024px;
   }
   .col {
-    padding: 0 24px;
+    padding: 0 16px;
   }
   .offset-l-0 {
     margin-left: 0%;
@@ -2010,76 +2010,76 @@ body.drawer-open .programacion-drawer-toggle {
     max-width: 100%;
   }
   .margin-top-micro {
-    margin-top: 14.832815729996513px;
+    margin-top: 9.888543819997675px;
   }
   .margin-top-tiny {
-    margin-top: 24px;
+    margin-top: 16px;
   }
   .margin-top-small {
-    margin-top: 48px;
+    margin-top: 32px;
   }
   .margin-top-basic {
-    margin-top: 96px;
+    margin-top: 64px;
   }
   .margin-top-mid {
-    margin-top: 168px;
+    margin-top: 112px;
   }
   .margin-top-large {
-    margin-top: 240px;
+    margin-top: 160px;
   }
   .margin-bottom-micro {
-    margin-bottom: 14.832815729996513px;
+    margin-bottom: 9.888543819997675px;
   }
   .margin-bottom-tiny {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
   .margin-bottom-small {
-    margin-bottom: 48px;
+    margin-bottom: 32px;
   }
   .margin-bottom-basic {
-    margin-bottom: 96px;
+    margin-bottom: 64px;
   }
   .margin-bottom-mid {
-    margin-bottom: 168px;
+    margin-bottom: 112px;
   }
   .margin-bottom-large {
-    margin-bottom: 240px;
+    margin-bottom: 160px;
   }
   .padding-top-micro {
-    padding-top: 14.832815729996513px;
+    padding-top: 9.888543819997675px;
   }
   .padding-top-tiny {
-    padding-top: 24px;
+    padding-top: 16px;
   }
   .padding-top-small {
-    padding-top: 48px;
+    padding-top: 32px;
   }
   .padding-top-basic {
-    padding-top: 96px;
+    padding-top: 64px;
   }
   .padding-top-mid {
-    padding-top: 168px;
+    padding-top: 112px;
   }
   .padding-top-large {
-    padding-top: 240px;
+    padding-top: 160px;
   }
   .padding-bottom-micro {
-    padding-bottom: 14.832815729996513px;
+    padding-bottom: 9.888543819997675px;
   }
   .padding-bottom-tiny {
-    padding-bottom: 24px;
+    padding-bottom: 16px;
   }
   .padding-bottom-small {
-    padding-bottom: 48px;
+    padding-bottom: 32px;
   }
   .padding-bottom-basic {
-    padding-bottom: 96px;
+    padding-bottom: 64px;
   }
   .padding-bottom-mid {
-    padding-bottom: 168px;
+    padding-bottom: 112px;
   }
   .padding-bottom-large {
-    padding-bottom: 240px;
+    padding-bottom: 160px;
   }
   #header {
     background-color: initial;
@@ -2088,15 +2088,15 @@ body.drawer-open .programacion-drawer-toggle {
     font-size: 1.469544744064506rem;
   }
   #header-menu {
-    padding-top: 24px;
-    padding-bottom: 14.832815729996513px;
+    padding-top: 16px;
+    padding-bottom: 9.888543819997675px;
     font-size: 1.400505962399693rem;
   }
   #header-menu li {
     line-height: 1.45;
   }
   #footer {
-    padding: 14.832815729996513px 0;
+    padding: 9.888543819997675px 0;
     font-size: 1.400505962399693rem;
   }
   #footer h1 {
@@ -2106,10 +2106,10 @@ body.drawer-open .programacion-drawer-toggle {
     padding: 0;
   }
   #main-content {
-    padding-top: 82px;
+    padding-top: 74px;
   }
   #header h1.site-title {
-    margin-right: 48px;
+    margin-right: 32px;
   }
   #header-menu {
     padding-top: 0;
@@ -2256,12 +2256,12 @@ body.drawer-open .programacion-drawer-toggle {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
-    -webkit-column-gap: 48px;
-    -moz-column-gap: 48px;
-    column-gap: 48px;
+    -webkit-column-gap: 32px;
+    -moz-column-gap: 32px;
+    column-gap: 32px;
   }
   .home-item {
-    padding-right: 48px;
+    padding-right: 32px;
   }
 }
 @media screen and (min-width: 1280px) {
