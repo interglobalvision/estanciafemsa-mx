@@ -55,11 +55,16 @@ if( have_posts() ) {
       <?php
         while ($prensa_query->have_posts()) {
           $prensa_query->the_post();
-          $number = get_post_meta($post->ID, '_igv_number', true);
-          $program_file = get_post_meta($post->ID, '_igv_program_file', true);
-          $color = get_post_meta($post->ID, '_igv_color', true);
+
+          if (qtranxf_getLanguage() == 'es') {
+            $program_file = get_post_meta($post->ID, '_igv_program_file_es', true);
+          } else {
+            $program_file = get_post_meta($post->ID, '_igv_program_file_en', true);
+          }
 
           if (!empty($program_file)) {
+            $number = get_post_meta($post->ID, '_igv_number', true);
+            $color = get_post_meta($post->ID, '_igv_color', true);
           ?>
             <li><a class="file-icon u-inline-block" href="<?php echo $program_file; ?>" target="_blank" rel="noopener" class="font-underline" style="color: <?php echo $color; ?>">No. <?php echo $number; ?></a></li>
           <?php

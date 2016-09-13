@@ -155,8 +155,15 @@ function igv_cmb_metaboxes() {
    */
 
   $program_meta->add_field( array(
-    'name' => __( 'Archivo (prensa)', 'cmb2' ),
-    'id'   => $prefix . 'program_file',
+    'name' => __( 'Archivo (prensa) Español', 'cmb2' ),
+    'id'   => $prefix . 'program_file_es',
+    'type' => 'file',
+  ) );
+
+
+  $program_meta->add_field( array(
+    'name' => __( 'Archivo (prensa) Inglés', 'cmb2' ),
+    'id'   => $prefix . 'program_file_en',
     'type' => 'file',
   ) );
 
