@@ -87,6 +87,21 @@ if( have_posts() ) {
             <div class="row">
               <div class="col col-s-12 col-l-8 programaction-content">
                 <?php the_content(); ?>
+                <?php 
+                if (qtranxf_getLanguage() == 'es') {
+                  $program_file = get_post_meta($post->ID, '_igv_program_visitors_file_es', true);
+                } else {
+                  $program_file = get_post_meta($post->ID, '_igv_program_visitors_file_en', true);
+                }
+
+                if (!empty($program_file)) {
+                  $link_text = get_post_meta($post->ID, '_igv_program_visitors_file_text', true);
+
+                  if (!empty($link_text)) {
+                    echo '<p><a href="' . esc_url($program_file) . '" target="_blank" rel="noopener noreferrer">' . $link_text . '</a></p>';
+                  }
+                }
+                ?>
               </div>
             </div>
           </div>

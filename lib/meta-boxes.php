@@ -168,7 +168,7 @@ function igv_cmb_metaboxes() {
 
   $program_meta->add_field( array(
     'name'       => __( 'Archivo (visitantes) texto del link', 'cmb2' ),
-    'id'         => $prefix . 'number',
+    'id'         => $prefix . 'program_visitors_file_text',
     'type'       => 'text',
     'attributes' => array(
       'class' => 'cmb2-qtranslate'
