@@ -13,7 +13,9 @@ get_header();
 if( have_posts() ) {
   while( have_posts() ) {
     the_post();
-    $time = new \Moment\Moment(get_the_date('r'));
+    $author = get_post_meta($post->ID, '_igv_post_author', true);
+    $date = get_post_meta($post->ID, '_igv_post_date', true);
+    $time = new \Moment\Moment(date('c', $date));
 
     $event = get_post_meta($post->ID, '_igv_related_event', true);
     $color = !empty($event) ? get_post_meta($event, '_igv_color', true) : false;
@@ -26,16 +28,28 @@ if( have_posts() ) {
         <div class="article-date margin-bottom-tiny">
           <h3 class="font-capitalize font-bold"><?php echo $time->format('j F,'); ?><br/><?php echo $time->format('Y'); ?></h3>
         </div>
+        <?php
+        if (!empty($author)) {
+        ?>
         <div class="article-author font-serif">
           <?php echo __('[:es]Por[:en]By'); ?>:<br/>
-          <?php the_author(); ?>
+          <?php echo $author; ?>
         </div>
+        <?php 
+        }
+        ?>
       </div>
 
       <!-- Mobile Article Meta -->
       <div class="article-meta col col-s-12 col-m-3 only-mobile">
         <h3 class="font-capitalize font-bold"><?php echo $time->format('j F, Y');?></h3>
+        <?php
+        if (!empty($author)) {
+        ?>
         <h4 class="font-serif"><?php echo __('[:es]Por[:en]By'); ?>: <?php the_author(); ?></h4>
+        <?php 
+        }
+        ?>
       </div>
 
       <!-- Article Content -->
@@ -68,7 +82,11 @@ if( have_posts() ) {
   }
 } else {
 ?>
-    <article class="u-alert"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
+    <article class="u-alert row">
+      <div class="col col-s-12">
+        <?php _e('[:es]Lo sentimos, no hemos encontrado lo que estás buscando[:en]Sorry, no posts matched your criteria'); ?>
+      </div>
+    </article>
 <?php
 } ?>
 
