@@ -48,7 +48,7 @@ if( have_posts() ) {
             if (!empty($source)) {
               echo '&nbsp;<h4 class="font-serif u-inline-block">&nbsp;—&nbsp;</h4>&nbsp;';
               echo '<h4 class="font-serif u-inline-block">';
-              echo !empty($link) ? '<a href="' . esc_url($link) . '" rel="noopener noreferrer">' . $source . '</a>' : $source;
+              echo !empty($link) ? '<a href="' . esc_url($link) . '" target="_blank" rel="noopener noreferrer">' . $source . '</a>' : $source;
               echo '</h4>';
             }
           ?>
