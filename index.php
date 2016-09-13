@@ -28,16 +28,28 @@ if( have_posts() ) {
         <div class="article-date margin-bottom-tiny">
           <h3 class="font-capitalize font-bold"><?php echo $time->format('j F,'); ?><br/><?php echo $time->format('Y'); ?></h3>
         </div>
+        <?php
+        if (!empty($author)) {
+        ?>
         <div class="article-author font-serif">
           <?php echo __('[:es]Por[:en]By'); ?>:<br/>
-          <?php echo !empty($author) ? $author : ''; ?>
+          <?php echo $author; ?>
         </div>
+        <?php 
+        }
+        ?>
       </div>
 
       <!-- Mobile Article Meta -->
       <div class="article-meta col col-s-12 col-m-3 only-mobile">
         <h3 class="font-capitalize font-bold"><?php echo $time->format('j F, Y');?></h3>
+        <?php
+        if (!empty($author)) {
+        ?>
         <h4 class="font-serif"><?php echo __('[:es]Por[:en]By'); ?>: <?php the_author(); ?></h4>
+        <?php 
+        }
+        ?>
       </div>
 
       <!-- Article Content -->
