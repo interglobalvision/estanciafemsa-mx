@@ -155,6 +155,27 @@ function igv_cmb_metaboxes() {
    */
 
   $program_meta->add_field( array(
+    'name' => __( 'Archivo (visitantes) Español', 'cmb2' ),
+    'id'   => $prefix . 'program_visitors_file_es',
+    'type' => 'file',
+  ) );
+
+  $program_meta->add_field( array(
+    'name' => __( 'Archivo (visitantes) Inglés', 'cmb2' ),
+    'id'   => $prefix . 'program_visitors_file_en',
+    'type' => 'file',
+  ) );
+
+  $program_meta->add_field( array(
+    'name'       => __( 'Archivo (visitantes) texto del link', 'cmb2' ),
+    'id'         => $prefix . 'number',
+    'type'       => 'text',
+    'attributes' => array(
+      'class' => 'cmb2-qtranslate'
+    )
+  ) );
+
+  $program_meta->add_field( array(
     'name' => __( 'Archivo (prensa) Español', 'cmb2' ),
     'id'   => $prefix . 'program_file_es',
     'type' => 'file',
