@@ -85,7 +85,7 @@ if( have_posts() ) {
         <div class="programacion-content-holder padding-top-micro padding-bottom-micro">
           <div class="container">
             <div class="row">
-              <div class="col col-s-12 col-l-8 programaction-content">
+              <div class="col col-s-12 col-l-8 programacion-content">
                 <?php the_content(); ?>
                 <?php 
                 if (qtranxf_getLanguage() == 'es') {
