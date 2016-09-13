@@ -14,8 +14,8 @@ $splash_text_en = IGV_get_option('_igv_splash_text_en');
   <a href="<?php echo site_url('/en/home'); ?>" class="front-page-block">
     <?php if (!empty($splash_text_en)) {echo $splash_text_en;} ?>&nbsp;>
   </a>
-  <div class="front-page-block only-desktop"></div>
-  <div class="front-page-block only-desktop"></div>
+  <div class="front-page-block front-page-block-bottom"></div>
+  <div class="front-page-block front-page-block-bottom"></div>
 <!-- end main-content -->
 </main>
 
