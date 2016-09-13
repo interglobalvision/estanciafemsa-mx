@@ -1185,8 +1185,12 @@ h4,
 p {
   margin-bottom: 1rem;
 }
+em,
 .font-italic {
   font-style: italic;
+}
+strong {
+  font-style: bold;
 }
 .font-bold {
   font-weight: 500;

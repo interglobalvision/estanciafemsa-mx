@@ -27,7 +27,7 @@ if ($home_content) {
       echo '</a>';
       if (!empty($item['image_id']) && (!empty($item['caption']) || !empty($item['title']))) {
         echo '<h4 class="home-item-image-caption padding-top-tiny text-align-center">';
-        echo !empty($item['title']) ? '<em>' . $item['title'] . '</em>' : '';
+        echo !empty($item['title']) ? '<span class="font-italic">' . $item['title'] . '</span>' : '';
         echo !empty($item['caption']) ? $item['caption'] : '';
         echo '</h4>';
       }
