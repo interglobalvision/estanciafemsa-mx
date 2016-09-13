@@ -7,7 +7,7 @@ $splash_text_en = IGV_get_option('_igv_splash_text_en');
 ?>
 
 <!-- main content -->
-<main id="front-page" class="font-bold">
+<main id="front-page" class="font-bolder">
   <a href="<?php echo site_url('/es/home'); ?>" class="front-page-block">
     <?php if (!empty($splash_text)) {echo $splash_text;} ?>&nbsp;>
   </a>

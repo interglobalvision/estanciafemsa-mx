@@ -56,7 +56,7 @@ if( have_posts() ) {
       </div>
 
       <div id="programacion-drawer">
-        <header class="programacion-header padding-top-tiny padding-bottom-micro">
+        <header class="programacion-header padding-top-tiny padding-bottom-micro font-bold">
           <div class="container">
             <div class="row font-size-h2">
               <div class="col col-s-12 col-m-6 col-l-5">
@@ -86,13 +86,14 @@ if( have_posts() ) {
         <div class="programacion-content-holder padding-top-micro">
           <div class="container">
             <div class="row">
-              <div class="col col-s-12 programaction-content">
+              <div class="col col-s-12 col-l-8 programaction-content">
                 <?php the_content(); ?>
               </div>
 <?php
 if (!empty($credits)) {
 ?>
-              <div class="col col-s-12 margin-top-small padding-bottom-micro">
+              <div class="col col-l-4"></div>
+              <div class="col col-s-12 col-l-4 margin-top-small padding-bottom-micro">
                 <?php echo apply_filters('the_content', $credits); ?>
               </div>
 <?php 
