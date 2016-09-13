@@ -46,3 +46,12 @@ function current_query() {
 function add_leading_zero($number) {
   return sprintf("%02d", $number);
 }
+
+// order Noticias by meta field _igv_post_date
+function orderby_meta_date( $query ) {
+  if ( $query->is_home() && $query->is_main_query() && !is_admin() ) {
+    $query->set( 'orderby', 'meta_value' );
+    $query->set( 'meta_key', '_igv_post_date' );
+  }
+}
+add_action( 'pre_get_posts', 'orderby_meta_date' );
