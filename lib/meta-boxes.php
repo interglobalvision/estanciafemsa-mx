@@ -178,6 +178,9 @@ function igv_cmb_metaboxes() {
     'desc' => __( 'Aparece en itálicas en hover', 'cmb2' ),
     'id'   => 'title',
     'type' => 'text',
+    'attributes' => array(
+      'class' => 'cmb2-qtranslate'
+    )
   ) );
 
   $home_meta->add_group_field( $home_content, array(
@@ -185,6 +188,9 @@ function igv_cmb_metaboxes() {
     'desc' => __( 'Aparece despues del título en hover', 'cmb2' ),
     'id'   => 'caption',
     'type' => 'text',
+    'attributes' => array(
+      'class' => 'cmb2-qtranslate'
+    )
   ) );
 
   $home_meta->add_group_field( $home_content, array(
