@@ -155,19 +155,19 @@ function igv_cmb_metaboxes() {
    */
 
   $program_meta->add_field( array(
-    'name' => __( 'Archivo (visitantes) Español', 'cmb2' ),
+    'name' => __( 'Visitantes (archivo en español)', 'cmb2' ),
     'id'   => $prefix . 'program_visitors_file_es',
     'type' => 'file',
   ) );
 
   $program_meta->add_field( array(
-    'name' => __( 'Archivo (visitantes) Inglés', 'cmb2' ),
+    'name' => __( 'Visitantes (archivo en inglés)', 'cmb2' ),
     'id'   => $prefix . 'program_visitors_file_en',
     'type' => 'file',
   ) );
 
   $program_meta->add_field( array(
-    'name'       => __( 'Archivo (visitantes) texto del link', 'cmb2' ),
+    'name'       => __( 'Visitantes (texto del link al archivo)', 'cmb2' ),
     'id'         => $prefix . 'program_visitors_file_text',
     'type'       => 'text',
     'attributes' => array(
@@ -176,14 +176,14 @@ function igv_cmb_metaboxes() {
   ) );
 
   $program_meta->add_field( array(
-    'name' => __( 'Archivo (prensa) Español', 'cmb2' ),
+    'name' => __( 'Prensa (archivo en español)', 'cmb2' ),
     'id'   => $prefix . 'program_file_es',
     'type' => 'file',
   ) );
 
 
   $program_meta->add_field( array(
-    'name' => __( 'Archivo (prensa) Inglés', 'cmb2' ),
+    'name' => __( 'Prensa (archivo en inglés)', 'cmb2' ),
     'id'   => $prefix . 'program_file_en',
     'type' => 'file',
   ) );
