@@ -1326,6 +1326,7 @@ body.single-programacion .footer-lang-switch {
   margin: 0 auto;
   border: 3px solid transparent;
   display: inline-block;
+  vertical-align: bottom;
 }
 .home-item-image-holder img {
   max-height: 400px;
