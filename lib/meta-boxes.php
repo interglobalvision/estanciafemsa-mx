@@ -231,6 +231,42 @@ function igv_cmb_metaboxes() {
     'show_on'       => array( 'key' => 'id', 'value' => array( get_id_by_slug('citas') ) ),
   ) );
 
+  $citas_meta->add_field( array(
+    'name' => __( 'Previa Cita', 'IGV' ),
+    'desc' => __( '', 'IGV' ),
+    'id'   => $prefix . 'visits_text',
+    'type' => 'textarea_small',
+    'default' => 'Para visitar Estancia FEMSA es necesario agendar una cita a través de:
+
++52 (55) 5515 4908
++52 (55) 5272 4945
+o por internet.',
+    'attributes' => array(
+      'class' => 'cmb2-qtranslate'
+    ),
+  ) );
+
+  $citas_meta->add_field( array(
+    'name' => __( 'Instrucciones', 'IGV' ),
+    'desc' => __( '', 'IGV' ),
+    'id'   => $prefix . 'visits_guide',
+    'type' => 'textarea_small',
+    'default' => 'Se solicita llegar 15 minutos antes del horario asignado ya que no habrá tolerancia.',
+    'attributes' => array(
+      'class' => 'cmb2-qtranslate'
+    ),
+  ) );
+
+  $citas_meta->add_field( array(
+    'name' => __( 'Costo', 'IGV' ),
+    'desc' => __( '', 'IGV' ),
+    'id'   => $prefix . 'visits_cost',
+    'type' => 'textarea_small',
+    'attributes' => array(
+      'class' => 'cmb2-qtranslate'
+    ),
+  ) );
+
   $citas_content = $citas_meta->add_field( array(
     'id' => $prefix . 'citas_content',
     'type' => 'group',
@@ -248,6 +284,7 @@ function igv_cmb_metaboxes() {
     'id'   => 'image',
     'type' => 'file',
   ) );
+  
 
 }
 
