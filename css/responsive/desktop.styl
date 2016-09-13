@@ -110,7 +110,7 @@ $margin-large = ($gutter * 5)
 // FOOTER
 
 #footer
-  padding: $margin-micro 0
+  padding: $margin-micro 0 
   font-size: $font-size-h4
   h1
     font-size: $font-size-h3
@@ -129,16 +129,18 @@ body.single-programacion
 // ******************************************************
 
 // HEADER
+#header
+  h1.site-title
+    margin-right: $margin-small
 
 #header-menu
   padding-top: 0
   padding-bottom: 0
   font-size: $font-size-h3
-  display: initial
+  display: inline-block
   li
     display: inline-block
     line-height: $font-leading-tighter
-    float: left
     &:after
       content: none
     &:before

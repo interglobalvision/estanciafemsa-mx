@@ -2108,16 +2108,18 @@ body.drawer-open .programacion-drawer-toggle {
   #main-content {
     padding-top: 82px;
   }
+  #header h1.site-title {
+    margin-right: 48px;
+  }
   #header-menu {
     padding-top: 0;
     padding-bottom: 0;
     font-size: 1.469544744064506rem;
-    display: initial;
+    display: inline-block;
   }
   #header-menu li {
     display: inline-block;
     line-height: 1.25;
-    float: left;
   }
   #header-menu li:after {
     content: none;
