@@ -48,14 +48,14 @@ function igv_cmb_metaboxes() {
 
   $post_meta->add_field( array(
     'name' => __( 'Autor', 'cmb2' ),
-    'id'   => $prefix . 'author',
+    'id'   => $prefix . 'post_author',
     'type' => 'text',
   ) );
 
   $post_meta->add_field( array(
     'name' => __( 'Fecha', 'cmb2' ),
     'desc' => __( 'de publicación', 'cmb2' ),
-    'id'   => $prefix . 'date',
+    'id'   => $prefix . 'post_date',
     'type' => 'text_date_timestamp',
   ) );
 
