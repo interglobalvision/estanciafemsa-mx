@@ -49,11 +49,7 @@ if( have_posts() ) {
           <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Previa Cita[:en]Appointments'); ?></h3>
           <div class="font-bold font-size-h4">
             <?php
-              if (qtranxf_getLanguage() === 'es') {
-                $cita_text = IGV_get_option('_igv_visits_text');
-              } else {
-                $cita_text = IGV_get_option('_igv_visits_text_en');
-              }
+              $cita_text = get_post_meta( get_the_ID(),'_igv_visits_text', true);
               if (!empty($cita_text)) {
                 echo apply_filters('the_content', $cita_text);
               }
@@ -65,13 +61,8 @@ if( have_posts() ) {
           <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Agendar cita[:en]Schedule appointment'); ?></h3>
           <div class="font-bold font-size-h4">
             <?php
-              if (qtranxf_getLanguage() === 'es') {
-                $cita_text_2 = IGV_get_option('_igv_visits_guide');
-                $cost = IGV_get_option('_igv_visits_cost');
-              } else {
-                $cita_text_2 = IGV_get_option('_igv_visits_guide_en');
-                $cost = IGV_get_option('_igv_visits_cost_en');
-              }
+              $cita_text_2 = get_post_meta( get_the_ID(),'_igv_visits_guide', true);
+              $cost = get_post_meta( get_the_ID(),'_igv_visits_cost', true);
               if (!empty($cita_text_2)) {
                 echo apply_filters('the_content', $cita_text_2);
               }

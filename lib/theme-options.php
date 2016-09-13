@@ -229,68 +229,6 @@ Ampliación Daniel Garza
 			'default' => 'https://www.instagram.com/estanciafemsa/',
 		) );
 
-		// VISITS
-
-		$options_metabox->add_field( array(
-			'name' => __( 'Citas', 'cmb2' ),
-			'desc' => __( '', 'cmb2' ),
-			'id'   => $this->prefix . 'visits_title',
-			'type' => 'title',
-		) );
-
-		$options_metabox->add_field( array(
-			'name' => __( 'Previa Cita', 'IGV' ),
-			'desc' => __( '', 'IGV' ),
-			'id'   => $this->prefix . 'visits_text',
-			'type' => 'textarea_small',
-			'default' => 'Para visitar Estancia FEMSA es necesario agendar una cita a través de:
-
-+52 (55) 5515 4908
-+52 (55) 5272 4945
-o por internet.',
-		) );
-
-		$options_metabox->add_field( array(
-			'name' => __( 'Previa Cita [EN]', 'IGV' ),
-			'desc' => __( '', 'IGV' ),
-			'id'   => $this->prefix . 'visits_text_en',
-			'type' => 'textarea_small',
-			'default' => 'To visit Estancia FEMSA you may schedule an appointment by calling:
-
-+52 (55) 5515 4908
-+52 (55) 5272 4945',
-		) );
-
-		$options_metabox->add_field( array(
-			'name' => __( 'Instrucciones', 'IGV' ),
-			'desc' => __( '', 'IGV' ),
-			'id'   => $this->prefix . 'visits_guide',
-			'type' => 'textarea_small',
-			'default' => 'Se solicita llegar 15 minutos antes del horario asignado ya que no habrá tolerancia.',
-		) );
-
-		$options_metabox->add_field( array(
-			'name' => __( 'Instrucciones [EN]', 'IGV' ),
-			'desc' => __( '', 'IGV' ),
-			'id'   => $this->prefix . 'visits_guide_en',
-			'type' => 'textarea_small',
-			'default' => '...',
-		) );
-
-		$options_metabox->add_field( array(
-			'name' => __( 'Costo', 'IGV' ),
-			'desc' => __( '', 'IGV' ),
-			'id'   => $this->prefix . 'visits_cost',
-			'type' => 'textarea_small',
-		) );
-
-		$options_metabox->add_field( array(
-			'name' => __( 'Costo [EN]', 'IGV' ),
-			'desc' => __( '', 'IGV' ),
-			'id'   => $this->prefix . 'visits_cost_en',
-			'type' => 'textarea_small',
-		) );
-
 		// ABOUT
 
 		$options_metabox->add_field( array(
