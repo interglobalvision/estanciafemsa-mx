@@ -1237,6 +1237,11 @@ a:visited {
   color: inherit;
   text-decoration: none;
 }
+p a,
+p a:active,
+p a:visited {
+  text-decoration: underline;
+}
 html {
   background-color: #fff;
   color: #000;
@@ -1292,6 +1297,9 @@ body.single-programacion .footer-lang-switch {
 }
 #front-page {
   letter-spacing: 1px;
+}
+.front-page-block-bottom {
+  display: none;
 }
 .home-item {
   width: 50%;
@@ -1354,9 +1362,6 @@ body.single-programacion .footer-lang-switch {
   bottom: 150px;
   right: 0;
   width: 100%;
-}
-.article-content p a:link {
-  text-decoration: underline;
 }
 .more-link {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
@@ -1875,6 +1880,9 @@ body.drawer-open .programacion-drawer-toggle {
   }
   #front-page .front-page-block:nth-child(2) {
     border-bottom: 3px solid #000;
+  }
+  .front-page-block-bottom {
+    display: initial;
   }
   .home-item {
     padding-right: 28px;
