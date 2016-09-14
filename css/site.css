@@ -1164,7 +1164,7 @@ h1,
 .font-size-h1 {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
   font-weight: 600;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
 }
 h2,
 .font-size-h2 {
@@ -1293,9 +1293,6 @@ body.menu-active .menu-open {
 }
 body.single-programacion .footer-lang-switch {
   display: none !important;
-}
-#front-page {
-  letter-spacing: 1px;
 }
 .home-item {
   width: 50%;
