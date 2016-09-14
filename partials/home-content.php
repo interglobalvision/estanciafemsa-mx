@@ -25,9 +25,9 @@ if ($home_content) {
         echo '</h3>';
       }
       echo '</a>';
-      if (!empty($item['image_id']) && (!empty($item['caption']) || !empty($item['title']))) {
+      if (!empty($item['image_id']) && !empty($item['caption'])) {
         echo '<h4 class="home-item-image-caption padding-top-micro text-align-center">';
-        echo !empty($item['caption']) ? apply_filters('the_content', $item['caption']) : '';
+        echo apply_filters('the_content', $item['caption']);
         echo '</h4>';
       }
       echo '</div>';
