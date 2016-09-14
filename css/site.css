@@ -1213,6 +1213,9 @@ strong {
 .font-serif {
   font-family: 'Tiempos', Times, Baskerville, Georgia, serif;
 }
+.line-tighter {
+  line-height: 1.25;
+}
 .text-overflow-ellipsis {
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -2021,11 +2024,11 @@ body.drawer-open .programacion-drawer-toggle {
   }
   h1,
   .font-size-h1 {
-    font-size: 1.781452392364234rem;
+    font-size: 1.739102962385611rem;
   }
   h2,
   .font-size-h2 {
-    font-size: 1.618rem;
+    font-size: 1.541986833892031rem;
   }
   h3,
   .font-size-h3 {
@@ -2295,6 +2298,22 @@ body.drawer-open .programacion-drawer-toggle {
   }
   .col {
     padding: 0 27px;
+  }
+  h1,
+  .font-size-h1 {
+    font-size: 2.058106176075472rem;
+  }
+  h2,
+  .font-size-h2 {
+    font-size: 1.697760280736162rem;
+  }
+  h3,
+  .font-size-h3 {
+    font-size: 1.469544744064506rem;
+  }
+  h4,
+  .font-size-h4 {
+    font-size: 1.400505962399693rem;
   }
   .margin-top-micro {
     margin-top: 16.686917696246077px;
