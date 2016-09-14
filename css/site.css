@@ -1164,6 +1164,7 @@ h1,
 .font-size-h1 {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
   font-weight: 600;
+  letter-spacing: 0.8px;
 }
 h2,
 .font-size-h2 {
@@ -1295,9 +1296,6 @@ body.single-programacion .footer-lang-switch {
 }
 #front-page {
   letter-spacing: 1px;
-}
-.front-page-block-bottom {
-  display: none;
 }
 .home-item {
   width: 50%;
@@ -1627,13 +1625,16 @@ body.menu-active #header-menu {
 #front-page {
   font-size: 1.3rem;
 }
-#front-page .front-page-block {
+.front-page-block {
   display: block;
   height: 50vh;
   padding: 24px;
 }
-#front-page .front-page-block:nth-child(1) {
+.front-page-block:nth-child(1) {
   border-bottom: 3px solid #000;
+}
+.front-page-block-bottom {
+  display: none;
 }
 .home-item {
   padding-right: 24px;
