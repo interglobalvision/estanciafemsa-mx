@@ -470,6 +470,22 @@ for col in 1..$cols
 
   .container
     width: 1680px
+    
+  $gutter = 32px
+
+  // COLUMN SIZES & OFFSETS
+
+  .col
+    padding: 0 ($gutter / 2)
+
+  for offset in 0..($cols - 1)
+    .offset-xl-{offset}
+      margin-left: ( 100% / $cols ) * offset
+
+  for col in 1..$cols
+    .col-xl-{col}
+      flex-basis: ( 100% / $cols ) * col
+      max-width: ( 100% / $cols ) * col
 
 @media screen and (min-width: 1920px)
 

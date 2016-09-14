@@ -24,7 +24,7 @@ if( have_posts() ) {
     <article <?php post_class('row margin-bottom-small'); ?> id="post-<?php the_ID(); ?>">
 
       <!-- Desktop Article Meta -->
-      <div class="article-meta col col-s-12 col-m-3 only-desktop">
+      <div class="article-meta col col-s-12 col-m-3 col-xl-2 only-desktop">
         <div class="article-date margin-bottom-tiny">
           <h3 class="font-capitalize font-bold"><?php echo $time->format('j F,'); ?><br/><?php echo $time->format('Y'); ?></h3>
         </div>
