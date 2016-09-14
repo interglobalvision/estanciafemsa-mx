@@ -112,6 +112,13 @@ class IGV_Admin {
 			'type' => 'title',
 		) );
 
+		$options_metabox->add_field( array(
+			'name' => __( 'Lugar Anfitrión', 'cmb2' ),
+			'desc' => __( 'Ubicación actual del programa', 'cmb2' ),
+			'id'   => $this->prefix . 'host_location',
+			'type' => 'text',
+		) );
+
 		// SPLASH
 
 		$options_metabox->add_field( array(
