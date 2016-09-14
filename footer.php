@@ -2,7 +2,15 @@
     <footer id="footer">
       <div class="container">
         <div class="col s-col-12 text-align-right">
-          <h1 class="font-uppercase only-mobile"><a href="<?php echo home_url('/citas'); ?>">Casa Luis Barragán</a></h1>
+        <?php 
+          $host = IGV_get_option('_igv_host_location');
+
+          if ($host) {
+        ?>
+          <h1 class="font-uppercase only-mobile"><a href="<?php echo home_url('/citas'); ?>"><?php echo $host; ?></a></h1>
+        <?php 
+          }
+        ?>
           <div class="font-bold footer-lang-switch only-desktop"><?php get_template_part('partials/language-switch'); ?></div>
         </div>
       </div>
