@@ -41,12 +41,12 @@ if( have_posts() ) {
       </div>
 
       <!-- Mobile Article Meta -->
-      <div class="article-meta col col-s-12 col-m-3 only-mobile">
+      <div class="article-meta col col-s-12 col-m-3 only-mobile margin-bottom-tiny">
         <h3 class="font-capitalize font-bold"><?php echo $time->format('j F, Y');?></h3>
         <?php
         if (!empty($author)) {
         ?>
-        <h4 class="font-serif"><?php echo __('[:es]Por[:en]By'); ?>: <?php the_author(); ?></h4>
+        <div class="font-serif"><?php echo __('[:es]Por[:en]By'); ?>: <?php the_author(); ?></div>
         <?php 
         }
         ?>

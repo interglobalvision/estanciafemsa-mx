@@ -81,7 +81,7 @@
           ?></span></div>
         </div>
         <div class="col col-s-12 col-l-5 col-xl-6">
-          <ul id="header-menu" class="font-sans font-bold">
+          <ul id="header-menu" class="font-sans font-bold font-size-h2">
             <!-- don't "fix" the <li>s. this is a whitespace hack -->
             <li><a href="<?php echo site_url('/nosotros'); ?>"><?php _e('[:es]Nosotros[:en]About'); ?></a></li
             ><li><a href="<?php echo site_url('/programacion'); ?>"><?php _e('[:es]Programación[:en]Program'); ?></a></li
