@@ -28,7 +28,7 @@ if( have_posts() ) {
           foreach ($citas_content as $item) {
             if (!empty($item['image_id'])) {
           ?>
-          <div class="home-item margin-top-<?php echo rand(0,1) == 1 ? 'mid' : 'basic'; ?> text-align-center">
+          <div class="home-item citas-item margin-top-<?php echo rand(0,1) == 1 ? 'mid' : 'basic'; ?> text-align-center">
             <div class="home-item-image-holder">
               <?php echo wp_get_attachment_image($item['image_id'], 'home-thumb'); ?>
             </div>
