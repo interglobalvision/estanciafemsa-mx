@@ -1294,6 +1294,9 @@ body.menu-active .menu-open {
 body.single-programacion .footer-lang-switch {
   display: none !important;
 }
+.home #main-container .padding-bottom-mid {
+  padding-bottom: 0;
+}
 .home-item {
   width: 50%;
 }
