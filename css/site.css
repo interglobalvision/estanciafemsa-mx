@@ -2030,11 +2030,11 @@ body.drawer-open .programacion-drawer-toggle {
   }
   h3,
   .font-size-h3 {
-    font-size: 1.469544744064506rem;
+    font-size: 1.541986833892031rem;
   }
   h4,
   .font-size-h4 {
-    font-size: 1.400505962399693rem;
+    font-size: 1.334710602476894rem;
   }
   .margin-top-micro {
     margin-top: 9.888543819997675px;
@@ -2269,10 +2269,10 @@ body.drawer-open .programacion-drawer-toggle {
     column-gap: 32px;
   }
   .home-item {
-    padding-right: 160px;
+    padding-right: 112px;
   }
   .citas-item {
-    padding-right: 112px;
+    padding-right: 64px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -2307,11 +2307,11 @@ body.drawer-open .programacion-drawer-toggle {
   }
   h3,
   .font-size-h3 {
-    font-size: 1.469544744064506rem;
+    font-size: 1.541986833892031rem;
   }
   h4,
   .font-size-h4 {
-    font-size: 1.400505962399693rem;
+    font-size: 1.334710602476894rem;
   }
   .margin-top-micro {
     margin-top: 16.686917696246077px;
