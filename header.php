@@ -70,7 +70,7 @@
   <header id="header">
     <div class="container padding-top-tiny padding-bottom-micro">
       <div class="row">
-        <div class="col col-s-9 col-l-3">
+        <div class="col col-s-9 col-l-3 col-xl-2">
           <h1 class="site-title font-uppercase u-inline-block"><a href="<?php echo site_url('/home'); ?>"><?php bloginfo('name'); ?></a></h1>
         </div>
         <div class="col col-s-3 only-mobile text-align-right">
@@ -80,7 +80,7 @@
             echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-close.svg'); 
           ?></span></div>
         </div>
-        <div class="col col-s-12 col-l-5">
+        <div class="col col-s-12 col-l-5 col-xl-6">
           <ul id="header-menu" class="font-sans font-bold">
             <!-- don't "fix" the <li>s. this is a whitespace hack -->
             <li><a href="<?php echo site_url('/nosotros'); ?>"><?php _e('[:es]Nosotros[:en]About'); ?></a></li
