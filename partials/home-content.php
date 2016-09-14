@@ -6,8 +6,8 @@ if ($home_content) {
   echo '<div id="home-holder">';
   foreach ($home_content as $item) {
     if (!empty($item['link'])) {
-      echo '<div class="home-item margin-top-';
-      echo rand(0,1) == 1 ? 'mid' : 'basic';
+      echo '<div class="home-item margin-bottom-small margin-top-';
+      echo rand(0,1) == 1 ? 'basic' : 'small';
       echo !empty($item['image_id']) ? ' text-align-center">' : '">';
       echo '<a href="' . get_permalink($item['link']) . '">';
       if (!empty($item['image_id'])) {
