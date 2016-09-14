@@ -264,11 +264,17 @@ function igv_cmb_metaboxes() {
     'default' => 'Para visitar Estancia FEMSA es necesario agendar una cita a través de:
 
 +52 (55) 5515 4908
-+52 (55) 5272 4945
-o por internet.',
++52 (55) 5272 4945',
     'attributes' => array(
       'class' => 'cmb2-qtranslate'
     ),
+  ) );
+
+  $citas_meta->add_field( array(
+    'name' => 'URL externo para citas',
+    'desc' => __( '', 'cmb2' ),
+    'id'   => $prefix . 'visits_url',
+    'type' => 'text',
   ) );
 
   $citas_meta->add_field( array(

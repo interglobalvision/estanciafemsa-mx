@@ -1406,6 +1406,12 @@ body.single-programacion .footer-lang-switch {
   text-align: center;
   line-height: 135px;
 }
+.citas-arrow {
+  position: absolute;
+  height: 20px;
+  margin-top: -2px;
+  margin-left: 5px;
+}
 .offset-s-0 {
   margin-left: 0%;
 }
