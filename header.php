@@ -90,9 +90,17 @@
             ><li class="only-mobile"><?php get_template_part('partials/language-switch'); ?></li>
           </ul>
         </div>
+        <?php 
+          $host = IGV_get_option('_igv_host_location');
+
+          if ($host) {
+        ?>
         <div class="col col-s-4 text-align-right only-desktop">
-          <h1 class="font-uppercase"><a href="<?php echo site_url('/home'); ?>">Casa Luis Barragán</a></h1>
+          <h1 class="font-uppercase"><a href="<?php echo site_url('/citas'); ?>"><?php echo $host; ?></a></h1>
         </div>
+        <?php
+          }
+        ?>
       </div>
     </div>
   </header>
