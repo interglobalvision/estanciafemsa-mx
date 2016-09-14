@@ -35,10 +35,6 @@ $golden-ratio = 1.61803398875
 
 $font-size-basic = 16px
 $font-size-larger = 1.3rem
-$font-size-h4 = golden-ratio(1rem , .7)
-$font-size-h3 = golden-ratio(1rem , .8)
-$font-size-h2 = golden-ratio(1rem , 1)
-$font-size-h1 = golden-ratio(1rem , 1.2)
 
 $font-leading-basic = 1.45
 $font-leading-tighter = 1.25
@@ -144,20 +140,17 @@ h1, h2, h3, h4
 
 h1, .font-size-h1 
   font-family: $font-sans
-  font-size: $font-size-h1
   font-weight: 600
+  letter-spacing: 1px
 
 h2, .font-size-h2
   font-family: $font-sans
-  font-size: $font-size-h2
   font-weight: 500
 
 h3, .font-size-h3
   font-family: $font-sans
-  font-size: $font-size-h3
 
 h4, .font-size-h4
-  font-size: $font-size-h4
   line-height: 1.1
 
 p
@@ -197,6 +190,9 @@ strong
   font-family: $font-serif
 
   // TEXT RULES
+    
+.line-tighter
+  line-height: $font-leading-tighter
 
 .text-overflow-ellipsis
   overflow: ellipsis
@@ -247,7 +243,6 @@ img
   width: 100%
   z-index: 1000
   h1
-    font-size: $font-size-h3
     margin: 0
 
 #header-menu
@@ -288,18 +283,11 @@ body.menu-active
 body.single-programacion 
   .footer-lang-switch
     display: none !important
-  
-// ******************************************************
-
-// FRONT PAGE
-
-#front-page
-  letter-spacing: 1px
-  
-.front-page-block-bottom
-  display: none
 
 // ******************************************************
+
+.home #main-container .padding-bottom-mid
+  padding-bottom: 0
 
 // HOME
 .home-item

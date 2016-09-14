@@ -1,5 +1,5 @@
   <?php if (!is_front_page()) { ?>
-    <footer id="footer">
+    <footer id="footer" class="font-size-h2">
       <div class="container">
         <div class="col s-col-12 text-align-right">
         <?php 

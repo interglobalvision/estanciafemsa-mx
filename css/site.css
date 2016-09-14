@@ -1163,23 +1163,20 @@ h4 {
 h1,
 .font-size-h1 {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
-  font-size: 1.781452392364234rem;
   font-weight: 600;
+  letter-spacing: 1px;
 }
 h2,
 .font-size-h2 {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
-  font-size: 1.618rem;
   font-weight: 500;
 }
 h3,
 .font-size-h3 {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
-  font-size: 1.469544744064506rem;
 }
 h4,
 .font-size-h4 {
-  font-size: 1.400505962399693rem;
   line-height: 1.1;
 }
 p {
@@ -1216,6 +1213,9 @@ strong {
 }
 .font-serif {
   font-family: 'Tiempos', Times, Baskerville, Georgia, serif;
+}
+.line-tighter {
+  line-height: 1.25;
 }
 .text-overflow-ellipsis {
   white-space: nowrap;
@@ -1258,7 +1258,6 @@ img {
   z-index: 1000;
 }
 #header h1 {
-  font-size: 1.469544744064506rem;
   margin: 0;
 }
 #header-menu li:after {
@@ -1295,11 +1294,8 @@ body.menu-active .menu-open {
 body.single-programacion .footer-lang-switch {
   display: none !important;
 }
-#front-page {
-  letter-spacing: 1px;
-}
-.front-page-block-bottom {
-  display: none;
+.home #main-container .padding-bottom-mid {
+  padding-bottom: 0;
 }
 .home-item {
   width: 50%;
@@ -1520,6 +1516,22 @@ body.single-programacion .footer-lang-switch {
       flex-basis: 100%;
   max-width: 100%;
 }
+h1,
+.font-size-h1 {
+  font-size: 1.469544744064506rem;
+}
+h2,
+.font-size-h2 {
+  font-size: 1.400505962399693rem;
+}
+h3,
+.font-size-h3 {
+  font-size: 1.334710602476894rem;
+}
+h4,
+.font-size-h4 {
+  font-size: 1.272006289292628rem;
+}
 .margin-top-micro {
   margin-top: 7.416407864998257px;
 }
@@ -1595,13 +1607,9 @@ body.single-programacion .footer-lang-switch {
 #main-content {
   padding-top: 87px;
 }
-#header h1 {
-  font-size: 1.469544744064506rem;
-}
 #header-menu {
   padding-top: 12px;
   padding-bottom: 7.416407864998257px;
-  font-size: 1.400505962399693rem;
   display: none;
 }
 #header-menu li {
@@ -1613,21 +1621,20 @@ body.menu-active #header-menu {
 #footer {
   padding: 7.416407864998257px 0;
   background-color: #fff;
-  font-size: 1.400505962399693rem;
-}
-#footer h1 {
-  font-size: 1.469544744064506rem;
 }
 #front-page {
   font-size: 1.3rem;
 }
-#front-page .front-page-block {
+.front-page-block {
   display: block;
   height: 50vh;
   padding: 24px;
 }
-#front-page .front-page-block:nth-child(1) {
+.front-page-block:nth-child(1) {
   border-bottom: 3px solid #000;
+}
+.front-page-block-bottom {
+  display: none;
 }
 .home-item {
   padding-right: 24px;
@@ -1837,25 +1844,14 @@ body.drawer-open .programacion-drawer-toggle {
   .padding-bottom-large {
     padding-bottom: 140px;
   }
-  #header h1 {
-    font-size: 1.469544744064506rem;
-  }
   #header-menu {
     padding-top: 14px;
     padding-bottom: 8.652475842497966px;
-    font-size: 1.400505962399693rem;
-  }
-  #header-menu li {
-    line-height: 1.45;
   }
   #footer {
     padding: 8.652475842497966px 0;
     pointer-events: none;
     background-color: initial;
-    font-size: 1.400505962399693rem;
-  }
-  #footer h1 {
-    font-size: 1.469544744064506rem;
   }
   #footer h1,
   #footer .footer-lang-switch {
@@ -1865,7 +1861,7 @@ body.drawer-open .programacion-drawer-toggle {
     padding-top: 88px;
   }
   #front-page {
-    font-size: 1.618rem;
+    font-size: 1.400505962399693rem;
   }
   #front-page:before,
   #front-page:after {
@@ -2027,6 +2023,22 @@ body.drawer-open .programacion-drawer-toggle {
         flex-basis: 100%;
     max-width: 100%;
   }
+  h1,
+  .font-size-h1 {
+    font-size: 1.739102962385611rem;
+  }
+  h2,
+  .font-size-h2 {
+    font-size: 1.541986833892031rem;
+  }
+  h3,
+  .font-size-h3 {
+    font-size: 1.541986833892031rem;
+  }
+  h4,
+  .font-size-h4 {
+    font-size: 1.334710602476894rem;
+  }
   .margin-top-micro {
     margin-top: 9.888543819997675px;
   }
@@ -2102,38 +2114,9 @@ body.drawer-open .programacion-drawer-toggle {
   #header {
     background-color: initial;
   }
-  #header h1 {
-    font-size: 1.469544744064506rem;
-  }
-  #header-menu {
-    padding-top: 16px;
-    padding-bottom: 9.888543819997675px;
-    font-size: 1.400505962399693rem;
-  }
-  #header-menu li {
-    line-height: 1.45;
-  }
-  #footer {
-    padding: 9.888543819997675px 0;
-    font-size: 1.400505962399693rem;
-  }
-  #footer h1 {
-    font-size: 1.469544744064506rem;
-  }
-  body.single-programacion #footer {
-    padding: 0;
-  }
-  #main-content {
-    padding-top: 74px;
-  }
-  #header h1.site-title {
-    margin-right: 32px;
-    line-height: 1.25;
-  }
   #header-menu {
     padding-top: 0;
     padding-bottom: 0;
-    font-size: 1.469544744064506rem;
     display: inline-block;
   }
   #header-menu li {
@@ -2148,6 +2131,15 @@ body.drawer-open .programacion-drawer-toggle {
   }
   #header-menu li:first-of-type:before {
     content: '';
+  }
+  #footer {
+    padding: 9.888543819997675px 0;
+  }
+  body.single-programacion #footer {
+    padding: 0;
+  }
+  #main-content {
+    padding-top: 74px;
   }
   .archive-programacion-post-title {
     font-size: 60px;
@@ -2280,10 +2272,10 @@ body.drawer-open .programacion-drawer-toggle {
     column-gap: 32px;
   }
   .home-item {
-    padding-right: 160px;
+    padding-right: 112px;
   }
   .citas-item {
-    padding-right: 112px;
+    padding-right: 64px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -2307,6 +2299,22 @@ body.drawer-open .programacion-drawer-toggle {
   }
   .col {
     padding: 0 27px;
+  }
+  h1,
+  .font-size-h1 {
+    font-size: 2.058106176075472rem;
+  }
+  h2,
+  .font-size-h2 {
+    font-size: 1.697760280736162rem;
+  }
+  h3,
+  .font-size-h3 {
+    font-size: 1.541986833892031rem;
+  }
+  h4,
+  .font-size-h4 {
+    font-size: 1.334710602476894rem;
   }
   .margin-top-micro {
     margin-top: 16.686917696246077px;
@@ -2380,22 +2388,8 @@ body.drawer-open .programacion-drawer-toggle {
   .padding-bottom-large {
     padding-bottom: 270px;
   }
-  #header h1 {
-    font-size: 1.469544744064506rem;
-    line-height: 1.45;
-  }
-  #header-menu {
-    font-size: 1.400505962399693rem;
-  }
-  #header-menu li {
-    line-height: 1.45;
-  }
   #footer {
     padding: 16.686917696246077px 0;
-    font-size: 1.400505962399693rem;
-  }
-  #footer h1 {
-    font-size: 1.469544744064506rem;
   }
   body.single-programacion #footer {
     padding: 0;
