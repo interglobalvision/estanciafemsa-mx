@@ -5,6 +5,23 @@ $margin-basic = ($gutter * 2)
 $margin-mid = ($gutter * 3.5)
 $margin-large = ($gutter * 5)
 
+$font-size-h4 = golden-ratio(1rem , .7)
+$font-size-h3 = golden-ratio(1rem , .8)
+$font-size-h2 = golden-ratio(1rem , 1)
+$font-size-h1 = golden-ratio(1rem , 1.2)
+
+h1, .font-size-h1 
+  font-size: $font-size-h1
+
+h2, .font-size-h2
+  font-size: $font-size-h2
+
+h3, .font-size-h3
+  font-size: $font-size-h3
+
+h4, .font-size-h4
+  font-size: $font-size-h4
+  
 // ******************************************************
 
 // MARGINS AND PADDING
@@ -88,22 +105,26 @@ $margin-large = ($gutter * 5)
 
 .padding-bottom-large
   padding-bottom: $margin-large
-  
+
 // ******************************************************
 
 // HEADER
-
-#header 
-  background-color: initial
-  h1
-    font-size: $font-size-h3 
+#header
+   background-color: initial
 
 #header-menu
-  padding-top: $margin-tiny
-  padding-bottom: $margin-micro
-  font-size: $font-size-h4
-  li 
-    line-height: $font-leading-basic
+  padding-top: 0
+  padding-bottom: 0
+  display: inline-block
+  li
+    display: inline-block
+    line-height: $font-leading-tighter
+    &:after
+      content: none
+    &:before
+      content: ', '
+    &:first-of-type:before
+      content: ''
 
 // ******************************************************
 
@@ -111,9 +132,6 @@ $margin-large = ($gutter * 5)
 
 #footer
   padding: $margin-micro 0 
-  font-size: $font-size-h4
-  h1
-    font-size: $font-size-h3
     
 body.single-programacion 
   #footer
@@ -125,29 +143,6 @@ body.single-programacion
 
 #main-content
   padding-top: 58px + $margin-tiny
-
-// ******************************************************
-
-// HEADER
-#header
-  h1.site-title
-    margin-right: $margin-small
-    line-height: $font-leading-tighter
-
-#header-menu
-  padding-top: 0
-  padding-bottom: 0
-  font-size: $font-size-h3
-  display: inline-block
-  li
-    display: inline-block
-    line-height: $font-leading-tighter
-    &:after
-      content: none
-    &:before
-      content: ', '
-    &:first-of-type:before
-      content: ''
       
 // ******************************************************
 
