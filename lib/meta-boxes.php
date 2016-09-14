@@ -219,22 +219,14 @@ function igv_cmb_metaboxes() {
   ) );
 
   $home_meta->add_group_field( $home_content, array(
-    'name' => 'Título',
-    'desc' => __( 'Aparece en itálicas en hover', 'cmb2' ),
-    'id'   => 'title',
-    'type' => 'text',
-    'attributes' => array(
-      'class' => 'cmb2-qtranslate'
-    )
-  ) );
-
-  $home_meta->add_group_field( $home_content, array(
     'name' => 'Sub-tíitulo',
-    'desc' => __( 'Aparece despues del título en hover', 'cmb2' ),
+    'desc' => __( 'Aparece despues del imagen en hover', 'cmb2' ),
     'id'   => 'caption',
-    'type' => 'text',
-    'attributes' => array(
-      'class' => 'cmb2-qtranslate'
+    'type'    => 'wysiwyg',
+    'options' => array( 
+      'media_buttons' => false,
+      'textarea_rows' => 2, 
+      'editor_class' => 'cmb2-qtranslate'
     )
   ) );
 
