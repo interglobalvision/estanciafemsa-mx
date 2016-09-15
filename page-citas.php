@@ -17,6 +17,12 @@ if( have_posts() ) {
 
     <article <?php post_class('row page-citas-row margin-bottom-small'); ?> id="page-<?php the_ID(); ?>">
 
+      <div class="citas-text-content-mobile col col-s-12">
+
+        <?php get_template_part('partials/citas-text-content'); ?>
+
+      </div>
+
       <div class="page-images col col-s-12 col-m-7 col-l-9 font-size-h4 font-bold">
       <?php 
         $citas_content = get_post_meta( get_the_ID(), '_igv_citas_content', true);
@@ -43,42 +49,12 @@ if( have_posts() ) {
       ?>
       </div>
 
-      <div class="page-content col col-s-12 col-m-5 col-l-3">
+      <div class="citas-text-content col col-m-5 col-l-3">
 
-        <div class="margin-bottom-small font-sans">
-          <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Previa Cita[:en]Appointments'); ?></h3>
-          <div class="font-bold font-size-h4">
-            <?php
-              $cita_text = get_post_meta( get_the_ID(),'_igv_visits_text', true);
-              $cita_url = get_post_meta( get_the_ID(),'_igv_visits_url', true);
-              if (!empty($cita_text)) {
-                echo apply_filters('the_content', $cita_text);
-              }
-              if (!empty($cita_url)) {
-                echo '<p>o por internet <a href="' . esc_url($cita_url) . '" target="_blank" rel="noopener noreferrer">' . 
-                  '<img class="citas-arrow" src="' . get_bloginfo('stylesheet_directory') . '/img/dist/ui-cursor-right.png"></a></p>'; 
-              }
-            ?>
-          </div>
-        </div>
-
-        <div class="margin-bottom-small font-sans">
-          <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Agendar cita[:en]Schedule appointment'); ?></h3>
-          <div class="font-bold font-size-h4">
-            <?php
-              $cita_text_2 = get_post_meta( get_the_ID(),'_igv_visits_guide', true);
-              $cost = get_post_meta( get_the_ID(),'_igv_visits_cost', true);
-              if (!empty($cita_text_2)) {
-                echo apply_filters('the_content', $cita_text_2);
-              }
-              if (!empty($cost)) {
-                echo apply_filters('the_content', $cost);
-              }
-            ?>
-          </div>
-        </div>
+        <?php get_template_part('partials/citas-text-content'); ?>
 
       </div>
+
     </article>
 
 <?php
