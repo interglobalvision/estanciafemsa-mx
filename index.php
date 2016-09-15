@@ -15,7 +15,9 @@ if( have_posts() ) {
     the_post();
     $author = get_post_meta($post->ID, '_igv_post_author', true);
     $date = get_post_meta($post->ID, '_igv_post_date', true);
-    $time = new \Moment\Moment(date('c', $date));
+    if (!empty($date)) {
+      $time = new \Moment\Moment(date('c', $date));
+    }
 
     $event = get_post_meta($post->ID, '_igv_related_event', true);
     $color = !empty($event) ? get_post_meta($event, '_igv_color', true) : false;
@@ -25,10 +27,15 @@ if( have_posts() ) {
 
       <!-- Desktop Article Meta -->
       <div class="article-meta col col-s-12 col-m-3 col-xl-2 only-desktop">
+        <?php
+        if (!empty($date)) {
+        ?>
         <div class="article-date margin-bottom-tiny">
           <h3 class="font-capitalize font-bold"><?php echo $time->format('j F,'); ?><br/><?php echo $time->format('Y'); ?></h3>
         </div>
         <?php
+        }
+
         if (!empty($author)) {
         ?>
         <div class="article-author font-serif">
@@ -42,11 +49,16 @@ if( have_posts() ) {
 
       <!-- Mobile Article Meta -->
       <div class="article-meta col col-s-12 col-m-3 only-mobile margin-bottom-tiny">
+        <?php
+        if (!empty($date)) {
+        ?>
         <h3 class="font-capitalize font-bold"><?php echo $time->format('j F, Y');?></h3>
         <?php
+        }
+
         if (!empty($author)) {
         ?>
-        <div class="font-serif"><?php echo __('[:es]Por[:en]By'); ?>: <?php the_author(); ?></div>
+        <div class="font-serif"><?php echo __('[:es]Por[:en]By'); ?>: <?php echo $author; ?></div>
         <?php 
         }
         ?>
@@ -71,7 +83,13 @@ if( have_posts() ) {
         if( is_single() ) {
           the_content(); 
         } else {
-          the_excerpt(); 
+          //the_excerpt(); 
+
+          if (!empty($post->post_excerpt)) {
+            echo '<p>' . $post->post_excerpt . ' <a class="more-link" href="'. get_permalink($post->ID) .'">' . __('[:es]LEER MÁS[:en]READ MORE') . '</a></p>';
+          } else {
+            the_excerpt(); 
+          }
         }
         ?>		
       </div>
