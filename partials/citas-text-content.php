@@ -4,12 +4,17 @@
     <?php
       $cita_text = get_post_meta( get_the_ID(),'_igv_visits_text', true);
       $cita_url = get_post_meta( get_the_ID(),'_igv_visits_url', true);
+      $cita_url_text = get_post_meta( get_the_ID(),'_igv_visits_url', true);
+      $cita_text_2 = get_post_meta( get_the_ID(),'_igv_visits_text_two', true);
       if (!empty($cita_text)) {
         echo apply_filters('the_content', $cita_text);
       }
-      if (!empty($cita_url)) {
-        echo '<p>o por internet <a href="' . esc_url($cita_url) . '" target="_blank" rel="noopener noreferrer">' . 
+      if (!empty($cita_url && $cita_url_text)) {
+        echo '<p>' . $cita_url_text . ' <a href="' . esc_url($cita_url) . '" target="_blank" rel="noopener noreferrer">' . 
           '<img class="citas-arrow" src="' . get_bloginfo('stylesheet_directory') . '/img/dist/ui-cursor-right.png"></a></p>'; 
+      }
+      if (!empty($cita_text_2)) {
+        echo apply_filters('the_content', $cita_text_2);
       }
     ?>
   </div>
