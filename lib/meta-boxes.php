@@ -54,7 +54,7 @@ function igv_cmb_metaboxes() {
 
   $post_meta->add_field( array(
     'name' => __( 'Fecha', 'cmb2' ),
-    'desc' => __( 'de publicación', 'cmb2' ),
+    'desc' => __( 'de publicación. Requerido', 'cmb2' ),
     'id'   => $prefix . 'post_date',
     'type' => 'text_date_timestamp',
   ) );
