@@ -137,7 +137,10 @@ body
 
 h1, h2, h3, h4
   line-height: $font-leading-tighter
-
+  
+.font-size-basic
+  font-size: $font-size-basic
+  
 h1, .font-size-h1 
   font-family: $font-sans
   font-weight: 600
@@ -155,6 +158,7 @@ h4, .font-size-h4
 
 p
   margin-bottom: 1rem
+  line-height: $font-leading-basic
 
   // FONT RULES
 
@@ -350,11 +354,12 @@ body.single-programacion
   
 .full-slide.container
   background-size: 0
+  
+.swiper-wrapper
+  align-items: center
 
 .swiper-slide
   cursor: pointer
-  
-.slide-image-holder
   img 
     max-height: 100%
     width: auto
