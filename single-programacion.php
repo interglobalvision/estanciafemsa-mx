@@ -37,9 +37,7 @@ if( have_posts() ) {
 ?>
               <div class="container">
 <?php } ?>
-                <div class="slide-image-holder">
                   <?php echo wp_get_attachment_image($image_id, 'full'); ?>
-                </div>
               </div>
             </div>
 <?php

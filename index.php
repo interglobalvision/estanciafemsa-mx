@@ -23,7 +23,7 @@ if( have_posts() ) {
     $color = !empty($event) ? get_post_meta($event, '_igv_color', true) : false;
 ?>
 
-    <article <?php post_class('row margin-bottom-small'); ?> id="post-<?php the_ID(); ?>">
+    <article <?php post_class('row margin-bottom-small margin-top-tiny'); ?> id="post-<?php the_ID(); ?>">
 
       <!-- Desktop Article Meta -->
       <div class="article-meta col col-s-12 col-m-3 col-xl-2 only-desktop">
@@ -79,19 +79,17 @@ if( have_posts() ) {
             }
           ?>
         </header>
+        <div class="font-serif font-size-h4">
         <?php
         if( is_single() ) {
           the_content(); 
         } else {
-          //the_excerpt(); 
+          $content = !empty($post->post_excerpt) ? $post->post_excerpt . ' <a class="more-link font-bold font-sans font-size-basic" href="'. get_permalink($post->ID) .'">' . __('[:es]LEER MÁS[:en]READ MORE') . '</a>' : get_the_content();
 
-          if (!empty($post->post_excerpt)) {
-            echo '<p>' . $post->post_excerpt . ' <a class="more-link" href="'. get_permalink($post->ID) .'">' . __('[:es]LEER MÁS[:en]READ MORE') . '</a></p>';
-          } else {
-            the_excerpt(); 
-          }
+          echo apply_filters('the_content', $content); 
         }
         ?>		
+        </div>
       </div>
 
     </article>
