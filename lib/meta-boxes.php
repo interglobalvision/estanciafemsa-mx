@@ -219,8 +219,8 @@ function igv_cmb_metaboxes() {
   ) );
 
   $home_meta->add_group_field( $home_content, array(
-    'name' => 'Sub-tíitulo',
-    'desc' => __( 'Aparece despues del imagen en hover', 'cmb2' ),
+    'name' => 'Texto',
+    'desc' => __( '', 'cmb2' ),
     'id'   => 'caption',
     'type'    => 'wysiwyg',
     'options' => array( 
