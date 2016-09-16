@@ -270,6 +270,27 @@ function igv_cmb_metaboxes() {
   ) );
 
   $citas_meta->add_field( array(
+    'name' => 'Texto para URL externo para citas',
+    'desc' => __( '', 'cmb2' ),
+    'id'   => $prefix . 'visits_url_text',
+    'type' => 'text',
+    'attributes' => array(
+      'class' => 'cmb2-qtranslate'
+    ),
+  ) );
+
+  $citas_meta->add_field( array(
+    'name' => __( 'Previa Cita (2a Parte)', 'IGV' ),
+    'desc' => __( '', 'IGV' ),
+    'id'   => $prefix . 'visits_text_two',
+    'type' => 'textarea_small',
+    'default' => '',
+    'attributes' => array(
+      'class' => 'cmb2-qtranslate'
+    ),
+  ) );
+
+  $citas_meta->add_field( array(
     'name' => __( 'Instrucciones', 'IGV' ),
     'desc' => __( '', 'IGV' ),
     'id'   => $prefix . 'visits_guide',
