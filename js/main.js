@@ -166,6 +166,7 @@ Site.Programacion = {
         prevButton: '.swiper-prev',
         pagination: '#single-programacion-gallery-pagination',
         paginationType: 'custom',
+        setWrapperSize: true,
         paginationCustomRender: function (swiper, current, total) {
           return '<span id="gallery-index-active">' + current + '</span> / <span id="gallery-index-length">' + total + '</span>';
         },
