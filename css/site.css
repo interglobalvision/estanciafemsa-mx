@@ -1247,6 +1247,9 @@ p a:active,
 p a:visited {
   text-decoration: underline;
 }
+p a:hover {
+  font-style: italic;
+}
 html {
   background-color: #fff;
   color: #000;
