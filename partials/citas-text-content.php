@@ -1,6 +1,6 @@
 <div class="margin-bottom-small font-sans">
   <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Previa Cita[:en]Appointments'); ?></h3>
-  <div class="font-bold font-size-h4">
+  <div class="font-bold font-size-h4 line-tighter">
     <?php
       $cita_text = get_post_meta( get_the_ID(),'_igv_visits_text', true);
       $cita_url = get_post_meta( get_the_ID(),'_igv_visits_url', true);
@@ -22,7 +22,7 @@
 
 <div class="margin-bottom-small font-sans">
   <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Agendar cita[:en]Schedule appointment'); ?></h3>
-  <div class="font-bold font-size-h4">
+  <div class="font-bold font-size-h4 line-tighter">
     <?php
       $cita_text_2 = get_post_meta( get_the_ID(),'_igv_visits_guide', true);
       $cost = get_post_meta( get_the_ID(),'_igv_visits_cost', true);
