@@ -83,10 +83,10 @@
         <div class="col col-s-12 col-l-5 col-xl-6">
           <ul id="header-menu" class="font-sans font-bold font-size-h2">
             <!-- don't "fix" the <li>s. this is a whitespace hack -->
-            <li><a href="<?php echo site_url('/nosotros'); ?>"><?php _e('[:es]Nosotros[:en]About'); ?></a></li
-            ><li><a href="<?php echo site_url('/programacion'); ?>"><?php _e('[:es]Programación[:en]Program'); ?></a></li
-            ><li><a href="<?php echo site_url('/noticias'); ?>"><?php _e('[:es]Noticias[:en]News'); ?></a></li
-            ><li><a href="<?php echo site_url('/citas'); ?>"><?php _e('[:es]Citas[:en]Visit'); ?></a></li
+            <li><a href="<?php echo site_url('/nosotros'); ?>" class="<?php echo is_page('nosotros') ? 'font-italic' : ''; ?>"><?php _e('[:es]Nosotros[:en]About'); ?></a></li
+            ><li><a href="<?php echo site_url('/programacion'); ?>" class="<?php echo is_post_type_archive('programacion') || is_singular('programacion') ? 'font-italic' : ''; ?>"><?php _e('[:es]Programación[:en]Program'); ?></a></li
+            ><li><a href="<?php echo site_url('/noticias'); ?>" class="<?php echo is_home() || is_singular('post') ? 'font-italic' : ''; ?>"><?php _e('[:es]Noticias[:en]News'); ?></a></li
+            ><li><a href="<?php echo site_url('/citas'); ?>" class="<?php echo is_page('citas') ? 'font-italic' : ''; ?>"><?php _e('[:es]Citas[:en]Visit'); ?></a></li
             ><li class="only-mobile"><?php get_template_part('partials/language-switch'); ?></li>
           </ul>
         </div>
