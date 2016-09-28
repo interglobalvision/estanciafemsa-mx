@@ -1289,6 +1289,9 @@ body.menu-active .menu-close {
 body.menu-active .menu-open {
   display: none;
 }
+#search-form {
+  display: none;
+}
 #footer {
   position: fixed;
   bottom: 0;

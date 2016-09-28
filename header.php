@@ -74,10 +74,10 @@
           <h1 class="site-title font-uppercase u-inline-block"><a href="<?php echo site_url('/home'); ?>"><?php bloginfo('name'); ?></a></h1>
         </div>
         <div class="col col-s-3 only-mobile text-align-right">
-          <div class="menu-toggle u-pointer u-inline-block"><span class="menu-open"><?php 
-            echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-menu.svg'); 
-          ?></span><span class="menu-close"><?php 
-            echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-close.svg'); 
+          <div class="menu-toggle u-pointer u-inline-block"><span class="menu-open"><?php
+            echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-menu.svg');
+          ?></span><span class="menu-close"><?php
+            echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-close.svg');
           ?></span></div>
         </div>
         <div class="col col-s-12 col-l-5 col-xl-6">
@@ -87,10 +87,12 @@
             ><li><a href="<?php echo site_url('/programacion'); ?>" class="<?php echo is_post_type_archive('programacion') || is_singular('programacion') ? 'font-italic' : ''; ?>"><?php _e('[:es]Programación[:en]Program'); ?></a></li
             ><li><a href="<?php echo site_url('/noticias'); ?>" class="<?php echo is_home() || is_singular('post') ? 'font-italic' : ''; ?>"><?php _e('[:es]Noticias[:en]News'); ?></a></li
             ><li><a href="<?php echo site_url('/citas'); ?>" class="<?php echo is_page('citas') ? 'font-italic' : ''; ?>"><?php _e('[:es]Citas[:en]Visit'); ?></a></li
+            ><li><?php get_search_form(); ?></li
             ><li class="only-mobile"><?php get_template_part('partials/language-switch'); ?></li>
+
           </ul>
         </div>
-        <?php 
+        <?php
           $host = IGV_get_option('_igv_host_location');
 
           if ($host) {
