@@ -1271,6 +1271,9 @@ img {
 #header-menu li:last-of-type:after {
   content: '';
 }
+#header-menu li a:hover {
+  font-style: italic;
+}
 .menu-toggle svg {
   height: 20px;
 }
