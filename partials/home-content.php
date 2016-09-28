@@ -4,7 +4,7 @@ $home_content = get_post_meta( get_the_ID(), '_igv_home_content', true);
 
 if ($home_content) {
   echo '<div id="home-holder">';
-  foreach ($home_content as $item) {
+  foreach (array_reverse($home_content) as $item) {
     if (!empty($item['link'])) {
       echo '<div class="home-item margin-bottom-small margin-top-';
       echo rand(0,1) == 1 ? 'basic' : 'small';
