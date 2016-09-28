@@ -433,7 +433,7 @@ for col in 1..$cols
 
   @import "responsive/tablet"
 
-@media screen and (min-width: 1024px)
+@media screen and (min-width: 1000px)
 
   .only-desktop
     display: initial !important
@@ -442,7 +442,7 @@ for col in 1..$cols
     display: none !important
 
   .container
-    width: 1024px
+    width: 980px
     
   $gutter = 32px
 
@@ -462,20 +462,20 @@ for col in 1..$cols
       
   @import "responsive/desktop"
 
-@media screen and (min-width: 1280px)
+@media screen and (min-width: 1260px)
 
   .container
-    width: 1280px
+    width: 1240px
 
-@media screen and (min-width: 1366px)
-
-  .container
-    width: 1366px
-
-@media screen and (min-width: 1680px)
+@media screen and (min-width: 1346px)
 
   .container
-    width: 1680px
+    width: 1330px
+
+@media screen and (min-width: 1660px)
+
+  .container
+    width: 1640px
     
   $gutter = 32px
 
@@ -493,10 +493,10 @@ for col in 1..$cols
       flex-basis: ( 100% / $cols ) * col
       max-width: ( 100% / $cols ) * col
 
-@media screen and (min-width: 1920px)
+@media screen and (min-width: 1900px)
 
   .container
-    width: 1920px
+    width: 1880px
 
   $gutter = 54px
 
