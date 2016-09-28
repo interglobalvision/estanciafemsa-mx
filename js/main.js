@@ -124,6 +124,7 @@ Site.Menu = {
     $('#search-toggle').on('click', function() {
       $(this).hide();
       $('#search-form').css('display', 'inline-block');
+      $('#search-input').focus();
     });
   },
 
