@@ -50,6 +50,7 @@ if( have_posts() ) {
           <div class="cursor-pagination-button swiper-prev"></div>
           <div class="cursor-pagination-button swiper-next"></div>
         </div>
+        <div class="close-drawer-overlay"></div>
       </div>
 
       <div class="programacion-drawer">
