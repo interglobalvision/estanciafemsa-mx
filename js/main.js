@@ -6,14 +6,9 @@ Site = {
   init: function() {
     var _this = this;
 
-    /*$(window).resize($.debounce(250, function(){
-      console.log('resize');
+    $(window).resize($.debounce(250, function(){
       _this.onResize();
-    }));*/
-
-    $(window).resize(function() {
-      _this.onResize(); 
-    })
+    }));
 
     $(document).ready(function () {
       _this.Layout.init();
