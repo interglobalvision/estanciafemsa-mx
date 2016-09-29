@@ -150,9 +150,9 @@ Site.Programacion = {
   },
 
   Single: {
-    $programacionDrawer: $('.programacion-drawer'),
     init: function() {
       var _this = this;
+      _this.$programacionDrawer = $('.programacion-drawer');
 
       $(document).ready(function () {
         _this.initGallery();
