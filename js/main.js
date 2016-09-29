@@ -161,6 +161,7 @@ Site.Programacion = {
       $(document).ready(function () {
         _this.initGallery();
         _this.bindToggle();
+        _this.bindScroll();
         _this.sizeSlideImageHolder();
       });
     },
@@ -205,6 +206,21 @@ Site.Programacion = {
           'padding-bottom': contentHeight, 
         });
       }
+    },
+
+    bindScroll: function() {
+      var _this = this;
+      var mouseOver= false;
+
+      $('#programacion-slider').bind('mousewheel', function(event){
+        var delta = event.originalEvent.wheelDelta;
+
+        if(delta < 0 && !$('.programacion-drawer').hasClass('drawer-open')){
+          _this.toggleContent();
+        } else if (delta > 0 && $('.programacion-drawer').hasClass('drawer-open')){
+          _this.toggleContent();
+        }
+      });
     },
 
     bindToggle: function() {
