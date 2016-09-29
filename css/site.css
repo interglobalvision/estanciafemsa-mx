@@ -1292,6 +1292,16 @@ body.menu-active .menu-open {
 #search-form {
   display: none;
 }
+#search-input,
+#search-submit {
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+#search-input:focus,
+#search-submit:focus {
+  outline: 0;
+}
 #footer {
   position: fixed;
   bottom: 0;
