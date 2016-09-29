@@ -200,6 +200,16 @@ function igv_cmb_metaboxes() {
     'show_on'       => array( 'key' => 'id', 'value' => array( get_id_by_slug('home') ) ),
   ) );
 
+  $home_meta->add_field( array(
+    'name' => 'Plus (+) link',
+    'desc' => __( '', 'cmb2' ),
+    'id'   => $prefix . 'plus_link_id',
+    'type' => 'post_search_text',
+    'post_type' => array('page', 'post', 'programacion'),
+    'select_type' => 'radio',
+    'select_behavior' => 'replace',
+  ) );
+
   $home_content = $home_meta->add_field( array(
     'id' => $prefix . 'home_content',
     'type' => 'group',
