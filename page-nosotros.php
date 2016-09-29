@@ -18,13 +18,13 @@ if( have_posts() ) {
     <article <?php post_class('row margin-bottom-small'); ?> id="page-<?php the_ID(); ?>">
 
       <div class="page-content col col-s-12 col-m-9 col-l-6">
-        <div class="margin-bottom-small font-bold font-size-h4">
+        <div class="margin-bottom-small font-bold font-size-h4 line-tighter">
           <?php the_content(); ?>
         </div>
 
         <div class="margin-bottom-small">
           <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Directorio[:en]Directory'); ?></h3>
-          <div class="font-bold font-size-h4">
+          <div class="font-bold font-size-h4 line-tighter">
             <?php
               if (qtranxf_getLanguage() === 'es') {
                 $about_directory = IGV_get_option('_igv_about_directory');
@@ -76,7 +76,7 @@ if( have_posts() ) {
       }
       wp_reset_postdata();
 ?>
-          <p class="font-bold font-size-h4">
+          <p class="font-bold font-size-h4 line-tighter">
           <?php
             $press_email = IGV_get_option('_igv_prensa_email');
             $press_telephone = IGV_get_option('_igv_prensa_telephone');
@@ -86,9 +86,9 @@ if( have_posts() ) {
           </p>
         </div>
 
-        <div class="margin-bottom-small" id="contacto">
+        <div class="margin-bottom-basic" id="contacto">
           <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Contacto[:en]Contact'); ?></h3>
-          <div class="font-bold font-size-h4">
+          <div class="font-bold font-size-h4 line-tighter">
             <?php
               $about_contact = IGV_get_option('_igv_about_contact');
               if (!empty($about_contact)) {
@@ -96,6 +96,14 @@ if( have_posts() ) {
               }
             ?>
           </div>
+        </div>
+
+        <div id="social-logo">
+          <h3 class="font-bolder u-inline-block">FB</h3>
+          <h3 class="font-bolder u-inline-block">IG</h3>
+          <div class="u-inline-block"><?php 
+            echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/femsa-logo.svg'); 
+          ?></div>
         </div>
 
       </div>
@@ -112,8 +120,6 @@ if( have_posts() ) {
 
   <!-- end posts -->
   </section>
-
-  <?php get_template_part('partials/pagination'); ?>
 
 <!-- end main-content -->
 
