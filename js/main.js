@@ -214,7 +214,9 @@ Site.Programacion = {
         mousewheel: function(event){
           var delta = event.originalEvent.wheelDelta;
 
-          if(delta < 0 && !_this.$programacionDrawer.hasClass('drawer-open')){
+          if (delta < 0 && !_this.$programacionDrawer.hasClass('drawer-open')){
+            _this.toggleContent();
+          } else if (delta > 0 && _this.$programacionDrawer.hasClass('drawer-open')){
             _this.toggleContent();
           }
         }
