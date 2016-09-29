@@ -52,7 +52,7 @@ if( have_posts() ) {
         </div>
       </div>
 
-      <div id="programacion-drawer">
+      <div class="programacion-drawer">
         <header class="programacion-header padding-top-tiny padding-bottom-micro font-bold">
           <div class="container">
             <div class="row font-size-h2">
