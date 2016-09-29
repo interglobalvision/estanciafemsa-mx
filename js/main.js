@@ -210,7 +210,7 @@ Site.Programacion = {
     bindToggle: function() {
       var _this = this;
 
-      $('.programacion-drawer-toggle').on('click', function() {
+      $('.programacion-title, .programacion-drawer-toggle').on('click', function() {
         _this.toggleContent();
       });
     },

@@ -57,7 +57,7 @@ if( have_posts() ) {
           <div class="container">
             <div class="row font-size-h2">
               <div class="col col-s-12 col-m-6 col-l-5">
-                <h2 class="u-inline-block"><?php the_title(); ?></h2> <span class="programacion-drawer-toggle"></span>
+                <h2 class="u-inline-block programacion-title u-pointer"><?php the_title(); ?></h2> <span class="programacion-drawer-toggle"></span>
               </div>
               <div class="col col-s-6 col-m-3 col-l-2 text-align-left">
                 <span class="swiper-prev u-pointer">< </span><span id="single-programacion-gallery-pagination"></span><span class="swiper-next u-pointer"> ></span>
