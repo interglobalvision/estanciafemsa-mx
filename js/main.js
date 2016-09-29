@@ -187,7 +187,7 @@ Site.Programacion = {
 
       $('.programacion-content-holder').scrollTop(0);
       $('body').removeClass('drawer-open');
-      
+
       var contentHeight = $('.programacion-header').outerHeight(true);
 
       if (windowWidth < 1024) {
@@ -198,7 +198,7 @@ Site.Programacion = {
       } else {
         $('.slide-image-holder').css({
           'padding-top': headerHeight,
-          'padding-bottom': contentHeight, 
+          'padding-bottom': contentHeight,
         });
       }
     },
@@ -220,7 +220,6 @@ Site.Programacion = {
         }
       });
 
-
     },
 
     toggleContent: function() {
@@ -240,6 +239,7 @@ Site.Programacion = {
     },
 
     setDrawerHeight: function() {
+      var _this = this;
       var windowHeightHalf = $(window).height() / 2;
       var drawerHeight = $('.programacion-header').outerHeight(true) + $('.programacion-content-holder').outerHeight(true);
 
