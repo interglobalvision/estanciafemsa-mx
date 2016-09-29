@@ -30,9 +30,9 @@ if( have_posts() ) {
           if (!empty($meta['_igv_end_time'][0])) {
             $end_date = new \Moment\Moment(date('c', $meta['_igv_end_time'][0]));
           }
-          echo $start_date ? $start_date->format('d. m. y') : '';
-          echo $start_date && $end_date ? ' &mdash; ' : '';
-          echo $end_date ? $end_date->format('d. m. y') : '';
+          echo $start_date ? $start_date->format('d. m. y') : false;
+          echo $start_date && $end_date ? ' &mdash; ' : false;
+          echo $end_date ? $end_date->format('d. m. y') : false;
         ?></div>
       </a>
     </article>
