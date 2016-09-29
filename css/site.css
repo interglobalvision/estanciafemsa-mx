@@ -1165,21 +1165,20 @@ h4 {
 }
 h1,
 .font-size-h1 {
-  font-family: 'Calibre', Helvetica, Arial, sans-serif;
-  font-weight: 600;
   letter-spacing: 1px;
 }
-h2,
-.font-size-h2 {
+h1 {
+  font-family: 'Calibre', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+h2 {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
   font-weight: 500;
 }
-h3,
-.font-size-h3 {
+h3 {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
 }
-h4,
-.font-size-h4 {
+h4 {
   line-height: 1.1;
 }
 p {
@@ -1219,8 +1218,7 @@ strong {
 .font-serif {
   font-family: 'Tiempos', Times, Baskerville, Georgia, serif;
 }
-.line-tighter,
-.line-tighter p {
+.line-tighter {
   line-height: 1.25;
 }
 .text-overflow-ellipsis {
