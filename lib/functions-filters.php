@@ -46,3 +46,12 @@ function custom_excerpt_more($more) {
   return ' <a class="more-link" href="'. get_permalink($post->ID) .'">' . __('[:es]LEER MÁS[:en]READ MORE') . '</a>';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
+
+//Remove pages from search results
+function exclude_pages_from_search($query) {
+    if ( $query->is_search ) {
+        $query->set( 'post_type', array('post', 'programacion') );
+    }
+    return $query;
+}
+add_filter( 'pre_get_posts','exclude_pages_from_search' );
