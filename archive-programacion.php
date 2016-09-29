@@ -21,6 +21,19 @@ if( have_posts() ) {
         <div class="margin-bottom-tiny"><?php if (!empty($meta['_igv_number'][0])) {echo 'No. ' . add_leading_zero( $meta['_igv_number'][0] );} ?></div>
         <h2 class="archive-programacion-post-title"><?php the_title(); ?></h2>
         <h5 class="font-size-h4 margin-top-micro"><?php if (!empty($meta['_igv_subtitle'][0])) {echo $meta['_igv_subtitle'][0];} ?></h5>
+        <div class="margin-top-micro"><?php 
+          $start_date = false;
+          $end_date = false;
+          if (!empty($meta['_igv_start_time'][0])) {
+            $start_date = new \Moment\Moment(date('c', $meta['_igv_start_time'][0]));
+          }
+          if (!empty($meta['_igv_end_time'][0])) {
+            $end_date = new \Moment\Moment(date('c', $meta['_igv_end_time'][0]));
+          }
+          echo $start_date ? $start_date->format('d. m. y') : false;
+          echo $start_date && $end_date ? ' &mdash; ' : false;
+          echo $end_date ? $end_date->format('d. m. y') : false;
+        ?></div>
       </a>
     </article>
 
