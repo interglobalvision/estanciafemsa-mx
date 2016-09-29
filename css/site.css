@@ -1165,26 +1165,24 @@ h4 {
 }
 h1,
 .font-size-h1 {
-  font-family: 'Calibre', Helvetica, Arial, sans-serif;
-  font-weight: 600;
   letter-spacing: 1px;
 }
-h2,
-.font-size-h2 {
+h1 {
+  font-family: 'Calibre', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+h2 {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
   font-weight: 500;
 }
-h3,
-.font-size-h3 {
+h3 {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
 }
-h4,
-.font-size-h4 {
+h4 {
   line-height: 1.1;
 }
 p {
   margin-bottom: 1rem;
-  line-height: 1.45;
 }
 em,
 .font-italic {
@@ -1246,6 +1244,9 @@ p a,
 p a:active,
 p a:visited {
   text-decoration: underline;
+}
+p a:hover {
+  font-style: italic;
 }
 html {
   background-color: #fff;
@@ -1408,6 +1409,7 @@ body.single-programacion .footer-lang-switch {
 }
 .archive-programacion-post-title {
   font-weight: normal;
+  line-height: 1;
 }
 .close-drawer-overlay {
   position: fixed;
@@ -1564,6 +1566,9 @@ h3,
 h4,
 .font-size-h4 {
   font-size: 1.272006289292628rem;
+}
+.article-content p {
+  font-size: 1.229874402046993rem;
 }
 .margin-top-micro {
   margin-top: 7.416407864998257px;
@@ -1944,7 +1949,7 @@ body.drawer-open .programacion-drawer-toggle {
     margin-right: 28px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1020px) {
   .only-desktop {
     display: initial !important;
   }
@@ -1952,7 +1957,7 @@ body.drawer-open .programacion-drawer-toggle {
     display: none !important;
   }
   .container {
-    width: 980px;
+    width: 1000px;
   }
   .col {
     padding: 0 16px;

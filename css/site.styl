@@ -137,40 +137,41 @@ body
 
 h1, h2, h3, h4
   line-height: $font-leading-tighter
-  
+
 .font-size-basic
   font-size: $font-size-basic
-  
-h1, .font-size-h1 
-  font-family: $font-sans
-  font-weight: 600
+
+h1, .font-size-h1
   letter-spacing: 1px
 
-h2, .font-size-h2
+h1
+  font-family: $font-sans
+  font-weight: 600
+
+h2
   font-family: $font-sans
   font-weight: 500
 
-h3, .font-size-h3
+h3
   font-family: $font-sans
 
-h4, .font-size-h4
+h4
   line-height: 1.1
 
 p
   margin-bottom: 1rem
-  line-height: $font-leading-basic
 
   // FONT RULES
 
 em, .font-italic
   font-style: italic
-  
+
 strong
   font-style: bold
 
 .font-bold
   font-weight: 500
-  
+
 .font-bolder
   font-weight: 600
   letter-spacing: 1px
@@ -195,7 +196,7 @@ strong
   font-family: $font-serif
 
   // TEXT RULES
-    
+
 .line-tighter
   line-height: $font-leading-tighter
 
@@ -219,11 +220,13 @@ a:visited
   color: inherit
   text-decoration: none
 
-p  
+p
   a,
   a:active,
   a:visited
     text-decoration: underline
+  a:hover
+    font-style: italic
 
 // ******************************************************
 
@@ -256,18 +259,18 @@ img
       content: ', '
     &:last-of-type:after
       content: ''
-    a:hover 
+    a:hover
       font-style: italic
-      
+
 .menu-toggle
   svg
     height: 20px
-    
+
 .menu-close
   display: none
 .menu-open
   display: initial
-    
+
 body.menu-active
   .menu-close
     display: initial
@@ -286,8 +289,8 @@ body.menu-active
   line-height: 1
   h1
     margin: 0
-    
-body.single-programacion 
+
+body.single-programacion
   .footer-lang-switch
     display: none !important
 
@@ -319,17 +322,17 @@ body.single-programacion
   border: 3px solid transparent
   display: inline-block
   vertical-align: bottom
-  img 
+  img
     max-height: 400px
     width: auto
 
 .home-item-image-caption
   opacity: 0
   transition: opacity $fast-animation-speed
-  
+
 .home-plus
   pointer-events: none
-  a 
+  a
     pointer-events: auto
     svg
       height: 50px
@@ -346,37 +349,38 @@ body.single-programacion
 
 .more-link
   font-family: $font-sans
-  
+
 // ******************************************************
 
 // PROGRAMACION
 
 #programacion-slider
   position: relative
-  
+
 .full-slide.container
   background-size: 0
-  
+
 .swiper-wrapper
   align-items: center
 
 .swiper-slide
   cursor: pointer
-  img 
+  img
     max-height: 100%
     width: auto
     display: block
     margin: 0 auto
-    
+
 .programacion-item
   height: 100%
   display: flex
-  flex-direction: column 
+  flex-direction: column
   justify-content: center
-  
+
 .archive-programacion-post-title
   font-weight: normal
-  
+  line-height: 1
+
 .close-drawer-overlay
   position: fixed
   height: 100%
@@ -386,7 +390,7 @@ body.single-programacion
   cursor: pointer
   z-index: 200
   display: none
-  
+
 // ******************************************************
 
 // NOSOTROS
@@ -398,13 +402,14 @@ body.single-programacion
   height: 120px
   text-align: center
   line-height: 135px
-  
+
 .femsa-logo svg
   height: 45px
   margin-top: -2px
   margin-left: -18px
   g
     fill: $color-black
+
 // ******************************************************
 
 // CITAS
@@ -412,11 +417,11 @@ body.single-programacion
 .citas-arrow
   position: absolute
   height: 20px
-  margin-top: -2px 
+  margin-top: -2px
   margin-left: 5px
 
 // ******************************************************
-  
+
 for offset in 0..($cols - 1)
   .offset-s-{offset}
     margin-left: ( 100% / $cols ) * offset
@@ -451,7 +456,7 @@ for col in 1..$cols
 
   @import "responsive/tablet"
 
-@media screen and (min-width: 1000px)
+@media screen and (min-width: 1020px)
 
   .only-desktop
     display: initial !important
@@ -460,8 +465,8 @@ for col in 1..$cols
     display: none !important
 
   .container
-    width: 980px
-    
+    width: 1000px
+
   $gutter = 32px
 
   // COLUMN SIZES & OFFSETS
@@ -477,7 +482,7 @@ for col in 1..$cols
     .col-l-{col}
       flex-basis: ( 100% / $cols ) * col
       max-width: ( 100% / $cols ) * col
-      
+
   @import "responsive/desktop"
 
 @media screen and (min-width: 1260px)
@@ -494,7 +499,7 @@ for col in 1..$cols
 
   .container
     width: 1640px
-    
+
   $gutter = 32px
 
   // COLUMN SIZES & OFFSETS

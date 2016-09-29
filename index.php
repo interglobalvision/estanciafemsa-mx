@@ -79,7 +79,7 @@ if( have_posts() ) {
             }
           ?>
         </header>
-        <div class="font-serif font-size-h4">
+        <div class="font-serif">
         <?php
         if( is_single() ) {
           the_content(); 
