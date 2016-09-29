@@ -1409,6 +1409,16 @@ body.single-programacion .footer-lang-switch {
 .archive-programacion-post-title {
   font-weight: normal;
 }
+.close-drawer-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 200;
+  display: none;
+}
 .file-icon {
   font-size: 1.3rem;
   background: url("../img/dist/file-icon.svg") center no-repeat;
@@ -2230,7 +2240,7 @@ body.drawer-open .programacion-drawer-toggle {
     right: 0;
     cursor: url("../img/dist/ui-cursor-right.png"), e-resize;
   }
-  #programacion-drawer {
+  .programacion-drawer {
     background-color: transparent;
     position: fixed;
     bottom: 0;
@@ -2258,21 +2268,20 @@ body.drawer-open .programacion-drawer-toggle {
   .programacion-drawer-toggle:after {
     content: '+';
   }
-  body.drawer-open #programacion-drawer {
+  .drawer-open {
     background-color: #fff;
-    height: 550px;
   }
-  body.drawer-open .programacion-drawer-toggle {
+  .drawer-open .programacion-drawer-toggle {
     display: inline-block;
   }
-  body.drawer-open .programacion-drawer-toggle:after {
+  .drawer-open .programacion-drawer-toggle:after {
     content: '\2013';
   }
   .programacion-content-holder {
     position: absolute;
-    height: 474px;
+    height: auto;
     width: 100%;
-    top: 76px;
+    top: 61px;
     overflow-y: scroll;
     z-index: 300;
   }
@@ -2530,7 +2539,10 @@ body.drawer-open .programacion-drawer-toggle {
   .swiper-slide img {
     max-height: calc(100vh - 168px);
   }
-  #programacion-drawer {
-    height: 81px;
+  .programacion-drawer {
+    height: 83px;
+  }
+  .programacion-content-holder {
+    top: 83px;
   }
 }
