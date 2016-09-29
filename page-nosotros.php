@@ -99,29 +99,29 @@ if( have_posts() ) {
         </div>
 
         <div id="social-logo" class="row align-center">
-          <?php 
+          <?php
             $facebook = IGV_get_option('_igv_social_facebook');
             $instagram = IGV_get_option('_igv_social_instagram');
             $twitter = IGV_get_option('_igv_social_twitter');
 
             if (!empty($facebook)) {
           ?>
-          <a class="social-link font-bolder u-inline-block font-size-h3" href="<?php echo esc_url($facebook); ?>">FB</a>
-          <?php 
+          <a class="social-link font-bolder u-inline-block font-size-h3" href="<?php echo esc_url($facebook); ?>" target="_blank" rel="noopener noreferrer">FB</a>
+          <?php
             }
             if (!empty($instagram)) {
           ?>
-          <a class="social-link font-bolder u-inline-block font-size-h3" href="<?php echo esc_url($instagram); ?>">IG</a>
-          <?php 
+          <a class="social-link font-bolder u-inline-block font-size-h3" href="<?php echo esc_url($instagram); ?>" target="_blank" rel="noopener noreferrer">IG</a>
+          <?php
             }
             if (!empty($twitter)) {
           ?>
-          <a class="social-link font-bolder u-inline-block font-size-h3" href="<?php echo esc_url($twitter); ?>">TW</a>
-          <?php 
+          <a class="social-link font-bolder u-inline-block font-size-h3" href="<?php echo esc_url($twitter); ?>" target="_blank" rel="noopener noreferrer">TW</a>
+          <?php
             }
           ?>
-          <a class="femsa-logo u-inline-block" href="http://www.coleccionfemsa.com"><?php 
-            echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/femsa-logo.svg'); 
+          <a class="femsa-logo u-inline-block" href="http://www.coleccionfemsa.com" target="_blank" rel="noopener noreferrer"><?php
+            echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/femsa-logo.svg');
           ?></a>
         </div>
 
