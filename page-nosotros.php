@@ -18,13 +18,13 @@ if( have_posts() ) {
     <article <?php post_class('row margin-bottom-small'); ?> id="page-<?php the_ID(); ?>">
 
       <div class="page-content col col-s-12 col-m-9 col-l-6">
-        <div class="margin-bottom-small font-bold font-size-h4">
+        <div class="margin-bottom-small font-bold font-size-h4 line-tighter">
           <?php the_content(); ?>
         </div>
 
         <div class="margin-bottom-small">
           <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Directorio[:en]Directory'); ?></h3>
-          <div class="font-bold font-size-h4">
+          <div class="font-bold font-size-h4 line-tighter">
             <?php
               if (qtranxf_getLanguage() === 'es') {
                 $about_directory = IGV_get_option('_igv_about_directory');
@@ -76,19 +76,19 @@ if( have_posts() ) {
       }
       wp_reset_postdata();
 ?>
-          <p class="font-bold font-size-h4">
+          <p class="font-bold font-size-h4 line-tighter">
           <?php
             $press_email = IGV_get_option('_igv_prensa_email');
             $press_telephone = IGV_get_option('_igv_prensa_telephone');
-            if (!empty($press_email)) {echo '<a href="mailto:' . $press_email . '">' . $press_email . '<a/><br/>';}
-            if (!empty($press_telephone)) {echo '<a href="tel:' . $press_telephone . '">' . $press_telephone . '<a/>';}
+            if (!empty($press_email)) {echo '<a href="mailto:' . $press_email . '">' . $press_email . '</a><br/>';}
+            if (!empty($press_telephone)) {echo '<a href="tel:' . $press_telephone . '">' . $press_telephone . '</a>';}
           ?>
           </p>
         </div>
 
-        <div class="margin-bottom-small" id="contacto">
+        <div class="margin-bottom-basic" id="contacto">
           <h3 class="font-bolder font-uppercase"><?php echo __('[:es]Contacto[:en]Contact'); ?></h3>
-          <div class="font-bold font-size-h4">
+          <div class="font-bold font-size-h4 line-tighter">
             <?php
               $about_contact = IGV_get_option('_igv_about_contact');
               if (!empty($about_contact)) {
@@ -96,6 +96,33 @@ if( have_posts() ) {
               }
             ?>
           </div>
+        </div>
+
+        <div id="social-logo" class="row align-center">
+          <?php
+            $facebook = IGV_get_option('_igv_social_facebook');
+            $instagram = IGV_get_option('_igv_social_instagram');
+            $twitter = IGV_get_option('_igv_social_twitter');
+
+            if (!empty($facebook)) {
+          ?>
+          <a class="social-link font-bolder u-inline-block font-size-h3" href="<?php echo esc_url($facebook); ?>" target="_blank" rel="noopener noreferrer">FB</a>
+          <?php
+            }
+            if (!empty($instagram)) {
+          ?>
+          <a class="social-link font-bolder u-inline-block font-size-h3" href="<?php echo esc_url($instagram); ?>" target="_blank" rel="noopener noreferrer">IG</a>
+          <?php
+            }
+            if (!empty($twitter)) {
+          ?>
+          <a class="social-link font-bolder u-inline-block font-size-h3" href="<?php echo esc_url($twitter); ?>" target="_blank" rel="noopener noreferrer">TW</a>
+          <?php
+            }
+          ?>
+          <a class="femsa-logo u-inline-block" href="http://www.coleccionfemsa.com" target="_blank" rel="noopener noreferrer"><?php
+            echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/femsa-logo.svg');
+          ?></a>
         </div>
 
       </div>
@@ -112,8 +139,6 @@ if( have_posts() ) {
 
   <!-- end posts -->
   </section>
-
-  <?php get_template_part('partials/pagination'); ?>
 
 <!-- end main-content -->
 
