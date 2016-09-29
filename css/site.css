@@ -1417,6 +1417,14 @@ body.single-programacion .footer-lang-switch {
   text-align: center;
   line-height: 135px;
 }
+.femsa-logo svg {
+  height: 45px;
+  margin-top: -2px;
+  margin-left: -18px;
+}
+.femsa-logo svg g {
+  fill: #000;
+}
 .citas-arrow {
   position: absolute;
   height: 20px;
@@ -1672,6 +1680,9 @@ body.drawer-open .programacion-drawer-toggle {
 .citas-text-content {
   display: none;
 }
+.social-link {
+  margin-right: 48px;
+}
 @media screen and (min-width: 760px) {
   .container {
     width: 760px;
@@ -1918,6 +1929,9 @@ body.drawer-open .programacion-drawer-toggle {
   }
   .citas-item {
     padding-right: 28px;
+  }
+  .social-link {
+    margin-right: 28px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -2290,6 +2304,9 @@ body.drawer-open .programacion-drawer-toggle {
   .citas-item {
     padding-right: 64px;
   }
+  .social-link {
+    margin-right: 64px;
+  }
 }
 @media screen and (min-width: 1260px) {
   .container {
@@ -2532,5 +2549,8 @@ body.drawer-open .programacion-drawer-toggle {
   }
   #programacion-drawer {
     height: 81px;
+  }
+  .social-link {
+    margin-right: 108px;
   }
 }

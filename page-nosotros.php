@@ -80,8 +80,8 @@ if( have_posts() ) {
           <?php
             $press_email = IGV_get_option('_igv_prensa_email');
             $press_telephone = IGV_get_option('_igv_prensa_telephone');
-            if (!empty($press_email)) {echo '<a href="mailto:' . $press_email . '">' . $press_email . '<a/><br/>';}
-            if (!empty($press_telephone)) {echo '<a href="tel:' . $press_telephone . '">' . $press_telephone . '<a/>';}
+            if (!empty($press_email)) {echo '<a href="mailto:' . $press_email . '">' . $press_email . '</a><br/>';}
+            if (!empty($press_telephone)) {echo '<a href="tel:' . $press_telephone . '">' . $press_telephone . '</a>';}
           ?>
           </p>
         </div>
@@ -98,12 +98,31 @@ if( have_posts() ) {
           </div>
         </div>
 
-        <div id="social-logo">
-          <h3 class="font-bolder u-inline-block">FB</h3>
-          <h3 class="font-bolder u-inline-block">IG</h3>
-          <div class="u-inline-block"><?php 
+        <div id="social-logo" class="row align-center">
+          <?php 
+            $facebook = IGV_get_option('_igv_social_facebook');
+            $instagram = IGV_get_option('_igv_social_instagram');
+            $twitter = IGV_get_option('_igv_social_twitter');
+
+            if (!empty($facebook)) {
+          ?>
+          <a class="social-link font-bolder u-inline-block font-size-h3" href="<?php echo esc_url($facebook); ?>">FB</a>
+          <?php 
+            }
+            if (!empty($instagram)) {
+          ?>
+          <a class="social-link font-bolder u-inline-block font-size-h3" href="<?php echo esc_url($instagram); ?>">IG</a>
+          <?php 
+            }
+            if (!empty($twitter)) {
+          ?>
+          <a class="social-link font-bolder u-inline-block font-size-h3" href="<?php echo esc_url($twitter); ?>">TW</a>
+          <?php 
+            }
+          ?>
+          <a class="femsa-logo u-inline-block"><?php 
             echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/femsa-logo.svg'); 
-          ?></div>
+          ?></a>
         </div>
 
       </div>
