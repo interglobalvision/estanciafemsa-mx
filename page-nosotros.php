@@ -120,7 +120,7 @@ if( have_posts() ) {
           <?php 
             }
           ?>
-          <a class="femsa-logo u-inline-block"><?php 
+          <a class="femsa-logo u-inline-block" href="http://www.coleccionfemsa.com"><?php 
             echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/femsa-logo.svg'); 
           ?></a>
         </div>
