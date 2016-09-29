@@ -1409,6 +1409,7 @@ body.single-programacion .footer-lang-switch {
 }
 .archive-programacion-post-title {
   font-weight: normal;
+  line-height: 1;
 }
 .close-drawer-overlay {
   position: fixed;
