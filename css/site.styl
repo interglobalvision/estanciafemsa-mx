@@ -259,6 +259,8 @@ img
       content: ', '
     &:last-of-type:after
       content: ''
+    a:hover
+      font-style: italic
 
 .menu-toggle
   svg
@@ -378,6 +380,16 @@ body.single-programacion
 .archive-programacion-post-title
   font-weight: normal
 
+.close-drawer-overlay
+  position: fixed
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0
+  cursor: pointer
+  z-index: 200
+  display: none
+
 // ******************************************************
 
 // NOSOTROS
@@ -389,6 +401,13 @@ body.single-programacion
   height: 120px
   text-align: center
   line-height: 135px
+
+.femsa-logo svg
+  height: 45px
+  margin-top: -2px
+  margin-left: -18px
+  g
+    fill: $color-black
 
 // ******************************************************
 
@@ -436,7 +455,7 @@ for col in 1..$cols
 
   @import "responsive/tablet"
 
-@media screen and (min-width: 1024px)
+@media screen and (min-width: 1020px)
 
   .only-desktop
     display: initial !important
@@ -445,7 +464,7 @@ for col in 1..$cols
     display: none !important
 
   .container
-    width: 1024px
+    width: 1000px
 
   $gutter = 32px
 
@@ -465,20 +484,20 @@ for col in 1..$cols
 
   @import "responsive/desktop"
 
-@media screen and (min-width: 1280px)
+@media screen and (min-width: 1260px)
 
   .container
-    width: 1280px
+    width: 1240px
 
-@media screen and (min-width: 1366px)
-
-  .container
-    width: 1366px
-
-@media screen and (min-width: 1680px)
+@media screen and (min-width: 1346px)
 
   .container
-    width: 1680px
+    width: 1330px
+
+@media screen and (min-width: 1660px)
+
+  .container
+    width: 1640px
 
   $gutter = 32px
 
@@ -496,10 +515,10 @@ for col in 1..$cols
       flex-basis: ( 100% / $cols ) * col
       max-width: ( 100% / $cols ) * col
 
-@media screen and (min-width: 1920px)
+@media screen and (min-width: 1900px)
 
   .container
-    width: 1920px
+    width: 1880px
 
   $gutter = 54px
 

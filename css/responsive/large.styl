@@ -8,9 +8,9 @@ $margin-large = ($gutter * 5)
 $font-size-h4 = golden-ratio(1rem , .6)
 $font-size-h3 = golden-ratio(1rem , .9)
 $font-size-h2 = golden-ratio(1rem , 1.1)
-$font-size-h1 = golden-ratio(1rem , 1.5)
+$font-size-h1 = golden-ratio(1rem , 1.4)
 
-h1, .font-size-h1 
+h1, .font-size-h1
   font-size: $font-size-h1
 
 h2, .font-size-h2
@@ -112,8 +112,8 @@ h4, .font-size-h4
 
 #footer
   padding: $margin-micro 0
-    
-body.single-programacion 
+
+body.single-programacion
   #footer
     padding: 0
 
@@ -137,15 +137,30 @@ body.single-programacion
 
 .citas-item
   padding-right: $margin-mid
-  
+
 // ******************************************************
 
 // PROGRAMACION
-  
+
   // SLIDER
 .swiper-slide
-  img 
+  img
     max-height: calc("100vh -" 168px)
-  
+
+$drawerHeaderHeight = 83px;
+
+.programacion-drawer
+  height: $drawerHeaderHeight
+
 #programacion-drawer
   height: 81px
+
+.programacion-content-holder
+  top: $drawerHeaderHeight
+
+// ******************************************************
+
+// NOSOTROS
+
+.social-link
+  margin-right: $margin-basic
