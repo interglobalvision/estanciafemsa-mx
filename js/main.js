@@ -150,6 +150,7 @@ Site.Programacion = {
   },
 
   Single: {
+    $programacionDrawer: $('.programacion-drawer'),
     init: function() {
       var _this = this;
 
@@ -213,7 +214,7 @@ Site.Programacion = {
         mousewheel: function(event){
           var delta = event.originalEvent.wheelDelta;
 
-          if(delta < 0 && !$('.programacion-drawer').hasClass('drawer-open')){
+          if(delta < 0 && !_this.$programacionDrawer.hasClass('drawer-open')){
             _this.toggleContent();
           }
         }
@@ -225,13 +226,13 @@ Site.Programacion = {
     toggleContent: function() {
       var _this = this;
 
-      if ($('.programacion-drawer').hasClass('drawer-open')) {
-        $('.programacion-drawer').removeClass('drawer-open').css('height', '');
+      if (_this.$programacionDrawer.hasClass('drawer-open')) {
+        _this.$programacionDrawer.removeClass('drawer-open').css('height', '');
         $('.programacion-content-holder').css('height', 'auto');
         $('.close-drawer-overlay').hide();
       } else {
         _this.setDrawerHeight();
-        $('.programacion-drawer').addClass('drawer-open');
+        _this.$programacionDrawer.addClass('drawer-open');
         $('.close-drawer-overlay').show();
       }
 
@@ -243,10 +244,10 @@ Site.Programacion = {
       var drawerHeight = $('.programacion-header').outerHeight(true) + $('.programacion-content-holder').outerHeight(true);
 
       if (drawerHeight > windowHeightHalf) {
-        $('.programacion-drawer').css('height', windowHeightHalf);
+        _this.$programacionDrawer.css('height', windowHeightHalf);
         $('.programacion-content-holder').css('height', (windowHeightHalf - $('.programacion-header').outerHeight(true)));
       } else {
-        $('.programacion-drawer').css('height', drawerHeight);
+        _this.$programacionDrawer.css('height', drawerHeight);
         $('.programacion-content-holder').css('height', (drawerHeight - $('.programacion-header').outerHeight(true)));
       }
     }
