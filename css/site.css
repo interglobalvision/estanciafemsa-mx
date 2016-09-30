@@ -1411,6 +1411,9 @@ body.single-programacion .footer-lang-switch {
   font-weight: normal;
   line-height: 1;
 }
+.archive-programacion-post-title p {
+  margin-bottom: 0;
+}
 .close-drawer-overlay {
   position: fixed;
   height: 100%;
