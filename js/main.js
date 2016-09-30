@@ -126,6 +126,16 @@ Site.Menu = {
       $('#search-form').css('display', 'inline-block');
       $('#search-input').focus();
     });
+
+    $(document).click(function(event) {
+      if(!$(event.target).closest('#search-bar').length) {
+        if($('#search-form').is(":visible")) {
+          $('#search-toggle').show();
+          $('#search-form').css('display', 'none');
+          $('#search-input').unfocus();
+        }
+      }        
+    });
   },
 
   closeMenu: function() {
