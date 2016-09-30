@@ -135,9 +135,9 @@ Site.Menu = {
         if($('#search-form').is(":visible")) {
           $('#search-toggle').show();
           $('#search-form').css('display', 'none');
-          $('#search-input').unfocus();
+          $('#search-input').blur();
         }
-      }        
+      }
     });
   },
 
