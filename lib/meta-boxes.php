@@ -102,6 +102,15 @@ function igv_cmb_metaboxes() {
 	) );
 
   $program_meta->add_field( array(
+    'name' => __( 'Archive Title', 'cmb2' ),
+    'id'   => $prefix . 'archive_title',
+    'type' => 'textarea_small',
+    'attributes' => array(
+      'class' => 'cmb2-qtranslate'
+    )
+  ) );
+
+  $program_meta->add_field( array(
 		'name'    => __( 'Galería', 'cmb2' ),
     'button' => 'Modificar galería', // Optionally set button label
     'clear-button' => 'Eliminar galería', // Optionally set clear button label

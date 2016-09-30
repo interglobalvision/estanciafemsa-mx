@@ -19,7 +19,13 @@ if( have_posts() ) {
     <article <?php post_class('col col-s-6 col-m-4 margin-top-small margin-bottom-small text-align-center'); ?> id="programacion-<?php the_ID(); ?>">
       <a href="<?php the_permalink() ?>" class="programacion-item" <?php if (!empty($meta['_igv_color'][0])) { echo 'data-hover-color="' . $meta['_igv_color'][0] . '"'; } ?> >
         <div class="margin-bottom-tiny"><?php if (!empty($meta['_igv_number'][0])) {echo 'No. ' . add_leading_zero( $meta['_igv_number'][0] );} ?></div>
-        <h2 class="archive-programacion-post-title"><?php the_title(); ?></h2>
+        <h2 class="archive-programacion-post-title"><?php 
+          if (!empty($meta['_igv_archive_title'][0])) {
+            echo apply_filters( 'the_content', $meta['_igv_archive_title'][0] );
+          } else {
+            the_title(); 
+          }
+        ?></h2>
         <h5 class="font-size-h4 margin-top-micro"><?php if (!empty($meta['_igv_subtitle'][0])) {echo $meta['_igv_subtitle'][0];} ?></h5>
         <div class="margin-top-micro"><?php 
           $start_date = false;
