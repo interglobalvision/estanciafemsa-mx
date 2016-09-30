@@ -142,23 +142,24 @@ h1, h2, h3, h4
   font-size: $font-size-basic
 
 h1, .font-size-h1
-  font-family: $font-sans
-  font-weight: 600
   letter-spacing: 1px
 
-h2, .font-size-h2
+h1
+  font-family: $font-sans
+  font-weight: 600
+
+h2
   font-family: $font-sans
   font-weight: 500
 
-h3, .font-size-h3
+h3
   font-family: $font-sans
 
-h4, .font-size-h4
+h4
   line-height: 1.1
 
 p
   margin-bottom: 1rem
-  line-height: $font-leading-basic
 
   // FONT RULES
 
@@ -224,6 +225,8 @@ p
   a:active,
   a:visited
     text-decoration: underline
+  a:hover
+    font-style: italic
 
 // ******************************************************
 
@@ -280,14 +283,14 @@ body.menu-active
 
 #search-form
   display: none
-  
+
 #search-input, #search-submit
   background: transparent
   border: 0
   -webkit-appearance: none
-  &:focus 
+  &:focus
     outline: 0
-    
+
 #search-submit
   height: 25px
   width: 40px
@@ -398,6 +401,17 @@ body.single-programacion
 
 .archive-programacion-post-title
   font-weight: normal
+  line-height: 1
+
+.close-drawer-overlay
+  position: fixed
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0
+  cursor: pointer
+  z-index: 200
+  display: none
 
 // ******************************************************
 
@@ -410,6 +424,13 @@ body.single-programacion
   height: 120px
   text-align: center
   line-height: 135px
+
+.femsa-logo svg
+  height: 45px
+  margin-top: -2px
+  margin-left: -18px
+  g
+    fill: $color-black
 
 // ******************************************************
 
@@ -457,7 +478,7 @@ for col in 1..$cols
 
   @import "responsive/tablet"
 
-@media screen and (min-width: 1000px)
+@media screen and (min-width: 1020px)
 
   .only-desktop
     display: initial !important
@@ -466,7 +487,7 @@ for col in 1..$cols
     display: none !important
 
   .container
-    width: 980px
+    width: 1000px
 
   $gutter = 32px
 

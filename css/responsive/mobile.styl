@@ -5,6 +5,7 @@ $margin-basic = ($gutter * 2)
 $margin-mid = ($gutter * 3.5)
 $margin-large = ($gutter * 5)
 
+$font-size-p = golden-ratio(1rem , .43)
 $font-size-h4 = golden-ratio(1rem , .5)
 $font-size-h3 = golden-ratio(1rem , .6)
 $font-size-h2 = golden-ratio(1rem , .7)
@@ -21,6 +22,9 @@ h3, .font-size-h3
 
 h4, .font-size-h4
   font-size: $font-size-h4
+  
+.article-content p 
+  font-size: $font-size-p
 
 // ******************************************************
 
@@ -186,3 +190,10 @@ body.drawer-open
 
 .citas-text-content
   display: none
+    
+// ******************************************************
+
+// NOSOTROS
+
+.social-link
+  margin-right: $margin-basic

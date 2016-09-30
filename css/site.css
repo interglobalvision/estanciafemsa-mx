@@ -1165,26 +1165,24 @@ h4 {
 }
 h1,
 .font-size-h1 {
-  font-family: 'Calibre', Helvetica, Arial, sans-serif;
-  font-weight: 600;
   letter-spacing: 1px;
 }
-h2,
-.font-size-h2 {
+h1 {
+  font-family: 'Calibre', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+h2 {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
   font-weight: 500;
 }
-h3,
-.font-size-h3 {
+h3 {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
 }
-h4,
-.font-size-h4 {
+h4 {
   line-height: 1.1;
 }
 p {
   margin-bottom: 1rem;
-  line-height: 1.45;
 }
 em,
 .font-italic {
@@ -1246,6 +1244,9 @@ p a,
 p a:active,
 p a:visited {
   text-decoration: underline;
+}
+p a:hover {
+  font-style: italic;
 }
 html {
   background-color: #fff;
@@ -1430,6 +1431,17 @@ body.single-programacion .footer-lang-switch {
 }
 .archive-programacion-post-title {
   font-weight: normal;
+  line-height: 1;
+}
+.close-drawer-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 200;
+  display: none;
 }
 .file-icon {
   font-size: 1.3rem;
@@ -1438,6 +1450,14 @@ body.single-programacion .footer-lang-switch {
   height: 120px;
   text-align: center;
   line-height: 135px;
+}
+.femsa-logo svg {
+  height: 45px;
+  margin-top: -2px;
+  margin-left: -18px;
+}
+.femsa-logo svg g {
+  fill: #000;
 }
 .citas-arrow {
   position: absolute;
@@ -1569,6 +1589,9 @@ h4,
 .font-size-h4 {
   font-size: 1.272006289292628rem;
 }
+.article-content p {
+  font-size: 1.229874402046993rem;
+}
 .margin-top-micro {
   margin-top: 7.416407864998257px;
 }
@@ -1693,6 +1716,9 @@ body.drawer-open .programacion-drawer-toggle {
 }
 .citas-text-content {
   display: none;
+}
+.social-link {
+  margin-right: 48px;
 }
 @media screen and (min-width: 760px) {
   .container {
@@ -1941,8 +1967,11 @@ body.drawer-open .programacion-drawer-toggle {
   .citas-item {
     padding-right: 28px;
   }
+  .social-link {
+    margin-right: 28px;
+  }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1020px) {
   .only-desktop {
     display: initial !important;
   }
@@ -1950,7 +1979,7 @@ body.drawer-open .programacion-drawer-toggle {
     display: none !important;
   }
   .container {
-    width: 980px;
+    width: 1000px;
   }
   .col {
     padding: 0 16px;
@@ -2252,7 +2281,7 @@ body.drawer-open .programacion-drawer-toggle {
     right: 0;
     cursor: url("../img/dist/ui-cursor-right.png"), e-resize;
   }
-  #programacion-drawer {
+  .programacion-drawer {
     background-color: transparent;
     position: fixed;
     bottom: 0;
@@ -2280,21 +2309,20 @@ body.drawer-open .programacion-drawer-toggle {
   .programacion-drawer-toggle:after {
     content: '+';
   }
-  body.drawer-open #programacion-drawer {
+  .drawer-open {
     background-color: #fff;
-    height: 550px;
   }
-  body.drawer-open .programacion-drawer-toggle {
+  .drawer-open .programacion-drawer-toggle {
     display: inline-block;
   }
-  body.drawer-open .programacion-drawer-toggle:after {
+  .drawer-open .programacion-drawer-toggle:after {
     content: '\2013';
   }
   .programacion-content-holder {
     position: absolute;
-    height: 474px;
+    height: auto;
     width: 100%;
-    top: 76px;
+    top: 61px;
     overflow-y: scroll;
     z-index: 300;
   }
@@ -2311,6 +2339,9 @@ body.drawer-open .programacion-drawer-toggle {
   }
   .citas-item {
     padding-right: 64px;
+  }
+  .social-link {
+    margin-right: 64px;
   }
 }
 @media screen and (min-width: 1260px) {
@@ -2552,7 +2583,16 @@ body.drawer-open .programacion-drawer-toggle {
   .swiper-slide img {
     max-height: calc(100vh - 168px);
   }
+  .programacion-drawer {
+    height: 83px;
+  }
   #programacion-drawer {
     height: 81px;
+  }
+  .programacion-content-holder {
+    top: 83px;
+  }
+  .social-link {
+    margin-right: 108px;
   }
 }
