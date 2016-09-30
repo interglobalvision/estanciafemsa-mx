@@ -1302,6 +1302,15 @@ body.menu-active .menu-open {
 #search-submit:focus {
   outline: 0;
 }
+#search-submit {
+  height: 25px;
+  width: 40px;
+}
+#search-submit svg {
+  height: 20px;
+  width: 26px;
+  margin-bottom: -2px;
+}
 #footer {
   position: fixed;
   bottom: 0;
