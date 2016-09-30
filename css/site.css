@@ -1642,6 +1642,9 @@ h4,
 .padding-bottom-large {
   padding-bottom: 120px;
 }
+#main-container {
+  padding-bottom: 49px;
+}
 #main-content {
   padding-top: 50px;
 }
@@ -1895,6 +1898,9 @@ body.drawer-open .programacion-drawer-toggle {
   #footer h1,
   #footer .footer-lang-switch {
     pointer-events: auto;
+  }
+  #main-container {
+    padding-bottom: 52px;
   }
   #main-content {
     padding-top: 53px;
@@ -2180,8 +2186,11 @@ body.drawer-open .programacion-drawer-toggle {
   body.single-programacion #footer .container {
     padding: 0;
   }
+  #main-container {
+    padding-bottom: 50px;
+  }
   #main-content {
-    padding-top: 61px;
+    padding-top: 60px;
   }
   .archive-programacion-post-title {
     font-size: 60px;
@@ -2538,8 +2547,11 @@ body.drawer-open .programacion-drawer-toggle {
   .padding-bottom-large {
     padding-bottom: 270px;
   }
+  #main-container {
+    padding-bottom: 71px;
+  }
   #main-content {
-    padding-top: 85px;
+    padding-top: 83px;
   }
   .home-item {
     padding-right: 270px;
