@@ -1,6 +1,6 @@
   <?php if (!is_front_page()) { ?>
     <footer id="footer" class="font-size-h2">
-      <div class="container">
+      <div class="container padding-top-tiny padding-bottom-micro">
         <div class="col s-col-12 text-align-right">
         <?php 
           $host = IGV_get_option('_igv_host_location');
