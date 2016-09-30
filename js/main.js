@@ -127,7 +127,7 @@ Site.Menu = {
       $('#search-input').focus();
     });
 
-    $(document).click(function(event) {
+    $(document).on('click', function(event) {
       if(!$(event.target).closest('#search-bar').length) {
         if($('#search-form').is(":visible")) {
           $('#search-toggle').show();
