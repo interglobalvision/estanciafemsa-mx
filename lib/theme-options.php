@@ -119,6 +119,13 @@ class IGV_Admin {
 			'type' => 'text',
 		) );
 
+		$options_metabox->add_field( array(
+      'name' => __( 'Open Graph default image', 'IGV' ),
+      'desc' => __( 'primarily displayed on Facebook, but other locations as well', 'IGV' ),
+      'id'   => $prefix . 'og_image',
+      'type' => 'file',
+    ) );
+
 		// SPLASH
 
 		$options_metabox->add_field( array(
