@@ -102,7 +102,6 @@ $margin-large = ($gutter * 5)
 // FOOTER
 
 #footer 
-  padding: $margin-micro 0
   pointer-events: none
   background-color: initial
   h1, .footer-lang-switch
@@ -110,10 +109,16 @@ $margin-large = ($gutter * 5)
     
 // ******************************************************
 
+$header-height = 53px
+$footer-height = 52px
+
 // BASIC
 
+#main-container
+  padding-bottom: $footer-height
+
 #main-content
-  padding-top: 53px
+  padding-top: $header-height
 
 // ****************************************************** 
 

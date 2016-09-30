@@ -1645,6 +1645,9 @@ h4,
 .padding-bottom-large {
   padding-bottom: 120px;
 }
+#main-container {
+  padding-bottom: 49px;
+}
 #main-content {
   padding-top: 50px;
 }
@@ -1660,7 +1663,6 @@ body.menu-active #header-menu {
   display: block;
 }
 #footer {
-  padding: 7.416407864998257px 0;
   background-color: #fff;
 }
 #front-page {
@@ -1893,13 +1895,15 @@ body.drawer-open .programacion-drawer-toggle {
     padding-bottom: 8.652475842497966px;
   }
   #footer {
-    padding: 8.652475842497966px 0;
     pointer-events: none;
     background-color: initial;
   }
   #footer h1,
   #footer .footer-lang-switch {
     pointer-events: auto;
+  }
+  #main-container {
+    padding-bottom: 52px;
   }
   #main-content {
     padding-top: 53px;
@@ -2182,14 +2186,14 @@ body.drawer-open .programacion-drawer-toggle {
   #header-menu li:first-of-type:before {
     content: '';
   }
-  #footer {
-    padding: 9.888543819997675px 0;
-  }
-  body.single-programacion #footer {
+  body.single-programacion #footer .container {
     padding: 0;
   }
+  #main-container {
+    padding-bottom: 50px;
+  }
   #main-content {
-    padding-top: 61px;
+    padding-top: 60px;
   }
   .archive-programacion-post-title {
     font-size: 60px;
@@ -2546,14 +2550,11 @@ body.drawer-open .programacion-drawer-toggle {
   .padding-bottom-large {
     padding-bottom: 270px;
   }
-  #footer {
-    padding: 16.686917696246077px 0;
-  }
-  body.single-programacion #footer {
-    padding: 0;
+  #main-container {
+    padding-bottom: 71px;
   }
   #main-content {
-    padding-top: 85px;
+    padding-top: 83px;
   }
   .home-item {
     padding-right: 270px;
