@@ -9,7 +9,7 @@
   {
     "@context": "http://schema.org",
     "@type": "Organization",
-    "url": "<?php echo site_url(); ?>",
+    "url": "<?php echo home_url(); ?>",
     <?php
       if ($logo) {
         // I think here I need to get the correct size of this image from an ID?
