@@ -4,23 +4,6 @@ $margin-micro = ($gutter / (2 * $golden-ratio))
 $margin-basic = ($gutter * 2)
 $margin-mid = ($gutter * 3.5)
 $margin-large = ($gutter * 5)
-
-$font-size-h4 = golden-ratio(1rem , .6)
-$font-size-h3 = golden-ratio(1rem , .75)
-$font-size-h2 = golden-ratio(1rem , .85)
-$font-size-h1 = golden-ratio(1rem , 1.10)
-
-h1, .font-size-h1 
-  font-size: $font-size-h1
-
-h2, .font-size-h2
-  font-size: $font-size-h2
-
-h3, .font-size-h3
-  font-size: $font-size-h3
-
-h4, .font-size-h4
-  font-size: $font-size-h4
   
 // ******************************************************
 
@@ -109,6 +92,7 @@ h4, .font-size-h4
 // ******************************************************
 
 // HEADER
+
 #header
    background-color: initial
 
@@ -125,6 +109,17 @@ h4, .font-size-h4
       content: ', '
     &:first-of-type:before
       content: ''
+      
+.header-menu-col
+  flex-basis: 47%
+  max-width: 47%
+  
+.desktop-hostname
+  flex-basis: 28%
+  max-width: 28%
+  
+#search-input
+  width: 80px
 
 // ******************************************************
 

@@ -9,7 +9,7 @@ get_header();
   <!-- main posts loop -->
   <section id="results" class="row">
 
-    <div id="results-meta" class="col col-s-12 col-m-3 col-xl-2">
+    <div id="results-meta" class="col col-s-12 col-m-3 col-xl-2 margin-bottom-tiny">
       <h3 class="font-bold font-capitalize"><?php echo get_search_query(); ?></h3>
     </div>
 
