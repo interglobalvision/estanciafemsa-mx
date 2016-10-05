@@ -80,7 +80,7 @@
             echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-close.svg');
           ?></span></div>
         </div>
-        <div class="col col-s-12 col-xl-6 header-menu-col">
+        <div class="col col-s-12 col-xl-6 header-menu-col-unique">
           <ul id="header-menu" class="font-sans font-bold font-size-h2">
             <!-- don't "fix" the <li>s. this is a whitespace hack -->
             <li><a href="<?php echo site_url('/nosotros'); ?>" class="<?php echo is_page('nosotros') ? 'font-italic' : ''; ?>"><?php _e('[:es]Nosotros[:en]About'); ?></a></li
@@ -95,7 +95,7 @@
 
           if ($host) {
         ?>
-        <div class="col col-s-4 col-xl-4 text-align-right only-desktop desktop-hostname">
+        <div class="col col-s-4 col-xl-4 text-align-right only-desktop desktop-hostname-unique">
           <h1 class="font-uppercase"><a href="<?php echo site_url('/citas'); ?>"><?php echo $host; ?></a></h1>
         </div>
         <?php

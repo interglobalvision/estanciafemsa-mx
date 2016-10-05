@@ -2208,13 +2208,13 @@ body.drawer-open .programacion-drawer-toggle {
   #header-menu li:first-of-type:before {
     content: '';
   }
-  .header-menu-col {
+  .header-menu-col-unique {
     -ms-flex-basis: 47%;
     -ms-flex-preferred-size: 47%;
         flex-basis: 47%;
     max-width: 47%;
   }
-  .desktop-hostname {
+  .desktop-hostname-unique {
     -ms-flex-basis: 28%;
     -ms-flex-preferred-size: 28%;
         flex-basis: 28%;
