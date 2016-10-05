@@ -63,7 +63,7 @@
 <body <?php body_class(); ?>>
 <!--[if lt IE 9]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
 
-  <section id="main-container" class="padding-bottom-mid">
+  <section id="main-container">
 
   <?php if (!is_front_page()) { ?>
   <!-- start content -->
@@ -71,7 +71,7 @@
     <div class="container padding-top-tiny padding-bottom-micro">
       <div class="row">
         <div class="col col-s-9 col-l-3 col-xl-2">
-          <h1 class="site-title font-uppercase u-inline-block"><a href="<?php echo site_url('/home'); ?>"><?php bloginfo('name'); ?></a></h1>
+          <h1 class="site-title font-uppercase u-inline-block"><a href="<?php echo home_url('/home'); ?>"><?php bloginfo('name'); ?></a></h1>
         </div>
         <div class="col col-s-3 only-mobile text-align-right">
           <div class="menu-toggle u-pointer u-inline-block"><span class="menu-open"><?php

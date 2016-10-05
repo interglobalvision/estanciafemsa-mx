@@ -112,10 +112,16 @@ h4, .font-size-h4
 
 // ******************************************************
 
+$header-height = 50px
+$footer-height = 49px
+
 // BASIC
 
+#main-container
+  padding-bottom: $footer-height
+
 #main-content
-  padding-top: 50px
+  padding-top: $header-height
 
 // ******************************************************
 
@@ -140,7 +146,6 @@ body.menu-active
 // FOOTER
 
 #footer
-  padding: $margin-micro 0
   background-color: $color-white
 
 // ******************************************************
