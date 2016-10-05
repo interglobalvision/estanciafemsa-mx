@@ -292,7 +292,8 @@ body.menu-active
 
 #search-submit
   height: 25px
-  width: 40px
+  width: 30px
+  padding: 0
   svg
     height: 20px
     width: 26px
@@ -530,6 +531,11 @@ for col in 1..$cols
 
   @import "responsive/desktop"
   
+@media screen and (min-width: 1150px)
+
+  #search-input
+    width: 100px
+  
 @media screen and (min-width: 1300px)
 
   $font-size-h4 = golden-ratio(1rem , .6)
@@ -550,7 +556,7 @@ for col in 1..$cols
     font-size: $font-size-h4
     
   #search-input
-    width: 120px
+    width: 150px
 
 @media screen and (min-width: 1660px)
 
