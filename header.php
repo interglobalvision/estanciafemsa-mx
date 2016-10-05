@@ -74,29 +74,29 @@
           <h1 class="site-title font-uppercase u-inline-block"><a href="<?php echo home_url('/home'); ?>"><?php bloginfo('name'); ?></a></h1>
         </div>
         <div class="col col-s-3 only-mobile text-align-right">
-          <div class="menu-toggle u-pointer u-inline-block"><span class="menu-open"><?php 
-            echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-menu.svg'); 
-          ?></span><span class="menu-close"><?php 
-            echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-close.svg'); 
+          <div class="menu-toggle u-pointer u-inline-block"><span class="menu-open"><?php
+            echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-menu.svg');
+          ?></span><span class="menu-close"><?php
+            echo file_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/ui-close.svg');
           ?></span></div>
         </div>
-        <div class="col col-s-12 col-l-5 col-xl-6">
+        <div class="col col-s-12 col-xl-6 header-menu-col-unique">
           <ul id="header-menu" class="font-sans font-bold font-size-h2">
             <!-- don't "fix" the <li>s. this is a whitespace hack -->
-            <li><a href="<?php echo home_url('/nosotros'); ?>" class="<?php echo is_page('nosotros') ? 'font-italic' : ''; ?>"><?php _e('[:es]Nosotros[:en]About'); ?></a></li
-            ><li><a href="<?php echo home_url('/programacion'); ?>" class="<?php echo is_post_type_archive('programacion') || is_singular('programacion') ? 'font-italic' : ''; ?>"><?php _e('[:es]Programación[:en]Program'); ?></a></li
-            ><li><a href="<?php echo home_url('/noticias'); ?>" class="<?php echo is_home() || is_singular('post') ? 'font-italic' : ''; ?>"><?php _e('[:es]Noticias[:en]News'); ?></a></li
-            ><li><a href="<?php echo home_url('/citas'); ?>" class="<?php echo is_page('citas') ? 'font-italic' : ''; ?>"><?php _e('[:es]Citas[:en]Visit'); ?></a></li
-            ><li class="only-mobile"><?php get_template_part('partials/language-switch'); ?></li>
+            <li><a href="<?php echo site_url('/nosotros'); ?>" class="<?php echo is_page('nosotros') ? 'font-italic' : ''; ?>"><?php _e('[:es]Nosotros[:en]About'); ?></a></li
+            ><li><a href="<?php echo site_url('/programacion'); ?>" class="<?php echo is_post_type_archive('programacion') || is_singular('programacion') ? 'font-italic' : ''; ?>"><?php _e('[:es]Programación[:en]Program'); ?></a></li
+            ><li><a href="<?php echo site_url('/noticias'); ?>" class="<?php echo is_home() || is_singular('post') ? 'font-italic' : ''; ?>"><?php _e('[:es]Noticias[:en]News'); ?></a></li
+            ><li><a href="<?php echo site_url('/citas'); ?>" class="<?php echo is_page('citas') ? 'font-italic' : ''; ?>"><?php _e('[:es]Citas[:en]Visit'); ?></a></li
+            ><li class="only-mobile"><?php get_template_part('partials/language-switch'); ?></li><li id="search-bar"><?php get_search_form(); ?></li>
           </ul>
         </div>
-        <?php 
+        <?php
           $host = IGV_get_option('_igv_host_location');
 
           if ($host) {
         ?>
-        <div class="col col-s-4 text-align-right only-desktop">
-          <h1 class="font-uppercase"><a href="<?php echo home_url('/citas'); ?>"><?php echo $host; ?></a></h1>
+        <div class="col col-s-4 col-xl-4 text-align-right only-desktop desktop-hostname-unique">
+          <h1 class="font-uppercase"><a href="<?php echo site_url('/citas'); ?>"><?php echo $host; ?></a></h1>
         </div>
         <?php
           }

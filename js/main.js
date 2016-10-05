@@ -12,7 +12,6 @@ Site = {
 
     $(document).ready(function () {
       _this.Layout.init();
-      _this.Menu.init();
     });
 
     if ($('body').hasClass('post-type-archive-programacion')) {
@@ -26,6 +25,8 @@ Site = {
     if ($('body').hasClass('blog') || $('body').hasClass('single-post')) {
       _this.Noticias.init();
     }
+
+    _this.Menu.init();
 
     _this.Home.init();
   },
@@ -113,11 +114,30 @@ Site.Menu = {
     var _this = this;
 
     _this.bindToggle();
+    _this.bindSearchToggle();
   },
 
   bindToggle: function() {
     $('.menu-toggle').on('click', function() {
       $('body').toggleClass('menu-active');
+    });
+  },
+
+  bindSearchToggle: function() {
+    $('#search-toggle').on('click', function() {
+      $(this).hide();
+      $('#search-form').css('display', 'inline-block');
+      $('#search-input').focus();
+    });
+
+    $(document).on('click', function(event) {
+      if(!$(event.target).closest('#search-bar').length) {
+        if($('#search-form').is(":visible")) {
+          $('#search-toggle').show();
+          $('#search-form').css('display', 'none');
+          $('#search-input').blur();
+        }
+      }
     });
   },
 
