@@ -34,7 +34,7 @@ if( have_posts() ) {
 
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-      <h3 class="font-bold u-inline-block"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></h3>&nbsp;<h4 class="font-serif u-inline-block">&nbsp;—&nbsp;</h4>&nbsp;<h4 class="font-serif font-capitalize u-inline-block"><a href="<?php echo get_post_type($post->ID) == 'post' ? site_url('/noticias') : site_url('/programacion'); ?>"><?php echo _e($post_type); ?></a></h4>
+      <h3 class="font-bold u-inline-block"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></h3>&nbsp;<h4 class="font-serif u-inline-block">&nbsp;—&nbsp;</h4>&nbsp;<h4 class="font-serif font-capitalize u-inline-block"><a href="<?php echo get_post_type($post->ID) == 'post' ? home_url('/noticias') : home_url('/programacion'); ?>"><?php echo _e($post_type); ?></a></h4>
 
     </article>
 
