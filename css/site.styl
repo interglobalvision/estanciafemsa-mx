@@ -455,7 +455,7 @@ for offset in 0..($cols - 1)
 
 for col in 1..$cols
   .col-s-{col}
-    flex-basis: ( 100% / $cols ) * col
+    flex: 1 1 (( 100% / $cols ) * col)
     max-width: ( 100% / $cols ) * col
 
 @import "responsive/mobile"
@@ -479,7 +479,7 @@ for col in 1..$cols
 
   for col in 1..$cols
     .col-m-{col}
-      flex-basis: ( 100% / $cols ) * col
+      flex: 1 1 (( 100% / $cols ) * col)
       max-width: ( 100% / $cols ) * col
 
   @import "responsive/tablet"
@@ -509,7 +509,7 @@ for col in 1..$cols
 
   for col in 1..$cols
     .col-l-{col}
-      flex-basis: ( 100% / $cols ) * col
+      flex: 1 1 (( 100% / $cols ) * col)
       max-width: ( 100% / $cols ) * col
       
   $font-size-h4 = golden-ratio(1rem , .5)
@@ -577,7 +577,7 @@ for col in 1..$cols
 
   for col in 1..$cols
     .col-xl-{col}
-      flex-basis: ( 100% / $cols ) * col
+      flex: 1 1 (( 100% / $cols ) * col)
       max-width: ( 100% / $cols ) * col
 
   $font-size-h4 = golden-ratio(1rem , .6)
