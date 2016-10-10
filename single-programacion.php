@@ -101,6 +101,7 @@ if( have_posts() ) {
                   }
                 }
                 ?>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share on Facebook[:es]Compartir en Facebook'); ?> ></a>
               </div>
             </div>
           </div>
