@@ -20,7 +20,7 @@ if( have_posts() ) {
     <article <?php post_class(''); ?> id="post-<?php the_ID(); ?>">
 
       <div id="programacion-slider">
-        <div class="swiper-container gallery-<?php the_ID(); ?>"">
+        <div class="swiper-container gallery-<?php the_ID(); ?>">
           <div class="swiper-wrapper">
 <?php 
   if (!empty($gallery)) {
