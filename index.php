@@ -46,7 +46,7 @@ if( have_posts() ) {
         }
         ?>
         <div class="font-serif">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share on Facebook[:es]Compartir en Facebook'); ?></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share[:es]Compartir'); ?><br><?php _e('[:en]on[:es]en'); ?> Facebook</a>
         </div>
       </div>
 
