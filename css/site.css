@@ -1842,6 +1842,9 @@ body.drawer-open .programacion-drawer-toggle {
     flex: 1 1 100%;
     max-width: 100%;
   }
+  .article-meta {
+    font-size: 1.229874402046993rem;
+  }
   .margin-top-micro {
     margin-top: 8.652475842497966px;
   }

@@ -30,7 +30,7 @@ if( have_posts() ) {
         <?php
         if (!empty($date)) {
         ?>
-        <div class="article-date margin-bottom-tiny">
+        <div class="margin-bottom-small">
           <h3 class="font-capitalize font-bold"><?php echo $time->format('j F,'); ?><br/><?php echo $time->format('Y'); ?></h3>
         </div>
         <?php
@@ -38,13 +38,14 @@ if( have_posts() ) {
 
         if (!empty($author)) {
         ?>
-        <div class="article-author font-serif">
+        <div class="font-serif margin-bottom-small">
           <?php echo __('[:es]Por[:en]By'); ?>:<br/>
           <?php echo $author; ?>
         </div>
         <?php 
         }
         ?>
+        <a class="u-inline-block font-serif" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share[:es]Compartir'); ?><br><?php _e('[:en]on[:es]en'); ?> Facebook</a>
       </div>
 
       <!-- Mobile Article Meta -->
@@ -62,11 +63,13 @@ if( have_posts() ) {
         <?php 
         }
         ?>
+
+        <a class="font-serif" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share on Facebook[:es]Compartir en Facebook'); ?></a>
       </div>
 
       <!-- Article Content -->
       <div class="article-content col col-s-12 col-m-9 col-l-6">
-        <header class="article-content-header margin-bottom-tiny">
+        <header class="article-content-header margin-bottom-small">
           <a href="<?php the_permalink() ?>"><h3 class="u-inline-block font-bold" <?php echo $color ? 'style="color: ' . $color . '"' : ''; ?>><?php the_title(); ?></h3></a><?php
             $source = get_post_meta($post->ID, '_igv_source_text', true);
             $link = get_post_meta($post->ID, '_igv_source_link', true);
