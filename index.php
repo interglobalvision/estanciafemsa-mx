@@ -45,9 +45,7 @@ if( have_posts() ) {
         <?php 
         }
         ?>
-        <div class="font-serif">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share[:es]Compartir'); ?><br><?php _e('[:en]on[:es]en'); ?> Facebook</a>
-        </div>
+        <a class="u-inline-block font-serif" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share[:es]Compartir'); ?><br><?php _e('[:en]on[:es]en'); ?> Facebook</a>
       </div>
 
       <!-- Mobile Article Meta -->
@@ -66,9 +64,7 @@ if( have_posts() ) {
         }
         ?>
 
-        <div class="font-serif">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share on Facebook[:es]Compartir en Facebook'); ?></a>
-        </div>
+        <a class="font-serif" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share on Facebook[:es]Compartir en Facebook'); ?></a>
       </div>
 
       <!-- Article Content -->
