@@ -40,23 +40,25 @@ if (is_home()) {
   <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
   <meta property="og:type" content="website" />
   <meta property="og:description" content="<?php bloginfo('description'); ?>" />
-  <meta name="twitter:card" value="<?php bloginfo('description'); ?>">
+  <meta name="description" content="<?php bloginfo('description'); ?>" />
 <?php
 } elseif (is_single()) {
 ?>
   <meta property="og:url" content="<?php the_permalink(); ?>"/>
   <meta property="og:title" content="<?php the_title(); ?>" />
-  <meta property="og:description" content="<?php echo htmlspecialchars($excerpt) ?>" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+  <meta property="og:description" content="<?php echo htmlspecialchars($excerpt) ?>" />
+  <meta name="description" content="<?php echo htmlspecialchars($excerpt) ?>" />
 <?php
 } else {
 ?>
   <meta property="og:url" content="<?php the_permalink() ?>"/>
   <meta property="og:title" content="<?php the_title(); ?>" />
+  <meta property="og:type" content="website" />
   <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
   <meta property="og:description" content="<?php bloginfo('description'); ?>" />
-  <meta property="og:type" content="website" />
+  <meta name="description" content="<?php bloginfo('description'); ?>" />
 <?php
 }
 ?>
