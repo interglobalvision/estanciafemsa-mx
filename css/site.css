@@ -1729,6 +1729,13 @@ body.drawer-open .programacion-drawer-toggle {
 .archive-programacion-post-title {
   font-size: 32px;
 }
+.programacion-pagination-holder {
+  text-align: right;
+}
+.program-activity-title {
+  text-indent: -24px;
+  margin-left: 24px;
+}
 .citas-text-content {
   display: none;
 }
@@ -1987,6 +1994,10 @@ body.drawer-open .programacion-drawer-toggle {
   }
   .swiper-slide img {
     max-height: 500px;
+  }
+  .program-activity-title {
+    text-indent: -28px;
+    margin-left: 28px;
   }
   .citas-text-content-mobile {
     display: none;
@@ -2378,6 +2389,13 @@ body.drawer-open .programacion-drawer-toggle {
     -moz-column-gap: 24px;
     column-gap: 24px;
   }
+  .programacion-pagination-holder {
+    text-align: left;
+  }
+  .program-activity-title {
+    text-indent: -24px;
+    margin-left: 24px;
+  }
   .home-item {
     padding-right: 84px;
   }
@@ -2690,6 +2708,10 @@ body.drawer-open .programacion-drawer-toggle {
   }
   .programacion-content-holder {
     top: 83px;
+  }
+  .program-activity-title {
+    text-indent: -54px;
+    margin-left: 54px;
   }
   .social-link {
     margin-right: 108px;
