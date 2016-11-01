@@ -1389,7 +1389,7 @@ body.single-programacion .footer-lang-switch {
 .more-link {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
 }
-.article-meta h3 p {
+.article-meta h3 p:last-of-type {
   margin-bottom: 0;
 }
 #programacion-slider {
@@ -1708,6 +1708,12 @@ body.menu-active #header-menu {
 .home-item {
   padding-right: 24px;
 }
+.article-meta {
+  margin-bottom: 12px;
+}
+.article-content-header {
+  margin-bottom: 12px;
+}
 body.drawer-open #programacion-drawer {
   height: auto;
 }
@@ -1966,6 +1972,15 @@ body.drawer-open .programacion-drawer-toggle {
   }
   .home-item {
     padding-right: 98px;
+  }
+  .article-meta {
+    margin-bottom: 0;
+  }
+  .article-meta-item {
+    margin-bottom: 14px;
+  }
+  .article-content-header {
+    margin-bottom: 14px;
   }
   .archive-programacion-post-title {
     font-size: 48px;
@@ -2366,6 +2381,12 @@ body.drawer-open .programacion-drawer-toggle {
   .home-item {
     padding-right: 84px;
   }
+  .article-meta-item {
+    margin-bottom: 24px;
+  }
+  .article-content-header {
+    margin-bottom: 24px;
+  }
   .citas-item {
     padding-right: 48px;
   }
@@ -2648,6 +2669,12 @@ body.drawer-open .programacion-drawer-toggle {
   }
   .home-item {
     padding-right: 270px;
+  }
+  .article-meta-item {
+    margin-bottom: 54px;
+  }
+  .article-content-header {
+    margin-bottom: 54px;
   }
   .citas-item {
     padding-right: 189px;

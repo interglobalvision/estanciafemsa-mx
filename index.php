@@ -54,45 +54,12 @@ if( $query->have_posts() ) {
 
     <article <?php post_class('row margin-bottom-small margin-top-tiny'); ?> id="post-<?php the_ID(); ?>">
 
-      <!-- Desktop Article Meta -->
-      <div class="article-meta col col-s-12 col-m-3 col-xl-2 only-desktop">
+      <!-- Article Meta -->
+      <div class="article-meta col col-s-12 col-m-3 col-xl-2">
         <?php
         if (!empty($date)) {
         ?>
-        <div class="margin-bottom-small">
-          <h3 class="font-capitalize font-bold"><?php 
-            if (get_post_type() == 'post') {
-              echo $time->format('j F,'); ?><br/><?php echo $time->format('Y');
-            } else {
-              echo apply_filters('the_content', $date);
-            } 
-          ?></h3>
-        </div>
-        <?php
-        }
-        ?> 
-
-        <div class="font-serif margin-bottom-small">
-        <?php 
-        if (get_post_type() == 'post') {
-          if (!empty($author)) {
-            echo __('[:es]Por[:en]By[:]') . ':<br/>' . $author;
-          }
-        } else {
-          echo '<a href="' . home_url('actividad') . '">' . __('[:es]Actividad Académica[:en]Academic Activity[:]') . '</a>'; 
-        }
-        ?>
-        </div>
-
-        <a class="u-inline-block font-serif" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share[:es]Compartir'); ?><br><?php _e('[:en]on[:es]en'); ?> Facebook</a>
-      </div>
-
-      <!-- Mobile Article Meta -->
-      <div class="article-meta col col-s-12 col-m-3 only-mobile margin-bottom-micro">
-        <?php
-        if (!empty($date)) {
-        ?>
-        <h3 class="font-capitalize font-bold margin-bottom-micro"><?php 
+        <h3 class="font-capitalize font-bold article-meta-item"><?php 
         if (get_post_type() == 'post') {
               echo $time->format('j F, Y');
             } else {
@@ -103,7 +70,7 @@ if( $query->have_posts() ) {
         }
         ?> 
         
-        <div class="font-serif margin-bottom-micro">
+        <div class="font-serif article-meta-item">
         <?php 
         if (get_post_type() == 'post') {
           if (!empty($author)) {
@@ -115,7 +82,7 @@ if( $query->have_posts() ) {
         ?>
         </div>
 
-        <a class="font-serif margin-bottom-micro" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share on Facebook[:es]Compartir en Facebook'); ?></a>
+        <a class="font-serif article-meta-item" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share on Facebook[:es]Compartir en Facebook'); ?></a>
       </div>
 
       <!-- Article Content -->
