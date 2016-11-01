@@ -55,3 +55,36 @@ function orderby_meta_date( $query ) {
   }
 }
 add_action( 'pre_get_posts', 'orderby_meta_date' );
+
+function get_actividad_num($post_id) {
+  $event = get_post_meta($post_id, '_igv_related_event', true);
+
+  $activity_num = 1;
+
+  if (!empty($event)) {
+    $args = array (
+      'post_type'              => array( 'actividad' ),
+      'posts_per_page'         => '-1',
+      'meta_query'             => array(
+        array(
+          'key'       => '_igv_related_event',
+          'value'     => $event,
+        ),
+      ),
+    );
+
+    $event_activities = get_posts( $args );
+
+    if ( $event_activities ) {
+      foreach ( $event_activities as $activity ) {
+        if ($activity->ID == $post_id) {
+          return $activity_num;
+        }
+
+        $activity_num++;
+      }
+    }
+  }
+
+  return false;
+}
