@@ -56,28 +56,34 @@ function orderby_meta_date( $query ) {
 }
 add_action( 'pre_get_posts', 'orderby_meta_date' );
 
-function get_actividad_num($post_id) {
-  $event = get_post_meta($post_id, '_igv_related_event', true);
+// get_posts for actividades related with event
+function get_event_actividades($event_id) {
+  $args = array (
+  'post_type'              => array( 'actividad' ),
+  'posts_per_page'         => '-1',
+  'meta_query'             => array(
+      array(
+        'key'       => '_igv_related_event',
+        'value'     => $event_id,
+      ),
+    ),
+  );
+
+  return get_posts($args);
+}
+
+// return order number of actividad related with event
+function get_actividad_num($actividad_id) {
+  $event_id = get_post_meta($actividad_id, '_igv_related_event', true);
 
   $activity_num = 1;
 
-  if (!empty($event)) {
-    $args = array (
-      'post_type'              => array( 'actividad' ),
-      'posts_per_page'         => '-1',
-      'meta_query'             => array(
-        array(
-          'key'       => '_igv_related_event',
-          'value'     => $event,
-        ),
-      ),
-    );
-
-    $event_activities = get_posts( $args );
+  if (!empty($event_id)) {
+    $event_activities = get_event_actividades($event_id);
 
     if ( $event_activities ) {
       foreach ( $event_activities as $activity ) {
-        if ($activity->ID == $post_id) {
+        if ($activity->ID == $actividad_id) {
           return $activity_num;
         }
 
