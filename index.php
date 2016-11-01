@@ -70,27 +70,29 @@ if( $query->have_posts() ) {
         </div>
         <?php
         }
+        ?> 
 
+        <div class="font-serif margin-bottom-small">
+        <?php 
         if (get_post_type() == 'post') {
           if (!empty($author)) {
-        ?>
-        <div class="font-serif margin-bottom-small">
-          <?php echo __('[:es]Por[:en]By'); ?>:<br/>
-          <?php echo $author; ?>
-        </div>
-        <?php 
+            echo __('[:es]Por[:en]By[:]') . ':<br/>' . $author;
           }
+        } else {
+          echo '<a href="' . home_url('actividad') . '">' . __('[:es]Actividad Académica[:en]Academic Activity[:]') . '</a>'; 
         }
         ?>
+        </div>
+
         <a class="u-inline-block font-serif" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share[:es]Compartir'); ?><br><?php _e('[:en]on[:es]en'); ?> Facebook</a>
       </div>
 
       <!-- Mobile Article Meta -->
-      <div class="article-meta col col-s-12 col-m-3 only-mobile margin-bottom-tiny">
+      <div class="article-meta col col-s-12 col-m-3 only-mobile margin-bottom-micro">
         <?php
         if (!empty($date)) {
         ?>
-        <h3 class="font-capitalize font-bold"><?php 
+        <h3 class="font-capitalize font-bold margin-bottom-micro"><?php 
         if (get_post_type() == 'post') {
               echo $time->format('j F, Y');
             } else {
@@ -99,15 +101,21 @@ if( $query->have_posts() ) {
         ?></h3>
         <?php
         }
-
-        if (!empty($author)) {
-        ?>
-        <div class="font-serif"><?php echo __('[:es]Por[:en]By'); ?>: <?php echo $author; ?></div>
+        ?> 
+        
+        <div class="font-serif margin-bottom-micro">
         <?php 
+        if (get_post_type() == 'post') {
+          if (!empty($author)) {
+            echo __('[:es]Por[:en]By[:]') . ':<br/>' . $author;
+          }
+        } else {
+          echo '<a href="' . home_url('actividad') . '">' . __('[:es]Actividad Académica[:en]Academic Activity[:]') . '</a>'; 
         }
         ?>
+        </div>
 
-        <a class="font-serif" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share on Facebook[:es]Compartir en Facebook'); ?></a>
+        <a class="font-serif margin-bottom-micro" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share on Facebook[:es]Compartir en Facebook'); ?></a>
       </div>
 
       <!-- Article Content -->
