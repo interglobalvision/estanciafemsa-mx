@@ -15,6 +15,7 @@ if( have_posts() ) {
     the_post();
     $gallery = get_post_meta($post->ID, '_igv_program_gallery', true);
     $number = get_post_meta($post->ID, '_igv_number', true);
+    $actividades = get_event_actividades($post->ID);
 ?>
 
     <article <?php post_class(''); ?> id="post-<?php the_ID(); ?>">
@@ -60,10 +61,10 @@ if( have_posts() ) {
               <div class="col col-s-12 col-m-6 col-l-5">
                 <h2 class="u-inline-block programacion-title u-pointer"><?php the_title(); ?></h2> <span class="programacion-drawer-toggle"></span>
               </div>
-              <div class="col col-s-6 col-m-3 col-l-2 text-align-left">
+              <div class="col col-s-6 col-m-3 col-l-3">
                 <span class="swiper-prev u-pointer">< </span><span id="single-programacion-gallery-pagination"></span><span class="swiper-next u-pointer"> ></span>
               </div>
-              <div class="col col-s-6 col-m-3 col-l-2 text-align-right">
+              <div class="col col-s-6 col-m-3 col-l-2 programacion-pagination-holder">
                 <?php
                   previous_post_link('%link', '< ');
 
@@ -74,7 +75,7 @@ if( have_posts() ) {
                   next_post_link('%link', ' >');
                 ?>
               </div>
-              <div class="col col-s-3 text-align-right only-desktop">
+              <div class="col col-s-2 text-align-right only-desktop">
                 <?php get_template_part('partials/language-switch'); ?>
               </div>
             </div>
@@ -84,7 +85,7 @@ if( have_posts() ) {
         <div class="programacion-content-holder padding-top-micro padding-bottom-micro">
           <div class="container">
             <div class="row">
-              <div class="col col-s-12 col-l-8 programacion-content line-tighter">
+              <div class="col col-s-12 col-m-6 col-l-8 programacion-content line-tighter">
                 <?php the_content(); ?>
                 <?php 
                 if (qtranxf_getLanguage() == 'es') {
@@ -103,6 +104,30 @@ if( have_posts() ) {
                 ?>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share on Facebook[:es]Compartir en Facebook'); ?> ></a>
               </div>
+              <?php 
+               if (!empty($actividades)) {
+              ?> 
+              <div class="col col-s-12 col-m-6 col-l-4">
+                <h2 class="margin-bottom-tiny"><?php echo __('[:es]Actividad Académica[:en]Academic Activity'); ?></h2>
+                <ul class="font-serif">
+              <?php 
+                foreach ($actividades as $actividad) {
+                  $activity_num = '';
+
+                  if (!empty($number)) {
+                    $activity_num = 'No. ' . add_leading_zero($number) . '.' . get_actividad_num($actividad->ID);
+                  }
+              ?> 
+                  <li class="margin-bottom-tiny"><a href="<?php echo get_permalink($actividad->ID); ?>"><?php 
+                  echo $activity_num . '<br>'; ?><div class="u-inline-block program-activity-title"><?php echo $actividad->post_title; ?></div></a></li>
+              <?
+                }
+              ?>
+                </ul>
+              </div>
+              <?php 
+               }
+              ?>
             </div>
           </div>
         </div>
