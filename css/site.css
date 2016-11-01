@@ -1389,6 +1389,9 @@ body.single-programacion .footer-lang-switch {
 .more-link {
   font-family: 'Calibre', Helvetica, Arial, sans-serif;
 }
+.article-meta h3 p {
+  margin-bottom: 0;
+}
 #programacion-slider {
   position: relative;
 }
