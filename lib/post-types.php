@@ -105,4 +105,4 @@ function actividad_post_type() {
 	register_post_type( 'actividad', $args );
 
 }
-add_action( 'init', 'programacion_post_type', 0 );
+add_action( 'init', 'actividad_post_type', 0 );
