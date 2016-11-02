@@ -31,7 +31,7 @@ if( $query->have_posts() ) {
       $author = get_post_meta($post->ID, '_igv_post_author', true);
       $date = get_post_meta($post->ID, '_igv_post_date', true);
       if (!empty($date)) {
-        $time = new \Moment\Moment(date('c', $date));
+        $time = new \Moment\Moment('@' . $date);
       }
     } else {
       $date = get_post_meta($post->ID, '_igv_activity_dates', true);
