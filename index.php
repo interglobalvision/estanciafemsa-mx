@@ -41,12 +41,14 @@ if( $query->have_posts() ) {
     $color = !empty($event) ? get_post_meta($event, '_igv_color', true) : false;
 
     if (get_post_type() == 'actividad') {
-      $activity_num = '';
+      $event_activity_num = '';
 
       if (!empty($event)) {
         $event_num = get_post_meta($event, '_igv_number', true);
-        if (!empty($event_num)) {
-          $activity_num = 'No. ' . add_leading_zero($event_num) . '.' . get_actividad_num($post->ID);
+        $activity_num = get_post_meta($post->ID, '_igv_activity_num', true);
+
+        if (!empty($event_num) && !empty($activity_num)) {
+          $event_activity_num = 'No. ' . add_leading_zero($event_num) . '.' . $activity_num;
         }
       }
     }
@@ -92,7 +94,7 @@ if( $query->have_posts() ) {
 
             if (get_post_type() == 'actividad') {
               echo __('[:es]Actividad Académica[:en]Academic Activity');
-              echo ' ' . $activity_num . '<br>';
+              echo ' ' . $event_activity_num . '<br>';
             }
 
             the_title(); 

@@ -112,14 +112,14 @@ if( have_posts() ) {
                 <ul class="font-serif">
               <?php 
                 foreach ($actividades as $actividad) {
-                  $activity_num = '';
+                  $activity_num = get_post_meta($actividad->ID, '_igv_activity_num', true);
 
-                  if (!empty($number)) {
-                    $activity_num = 'No. ' . add_leading_zero($number) . '.' . get_actividad_num($actividad->ID);
+                  if (!empty($number) && !empty($activity_num)) {
+                    $event_activity_num = 'No. ' . add_leading_zero($number) . '.' . $activity_num;
                   }
               ?> 
                   <li class="margin-bottom-tiny"><a href="<?php echo get_permalink($actividad->ID); ?>"><?php 
-                  echo $activity_num . '<br>'; ?><div class="u-inline-block program-activity-title"><?php echo $actividad->post_title; ?></div></a></li>
+                  echo $event_activity_num . '<br>'; ?><div class="u-inline-block program-activity-title"><?php echo $actividad->post_title; ?></div></a></li>
               <?
                 }
               ?>

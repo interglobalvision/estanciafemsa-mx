@@ -16,12 +16,14 @@ if( have_posts() ) {
     $event = get_post_meta($post->ID, '_igv_related_event', true);
     $color = !empty($event) ? get_post_meta($event, '_igv_color', true) : false;
 
-    $activity_num = '';
+    $event_activity_num = '';
 
     if (!empty($event)) {
       $event_num = get_post_meta($event, '_igv_number', true);
+      $activity_num = get_post_meta($post->ID, '_igv_activity_num', true);
+
       if (!empty($event_num)) {
-        $activity_num = 'No. ' . add_leading_zero($event_num) . '.' . get_actividad_num($post->ID);
+        $event_activity_num = 'No. ' . add_leading_zero($event_num) . '.' . $activity_num;
       }
     }
 ?>
@@ -38,7 +40,7 @@ if( have_posts() ) {
         <header class="article-content-header margin-bottom-small">
           <a href="<?php the_permalink() ?>"><h3 class="u-inline-block font-bold" <?php echo $color ? 'style="color: ' . $color . '"' : ''; ?>><?php 
           echo __('[:es]Actividad Académica[:en]Academic Activity');
-          echo ' ' . $activity_num . '<br>';
+          echo ' ' . $event_activity_num . '<br>';
           the_title(); 
           ?></h3></a>
         </header>

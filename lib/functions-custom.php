@@ -92,5 +92,20 @@ function get_actividad_num($actividad_id) {
     }
   }
 
-  return false;
+  return 0;
 }
+
+// update activity number on post save
+function save_actividad_num( $post_id, $post, $update ) {
+
+    $post_type = get_post_type($post_id);
+
+    // If this isn't a 'actividad' post, don't update it.
+    if ( 'actividad' != $post_type ) return;
+
+    $activity_num = get_actividad_num($post_id);
+
+    // - Update the post's metadata.
+    update_post_meta( $post_id, '_igv_activity_num', $activity_num );
+}
+add_action( 'save_post', 'save_actividad_num', 10, 3 );
