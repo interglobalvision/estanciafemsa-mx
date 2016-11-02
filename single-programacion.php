@@ -112,6 +112,7 @@ if( have_posts() ) {
                 <ul class="font-serif">
               <?php 
                 foreach ($actividades as $actividad) {
+                  $event_activity_num = '';
                   $activity_num = get_post_meta($actividad->ID, '_igv_activity_num', true);
 
                   if (!empty($number) && !empty($activity_num)) {
