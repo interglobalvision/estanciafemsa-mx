@@ -105,7 +105,7 @@ function igv_cmb_metaboxes() {
     'name' => __( 'Fecha en texto', 'cmb2' ),
     'desc' => __( 'Sobrescribe las fechas', 'cmb2' ),
     'id'   => $prefix . 'text_time',
-    'type' => 'textarea_small',
+    'type' => 'text',
     'attributes' => array(
       'class' => 'cmb2-qtranslate'
     )
