@@ -11,7 +11,6 @@ get_header();
 
 <?php
 if( have_posts() ) {
-  while( have_posts() ) {
     the_post();
     $gallery = get_post_meta($post->ID, '_igv_program_gallery', true);
     $gallery_has_slides = (count($gallery) > 1);
@@ -144,7 +143,6 @@ if( have_posts() ) {
     </article>
 
 <?php
-  }
 } else {
 ?>
     <article class="u-alert"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
