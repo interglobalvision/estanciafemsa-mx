@@ -38,7 +38,7 @@ if( have_posts() ) {
           <?php echo !empty($subtitle) ? $subtitle : '&nbsp;'; ?>
         </h4>
         <h4 class="margin-top-micro">
-          <?php echo !empty($curator) ? $curator : '&nbsp;'; ?>
+          <?php echo !empty($curator) ? __('[:es]Curaduría de[:en]Curated by[:]') . ' ' . $curator : '&nbsp;'; ?>
         </h4>
         <h5 class="margin-top-micro"><?php   
           if (!empty($text_time)) {
