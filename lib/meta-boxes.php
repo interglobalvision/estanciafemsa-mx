@@ -71,13 +71,34 @@ function igv_cmb_metaboxes() {
     'type' => 'text',
   ) );
 
-  $post_meta->add_field( array(
+  $related_event_meta = new_cmb2_box( array(
+    'id'            => $prefix . 'related_event_metabox',
+    'title'         => __( 'Evento relacionado Metabox', 'cmb2' ),
+    'object_types'  => array( 'post', 'actividad' ), // Post type
+  ) );
+
+  $related_event_meta->add_field( array(
     'name' => __( 'Evento relacionado', 'cmb2' ),
     'id'   => $prefix . 'related_event',
     'type' => 'post_search_text',
     'post_type' => array('programacion'),
     'select_type' => 'radio',
     'select_behavior' => 'replace',
+  ) );
+
+  $activity_meta = new_cmb2_box( array(
+    'id'            => $prefix . 'activity_metabox',
+    'title'         => __( 'Actividad Metabox', 'cmb2' ),
+    'object_types'  => array( 'actividad', ), // Post type
+  ) ); 
+
+  $activity_meta->add_field( array(
+    'name' => __( 'Fechas / horario', 'cmb2' ),
+    'id'   => $prefix . 'activity_dates',
+    'type' => 'textarea_small',
+    'attributes' => array(
+      'class' => 'cmb2-qtranslate'
+    )
   ) );
 
   // **** PROGRAM
