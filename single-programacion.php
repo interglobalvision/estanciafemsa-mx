@@ -14,6 +14,7 @@ if( have_posts() ) {
   while( have_posts() ) {
     the_post();
     $gallery = get_post_meta($post->ID, '_igv_program_gallery', true);
+    $gallery_has_slides = (count($gallery) > 1);
     $number = get_post_meta($post->ID, '_igv_number', true);
     $actividades = get_event_actividades($post->ID);
 ?>
@@ -23,7 +24,7 @@ if( have_posts() ) {
       <div id="programacion-slider">
         <div class="swiper-container gallery-<?php the_ID(); ?>">
           <div class="swiper-wrapper">
-<?php 
+<?php
   if (!empty($gallery)) {
     foreach ($gallery as $image_id) {
       $full = get_post_meta($image_id, '_igv_full_view', true);
@@ -33,7 +34,7 @@ if( have_posts() ) {
       if ($full == 'on') {
 ?>
               <div class="container full-slide" style="background-image: url('<?php echo wp_get_attachment_image_src($image_id, 'full-slide')[0]; ?>')">
-<?php 
+<?php
       } else {
 ?>
               <div class="container">
@@ -43,14 +44,18 @@ if( have_posts() ) {
             </div>
 <?php
     }
-  } 
+  }
 ?>
           </div>
         </div>
+
+        <?php if ($gallery_has_slides) { ?>
         <div class="slider-cursor-pagination">
           <div class="cursor-pagination-button swiper-prev"></div>
           <div class="cursor-pagination-button swiper-next"></div>
         </div>
+        <?php } ?>
+
         <div class="close-drawer-overlay"></div>
       </div>
 
@@ -61,8 +66,10 @@ if( have_posts() ) {
               <div class="col col-s-12 col-m-6 col-l-5">
                 <h2 class="u-inline-block programacion-title u-pointer"><?php the_title(); ?></h2> <span class="programacion-drawer-toggle"></span>
               </div>
-              <div class="col col-s-6 col-m-3 col-l-3">
+              <div class="col col-s-6 col-m-3 col-l-2 text-align-left">
+                <?php if ($gallery_has_slides) { ?>
                 <span class="swiper-prev u-pointer">< </span><span id="single-programacion-gallery-pagination"></span><span class="swiper-next u-pointer"> ></span>
+                <?php } ?>
               </div>
               <div class="col col-s-6 col-m-3 col-l-2 programacion-pagination-holder">
                 <?php
@@ -87,7 +94,7 @@ if( have_posts() ) {
             <div class="row">
               <div class="col col-s-12 col-m-6 col-l-8 programacion-content line-tighter">
                 <?php the_content(); ?>
-                <?php 
+                <?php
                 if (qtranxf_getLanguage() == 'es') {
                   $program_file = get_post_meta($post->ID, '_igv_program_visitors_file_es', true);
                 } else {
@@ -104,13 +111,13 @@ if( have_posts() ) {
                 ?>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share on Facebook[:es]Compartir en Facebook'); ?> ></a>
               </div>
-              <?php 
+              <?php
                if (!empty($actividades)) {
-              ?> 
+              ?>
               <div class="col col-s-12 col-m-6 col-l-4">
                 <h2 class="margin-bottom-tiny"><?php echo __('[:es]Actividad Académica[:en]Academic Activity'); ?></h2>
                 <ul class="font-serif">
-              <?php 
+              <?php
                 foreach ($actividades as $actividad) {
                   $event_activity_num = '';
                   $activity_num = get_post_meta($actividad->ID, '_igv_activity_num', true);
@@ -118,15 +125,15 @@ if( have_posts() ) {
                   if (!empty($number) && !empty($activity_num)) {
                     $event_activity_num = 'No. ' . add_leading_zero($number) . '.' . $activity_num;
                   }
-              ?> 
-                  <li class="margin-bottom-tiny"><a href="<?php echo get_permalink($actividad->ID); ?>"><?php 
+              ?>
+                  <li class="margin-bottom-tiny"><a href="<?php echo get_permalink($actividad->ID); ?>"><?php
                   echo $event_activity_num . '<br>'; ?><div class="u-inline-block program-activity-title"><?php echo $actividad->post_title; ?></div></a></li>
               <?
                 }
               ?>
                 </ul>
               </div>
-              <?php 
+              <?php
                }
               ?>
             </div>
@@ -146,8 +153,6 @@ if( have_posts() ) {
 
   <!-- end posts -->
   </section>
-
-  <?php get_template_part('partials/pagination'); ?>
 
 <!-- end main-content -->
 
