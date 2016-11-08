@@ -14,6 +14,7 @@ if( have_posts() ) {
   while( have_posts() ) {
     the_post();
     $gallery = get_post_meta($post->ID, '_igv_program_gallery', true);
+    $gallery_has_slides = (count($gallery) > 1);
     $number = get_post_meta($post->ID, '_igv_number', true);
 ?>
 
@@ -22,7 +23,7 @@ if( have_posts() ) {
       <div id="programacion-slider">
         <div class="swiper-container gallery-<?php the_ID(); ?>">
           <div class="swiper-wrapper">
-<?php 
+<?php
   if (!empty($gallery)) {
     foreach ($gallery as $image_id) {
       $full = get_post_meta($image_id, '_igv_full_view', true);
@@ -32,7 +33,7 @@ if( have_posts() ) {
       if ($full == 'on') {
 ?>
               <div class="container full-slide" style="background-image: url('<?php echo wp_get_attachment_image_src($image_id, 'full')[0]; ?>')">
-<?php 
+<?php
       } else {
 ?>
               <div class="container">
@@ -42,12 +43,12 @@ if( have_posts() ) {
             </div>
 <?php
     }
-  } 
+  }
 ?>
           </div>
         </div>
 
-        <?php if (count($gallery) > 1) { ?> 
+        <?php if ($gallery_has_slides) { ?>
         <div class="slider-cursor-pagination">
           <div class="cursor-pagination-button swiper-prev"></div>
           <div class="cursor-pagination-button swiper-next"></div>
@@ -65,7 +66,7 @@ if( have_posts() ) {
                 <h2 class="u-inline-block programacion-title u-pointer"><?php the_title(); ?></h2> <span class="programacion-drawer-toggle"></span>
               </div>
               <div class="col col-s-6 col-m-3 col-l-2 text-align-left">
-                <?php if (count($gallery) > 1) { ?> 
+                <?php if ($gallery_has_slides) { ?>
                 <span class="swiper-prev u-pointer">< </span><span id="single-programacion-gallery-pagination"></span><span class="swiper-next u-pointer"> ></span>
                 <?php } ?>
               </div>
@@ -92,7 +93,7 @@ if( have_posts() ) {
             <div class="row">
               <div class="col col-s-12 col-l-8 programacion-content line-tighter">
                 <?php the_content(); ?>
-                <?php 
+                <?php
                 if (qtranxf_getLanguage() == 'es') {
                   $program_file = get_post_meta($post->ID, '_igv_program_visitors_file_es', true);
                 } else {
