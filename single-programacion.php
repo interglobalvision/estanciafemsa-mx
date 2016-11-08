@@ -148,7 +148,7 @@ if( have_posts() ) {
   }
 } else {
 ?>
-    <article class="u-alert"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
+    <article class="u-alert"><?php _e('Sorry, no posts matched your criteria'); ?></article>
 <?php
 } 
 ?>
