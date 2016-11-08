@@ -32,7 +32,7 @@ if( have_posts() ) {
 <?php
       if ($full == 'on') {
 ?>
-              <div class="container full-slide" style="background-image: url('<?php echo wp_get_attachment_image_src($image_id, 'full')[0]; ?>')">
+              <div class="container full-slide" style="background-image: url('<?php echo wp_get_attachment_image_src($image_id, 'full-slide')[0]; ?>')">
 <?php 
       } else {
 ?>
