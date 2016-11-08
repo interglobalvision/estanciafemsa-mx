@@ -11,6 +11,7 @@ get_header();
 
 <?php
 if( have_posts() ) {
+  while( have_posts() ) {
     the_post();
     $gallery = get_post_meta($post->ID, '_igv_program_gallery', true);
     $gallery_has_slides = (count($gallery) > 1);
@@ -31,8 +32,9 @@ if( have_posts() ) {
             <div class="swiper-slide">
 <?php
       if ($full == 'on') {
+        $full_slide_url = wp_get_attachment_image_src($image_id, 'full-slide');
 ?>
-              <div class="container full-slide" style="background-image: url('<?php echo wp_get_attachment_image_src($image_id, 'full-slide')[0]; ?>')">
+              <div class="container full-slide" style="background-image: url('<?php echo $full_slide_url[0]; ?>')">
 <?php
       } else {
 ?>
@@ -143,11 +145,13 @@ if( have_posts() ) {
     </article>
 
 <?php
+  }
 } else {
 ?>
     <article class="u-alert"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
 <?php
-} ?>
+} 
+?>
 
   <!-- end posts -->
   </section>
