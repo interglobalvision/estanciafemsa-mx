@@ -102,6 +102,16 @@ function igv_cmb_metaboxes() {
 	) );
 
   $program_meta->add_field( array(
+    'name' => __( 'Fecha en texto', 'cmb2' ),
+    'desc' => __( 'Sobrescribe las fechas', 'cmb2' ),
+    'id'   => $prefix . 'text_time',
+    'type' => 'textarea_small',
+    'attributes' => array(
+      'class' => 'cmb2-qtranslate'
+    )
+  ) );
+
+  $program_meta->add_field( array(
     'name' => __( 'Título para archivo', 'cmb2' ),
     'id'   => $prefix . 'archive_title',
     'type' => 'textarea_small',
