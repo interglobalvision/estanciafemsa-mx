@@ -21,6 +21,7 @@ if( have_posts() ) {
     $curator = get_post_meta($post->ID, '_igv_curator', true);
     $start_time = get_post_meta($post->ID, '_igv_start_time', true);
     $end_time = get_post_meta($post->ID, '_igv_end_time', true);
+    $text_time = get_post_meta($post->ID, '_igv_text_time', true);
 ?>
 
     <article <?php post_class('col col-s-6 col-m-4 margin-top-small margin-bottom-small text-align-center'); ?> id="programacion-<?php the_ID(); ?>">
@@ -39,8 +40,10 @@ if( have_posts() ) {
         <h4 class="margin-top-micro">
           <?php echo !empty($curator) ? $curator : '&nbsp;'; ?>
         </h4>
-        <h5 class="margin-top-micro"><?php 
-          if (!empty($start_time) || !empty($end_time)) {
+        <h5 class="margin-top-micro"><?php   
+          if (!empty($text_time)) {
+            echo $text_time;
+          } elseif (!empty($start_time) || !empty($end_time)) {
             $start_date = false;
             $end_date = false;
             if (!empty($start_time)) {
@@ -52,8 +55,6 @@ if( have_posts() ) {
             echo $start_date ? $start_date->format('d. m. y') : false;
             echo $start_date && $end_date ? ' &mdash; ' : false;
             echo $end_date ? $end_date->format('d. m. y') : false;
-          } elseif (!empty($text_time)) {
-            echo $text_time;
           } else {
             echo '&nbsp;';
           }
