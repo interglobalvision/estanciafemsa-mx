@@ -72,29 +72,3 @@ function get_event_actividades($event_id) {
 
   return get_posts($args);
 }
-
-// update activity numbers on post save
-function save_actividad_num( $post_id, $post, $update ) {
-
-  $post_type = get_post_type($post_id);
-
-  // If this isn't a 'actividad' post, don't update it.
-  if ( 'actividad' != $post_type ) return;
-
-  $event_id = get_post_meta($post_id, '_igv_related_event', true);
-
-  $activity_num = 1;
-
-  if (!empty($event_id)) {
-    $event_activities = get_event_actividades($event_id);
-
-    if ( $event_activities ) {
-      foreach ( $event_activities as $activity ) {
-        update_post_meta( $activity->ID, '_igv_activity_num', $activity_num );
-
-        $activity_num++;
-      }
-    }
-  }
-}
-add_action( 'save_post', 'save_actividad_num', 10, 3 );

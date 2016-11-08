@@ -22,7 +22,7 @@ if( have_posts() ) {
       $event_num = get_post_meta($event, '_igv_number', true);
       $activity_num = get_post_meta($post->ID, '_igv_activity_num', true);
 
-      if (!empty($event_num)) {
+      if (!empty($event_num) && !empty($activity_num)) {
         $event_activity_num = 'No. ' . add_leading_zero($event_num) . '.' . $activity_num;
       }
     }
