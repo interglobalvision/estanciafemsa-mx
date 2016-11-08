@@ -59,9 +59,10 @@ add_action( 'pre_get_posts', 'orderby_meta_date' );
 // get_posts for actividades related with event
 function get_event_actividades($event_id) {
   $args = array (
-  'post_type'              => array( 'actividad' ),
-  'posts_per_page'         => '-1',
-  'meta_query'             => array(
+    'post_type'       => array( 'actividad' ),
+    'posts_per_page'  => '-1',
+    'order'           => 'ASC',
+    'meta_query'      => array(
       array(
         'key'       => '_igv_related_event',
         'value'     => $event_id,
@@ -72,9 +73,15 @@ function get_event_actividades($event_id) {
   return get_posts($args);
 }
 
-// return order number of actividad related with event
-function get_actividad_num($actividad_id) {
-  $event_id = get_post_meta($actividad_id, '_igv_related_event', true);
+// update activity numbers on post save
+function save_actividad_num( $post_id, $post, $update ) {
+
+  $post_type = get_post_type($post_id);
+
+  // If this isn't a 'actividad' post, don't update it.
+  if ( 'actividad' != $post_type ) return;
+
+  $event_id = get_post_meta($post_id, '_igv_related_event', true);
 
   $activity_num = 1;
 
@@ -83,29 +90,11 @@ function get_actividad_num($actividad_id) {
 
     if ( $event_activities ) {
       foreach ( $event_activities as $activity ) {
-        if ($activity->ID == $actividad_id) {
-          return $activity_num;
-        }
+        update_post_meta( $activity->ID, '_igv_activity_num', $activity_num );
 
         $activity_num++;
       }
     }
   }
-
-  return 0;
-}
-
-// update activity number on post save
-function save_actividad_num( $post_id, $post, $update ) {
-
-    $post_type = get_post_type($post_id);
-
-    // If this isn't a 'actividad' post, don't update it.
-    if ( 'actividad' != $post_type ) return;
-
-    $activity_num = get_actividad_num($post_id);
-
-    // - Update the post's metadata.
-    update_post_meta( $post_id, '_igv_activity_num', $activity_num );
 }
 add_action( 'save_post', 'save_actividad_num', 10, 3 );
