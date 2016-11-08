@@ -89,7 +89,7 @@ if( have_posts() ) {
           </div>
         </header>
 
-        <div class="programacion-content-holder padding-top-micro padding-bottom-micro">
+        <div class="programacion-content-holder padding-top-micro padding-bottom-basic">
           <div class="container">
             <div class="row">
               <div class="col col-s-12 col-m-6 col-l-8 programacion-content line-tighter">
