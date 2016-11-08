@@ -46,10 +46,14 @@ if( have_posts() ) {
 ?>
           </div>
         </div>
+
+        <?php if (count($gallery) > 1) { ?> 
         <div class="slider-cursor-pagination">
           <div class="cursor-pagination-button swiper-prev"></div>
           <div class="cursor-pagination-button swiper-next"></div>
         </div>
+        <?php } ?>
+
         <div class="close-drawer-overlay"></div>
       </div>
 
@@ -61,7 +65,9 @@ if( have_posts() ) {
                 <h2 class="u-inline-block programacion-title u-pointer"><?php the_title(); ?></h2> <span class="programacion-drawer-toggle"></span>
               </div>
               <div class="col col-s-6 col-m-3 col-l-2 text-align-left">
+                <?php if (count($gallery) > 1) { ?> 
                 <span class="swiper-prev u-pointer">< </span><span id="single-programacion-gallery-pagination"></span><span class="swiper-next u-pointer"> ></span>
+                <?php } ?>
               </div>
               <div class="col col-s-6 col-m-3 col-l-2 text-align-right">
                 <?php
