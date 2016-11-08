@@ -129,7 +129,7 @@ if( have_posts() ) {
               ?>
                   <li class="margin-bottom-tiny"><a href="<?php echo get_permalink($actividad->ID); ?>"><?php
                   echo $event_activity_num . '<br>'; ?><div class="u-inline-block program-activity-title"><?php echo $actividad->post_title; ?></div></a></li>
-              <?
+              <?php
                 }
               ?>
                 </ul>
