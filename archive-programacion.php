@@ -16,7 +16,7 @@ if( have_posts() ) {
     $meta = get_post_meta($post->ID);
     $color = get_post_meta($post->ID, '_igv_color', true);
     $number = get_post_meta($post->ID, '_igv_number', true);
-    $title = get_post_meta($post->ID, '_igv_archive_title', true);
+    $archive_title = get_post_meta($post->ID, '_igv_archive_title', true);
     $subtitle = get_post_meta($post->ID, '_igv_subtitle', true);
     $curator = get_post_meta($post->ID, '_igv_curator', true);
     $start_time = get_post_meta($post->ID, '_igv_start_time', true);
@@ -25,11 +25,11 @@ if( have_posts() ) {
 ?>
 
     <article <?php post_class('col col-s-6 col-m-4 margin-top-small margin-bottom-small text-align-center'); ?> id="programacion-<?php the_ID(); ?>">
-      <a href="<?php the_permalink() ?>" class="programacion-item" <?php echo !empty($number) ? 'data-hover-color="' . $number . '"' : ''; ?> >
+      <a href="<?php the_permalink() ?>" class="programacion-item" <?php echo !empty($color) ? 'data-hover-color="' . $color . '"' : ''; ?> >
         <div class="margin-bottom-tiny"><?php echo !empty($number) ? 'No. ' . add_leading_zero($number) : ''; ?></div>
         <h2 class="archive-programacion-post-title"><?php 
-          if (!empty($title)) {
-            echo apply_filters( 'the_content', $title );
+          if (!empty($archive_title)) {
+            echo apply_filters( 'the_content', $archive_title );
           } else {
             the_title(); 
           }
