@@ -101,6 +101,12 @@ function igv_cmb_metaboxes() {
     )
   ) );
 
+  $activity_meta->add_field( array(
+    'name'       => __( 'Número de evento', 'cmb2' ),
+    'id'         => $prefix . 'activity_num',
+    'type'       => 'text',
+  ) );
+
   // **** PROGRAM
   $program_meta = new_cmb2_box( array(
   	'id'            => $prefix . 'programacion_metabox',
