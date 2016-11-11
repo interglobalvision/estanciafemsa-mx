@@ -32,7 +32,13 @@ if (!empty($event)) {
     <?php echo '<a href="' . home_url('actividad') . '">' . __('[:es]Actividad Académica[:en]Academic Activity[:]') . '</a>'; ?>
     </div>
 
+    <?php 
+    if (is_single()) {
+    ?>
     <a class="font-serif article-meta-item" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share on Facebook[:es]Compartir en Facebook'); ?></a>
+    <?php 
+    }
+    ?>
   </div>
 
   <!-- Article Content -->

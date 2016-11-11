@@ -29,7 +29,13 @@ $color = !empty($event) ? get_post_meta($event, '_igv_color', true) : false;
     ?>
     </div>
 
+    <?php 
+    if (is_single()) {
+    ?>
     <a class="font-serif article-meta-item" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php _e('[:en]Share on Facebook[:es]Compartir en Facebook'); ?></a>
+    <?php 
+    }
+    ?>
   </div>
 
   <!-- Article Content -->
