@@ -311,7 +311,7 @@ function igv_cmb_metaboxes() {
     'id'            => $prefix . 'citas_metabox',
     'title'         => __( 'Imagenes', 'cmb2' ),
     'object_types'  => array( 'page', ), // Post type
-    'show_on'       => array( 'key' => 'id', 'value' => array( get_id_by_slug('citas') ) ),
+    'show_on'       => array( 'key' => 'id', 'value' => array( get_id_by_slug('visita') ) ),
   ) );
 
   $citas_content = $citas_meta->add_field( array(
