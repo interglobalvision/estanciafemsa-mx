@@ -1405,9 +1405,6 @@ body.single-programacion .footer-lang-switch {
       -ms-grid-row-align: center;
       align-items: center;
 }
-.swiper-slide {
-  cursor: pointer;
-}
 .swiper-slide img {
   max-height: 100%;
   width: auto;
@@ -1459,6 +1456,18 @@ body.single-programacion .footer-lang-switch {
 }
 .femsa-logo svg g {
   fill: #000;
+}
+.citas-text-content {
+  font-family: 'Calibre', Helvetica, Arial, sans-serif;
+}
+.citas-text-content h3 {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.citas-text-content p {
+  font-weight: 500;
+  line-height: 1.25;
 }
 .citas-arrow {
   position: absolute;
@@ -1739,7 +1748,10 @@ body.drawer-open .programacion-drawer-toggle {
   text-indent: -24px;
   margin-left: 24px;
 }
-.citas-text-content {
+.citas-text-content p {
+  font-size: 1.272006289292628rem;
+}
+.citas-text-content-desktop {
   display: none;
 }
 .social-link {
@@ -2008,7 +2020,7 @@ body.drawer-open .programacion-drawer-toggle {
   .citas-text-content-mobile {
     display: none;
   }
-  .citas-text-content {
+  .citas-text-content-desktop {
     display: initial;
   }
   .citas-item {
@@ -2154,6 +2166,9 @@ body.drawer-open .programacion-drawer-toggle {
   }
   h4,
   .font-size-h4 {
+    font-size: 1.272006289292628rem;
+  }
+  .citas-text-content p {
     font-size: 1.272006289292628rem;
   }
   .margin-top-micro {
@@ -2446,6 +2461,9 @@ body.drawer-open .programacion-drawer-toggle {
   #search-input {
     width: 120px;
   }
+  .citas-text-content p {
+    font-size: 1.334710602476894rem;
+  }
 }
 @media screen and (min-width: 1660px) {
   .col {
@@ -2579,6 +2597,9 @@ body.drawer-open .programacion-drawer-toggle {
   .font-size-h4 {
     font-size: 1.334710602476894rem;
   }
+  .citas-text-content p {
+    font-size: 1.334710602476894rem;
+  }
 }
 @media screen and (min-width: 1900px) {
   .container {
@@ -2705,6 +2726,9 @@ body.drawer-open .programacion-drawer-toggle {
   }
   .article-content-header {
     margin-bottom: 54px;
+  }
+  .citas-text-content p {
+    font-size: 1.334710602476894rem;
   }
   .citas-item {
     padding-right: 189px;

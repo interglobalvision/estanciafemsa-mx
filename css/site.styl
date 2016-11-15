@@ -440,7 +440,15 @@ body.single-programacion
 
 // CITAS
 
-.citas-content
+.citas-text-content
+  font-family: $font-sans
+  h3 
+    font-weight: 600
+    text-transform: uppercase
+    letter-spacing: 1px
+  p 
+    font-weight: 500
+    line-height: $font-leading-tighter
 
 .citas-arrow
   position: absolute
@@ -532,6 +540,10 @@ for col in 1..$cols
 
   h4, .font-size-h4
     font-size: $font-size-h4
+    
+  .citas-text-content
+    p 
+      font-size: $font-size-h4
 
   @import "responsive/desktop"
   
@@ -561,6 +573,10 @@ for col in 1..$cols
     
   #search-input
     width: 120px
+    
+  .citas-text-content
+    p 
+      font-size: $font-size-h4
 
 @media screen and (min-width: 1660px)
 
@@ -600,6 +616,10 @@ for col in 1..$cols
 
   h4, .font-size-h4
     font-size: $font-size-h4
+    
+  .citas-text-content
+    p 
+      font-size: $font-size-h4
     
 @media screen and (min-width: 1900px)
 
