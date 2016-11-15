@@ -6,7 +6,7 @@ get_header();
 
 <section id="main-content" class="container">
   <div class="row">
-    <div class="col col-s-12 text-align-center">
+    <div class="col col-s-12">
       <h1><?php echo __('[:en]Page not found[:es]Página no encontrada[:]'); ?></h1>
       <p>:(</p>
     </div>
