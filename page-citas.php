@@ -17,9 +17,9 @@ if( have_posts() ) {
 
     <article <?php post_class('row page-citas-row margin-bottom-small'); ?> id="page-<?php the_ID(); ?>">
 
-      <div class="citas-text-content-mobile col col-s-12">
+      <div class="citas-text-content citas-text-content-mobile col col-s-12">
 
-        <?php get_template_part('partials/citas-text-content'); ?>
+        <?php the_content(); ?>
 
       </div>
 
@@ -49,9 +49,9 @@ if( have_posts() ) {
       ?>
       </div>
 
-      <div class="citas-text-content col col-m-5 col-l-3">
+      <div class="citas-text-content citas-text-content-desktop col col-m-5 col-l-3">
 
-        <?php get_template_part('partials/citas-text-content'); ?>
+        <?php the_content(); ?>
 
       </div>
 
