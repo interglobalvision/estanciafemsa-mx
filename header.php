@@ -96,7 +96,7 @@
           if ($host) {
         ?>
         <div class="col col-s-4 col-xl-4 text-align-right only-desktop desktop-hostname-unique">
-          <h1 class="font-uppercase"><a href="<?php echo home_url('/citas'); ?>"><?php echo $host; ?></a></h1>
+          <h1 class="font-uppercase"><a href="<?php echo home_url('/visita'); ?>"><?php echo $host; ?></a></h1>
         </div>
         <?php
           }
